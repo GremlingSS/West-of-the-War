@@ -43,6 +43,7 @@
 	flash_protect = 2
 	slowdown = 0.14
 	mutantrace_variation = STYLE_DIGITIGRADE
+	damage_threshold = DT_BASIC // Has near heavy armor slowdown.
 
 /obj/item/clothing/suit/armor/f13/raider/yankee
 	name = "yankee raider armor"
@@ -113,6 +114,7 @@
 	mutantrace_variation = STYLE_DIGITIGRADE
 	armor = list("melee" = 45, "bullet" = 50, "laser" = 45, "energy" = 15, "bomb" = 20, "bio" = 10, "rad" = 10, "fire" = 20, "acid" = 0, "wound" = 20)
 	slowdown = 0.14
+	damage_threshold = DT_BASIC // Has near heavy armor slowdown.
 
 /obj/item/clothing/suit/armor/f13/raider/combatduster/patrolduster
 	name = "Patrol Duster"
@@ -460,6 +462,7 @@
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/bulletbelt
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 	slowdown = 0.25		//0.35 with helmet
+	damage_threshold = DT_ADVANCED // Salvaged PA
 
 /obj/item/clothing/suit/armor/f13/ncr/heavygunner						//NCR Heavy Gunner armor, Flamethrower loadout
 	name = "\improper NCR heavy plate vest"
@@ -471,6 +474,7 @@
 	armor = list("melee" = 45, "bullet" = 45, "laser" = 35, "energy" = 15, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 0, "wound" = 45)
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 	slowdown = 0.18		//0.22 with helmet
+	damage_threshold = DT_STRONG
 
 /obj/item/clothing/suit/armor/f13/ncr/heavygunner/trenchraider //NCR Trench-Raider kit
 	name = "\improper NCR trench-raider plate vest"
@@ -482,6 +486,7 @@
 	armor = list("melee" = 55, "bullet" = 40, "laser" = 25, "energy" = 15, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 0, "wound" = 40)
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 	slowdown = 0.15		//0.18 with helmet
+	damage_threshold = DT_STRONG
 
 //OFFICER ROLES
 /obj/item/clothing/suit/armor/f13/ncr/reinforced/mantle/officer						//NCR Lieutenant armor
@@ -492,6 +497,7 @@
 	armor = list("melee" = 30, "bullet" = 45, "laser" = 35, "energy" = 15, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 0, "wound" = 40)
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 	slowdown = 0.14
+	damage_threshold = DT_BASIC
 
 /obj/item/clothing/suit/armor/f13/ncr/reinforced/mantle/officer/captain				//NCR Captain Armor
 	name = "\improper NCR reinforced officer mantle vest"
@@ -657,6 +663,7 @@
 	item_state = "brotherhood_armor_captain"
 	armor = list("melee" = 55, "bullet" = 55, "laser" = 65, "energy" = 30, "bomb" = 30, "bio" = 25, "rad" = 25, "fire" = 30, "acid" = 0, "wound" = 30)
 	slowdown = 0.15
+	damage_threshold = DT_ADVANCED // Brotherhood quality
 
 /obj/item/clothing/suit/armor/f13/combat/brotherhood/initiate
 	name = "initiate armor"
@@ -674,6 +681,7 @@
 	armor = list("melee" = 50, "bullet" = 50, "laser" = 55, "energy" = 25, "bomb" = 25, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 0, "wound" = 25)
 	slowdown = 0.15
 	mutantrace_variation = STYLE_DIGITIGRADE
+	damage_threshold = DT_STRONG //Brotherhood quality.
 
 //Oasis/Town
 /obj/item/clothing/suit/armor/f13/town
@@ -700,6 +708,7 @@
 	armor = list("melee" = 45, "bullet" = 55, "laser" = 45,  "energy" = 20, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 0, "wound" = 30)
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small/holdout
 	slowdown = 0.14
+	damage_threshold = DT_STRONG // Unique
 
 /obj/item/clothing/suit/armor/f13/town/chief
 	name = "BPD Chief's jacket"
@@ -711,6 +720,7 @@
 	armor = list("melee" = 45, "bullet" = 55, "laser" = 45,  "energy" = 20, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 0, "wound" = 30)
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small/holdout
 	slowdown = 0.14
+	damage_threshold = DT_STRONG // Unique
 
 /obj/item/clothing/suit/armor/f13/town/deputy
 	name = "armored town trenchcoat"
@@ -719,6 +729,7 @@
 	armor = list("melee" = 40, "bullet" = 50, "laser" = 40,  "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 0, "wound" = 25)
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small/holdout
 	slowdown = 0.12
+	damage_threshold = DT_BASIC
 
 /obj/item/clothing/suit/armor/vest/oasis
 	name = "\improper BPD vest"
@@ -728,6 +739,7 @@
 	armor = list("melee" = 40, "bullet" = 50, "laser" = 40,  "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 0, "wound" = 25)
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets
 	slowdown = 0.12
+	damage_threshold = DT_BASIC
 
 /obj/item/clothing/suit/armor/f13/metalarmor/steelbib/oasis
 	name = "heavy steel breastplate"

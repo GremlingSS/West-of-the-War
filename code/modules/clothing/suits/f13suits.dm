@@ -367,6 +367,7 @@
 	armor = list("melee" = 45, "bullet" = 45, "laser" = 50, "energy" = 25, "bomb" = 35, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 0, "wound" = 45)
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small
 	slowdown = 0.15
+	damage_threshold = DT_BASIC
 
 
 // --------------------------------------------------------------------------
@@ -590,6 +591,7 @@
 	item_state = "follower_heavy"
 	armor = list("melee" = 45, "bullet" = 45, "laser" = 35, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 10)
 	slowdown = 0.12
+	damage_threshold = DT_STRONG // Followers quality
 
 /obj/item/clothing/suit/hooded/followerheavy/followerheavy/Initialize(mapload)
 	. = ..()

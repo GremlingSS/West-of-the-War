@@ -693,6 +693,7 @@ Mayor
 	gloves =		/obj/item/clothing/gloves/fingerless
 	shoes = 		/obj/item/clothing/shoes/jackboots
 	r_pocket = 		/obj/item/flashlight/flare
+	r_hand = /obj/item/melee/onehanded/knife/hunting
 
 	backpack =		/obj/item/storage/backpack/cultpack
 	satchel = 		/obj/item/storage/backpack/cultpack

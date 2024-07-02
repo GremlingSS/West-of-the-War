@@ -13,6 +13,7 @@
 	item_state = "sulphite"
 	armor = list("melee" = 55, "bullet" = 40, "laser" = 50, "energy" = 20, "bomb" = 30, "bio" = 25, "rad" = 30, "fire" = 95, "acid" = 15)
 	resistance_flags = FIRE_PROOF
+	damage_threshold = DT_STRONG // It's sulphite, raider made be damned.
 
 /obj/item/clothing/suit/armored/heavy/metal
 	name = "metal armor suit"
@@ -26,6 +27,7 @@
 	desc = "Taking pieces off from a wrecked power armor will at least give you thick plating, but don't expect too much of this shot up, piecemeal armor.."
 	icon_state = "recycled_power"
 	armor = list("melee" = 50, "bullet" = 45, "laser" = 30, "energy" = 10, "bomb" = 35, "bio" = 5, "rad" = 15, "fire" = 15, "acid" = 5, "wound" = 10)
+	damage_threshold = DT_ADVANCED // Still SPA
 
 /obj/item/clothing/suit/armored/heavy/raidermetal
 	name = "iron raider suit"
@@ -33,12 +35,14 @@
 	icon_state = "raider_metal"
 	item_state = "raider_metal"
 	armor = list("melee" = 55, "bullet" = 40, "laser" = 15, "energy" = 5, "bomb" = 25, "bio" = 0, "rad" = 15, "fire" = 20, "acid" = 0, "wound" = 10)
+	damage_threshold = DT_STRONG
 
 /obj/item/clothing/suit/armored/heavy/wardenplate
 	name = "warden plates"
 	desc = "Thick metal breastplate with a decorative skull on the shoulder."
 	icon_state = "wardenplate"
 	armor = list("melee" = 55, "bullet" = 50, "laser" = 35, "energy" = 10, "bomb" = 30, "bio" = 0, "rad" = 15, "fire" = 10, "acid" = 10, "wound" = 10)
+	damage_threshold = DT_STRONG
 
 /obj/item/clothing/suit/armored/heavy/bosexile
 	name = "modified Brotherhood armor"
@@ -46,6 +50,7 @@
 	icon_state = "exile_bos"
 	item_state = "exile_bos"
 	armor = list("melee" = 30, "bullet" = 40, "laser" = 40, "energy" = 20, "bomb" = 25, "bio" = 10, "rad" = 10, "fire" = 20, "acid" = 10, "wound" = 10)
+	damage_threshold = DT_STRONG // Brotherhood quality
 
 /obj/item/clothing/suit/armored/heavy/riotpolice
 	name = "riot police armor"
@@ -62,6 +67,7 @@
 	item_state = "tribal_heavy"
 	armor = list("melee" = 55, "bullet" = 20, "laser" = 25, "energy" = 5, "bomb" = 45, "bio" = 5, "rad" = 10, "fire" = 30, "acid" = 10, "wound" = 10)
 	allowed = list(/obj/item/twohanded, /obj/item/melee/onehanded, /obj/item/melee/smith, /obj/item/melee/smith/twohand, /obj/item/shield)
+	damage_threshold = DT_STRONG // Give tribals something :V
 
 //////////////////////////
 // Salvaged Power Armor //
@@ -81,6 +87,7 @@
 	It isn't meant to be used, it just dictates procs and all that stuff to the subtypes, such as t45d and so on. \
 	Now begone, report this to coders. NOW!"
 	slowdown = 0.35	//When helmeted, 0.45
+	damage_threshold = DT_ADVANCED // Salvaged PA, still PA.
 
 // T-45D
 /obj/item/clothing/suit/armored/heavy/salvaged_pa/t45d
@@ -167,6 +174,7 @@
 	icon_state = "legion_heavy"
 	item_state = "legion_heavy"
 	armor = list("melee" = 65, "bullet" = 45, "laser" = 30, "energy" = 10, "bomb" = 30, "bio" = 20, "rad" = 25, "fire" = 30, "acid" = 5, "wound" = 10)
+	damage_threshold = DT_STRONG
 
 /obj/item/clothing/suit/armored/heavy/legion/centurion
 	name = "legion centurion armor"
@@ -175,12 +183,14 @@
 	armor = list("melee" = 60, "bullet" = 50, "laser" = 35, "energy" = 10, "bomb" = 45, "bio" = 20, "rad" = 20, "fire" = 45, "acid" = 45, "wound" = 32)
 	slowdown = 0.1
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 10) // Rest in pieces
+	damage_threshold = DT_STRONG
 
 /obj/item/clothing/suit/armored/heavy/legion/palacent
 	name = "paladin-slayer centurion armor"
 	desc = "The armor of a Centurion who has bested one or more Brotherhood Paladins, adding pieces of his prizes to his own defense. The symbol of the Legion is crudely painted on this once-marvelous suit of armor."
 	icon_state = "legion_palacent"
 	armor = list("melee" = 55, "bullet" = 45, "laser" = 70, "energy" = 40, "bomb" = 55, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 0, "wound" = 45)
+	damage_threshold = DT_STRONG
 
 /obj/item/clothing/suit/armored/heavy/legion/rangercent
 	name = "ranger-hunter centurion armor"
@@ -189,6 +199,7 @@
 	item_state = "legion_rangercent"
 	armor = list("melee" = 40, "bullet" = 45, "laser" = 25, "energy" = 10, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20, "wound" = 35) //Mimics vet ranger stuff, higher melee and lower laser
 	slowdown = 0.03
+	damage_threshold = DT_STRONG
 
 /obj/item/clothing/suit/armored/heavy/legion/legate
 	name = "legion legate armor"
@@ -196,6 +207,7 @@
 	icon_state = "legion_legate"
 	armor = list("melee" = 60, "bullet" = 60, "laser" = 40, "energy" = 10, "bomb" = 45, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0, "wound" = 10)
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 15) // Wouldn't it be hilarious if we just tore apart the Legate's armor?
+	damage_threshold = DT_ADVANCED // Very unique, deserves this given its stat line.
 
 /*
 
