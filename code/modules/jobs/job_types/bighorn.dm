@@ -436,7 +436,13 @@ Mayor
 		/obj/item/gun/ballistic/shotgun/trench = 1,
 		/obj/item/ammo_box/shotgun/buck = 1,
 		/obj/item/ammo_box/shotgun/buck = 1,
-		/obj/item/book/granter/trait/trekking = 1
+		/obj/item/book/granter/trait/trekking = 1,
+		/obj/item/camera/spooky = 1,
+		/obj/item/reagent_containers/food/drinks/flask = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/storage/fancy/candle_box = 1,
+		/obj/item/pda = 1,
+		/obj/item/storage/bag/money/small/settler = 1
 	) // Basically wastelander settler with a shotgun.
 
 // A preacher who relies on technology, a wasteland savant.
@@ -460,7 +466,13 @@ Mayor
 		/obj/item/wrench = 1,
 		/obj/item/wirecutters = 1,
 		/obj/item/stack/crafting/metalparts = 5,
-		/obj/item/book/granter/trait/techno = 1
+		/obj/item/book/granter/trait/techno = 1,
+		/obj/item/camera/spooky = 1,
+		/obj/item/reagent_containers/food/drinks/flask = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/storage/fancy/candle_box = 1,
+		/obj/item/pda = 1,
+		/obj/item/storage/bag/money/small/settler = 1
 	) // No weapons, you should be crafting them or using your null rod.
 
 // A preacher who brings god's enemies to the sword, a warrior of faith.
@@ -473,7 +485,13 @@ Mayor
 		/obj/item/clothing/gloves/legion/plated = 1,
 		/obj/item/clothing/shoes/f13/military/plated = 1,
 		/obj/item/shield/riot/tower/scrap = 1,
-		/obj/item/book/granter/trait/bigleagues = 1
+		/obj/item/book/granter/trait/bigleagues = 1,
+		/obj/item/camera/spooky = 1,
+		/obj/item/reagent_containers/food/drinks/flask = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/storage/fancy/candle_box = 1,
+		/obj/item/pda = 1,
+		/obj/item/storage/bag/money/small/settler = 1
 	) // Nullrod is your melee weapon, but you get lovely armor on par with the town steel bib and heavy steel helmet with a tower shield.
 
 // A preacher who delivers lead clots to god's enemies, a gunslinger.
@@ -486,7 +504,13 @@ Mayor
 		/obj/item/ammo_box/m44 = 2,
 		/obj/item/ammo_box/m44box = 1,
 		/obj/item/clothing/suit/armor/f13/leather_jacket/combat/coat = 1, // 10/10 drip
-		/obj/item/book/granter/trait/gunslinger = 1
+		/obj/item/book/granter/trait/gunslinger = 1,
+		/obj/item/camera/spooky = 1,
+		/obj/item/reagent_containers/food/drinks/flask = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/storage/fancy/candle_box = 1,
+		/obj/item/pda = 1,
+		/obj/item/storage/bag/money/small/settler = 1
 	) // Basically the cleanser but with a null rod and decent light armor.
 
 // A priest who remembers a majority of them are charitable healers, a doctor of god.
@@ -503,7 +527,13 @@ Mayor
 		/obj/item/storage/backpack/duffelbag/med/surgery = 1,
 		/obj/item/storage/firstaid/ancient = 1,
 		/obj/item/nullrod/rosary = 1,
-		/obj/item/book/granter/trait/midsurgery
+		/obj/item/book/granter/trait/midsurgery,
+		/obj/item/camera/spooky = 1,
+		/obj/item/reagent_containers/food/drinks/flask = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/storage/fancy/candle_box = 1,
+		/obj/item/pda = 1,
+		/obj/item/storage/bag/money/small/settler = 1
 	) // Wasteland doctor with a null rod.
 
 // A priest who looks inward for answers, a pious monk.
@@ -515,7 +545,13 @@ Mayor
 		/obj/item/clothing/gloves/fingerless/pugilist/chaplain = 1,
 		/obj/item/nullrod/rosary = 1,
 		/obj/item/clothing/suit/hooded/robes = 1,
-		/obj/item/book/granter/trait/iron_fist = 1
+		/obj/item/book/granter/trait/iron_fist = 1,
+		/obj/item/camera/spooky = 1,
+		/obj/item/reagent_containers/food/drinks/flask = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/storage/fancy/candle_box = 1,
+		/obj/item/pda = 1,
+		/obj/item/storage/bag/money/small/settler = 1
 	) // Mostly for flavor, but starting with a rosary and gloves is a really nice bonus.
 
 // Division is truth.
@@ -527,7 +563,13 @@ Mayor
 		/obj/item/clothing/under/f13/atombomb/atombeliever = 1,
 		/obj/item/grenade/f13/radiation = 2,
 		/obj/item/reagent_containers/blood/radaway = 2,
-		/obj/item/book/granter/trait/explosives = 1 // So we can give people division with force.
+		/obj/item/book/granter/trait/explosives = 1, // So we can give people division with force.
+		/obj/item/camera/spooky = 1,
+		/obj/item/reagent_containers/food/drinks/flask = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/storage/fancy/candle_box = 1,
+		/obj/item/pda = 1,
+		/obj/item/storage/bag/money/small/settler = 1
 	) // Mostly for flavor. The under clothes does give 100 rad protection though and the grenades could be fun if not really deadly.
 
 // For the right price, you too can be saved!
@@ -538,7 +580,13 @@ Mayor
 		/obj/item/clothing/suit/f13/hubologist = 1,
 		/obj/item/stack/f13Cash/caps/onezerozerozero = 1,
 		/obj/item/stack/f13Cash/caps/onezerozerozero = 1,
-		/obj/item/book/granter/trait/medical = 1 // You have some form of training to make those rad devices they use in lore.
+		/obj/item/book/granter/trait/medical = 1, // You have some form of training to make those rad devices they use in lore.
+		/obj/item/camera/spooky = 1,
+		/obj/item/reagent_containers/food/drinks/flask = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/storage/fancy/candle_box = 1,
+		/obj/item/pda = 1,
+		/obj/item/storage/bag/money/small/settler = 1
 	) // Mostly for flavor. Hubology is heavily focused on getting caps (snrk) so you at least start with alot more.
 
 /datum/job/bighorn/f13preacher/after_spawn(mob/living/H, mob/M)
@@ -648,14 +696,6 @@ Mayor
 
 	backpack =		/obj/item/storage/backpack/cultpack
 	satchel = 		/obj/item/storage/backpack/cultpack
-	backpack_contents = list(
-		/obj/item/camera/spooky = 1,
-		/obj/item/reagent_containers/food/drinks/flask = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
-		/obj/item/storage/fancy/candle_box = 1,
-		/obj/item/pda = 1,
-		/obj/item/storage/bag/money/small/settler = 1,
-		)
 //end preacher
 
 /datum/outfit/job/bighorn/f13settler
