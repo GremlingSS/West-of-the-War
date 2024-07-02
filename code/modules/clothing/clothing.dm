@@ -280,6 +280,8 @@
 			how_cool_are_your_threads += "Adding or removing items from [src] makes no noise.\n"
 		how_cool_are_your_threads += "</span>"
 		. += how_cool_are_your_threads.Join()
+	if(damage_threshold && damage_threshold > 0)
+		. += "It has a Damage Treshold of: [damage_threshold]"
 
 	if(LAZYLEN(armor_list))
 		armor_list.Cut()
