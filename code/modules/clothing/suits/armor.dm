@@ -1,3 +1,18 @@
+// Damage Threshold defined here as it seems to be the best place.
+#define DT_BASIC "5"
+#define DT_STRONG "10"
+#define DT_ADVANCED "15"
+#define DT_MAX "20"
+// General DT Rules
+// Basic: Generically applied to heavy armor.
+// Strong: Applied to higher tier heavy armor such as faction armor and some salvaged power armor.
+// Advanced: Applied mainly to either advanced armor or specialty armor found as dungeon rewards.
+// Max: Full fledged power armor.
+// DT does not make you immune to damage and falls off the greater the damage is (I.E. it works better against low damage attacks)
+// Higher damage hits and armor penetrating hits from heavy hitters will still make DT a minor benefit, noticable but not extreme.
+// NOTE when editing DT for balance, change the above values, it will effect every item assigned this define so easy adjustment. -Possum
+
+
 /obj/item/clothing/suit/armor
 	allowed = null
 	cold_protection = CHEST|GROIN
@@ -405,7 +420,7 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	allowed = list(/obj/item/melee/onehanded, /obj/item/twohanded, /obj/item/melee/smith, /obj/item/melee/smith/twohand, /obj/item/shield)
 
 
-// Heavy armor. 50-65 in its primary value, slowdown 0.15
+// Heavy armor. 50-65 in its primary value, slowdown 0.15, damage threshold 5
 /obj/item/clothing/suit/armored/heavy
 	name = "heavy armor template"
 	icon = 'icons/fallout/clothing/armored_heavy.dmi'
@@ -413,6 +428,7 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	slowdown = 0.15
 	allowed = list(/obj/item/gun, /obj/item/melee/onehanded, /obj/item/twohanded, /obj/item/melee/smith, /obj/item/melee/smith/twohand, /obj/item/shield)
 	strip_delay = 50
+	damage_threshold = DT_BASIC
 
 /obj/item/clothing/suit/armored/heavy/legion
 	slowdown = 0.1

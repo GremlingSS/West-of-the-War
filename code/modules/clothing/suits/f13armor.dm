@@ -115,6 +115,7 @@
 	armor = list("melee" = 40, "bullet" = 40, "laser" = 50, "energy" = 10, "bomb" = 20, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0, "wound" = 20)
 	slowdown = 0.16
 	strip_delay = 10
+	damage_threshold = DT_BASIC
 
 /obj/item/clothing/suit/armor/f13/metalarmor/laserproof
 	name = "polished metal armor"
@@ -165,6 +166,7 @@
 	slowdown = 0.12
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 5)
 	mutantrace_variation = STYLE_DIGITIGRADE
+	damage_threshold = DT_BASIC
 
 /obj/item/clothing/suit/armor/f13/combat/laserproof
 	name = "ablative combat armor"
@@ -193,6 +195,7 @@
 	armor = list("melee" = 35, "bullet" = 50, "laser" = 45, "energy" = 15, "bomb" = 25, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 0, "wound" = 25)
 	slowdown = 0.16
 	mutantrace_variation = NONE
+	damage_threshold = DT_BASIC
 
 /obj/item/clothing/suit/armor/f13/combat/mk2
 	name = "reinforced combat armor"
@@ -204,6 +207,7 @@
 	slowdown = 0.14
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 10)
 	mutantrace_variation = STYLE_DIGITIGRADE
+	damage_threshold = DT_BASIC
 
 /obj/item/clothing/suit/armor/f13/combat/mk2/dark
 	name = "reinforced combat armor"
@@ -261,6 +265,7 @@
 	icon_state = "combat_armor_raider"
 	item_state = "combat_armor_raider"
 	mutantrace_variation = STYLE_DIGITIGRADE
+	damage_threshold = DT_BASIC // Gives raider a viable choice.
 
 /////////////////
 // Power armor //
@@ -283,6 +288,7 @@
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 20)
 	salvage_tool_behavior = TOOL_WELDER
+	damage_threshold = DT_MAX // Best DT you can get.
 	/// Cell that is currently installed in the suit
 	var/obj/item/stock_parts/cell/cell = /obj/item/stock_parts/cell/high
 	/// How much power the cell consumes each process tick
@@ -829,6 +835,7 @@
 	item_state = "sulphite"
 	armor = list("melee" = 40, "bullet" = 45, "laser" = 55, "energy" = 15, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 60, "acid" = 0, "wound" = 25)
 	slowdown = 0.18
+	damage_threshold = DT_STRONG // Suphite quality.
 
 /obj/item/clothing/suit/toggle/armor
 	body_parts_covered = CHEST|GROIN
@@ -884,6 +891,7 @@
 	icon = 'icons/fallout/clothing/armored_light.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets
+	damage_threshold = DT_STRONG // Slowdown with that stat line means its a rare high quality armor.
 
 /obj/item/clothing/suit/armor/f13/battlecoat/vault
 	name = "command coat"
@@ -1069,6 +1077,7 @@
 	mutantrace_variation = STYLE_DIGITIGRADE
 	armor = list("melee" = 50, "bullet" = 35, "laser" = 50, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 0, "wound" = 25)
 	slowdown = 0.12
+	damage_threshold = DT_BASIC
 
 /obj/item/clothing/suit/f13/tribal/light/whitelegs
 	name = "White Legs light armour"
@@ -1179,6 +1188,7 @@
 	mutantrace_variation = STYLE_DIGITIGRADE
 	armor = list("melee" = 55, "bullet" = 30, "laser" = 40, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 0, "wound" = 25)
 	slowdown = 0.12
+	damage_threshold = DT_BASIC
 
 /obj/item/clothing/suit/f13/tribal/light/westernwayfarer
 	name = "Western Wayfarer salvaged armor"
@@ -1247,6 +1257,10 @@
 	// Slowdown = 0.15 | Heavy armor standard
 	mutantrace_variation = STYLE_DIGITIGRADE
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	damage_threshold = DT_STRONG
+	// Originally I was going to do quality + 2 at the crafting step but due to some weirdness and laziness I just hacked it here.
+	// Stats are affected by quality and if you're making heavy armor you're making masterwork and plating it. So this fits.
+	// Plus, unlike other heavy armor you either start with or clear a dungeon for, this *always* requires work to get.
 
 /obj/item/clothing/suit/armored/heavy/smith_armor_heavy/Initialize(mapload) // TO GO EVEN FURTHER BYOND!!!
 	. = ..()
