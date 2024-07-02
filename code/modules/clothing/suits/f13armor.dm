@@ -1257,6 +1257,10 @@
 	// Slowdown = 0.15 | Heavy armor standard
 	mutantrace_variation = STYLE_DIGITIGRADE
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	damage_threshold = DT_STRONG
+	// Originally I was going to do quality + 2 at the crafting step but due to some weirdness and laziness I just hacked it here.
+	// Stats are affected by quality and if you're making heavy armor you're making masterwork and plating it. So this fits.
+	// Plus, unlike other heavy armor you either start with or clear a dungeon for, this *always* requires work to get.
 
 /obj/item/clothing/suit/armored/heavy/smith_armor_heavy/Initialize(mapload) // TO GO EVEN FURTHER BYOND!!!
 	. = ..()
