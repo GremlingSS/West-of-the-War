@@ -1,8 +1,8 @@
 // Damage Threshold defined here as it seems to be the best place.
-#define DT_BASIC "5"
-#define DT_STRONG "10"
-#define DT_ADVANCED "15"
-#define DT_MAX "20"
+#define DT_BASIC 5
+#define DT_STRONG 10
+#define DT_ADVANCED 15
+#define DT_MAX 20
 // General DT Rules
 // Basic: Generically applied to heavy armor.
 // Strong: Applied to higher tier heavy armor such as faction armor and some salvaged power armor.
