@@ -112,12 +112,12 @@ Mayor
 	head = /obj/item/clothing/head/helmet/f13/enclave/usmcriot/dusty
 	l_pocket = /obj/item/storage/bag/money/small/bighorn
 	r_pocket = /obj/item/flashlight/flare
+	l_hand = /obj/item/melee/classic_baton
+	r_hand = /obj/item/melee/onehanded/knife/survival
 
 	backpack_contents = list(
-		/obj/item/storage/box/deputy_badges=1, \
-		/obj/item/restraints/handcuffs=1, \
-		/obj/item/melee/classic_baton=1,
-		/obj/item/melee/onehanded/knife/survival = 1,
+		/obj/item/storage/box/deputy_badges = 1, \
+		/obj/item/restraints/handcuffs = 1, \
 		/obj/item/book/granter/crafting_recipe/ODF = 1)
 
 /datum/outfit/job/bighorn/f13sheriff/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
