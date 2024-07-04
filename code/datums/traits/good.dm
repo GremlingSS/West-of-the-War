@@ -267,7 +267,7 @@
 	gain_text = "<span class='notice'>The mysteries of chemistry are revealed to you.</span>"
 	lose_text = "<span class='danger'>You forget how the periodic table works.</span>"
 	//locked = TRUE
-
+/*
 /datum/quirk/pa_wear
 	name = "PA Wear"
 	desc = "You've being around the wastes and have learned the importance of defense."
@@ -276,7 +276,7 @@
 	gain_text = "<span class='notice'>You realize how to use Power Armor.</span>"
 	lose_text = "<span class='danger'>You forget how Power Armor works.</span>"
 	//locked = TRUE
-
+*/
 /datum/quirk/hard_yards
 	name = "Hard Yards"
 	desc = "You've put them in, now reap the rewards."
