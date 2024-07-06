@@ -7,8 +7,8 @@
 	access = list(ACCESS_FOLLOWER, ACCESS_FUSION)
 	minimal_access = list(ACCESS_FOLLOWER, ACCESS_FUSION)
 	roleplay_exclusive_notify = 1
-	forbids = "Aligning oneself with a faction exclusively. Acting in an aggressive and violent way on the offensive, not in defense. Abandoning your facility, peers, and community."
-	enforces = "Preaching humanitarianism and valuing human life. Assist and provide medical services to those in need. Provide free education for all those who are willing to learn."
+	forbids = "Aligning oneself with a faction besides the town. Acting in an aggressive and violent way on the offensive, not in defense. Abandoning your facility, peers, and community."
+	enforces = "I shall do by my patients as I would be done by; shall obtain consultation whenever I or they desire; shall include them to the extent they wish in all important decisions; and shall minimize suffering whenever a cure cannot be obtained, understanding that a dignified death is an important goal in everyone's life."
 	objectivesList = list("Leadership recommends the following goal for this week: Establish medical outposts throughout the wasteland","Leadership recommends the following goal for this week: Experiment with and improve medical techniques and equipment", "Leadership recommends the following goal for this week: Replenish the operation's funds through donations and sales.")
 
 /datum/outfit/job/followers
@@ -45,7 +45,7 @@
 Administrator
 */
 /datum/job/followers/f13leadpractitioner
-	title = "Followers Administrator"
+	title = "Westford Medical Administrator"
 	flag = F13LEADPRACTITIONER
 	department_flag = FOLLOWERS
 	head_announce = list("Security")
@@ -53,9 +53,9 @@ Administrator
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "No one."
-	description = "You are the Follower Administrator. You are the administrator for the on-site followers. While there is no tradtional chain of command that is used, you have been chosen to lead due to your expert knowledge in the field of medicine and other general knowledges. Make sure that the supplies donated are being put to use, help secure more donations, and fill in as needed whenever short staffed or if the clinic is busy."
+	description = "You are the Westford Medical Administrator. You are the administrator for the on-site doctors. While there is no tradtional chain of command that is used, you have been chosen to lead due to your expert knowledge in the field of medicine and other general knowledges. Make sure that the supplies donated are being put to use, help secure more donations, and fill in as needed whenever short staffed or if the clinic is busy."
 	forbids = "Causing harm to others except in times of self-defense."
-	enforces = "Followers are not fond of the NCR due to their corruption, but they will help them. They dislike the Brotherhood for hoarding tech, but will make deals to work with them if it furthers the spreading of knowledge. While your goal is to assist those who need your help, you do not have to help everyone, and may turn away anyone - you are not obligated to revive a raider or Legionnaire dropped at your doorstep. Preaching humanitarianism and valuing human life. Assist and provide medical services to those in need. Provide free education for all those who are willing to learn."
+	enforces = "While your goal is to assist those who need your help regardless of affiliation, you do not have to help everyone, and may turn away anyone - you are not obligated to revive a raider dropped at your doorstep. Preaching humanitarianism and valuing human life. Assist and provide medical services to those in need. Provide free education for all those who are willing to learn."
 	selection_color = "#FF95FF"
 	exp_type = EXP_TYPE_FOLLOWERS
 	exp_requirements = 1200
@@ -82,7 +82,7 @@ Administrator
 	ADD_TRAIT(H, TRAIT_CYBERNETICIST, REF(src))
 
 /datum/outfit/job/followers/f13leadpractitioner
-	name =	"Followers Administrator"
+	name =	"Medical Administrator"
 	jobtype =	/datum/job/followers/f13leadpractitioner
 	id =	/obj/item/card/id/silver
 	chemwhiz =	TRUE
@@ -109,16 +109,16 @@ Administrator
 Practitioner
 */
 /datum/job/followers/f13practitioner
-	title = "Followers Doctor"
+	title = "Westford Medical Doctor"
 	flag = F13PRACTITIONER
 	department_flag = FOLLOWERS
 	faction = "Followers"
 	total_positions = 3
 	spawn_positions = 3
-	supervisors = "Followers having no strict command structure, don't report to anyone- though they will look to the Administrator for guidance."
-	description ="You are a Followers Doctor. As a Followers Doctor it is your responsibility to maintain working order in the hospital and to manage its staff and to treat patients who come in regardless of whether or not they can afford care. Some Doctors are known for leaving the hospital to look for injured or those who need help who may not come to a health facility, however it is key that those who do travel around to give aid keep in touch with the rest of staff and if there are no other able physicans or chemist that they stay to offer the best aid possible."
+	supervisors = "Westford Medical, having no strict allegiance to any faction besides Westford, means you don't report to anyone except your Administrator. However, you are still bound by Westford law."
+	description ="You are a Doctor. As a Doctor it is your responsibility to maintain working order in the hospital and to manage its staff and to treat patients who come in regardless of whether or not they can afford care. Some Doctors are known for leaving the hospital to look for injured or those who need help who may not come to a health facility, however it is key that those who do travel around to give aid keep in touch with the rest of staff and if there are no other able physicans or chemist that they stay to offer the best aid possible."
 	forbids = "Causing harm to others except in times of self-defense."
-	enforces = "Followers are not fond of the NCR due to their corruption, but they will help them. They dislike the Brotherhood for hoarding tech, but will make deals to work with them if it furthers the spreading of knowledge. While your goal is to assist those who need your help, you do not have to help everyone, and may turn away anyone - you are not obligated to revive a raider or Legionnaire dropped at your doorstep. Preaching humanitarianism and valuing human life. Assist and provide medical services to those in need. Provide free education for all those who are willing to learn."
+	enforces = "While your goal is to assist those who need your help regardless of affiliation, you do not have to help everyone, and may turn away anyone - you are not obligated to revive a raider dropped at your doorstep. Preaching humanitarianism and valuing human life. Assist and provide medical services to those in need. Provide free education for all those who are willing to learn."
 	selection_color = "#FFDDFF"
 	exp_type = EXP_TYPE_FOLLOWERS
 	exp_requirements = 600
@@ -126,7 +126,7 @@ Practitioner
 	outfit = /datum/outfit/job/followers/f13practitioner
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/mentor = list(
-			/datum/job/followers/f13followervolunteer,
+			/datum/job/followers/f13practitioner,
 		),
 	)
 
@@ -153,7 +153,7 @@ Practitioner
 
 
 /datum/outfit/job/followers/f13practitioner
-	name =	"Followers Doctor"
+	name =	"Doctor"
 	jobtype =	/datum/job/followers/f13practitioner
 	uniform =	/obj/item/clothing/under/f13/followers
 	suit=	/obj/item/clothing/suit/hooded/followerlight
@@ -217,7 +217,7 @@ Practitioner
 
 /*
 Follower Volunteer
-*/
+
 
 /datum/job/followers/f13followervolunteer
 	title = "Followers Volunteer"
@@ -301,9 +301,9 @@ Follower Volunteer
 		/obj/item/pen/fourcolor = 1,
 	)
 
-
+*/
 // Formerly Follower Guard - It was desperately in need of an overhaul
-
+/*
 /datum/job/followers/f13followerguard
 	title = "Followers Guard"
 	flag = F13FOLLOWERGUARD
@@ -363,8 +363,9 @@ Follower Volunteer
 		/obj/item/ammo_box/shotgun/slug = 1,
 	)
 
-
+*/
 // Special - 'Borg
+/*
 /datum/job/followers/f13folborg
 	title = "Followers Robot"
 	flag = F13FOLCYBORG
@@ -390,3 +391,4 @@ Follower Volunteer
 	R.apply_pref_name("human", M.client)
 	R.gender = NEUTER
 	R.forceMove(pick(GLOB.followers_borg_start))
+*/

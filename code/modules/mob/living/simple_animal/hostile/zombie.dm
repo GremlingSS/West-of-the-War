@@ -21,7 +21,7 @@
 	spacewalk = FALSE
 	status_flags = CANPUSH
 	del_on_death = 1
-	var/zombiejob = "Followers Doctor"
+	var/zombiejob = "Westford Medical Doctor"
 	var/infection_chance = 0
 	var/obj/effect/mob_spawn/human/corpse/delayed/corpse
 

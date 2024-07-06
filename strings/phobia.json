@@ -4,7 +4,6 @@
 		"web",
 		"arachnid"
 	],
-
 	"space": [
 		"space",
 		"star",
@@ -13,7 +12,6 @@
 		"galaxy",
 		"spess"
 	],
-
 	"eye": [
 		"eye",
 		"blink",
@@ -26,7 +24,6 @@
 		"lens",
 		"optic"
 	],
-
 	"security": [
 		"police",
 		"cops",
@@ -38,7 +35,6 @@
 		"brig",
 		"gulag"
 	],
-	
 	"conspiracies": [
 		"the brotherhood",
 		"brotherhood",
@@ -46,8 +42,8 @@
 		"enclave",
 		"the police",
 		"police",
-		"the followers",
-		"followers",
+		"vaccine",
+		"doctors",
 		"the legion",
 		"legion",
 		"NCR commander",
@@ -74,7 +70,6 @@
 		"second shooter",
 		"freemason"
 	],
-
 	"greytide": [
 		"Mister Gutsy",
 		"grey",
@@ -85,7 +80,6 @@
 		"revolution",
 		"viva"
 	],
-
 	"lizards": [
 		"lizard",
 		"kobold",
@@ -96,7 +90,6 @@
 		"wagged",
 		"wagging"
 	],
-
 	"skeletons": [
 		"skeleton",
 		"milk",
@@ -106,7 +99,6 @@
 		"the ride never ends",
 		"doot"
 	],
-
 	"snakes": [
 		"snake",
 		"snek",
@@ -118,7 +110,6 @@
 		"viper",
 		"python"
 	],
-
 	"robots": [
 		"robot",
 		"bot",
@@ -127,7 +118,6 @@
 		"beep",
 		"boop"
 	],
-
 	"doctors": [
 		"doc",
 		"md",
@@ -143,11 +133,10 @@
 		"genetics",
 		"virology"
 	],
-
 	"authority": [
 		"NCR",
 		"Legion",
-		"Follower doctor",
+		"Westford medical",
 		"Brotherhood",
 		"Landscaper",
 		"Vault overseer",
@@ -157,7 +146,6 @@
 		"Mayor",
 		"Detective"
 	],
-
 	"the supernatural": [
 		"chaplain",
 		"chappy",
@@ -179,8 +167,7 @@
 		"lich",
 		"ei nath"
 	],
-
-"aliens": [
+	"aliens": [
 		"alien",
 		"abductor",
 		"ayys",
@@ -193,14 +180,12 @@
 		"slime",
 		"lusty"
 	],
-
-"strangers": [
+	"strangers": [
 		"as (unknown)",
 		"unknown",
 		"stranger danger"
 	],
-
-"birds": [
+	"birds": [
 		"birdemic",
 		"bird",
 		"beak",
@@ -224,8 +209,7 @@
 		"chick",
 		"fowl"
 	],
-
-"cats": [
+	"cats": [
 		"mew",
 		"nya",
 		"moew",
@@ -237,8 +221,7 @@
 		"purr",
 		"headpat"
 	],
-
-"falling": [
+	"falling": [
 		"hold on",
 		"hang in there",
 		"chasm",
@@ -250,7 +233,6 @@
 		"i'll catch you",
 		"slip"
 	],
-	
 	"syndicate": [
 		"syndicate",
 		"changeling",
@@ -269,8 +251,7 @@
 		"enemy corporation",
 		"agent"
 	],
-	
-"anime": [
+	"anime": [
 		"anime",
 		"manga",
 		"baka",

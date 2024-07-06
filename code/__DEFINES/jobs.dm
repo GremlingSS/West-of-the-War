@@ -4,11 +4,11 @@
 #define FACTION_NCR "NCR"
 #define FACTION_LEGION "Legion"
 #define FACTION_BROTHERHOOD "BOS"
-#define FACTION_BIGHORN "Waypoint"
+#define FACTION_BIGHORN "Westford"
 #define FACTION_ENCLAVE "Enclave"
 #define FACTION_WASTELAND "Wastelander"
 #define FACTION_RAIDERS "Raiders"
-#define FACTION_FOLLOWERS "Followers"
+#define FACTION_FOLLOWERS "Westford Medical"
 #define FACTION_KHAN "Great Khans"
 #define FACTION_TRIBAL "Tribals"
 
@@ -168,12 +168,13 @@
 #define F13USBDUTY		(1<<9)
 #define F13USMAJ			(1<<10)
 
-#define FOLLOWERS		(1<<12)
+//Followers nuking
+#define FOLLOWERS		(1<<4)
 
-#define	F13LEADPRACTITIONER	(1<<0)
-#define	F13PRACTITIONER	(1<<1)
-#define F13FOLLOWERGUARD	(1<<2)
-#define F13FOLLOWERVOLUNTEER	(1<<3)
+#define	F13LEADPRACTITIONER	(1<<1)
+#define	F13PRACTITIONER	(1<<3)
+//#define F13FOLLOWERGUARD	(0<<0)
+//#define F13FOLLOWERVOLUNTEER	(0<<0)
 
 #define KHAN		(1<<13)
 /*
