@@ -63,7 +63,7 @@ GLOBAL_LIST_INIT(command_positions, list(
 
 	"Enclave Lieutenant",
 
-	"Followers Administrator",
+	"Westford Medical Administrator",
 
 	"Khan Senior Enforcer",
 
@@ -137,8 +137,8 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 
 "Raider",
 
-"Followers Administrator",
-"Followers Doctor",
+"Westford Medical Administrator",
+"Westford Medical Doctor",
 "Followers Guard",
 "Followers Robot",
 
@@ -268,8 +268,8 @@ GLOBAL_LIST_INIT(silicon_positions, list(
 ))
 
 GLOBAL_LIST_INIT(followers_positions, list(
-	"Followers Administrator",
-	"Followers Doctor",
+	"Westford Medical Administrator",
+	"Westford Medical Doctor",
 	"Followers Guard",
 	"Followers Volunteer",
 	"Followers Scientist",
@@ -312,7 +312,7 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_SCRIBE = list("titles" = list("Scribe")),
 	EXP_TYPE_DECANUS = list("titles" = list("Legion Decanus")),
 
-	EXP_TYPE_FOLLOWERSCOMMAND = list("titles" = list("Followers Administrator")),
+	EXP_TYPE_FOLLOWERSCOMMAND = list("titles" = list("Westford Medical Administrator")),
 	EXP_TYPE_NCRCOMMAND = list("titles" = list("NCR Lieutenant","NCR Sergeant First Class","NCR Captain", "NCR Veteran Ranger"))
 ))
 

@@ -189,7 +189,7 @@
 	path = /obj/item/clothing/suit/armor/f13/town
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_FACTIONS
 	cost = 4
-	restricted_desc = "Waypoint"
+	restricted_desc = "Westford"
 	restricted_roles = list("Mayor",
 							"Secretary",
 							"Lieutenant",
@@ -208,7 +208,7 @@
 	path = /obj/item/clothing/suit/armor/vest/oasis
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_FACTIONS
 	cost = 4
-	restricted_desc = "Waypoint Mercs & Contractors"
+	restricted_desc = "Westford Law & Contractors"
 	restricted_roles = list("Lieutenant",
 							"Mercenary",
 							"Mayor",

@@ -35,11 +35,11 @@ Mayor
 	department_flag = DEP_BIGHORN
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Dusty Trails Caravan Company"
-	description = "You are the overseer of the company town of Waypoint, owned by the Dusty Trails Caravan Company. \
-	 You have been entrusted by the Company to protect citizens, distribute funds, and make beneficial deals with the regional powers. \
-	 The mercenaries defending Waypoint are under your control, though matters are often left to your subordinate the Lieutenant. \
-	 There is great flexibility for personal gain and to run things as you see fit, but always remember your true benefactors."
+	supervisors = "The citizens of Westford."
+	description = "You are the elected mayor of the town of Westford. \
+	 You have been entrusted by the people to protect them, distribute funds, and make beneficial deals with the regional powers. \
+	 The law enforcers defending Westford are under your control, though matters are often left to your subordinate the Sheriff. \
+	 There is great flexibility for personal gain and to run things as you see fit, but always remember that you were elected, not appointed."
 	selection_color = "#d7b088"
 	exp_type = EXP_TYPE_BIGHORN
 	exp_requirements = 1440
@@ -78,16 +78,16 @@ Mayor
 		)
 /*--------------------------------------------------------------*/
 /datum/job/bighorn/f13sheriff
-	title = "Lieutenant"
+	title = "Sheriff"
 	flag = F13SHERIFF
 	department_flag = DEP_BIGHORN
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Mayor and Dusty Trails Caravan Company"
-	description = "You are the chief law enforcer of the company town of Waypoint, owned by the Dusty Trails Caravan Company. \
-	 You have been entrusted by the Company to keep the peace, settle local disputes, and keep townsfolk safe and alive. \
-	 The mercenaries defending Waypoint are under your management, though ultimately answer to the Mayor. \
-	 Never leave the town undefended, utilising bounties or trusty mercenaries on missions far beyond the walls."
+	supervisors = "the Mayor."
+	description = "You are the chief law enforcer of the town of Westford. \
+	 You have been entrusted by the people to keep the peace, settle local disputes, and keep townsfolk safe and alive. \
+	 The deputies defending Westford are under your management, though ultimately answer to the Mayor. \
+	 Never leave the town undefended, utilising bounties, your sheriffs and deputies, or trusty mercenaries on missions far beyond the walls."
 
 	selection_color = "#d7b088"
 	exp_type = EXP_TYPE_BIGHORN
@@ -97,7 +97,7 @@ Mayor
 	minimal_access = list(ACCESS_BAR, ACCESS_GATEWAY, ACCESS_FUSION, ACCESS_TOWN)
 
 /datum/outfit/job/bighorn/f13sheriff
-	name = "Lieutenant"
+	name = "Sheriff"
 	jobtype = /datum/job/bighorn/f13sheriff
 	id = /obj/item/card/id/dogtag/sheriff
 	backpack = /obj/item/storage/backpack/enclave
@@ -134,15 +134,15 @@ Mayor
 
 /*--------------------------------------------------------------*/
 /datum/job/bighorn/f13deputy
-	title = "Mercenary"
+	title = "Deputy"
 	flag = F13DEPUTY
 	department_flag = DEP_BIGHORN
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = "the Mayor, Lieutenant and Dusty Trails Caravan Company"
-	description = "You are a hired law enforcer of the company town of Waypoint, owned by the Dusty Trails Caravan Company. \
-	 You have been entrusted by the Company to keep the peace, settle local disputes, and keep townsfolk safe and alive. \
-	 Patrol town, the perimeter of the walls, and follow the orders of the Lieutenant, and their superior the Mayor. \
+	supervisors = "the Mayor, the Sheriff"
+	description = "You are a hired law enforcer of the town of Westford. \
+	 You have been entrusted to keep the peace, settle local disputes, and keep townsfolk safe and alive. \
+	 Patrol town, the perimeter of the walls, and follow the orders of the Sheriff, and their superior the Mayor. \
 	 Never leave the town undefended, yet orders may send you further afield on bounties or doomed diplomatic missions."
 	selection_color = "#dcba97"
 	exp_type = EXP_TYPE_BIGHORN
@@ -157,7 +157,7 @@ Mayor
 		)
 
 /datum/outfit/job/bighorn/f13deputy
-	name = "Mercenary"
+	name = "Deputy"
 	jobtype = /datum/job/bighorn/f13deputy
 	ears = /obj/item/radio/headset/headset_sheriff
 	id = /obj/item/card/id/dogtag/deputy
@@ -178,7 +178,7 @@ Mayor
 		)
 
 /datum/outfit/loadout/waypointmerca
-	name = "Militarised Officer"
+	name = "Militarised Police Officer"
 	head = /obj/item/clothing/head/helmet/f13/combat/swat/dusty
 	suit = /obj/item/clothing/suit/armor/f13/combat/dusty
 	suit_store = /obj/item/gun/ballistic/automatic/infantry_rifle
@@ -211,10 +211,10 @@ Mayor
 	department_flag = DEP_BIGHORN
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the Mayor, Lieutenant and Dusty Trails Caravan Company"
-	description = "You are a hired contractor of the company town of Waypoint, owned by the Dusty Trails Caravan Company. \
-	 You have been entrusted by the Company to run a place of food, drink, and rest for the populace. \
-	 While you have full domain over the running of your business, remember to work in the interests of your superiors."
+	supervisors = "the call of Profit."
+	description = "You are a local mixologist hired to run and staff the Westford bar. \
+	 You have been entrusted by the owner to run a place of food, drink, and rest for the populace. \
+	 You have full domain over the running of your business, but mind the law."
 	selection_color = "#dcba97"
 	exp_type = EXP_TYPE_BIGHORN
 	exp_requirements = 90
@@ -292,10 +292,10 @@ Mayor
 	department_flag = DEP_BIGHORN
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the Mayor, Lieutenant and Dusty Trails Caravan Company"
-	description = "You are a hired contractor of the company town of Waypoint, owned by the Dusty Trails Caravan Company. \
-	 You have been entrusted by the Company to run a store and have been given a generous initial stock. \
-	 While you have full domain over the running of your business, remember to work in the interests of your superiors."
+	supervisors = "the call of Profit."
+	description = "You are a hired contractor to run Westford's shop. \
+	 You have been entrusted by the owners to run the store and have been given a generous initial stock. \
+	 You have full domain over the running of your business, but mind the law."
 	selection_color = "#dcba97"
 	exp_type = EXP_TYPE_BIGHORN
 	exp_requirements = 400
@@ -355,10 +355,10 @@ Mayor
 	department_flag = DEP_BIGHORN
 	total_positions = -1
 	spawn_positions = -1
-	supervisors = "the Mayor, Lieutenant and Dusty Trails Caravan Company"
-	description = "You are a citizen of the company town of Waypoint, owned by the Dusty Trails Caravan Company. \
-	In return for their protection you are expected to help maintain the streets and set an example as a law-abiding townsperson. \
-	You may occasionally be contracted out to the Lieutenant or their superior the Mayor, for some dark task or another."
+	supervisors = "the Mayor, the Sheriffs, and your personal goals."
+	description = "You are a citizen of Westford. \
+	In return for the town's protection you are expected to help maintain the streets and set an example as a law-abiding townsperson. \
+	You may occasionally be contracted out to the Sheriff or their superior the Mayor, for some dark task or another."
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/bighorn/f13settler
@@ -382,10 +382,10 @@ Mayor
 	faction = FACTION_WASTELAND
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Mayor, Lieutenant and Dusty Trails Caravan Company"
-	description = "You are a citizen of the company town of Waypoint, owned by the Dusty Trails Caravan Company. \
-	In return for their protection you are expected to help maintain the spirits of the townsfolk and manage ceremonies. \
-	Of course, you are no contractor to the Company like the Barkeep or Merchant. Following your faith may take you on a divergent path."
+	supervisors = "God."
+	description = "You are a citizen of Westford. \
+	In return for the town's protection you are expected to help maintain the spirits of the townsfolk and manage ceremonies. \
+	Following your faith may take you on an unknown path, but even God's faithful are not above the law."
 	selection_color = "#dcba97"
 	exp_type = EXP_TYPE_BIGHORN
 	exp_requirements = 90
@@ -760,10 +760,10 @@ Mayor
 	department_flag = DEP_BIGHORN
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Mayor, Lieutenant and Dusty Trails Caravan Company"
-	description = "You are a hired contractor of the company town of Waypoint, owned by the Dusty Trails Caravan Company. \
-	 You have been entrusted by the Company to handle paperwork and the menial tasks of the Lieutenant and their superior the Mayor. \
-	 More quietly, you are expected to keep an eye on these two individuals and make sure they are aligned with Company goals."
+	supervisors = "the Mayor"
+	description = "You are a hired secretary for Westford's Mayor. \
+	 You have been entrusted by the Mayor to handle paperwork and the menial tasks of the Sheriff and the Mayor. \
+	 More quietly, you are expected to keep an eye on these two individuals and make sure they are aligned with the town's goals."
 	selection_color = "#dcba97"
 	exp_type = EXP_TYPE_BIGHORN
 	exp_requirements = 200

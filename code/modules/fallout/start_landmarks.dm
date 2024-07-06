@@ -408,15 +408,15 @@
 	name = "Tribal"
 	icon_state = "Tribal"
 
-//Followers of the Apocalypse
+//Followers of the Apocalypse (rebranded)
 /obj/effect/landmark/start/f13/followersadministrator
-	name = "Followers Administrator"
+	name = "Westford Medical Administrator"
 	icon_state = "Chief Medical Officer"
 
 /obj/effect/landmark/start/f13/followersdoctor
-	name = "Followers Doctor"
+	name = "Westford Medical Doctor"
 	icon_state = "Medical Doctor"
-
+/* Followers Nuke
 /obj/effect/landmark/start/f13/followersguard
 	name = "Followers Guard"
 	icon_state = "Security Officer"
@@ -436,7 +436,7 @@
 	..()
 	GLOB.followers_borg_start += loc
 	return INITIALIZE_HINT_QDEL
-
+*/
 //Khans
 
 // Proper Khans

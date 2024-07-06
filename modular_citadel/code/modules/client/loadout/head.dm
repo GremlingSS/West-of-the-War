@@ -481,7 +481,7 @@
 	path = /obj/item/clothing/head/helmet/blueshirt
 	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
 	cost = 3
-	restricted_desc = "Waypoint Mercs & Contractors"
+	restricted_desc = "Westford Law & Contractors"
 	restricted_roles = list("Lieutenant",
 							"Mercenary",
 							"Mayor",
