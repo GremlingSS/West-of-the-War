@@ -126,7 +126,7 @@ Practitioner
 	outfit = /datum/outfit/job/followers/f13practitioner
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/mentor = list(
-			/datum/job/followers/f13followervolunteer,
+			/datum/job/followers/f13practitioner,
 		),
 	)
 
