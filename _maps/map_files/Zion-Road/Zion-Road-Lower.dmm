@@ -773,6 +773,14 @@
 	icon_state = "horizontalinnermain1"
 	},
 /area/f13/tunnel)
+"anq" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/biogenerator,
+/obj/item/reagent_containers/glass/bucket/plastic,
+/turf/open/floor/vault,
+/area/f13/enclave)
 "ant" = (
 /obj/effect/spawner/lootdrop/glowstick,
 /turf/open/indestructible/ground/inside/mountain,
@@ -1551,6 +1559,10 @@
 "aSB" = (
 /obj/machinery/rnd/production/protolathe,
 /obj/structure/table/abductor,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/metal/fifty{
+	pixel_x = -6
+	},
 /turf/open/floor/vault,
 /area/f13/enclave)
 "aSU" = (
@@ -1772,10 +1784,6 @@
 	icon_state = "bluerustychess2"
 	},
 /area/f13/tunnel)
-"bbL" = (
-/obj/machinery/vending/hydronutrients,
-/turf/open/floor/vault,
-/area/f13/enclave)
 "bcg" = (
 /obj/structure/fence/wooden{
 	dir = 4;
@@ -2081,11 +2089,7 @@
 	},
 /area/f13/caves)
 "blP" = (
-/obj/machinery/chem_dispenser/drinks{
-	dir = 4;
-	pixel_y = -1;
-	pixel_x = -24
-	},
+/obj/machinery/mineral/wasteland_vendor/clothing,
 /turf/open/floor/vault,
 /area/f13/enclave)
 "bmm" = (
@@ -5721,6 +5725,11 @@
 	icon_state = "floordirtysolid"
 	},
 /area/f13/tunnel)
+"eqS" = (
+/obj/machinery/light,
+/obj/machinery/seed_extractor,
+/turf/open/floor/vault,
+/area/f13/enclave)
 "erv" = (
 /obj/machinery/autolathe,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -6477,14 +6486,6 @@
 /obj/effect/turf_decal/weather/dirt,
 /turf/open/indestructible/ground/outside/water/running,
 /area/f13/wasteland)
-"eSp" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/machinery/biogenerator,
-/obj/item/reagent_containers/glass/bucket/plastic,
-/turf/open/floor/vault,
-/area/f13/enclave)
 "eSs" = (
 /obj/machinery/telecomms/server/presets/common,
 /turf/open/floor/plasteel/dark/telecomms/mainframe,
@@ -8450,6 +8451,7 @@
 /obj/machinery/vending/wardrobe/medi_wardrobe{
 	pixel_x = 32
 	},
+/obj/structure/table/abductor,
 /turf/open/floor/vault,
 /area/f13/enclave)
 "gtB" = (
@@ -12447,6 +12449,7 @@
 "jIb" = (
 /obj/structure/table/abductor,
 /obj/machinery/chem_heater,
+/obj/item/reagent_containers/glass/beaker/large,
 /turf/open/floor/vault,
 /area/f13/enclave)
 "jIv" = (
@@ -13139,6 +13142,7 @@
 /obj/machinery/smartfridge/chemistry/preloaded{
 	pixel_x = 32
 	},
+/obj/structure/table/abductor,
 /turf/open/floor/vault,
 /area/f13/enclave)
 "kjm" = (
@@ -13740,6 +13744,7 @@
 /obj/structure/frame/machine,
 /obj/item/screwdriver/abductor,
 /obj/item/stack/cable_coil,
+/obj/item/wrench/abductor,
 /turf/open/floor/vault,
 /area/f13/enclave)
 "kII" = (
@@ -14602,6 +14607,14 @@
 /obj/machinery/chem_master/advanced{
 	pixel_y = 7;
 	pixel_x = 5
+	},
+/obj/item/reagent_containers/glass/beaker,
+/obj/item/reagent_containers/glass/beaker{
+	pixel_x = -8
+	},
+/obj/item/reagent_containers/glass/beaker{
+	pixel_x = -3;
+	pixel_y = 8
 	},
 /turf/open/floor/vault,
 /area/f13/enclave)
@@ -19168,10 +19181,6 @@
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier3,
 /turf/open/floor/carpet/green,
 /area/f13/tunnel)
-"oVF" = (
-/obj/machinery/mineral/wasteland_vendor/clothing,
-/turf/open/floor/vault,
-/area/f13/enclave)
 "oWa" = (
 /obj/structure/kitchenspike,
 /obj/effect/mob_spawn/human/corpse/raidermelee,
@@ -21979,6 +21988,11 @@
 "rmx" = (
 /obj/structure/table/abductor,
 /obj/item/trash/f13/electronic/toaster/oven,
+/obj/item/reagent_containers/glass/beaker/jar,
+/obj/machinery/chem_dispenser/drinks{
+	dir = 8;
+	pixel_x = 24
+	},
 /turf/open/floor/vault,
 /area/f13/enclave)
 "rmK" = (
@@ -22878,10 +22892,6 @@
 	},
 /turf/open/floor/plating/tunnel,
 /area/f13/tunnel)
-"saT" = (
-/obj/machinery/autolathe/hacked,
-/turf/open/floor/vault,
-/area/f13/enclave)
 "sbp" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel/f13{
@@ -24201,14 +24211,6 @@
 /obj/structure/stairs/north,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/tunnel)
-"tdI" = (
-/obj/item/seeds/wheat,
-/obj/item/seeds/cotton,
-/obj/item/seeds/poppy/broc,
-/obj/item/seeds/xander,
-/obj/structure/rack/shelf_metal,
-/turf/open/floor/vault,
-/area/f13/enclave)
 "ten" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/f13/traitbooks,
@@ -25990,11 +25992,6 @@
 /obj/structure/drain,
 /turf/open/floor/vault,
 /area/f13/enclave)
-"utM" = (
-/obj/machinery/light,
-/obj/machinery/seed_extractor,
-/turf/open/floor/vault,
-/area/f13/enclave)
 "uuy" = (
 /obj/structure/stairs/south,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -26669,6 +26666,14 @@
 /obj/effect/decal/cleanable/blood/gibs/human,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
+"uWY" = (
+/obj/item/seeds/wheat,
+/obj/item/seeds/cotton,
+/obj/item/seeds/poppy/broc,
+/obj/item/seeds/xander,
+/obj/structure/rack/shelf_metal,
+/turf/open/floor/vault,
+/area/f13/enclave)
 "uXi" = (
 /obj/item/trash/f13/dog{
 	pixel_y = 3
@@ -26859,10 +26864,10 @@
 /turf/open/floor/f13/wood,
 /area/f13/tunnel)
 "vdK" = (
+/obj/structure/table/abductor,
 /obj/structure/sink/kitchen{
 	pixel_y = -1
 	},
-/obj/structure/table/abductor,
 /turf/open/floor/vault,
 /area/f13/enclave)
 "vdO" = (
@@ -28493,6 +28498,10 @@
 	},
 /turf/open/water,
 /area/f13/caves)
+"wCe" = (
+/obj/machinery/vending/hydronutrients,
+/turf/open/floor/vault,
+/area/f13/enclave)
 "wCl" = (
 /mob/living/simple_animal/hostile/supermutant/nightkin/elitemutant,
 /turf/open/indestructible/ground/inside/subway,
@@ -29709,6 +29718,10 @@
 	icon_state = "common-broken1"
 	},
 /area/f13/building)
+"xDQ" = (
+/obj/machinery/autolathe/hacked,
+/turf/open/floor/vault,
+/area/f13/enclave)
 "xEy" = (
 /turf/open/floor/plating/tunnel,
 /area/f13/tunnel)
@@ -37068,9 +37081,9 @@ upc
 dxu
 ilc
 ilc
-eSp
-oVF
-saT
+anq
+blP
+xDQ
 xQj
 ilm
 dfl
@@ -39071,14 +39084,14 @@ hGO
 hGO
 upc
 vdK
-blP
+ilc
 fmo
-bbL
+wCe
 ilc
 mwl
 mwl
 owL
-tdI
+uWY
 ilc
 ilc
 bOv
@@ -39582,7 +39595,7 @@ ilc
 ilc
 ilc
 ilc
-utM
+eqS
 upc
 soM
 ilc
