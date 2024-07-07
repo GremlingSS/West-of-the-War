@@ -1,7 +1,7 @@
 
 /datum/job/enclave
 	department_flag = ENCLAVE
-	selection_color = "#434944"
+	selection_color = "#5a5bc7"
 	faction = FACTION_ENCLAVE
 	exp_type = EXP_TYPE_ENCLAVE
 
@@ -137,6 +137,7 @@
 	req_admin_notify = 1
 	exp_type = EXP_TYPE_ENCLAVE
 	exp_requirements = 3000
+	selection_color = "#3637d6"
 
 	loadout_options = list(
 		/datum/outfit/loadout/lt_is, // Plasma Glock, CIA Badge
@@ -582,6 +583,7 @@
 	exp_type = EXP_TYPE_LIVING
 	exp_requirements = 10000
 	access = list(ACCESS_ENCLAVE, ACCESS_SECURITY, ACCESS_AI_UPLOAD)
+	selection_color = "#c4c5f2"
 
 /datum/outfit/job/enclave/noncombat/enclavesci
 	name = "Enclave Scientist"

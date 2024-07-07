@@ -119,16 +119,11 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Preacher",
 "Citizen",
 
-"Enclave Captain",
 "Enclave Lieutenant",
-"Enclave Gunnery Sergeant",
 "Enclave Sergeant",
 "Enclave Specialist",
 "Enclave Scientist",
-"Enclave Pilot Officer",
 "Enclave Marine",
-"Enclave Bunker Duty",
-"Enclave Synthetic",
 
 "Khan Senior Enforcer",
 "Khan Enforcer",
@@ -246,17 +241,12 @@ GLOBAL_LIST_INIT(khan_positions, list(
 ))
 
 GLOBAL_LIST_INIT(enclave_positions, list(
-	"Enclave Captain",
 	"Enclave Lieutenant",
-	"Enclave Gunnery Sergeant",
 	"Enclave Sergeant",
 	"Enclave Armored Infantry",
 	"Enclave Specialist",
 	"Enclave Scientist",
-	"Enclave Pilot Officer",
 	"Enclave Marine",
-	"Enclave Bunker Duty",
-	"Enclave Synthetic",
 ))
 
 GLOBAL_LIST_INIT(security_positions, list(
@@ -285,6 +275,7 @@ GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_LEGION = list("jobs" = legion_positions, "color" = "#f81717"),
 	EXP_TYPE_KHAN = list("jobs" = khan_positions, "color" = "#006666"),
 	EXP_TYPE_BROTHERHOOD = list("jobs" = brotherhood_positions, "color" = "#95a5a6"),
+	EXP_TYPE_ENCLAVE = list("jobs" = enclave_positions, "color" = "#5a5bc7"),
 ))
 
 GLOBAL_LIST_INIT(exp_jobsmap, list(
@@ -308,6 +299,7 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_WASTELAND = list("titles" = wasteland_positions),
 	EXP_TYPE_KHAN = list("titles" = khan_positions),
 	EXP_TYPE_FOLLOWERS = list("titles" = followers_positions),
+	EXP_TYPE_ENCLAVE = list("titles" = enclave_positions),
 	EXP_TYPE_RANGER = list("titles" = list("NCR Veteran Ranger","NCR Ranger")),
 	EXP_TYPE_SCRIBE = list("titles" = list("Scribe")),
 	EXP_TYPE_DECANUS = list("titles" = list("Legion Decanus")),
