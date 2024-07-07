@@ -5,7 +5,7 @@
 #define RADIO_CHANNEL_COMMON "Common"
 #define RADIO_KEY_COMMON ";"
 
-#define RADIO_CHANNEL_SECURITY "Waypoint Police"
+#define RADIO_CHANNEL_SECURITY "Westford Police"
 #define RADIO_KEY_SECURITY "s"
 #define RADIO_TOKEN_SECURITY ".s"
 
@@ -21,7 +21,7 @@
 #define RADIO_KEY_SCIENCE "n"
 #define RADIO_TOKEN_SCIENCE ".n"
 
-#define RADIO_CHANNEL_MEDICAL "Followers"
+#define RADIO_CHANNEL_MEDICAL "Westford Medical"
 #define RADIO_KEY_MEDICAL "m"
 #define RADIO_TOKEN_MEDICAL ".m"
 
@@ -65,7 +65,7 @@
 #define RADIO_KEY_ENCLAVE "z"
 #define RADIO_TOKEN_ENCLAVE ".z"
 
-#define RADIO_CHANNEL_TOWN "Waypoint"
+#define RADIO_CHANNEL_TOWN "Westford"
 #define RADIO_KEY_TOWN "f"
 #define RADIO_TOKEN_TOWN ".f"
 

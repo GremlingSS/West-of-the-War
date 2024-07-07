@@ -83,7 +83,7 @@
 	icon_state = "nanoex"
 
 /area/f13/wasteland/bighorn
-	name = "Waypoint Exterior"
+	name = "Westford Exterior"
 	icon_state = "bighornex"
 	requires_power = TRUE
 
@@ -279,7 +279,7 @@
 	outdoors = FALSE
 
 /area/f13/city/bighorn
-	name = "Waypoint"
+	name = "Westford"
 	icon_state = "bighorn"
 	requires_power = TRUE
 	outdoors = 0
