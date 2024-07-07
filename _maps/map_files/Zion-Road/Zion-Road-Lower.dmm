@@ -1151,6 +1151,7 @@
 /area/f13/tunnel)
 "aDG" = (
 /obj/structure/reagent_dispensers/watertank/high,
+/obj/item/reagent_containers/glass/bucket/plastic,
 /turf/open/floor/vault,
 /area/f13/enclave)
 "aDM" = (
@@ -1771,6 +1772,10 @@
 	icon_state = "bluerustychess2"
 	},
 /area/f13/tunnel)
+"bbL" = (
+/obj/machinery/vending/hydronutrients,
+/turf/open/floor/vault,
+/area/f13/enclave)
 "bcg" = (
 /obj/structure/fence/wooden{
 	dir = 4;
@@ -2282,7 +2287,9 @@
 	dir = 4;
 	pixel_x = 10
 	},
-/obj/effect/landmark/start/f13/uscpl,
+/obj/effect/landmark/start/f13/uscpl{
+	name = "Enclave Corporal"
+	},
 /turf/open/floor/vault,
 /area/f13/enclave)
 "bsZ" = (
@@ -6470,6 +6477,14 @@
 /obj/effect/turf_decal/weather/dirt,
 /turf/open/indestructible/ground/outside/water/running,
 /area/f13/wasteland)
+"eSp" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/biogenerator,
+/obj/item/reagent_containers/glass/bucket/plastic,
+/turf/open/floor/vault,
+/area/f13/enclave)
 "eSs" = (
 /obj/machinery/telecomms/server/presets/common,
 /turf/open/floor/plasteel/dark/telecomms/mainframe,
@@ -13724,6 +13739,7 @@
 /obj/item/circuitboard/machine/ore_silo,
 /obj/structure/frame/machine,
 /obj/item/screwdriver/abductor,
+/obj/item/stack/cable_coil,
 /turf/open/floor/vault,
 /area/f13/enclave)
 "kII" = (
@@ -18608,7 +18624,9 @@
 	dir = 8;
 	pixel_x = -10
 	},
-/obj/effect/landmark/start/f13/uscpl,
+/obj/effect/landmark/start/f13/uscpl{
+	name = "Enclave Corporal"
+	},
 /turf/open/floor/vault,
 /area/f13/enclave)
 "owU" = (
@@ -19150,6 +19168,10 @@
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier3,
 /turf/open/floor/carpet/green,
 /area/f13/tunnel)
+"oVF" = (
+/obj/machinery/mineral/wasteland_vendor/clothing,
+/turf/open/floor/vault,
+/area/f13/enclave)
 "oWa" = (
 /obj/structure/kitchenspike,
 /obj/effect/mob_spawn/human/corpse/raidermelee,
@@ -22856,6 +22878,10 @@
 	},
 /turf/open/floor/plating/tunnel,
 /area/f13/tunnel)
+"saT" = (
+/obj/machinery/autolathe/hacked,
+/turf/open/floor/vault,
+/area/f13/enclave)
 "sbp" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel/f13{
@@ -24175,6 +24201,14 @@
 /obj/structure/stairs/north,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/tunnel)
+"tdI" = (
+/obj/item/seeds/wheat,
+/obj/item/seeds/cotton,
+/obj/item/seeds/poppy/broc,
+/obj/item/seeds/xander,
+/obj/structure/rack/shelf_metal,
+/turf/open/floor/vault,
+/area/f13/enclave)
 "ten" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/f13/traitbooks,
@@ -25954,6 +25988,11 @@
 	},
 /obj/structure/window,
 /obj/structure/drain,
+/turf/open/floor/vault,
+/area/f13/enclave)
+"utM" = (
+/obj/machinery/light,
+/obj/machinery/seed_extractor,
 /turf/open/floor/vault,
 /area/f13/enclave)
 "uuy" = (
@@ -37029,9 +37068,9 @@ upc
 dxu
 ilc
 ilc
-owU
-ilc
-ilc
+eSp
+oVF
+saT
 xQj
 ilm
 dfl
@@ -39034,12 +39073,12 @@ upc
 vdK
 blP
 fmo
-ilc
+bbL
 ilc
 mwl
 mwl
 owL
-ilc
+tdI
 ilc
 ilc
 bOv
@@ -39543,7 +39582,7 @@ ilc
 ilc
 ilc
 ilc
-kxy
+utM
 upc
 soM
 ilc
