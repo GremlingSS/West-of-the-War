@@ -321,6 +321,7 @@
 		/obj/item/clothing/head/helmet/f13/combat/rangerbroken,
 		/obj/item/clothing/head/helmet/f13/combat/swat,
 		/obj/item/clothing/head/helmet/f13/combat/environmental,
+		/obj/item/clothing/head/helmet/f13/combat/brotherhood,
 	)
 	reqs = list(/obj/item/clothing/head/helmet/f13/combat = 1,
 				/obj/item/toy/crayon/spraycan)
@@ -1343,6 +1344,7 @@
 		/obj/item/clothing/head/helmet/f13/combat/rangerbroken,
 		/obj/item/clothing/head/helmet/f13/combat/swat,
 		/obj/item/clothing/head/helmet/f13/combat/environmental,
+		/obj/item/clothing/head/helmet/f13/combat/brotherhood,
 	)
 	reqs = list(
 		/obj/item/clothing/head/helmet/f13/combat = 1,
@@ -1410,6 +1412,7 @@
 		/obj/item/clothing/head/helmet/f13/combat/rangerbroken,
 		/obj/item/clothing/head/helmet/f13/combat/swat,
 		/obj/item/clothing/head/helmet/f13/combat/environmental,
+		/obj/item/clothing/head/helmet/f13/combat/brotherhood,
 	)
 	reqs = list(
 		/obj/item/clothing/head/helmet/f13/combat = 1,
