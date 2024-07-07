@@ -1,4 +1,4 @@
-/*
+
 /datum/job/enclave
 	department_flag = ENCLAVE
 	selection_color = "#434944"
@@ -8,8 +8,8 @@
 	access = list(ACCESS_ENCLAVE, ACCESS_SECURITY, ACCESS_AI_UPLOAD)
 	minimal_access = list(ACCESS_ENCLAVE, ACCESS_SECURITY, ACCESS_AI_UPLOAD)
 	blacklisted_quirks = list(/datum/quirk/straight_edge)
-	forbids = "Enclave taboos: Aiding the Brotherhood, NCR, or Legion in any way if it will not get you more than it gets them. Revealing your affiliation with the Enclave to outsiders if not directly ordered to. Killing fellow Americans."
-	enforces = "Enclave rules: Stay in uniform. Act mature and respectful. Obey orders given to you that do not harm fellow Americans. Maintain secrecy of your bunker's whereabouts."
+	forbids = "Enclave taboos: Aiding the Brotherhood, NCR, or Legion in any way if it will not get you more than it gets them. Killing fellow Americans."
+	enforces = "Enclave rules: Act mature and respectful. Obey orders given to you that do not harm fellow Americans. Maintain secrecy of your bunker's whereabouts. You may hide your affiliation with the Enclave, or reveal it as suits your mission."
 	objectivesList = list("Rapid Reaction Corps Logistics advisory: Collect resources, attrition is depleting our reserves.", "Rapid Reaction Corps Research advisory: Capture human subjects for experiments, alive.")
 
 /datum/outfit/job/enclave
@@ -53,7 +53,7 @@
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/belt/enclave)
 
 //Captain
-/datum/job/enclave/enclavecpt
+/*/datum/job/enclave/enclavecpt
 	title = "Enclave Captain"
 	flag = F13USLT
 	total_positions = 0
@@ -122,7 +122,7 @@
 	H.AddSpell(new /obj/effect/proc_holder/spell/terrifying_presence)
 	H.grant_language(/datum/language/codespeak, TRUE, TRUE, LANGUAGE_MIND)
 
-
+*/
 //Lieutenant
 /datum/job/enclave/enclavelt
 	title = "Enclave Lieutenant"
@@ -136,7 +136,7 @@
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavelt
 	req_admin_notify = 1
 	exp_type = EXP_TYPE_ENCLAVE
-	exp_requirements = 1440
+	exp_requirements = 3000
 
 	loadout_options = list(
 		/datum/outfit/loadout/lt_is, // Plasma Glock, CIA Badge
@@ -200,7 +200,7 @@
 	)
 
 // Gunnery Sergeant
-
+/*
 /datum/job/enclave/f13gysergeant
 	title = "Enclave Gunnery Sergeant"
 	flag = F13USGYSGT
@@ -281,19 +281,20 @@
 	H.AddSpell(new /obj/effect/proc_holder/spell/terrifying_presence)
 	H.grant_language(/datum/language/codespeak, TRUE, TRUE, LANGUAGE_MIND)
 
-
+*/
 //Sergeant
 
 /datum/job/enclave/enclavesgt
 	title = "Enclave Sergeant"
 	flag = F13USSGT
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 1
+	spawn_positions = 1
 	description = "You're an NCO in a force of Enclave Remnant marines, part of the Rapid Reaction Corps. You are a well-trained soldier, entrusted with a valuable suit of Advanced Power Armor and heavy weapons. Depending on the mission, you may provide fire support in heavy combat or you may command covert teams in the field."
-	supervisors = "The Lieutenant and the Gunnery Sergeant."
+	supervisors = "The Lieutenant."
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavesgt
 	exp_type = EXP_TYPE_ENCLAVE
-	exp_requirements = 780
+	exp_requirements = 3000
+	req_admin_notify = 1
 
 	loadout_options = list(
 		/datum/outfit/loadout/sgt_plasrifle,	// Plasma rifle + Mk23
@@ -369,14 +370,16 @@
 //Armoured Infantry
 
 /datum/job/enclave/enclavecpl
-	title = "Enclave Armored Infantry"
+	title = "Enclave Corporal"
 	flag = F13USCPL
-	total_positions = 1
-	spawn_positions = 1
-	description = "You're the garrison on the operations floor of a far larger complex. This complex sits within the Black Hills mountain range. Entrusted with the command of the squads assigned to the bunker, your job is to assist the Lieutenant alongside the scientists."
-	supervisors = "The Sergeants, Gunnery Sergeants, and Lieutenants."
+	total_positions = 2
+	spawn_positions = 2
+	description = "You're a corporal in the Enclave Remnant. Entrusted with the command of a small squad, your job is to assist the Lieutenant alongside the scientists."
+	supervisors = "The Sergeants and Lieutenant."
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavecpl
-	exp_requirements = 780
+	exp_type = EXP_TYPE_ENCLAVE
+	exp_requirements = 2000
+	req_admin_notify = 1
 
 	loadout_options = list(
 		/datum/outfit/loadout/acpl_ballistics,	// Minigun
@@ -429,13 +432,13 @@
 /datum/job/enclave/f13specialist
 	title = "Enclave Specialist"
 	flag = F13USSPECIALIST
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	description = "You're a support fighter in a force of Enclave Remnant marines, part of the Rapid Reaction Corps. You, unlike the average Privates, have recieved specialist training in either engineering or medicine."
-	supervisors = "The Lieutenant and the Sergeants."
+	supervisors = "The Lieutenant, your corporal, the Scientists, and the Sergeants."
 	outfit = /datum/outfit/job/enclave/peacekeeper/f13specialist
 	exp_type = EXP_TYPE_ENCLAVE
-	exp_requirements = 780
+	exp_requirements = 1000
 
 	loadout_options = list(
 		/datum/outfit/loadout/combatmedic, // MP5, Defib, medbooks
@@ -502,11 +505,11 @@
 	flag = F13USPRIVATE
 	total_positions = 3
 	spawn_positions = 3
-	description = "You're a grunt in a force of Enclave Remnant marines, part of the Rapid Reaction Corps. You may be an experienced trooper, or you may be a fresh recruit in need of training, either from the Enclave's tiny population, the hidden, Enclave-controlled Vault 45, or from concealed Enclave cryostasis bunkers. Be careful not to do anything that will expose the Enclave's presence to its many enemies."
-	supervisors = "The Lieutenant, the Sergeants, and the Specialists."
+	description = "You're a grunt in a force of Enclave Remnant marines, part of the Rapid Reaction Corps. You may be an experienced trooper, or you may be a fresh recruit in need of training, either from the Enclave's tiny population, the hidden, Enclave-controlled Vault 45, or from concealed Enclave cryostasis bunkers. Be careful not to do anything that will expose the Enclave bunker's presence to its many enemies."
+	supervisors = "The Lieutenant, the Sergeants, your Corporal, the Scientists."
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavespy
-	exp_type = EXP_TYPE_FALLOUT
-	exp_requirements = 600
+	exp_type = EXP_TYPE_LIVING
+	exp_requirements = 10000
 
 	loadout_options = list(
 		/datum/outfit/loadout/reconmarine, // Infantry Rifle
@@ -574,10 +577,10 @@
 	total_positions = 2
 	spawn_positions = 2
 	description = "You're a highly-trained academic working in a force of Enclave Remnant marines, part of the Rapid Reaction Corps. You're responsible for a wide array of non-combat tasks, from materials science research to medical treatment to biological weapons and augmentations testing. You've dabbled in enough to be considered a Professor in your field of research, but they call you Doctor. Support your fellow Americans, and avoid leaving the bunker alone if not absolutely necessary."
-	supervisors = "The Lieutenant and the Gunnery Sergeant."
+	supervisors = "The Lieutenant and the Sergeants."
 	outfit = /datum/outfit/job/enclave/noncombat/enclavesci
-	exp_type = EXP_TYPE_FALLOUT
-	exp_requirements = 600
+	exp_type = EXP_TYPE_LIVING
+	exp_requirements = 10000
 	access = list(ACCESS_ENCLAVE, ACCESS_SECURITY, ACCESS_AI_UPLOAD)
 
 /datum/outfit/job/enclave/noncombat/enclavesci
@@ -672,7 +675,7 @@
 	H.grant_language(/datum/language/codespeak, TRUE, TRUE, LANGUAGE_MIND)
 
 */
-
+/*
 //Bunker Duty
 /datum/job/enclave/f13BDUTY
 	title = "Enclave Bunker Duty"
