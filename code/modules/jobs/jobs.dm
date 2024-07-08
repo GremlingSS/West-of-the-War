@@ -58,7 +58,7 @@ GLOBAL_LIST_INIT(command_positions, list(
 
 	"Legion Centurion",
 
-	"Lieutenant",
+	"Sheriff",
 	"Mayor",
 
 	"Enclave Lieutenant",
@@ -111,8 +111,8 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 
 "Mayor",
 "Secretary",
-"Lieutenant",
-"Mercenary",
+"Sheriff",
+"Deputy",
 "Sierra Representative",
 "Shopkeeper",
 "Barkeep",
@@ -121,6 +121,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 
 "Enclave Lieutenant",
 "Enclave Sergeant",
+"Enclave Corporal",
 "Enclave Specialist",
 "Enclave Scientist",
 "Enclave Marine",
@@ -159,8 +160,8 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 GLOBAL_LIST_INIT(bighorn_positions, list(
 	"Mayor",
 	"Secretary",
-	"Lieutenant",
-	"Mercenary",
+	"Sheriff",
+	"Deputy",
 	"Sierra Representative",
 	"Shopkeeper",
 	"Barkeep",
@@ -243,7 +244,7 @@ GLOBAL_LIST_INIT(khan_positions, list(
 GLOBAL_LIST_INIT(enclave_positions, list(
 	"Enclave Lieutenant",
 	"Enclave Sergeant",
-	"Enclave Armored Infantry",
+	"Enclave Corporal",
 	"Enclave Specialist",
 	"Enclave Scientist",
 	"Enclave Marine",

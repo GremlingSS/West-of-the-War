@@ -3118,7 +3118,9 @@
 	},
 /area/f13/wasteland/badlands)
 "aJy" = (
-/obj/effect/landmark/start/f13/deputy,
+/obj/effect/landmark/start/f13/deputy{
+	name = "Deputy"
+	},
 /turf/open/floor/wood/wood_fancy,
 /area/f13/city/bighorn)
 "aJQ" = (
@@ -3347,15 +3349,6 @@
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/plating/tunnel,
 /area/f13/tunnel)
-"aNF" = (
-/obj/item/flag/followers{
-	density = 0;
-	pixel_y = 20
-	},
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "horizontalbottomborderbottom1"
-	},
-/area/f13/wasteland/bighorn)
 "aNG" = (
 /obj/effect/turf_decal/trimline/neutral/line{
 	dir = 4
@@ -12246,16 +12239,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/city/bighorn)
-"drs" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/shutters{
-	id = "followershutters";
-	name = "Followers Clinic"
-	},
-/turf/open/floor/f13{
-	icon_state = "whiterustysolid"
-	},
-/area/f13/city/bighorn)
 "drt" = (
 /obj/machinery/button/door{
 	pixel_y = -24;
@@ -13276,7 +13259,7 @@
 /area/f13/wasteland)
 "dGJ" = (
 /obj/machinery/door/airlock/glass_large{
-	name = "Followers Clinic"
+	name = "Westford Clinic"
 	},
 /turf/open/floor/f13{
 	icon_state = "whiterustysolid"
@@ -22575,7 +22558,6 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/bot_white,
-/obj/effect/landmark/start/f13/followersrobot,
 /obj/machinery/recharge_station/fullupgrade,
 /obj/effect/turf_decal/delivery/white,
 /turf/open/floor/f13{
@@ -28961,12 +28943,6 @@
 	icon_state = "redrustyfull"
 	},
 /area/f13/building)
-"ihO" = (
-/obj/effect/landmark/start/f13/followersvolunteer,
-/turf/open/floor/f13{
-	icon_state = "whiterusty"
-	},
-/area/f13/city/bighorn)
 "ihP" = (
 /obj/structure/wreck/trash/machinepile,
 /turf/open/indestructible/ground/outside/desertharsh{
@@ -30186,7 +30162,6 @@
 /obj/structure/sign/poster/official/medical_green_cross{
 	pixel_y = 31
 	},
-/obj/effect/landmark/start/f13/followersvolunteer,
 /turf/open/floor/f13{
 	icon_state = "whitedirty"
 	},
@@ -34919,13 +34894,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/wasteland)
 "jRG" = (
-/obj/machinery/door/poddoor/shutters{
-	id = "followershutters";
-	name = "Followers Clinic"
-	},
 /obj/machinery/door/airlock/glass_large{
-	name = "Followers Clinic";
-	req_one_access_txt = "124"
+	name = "Westford Clinic"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "whitedirtysolid"
@@ -54883,7 +54853,6 @@
 /obj/structure/chair/office/dark{
 	dir = 8
 	},
-/obj/effect/landmark/start/f13/followersvolunteer,
 /turf/open/floor/carpet/blue,
 /area/f13/city/bighorn)
 "pBm" = (
@@ -58208,7 +58177,9 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "qxx" = (
-/obj/effect/landmark/start/f13/deputy,
+/obj/effect/landmark/start/f13/deputy{
+	name = "Deputy"
+	},
 /turf/open/floor/carpet/red,
 /area/f13/city/bighorn)
 "qxB" = (
@@ -65927,7 +65898,9 @@
 	},
 /area/f13/building)
 "sHc" = (
-/obj/effect/landmark/start/f13/sheriff,
+/obj/effect/landmark/start/f13/sheriff{
+	name = "Sheriff"
+	},
 /turf/open/floor/wood/wood_fancy,
 /area/f13/city/bighorn)
 "sHv" = (
@@ -67107,12 +67080,6 @@
 	},
 /obj/item/pen,
 /obj/machinery/button/door{
-	id = "followershutters";
-	name = "door shutters";
-	pixel_x = -26;
-	pixel_y = -6
-	},
-/obj/machinery/button/door{
 	id = "followerreception";
 	name = "reception shutters";
 	pixel_x = -26;
@@ -67464,8 +67431,7 @@
 /area/f13/wasteland)
 "tej" = (
 /obj/machinery/door/airlock/medical{
-	name = "Clinic Surgery";
-	req_one_access_txt = "124"
+	name = "Clinic Surgery"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "whitedirtysolid"
@@ -69670,12 +69636,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building)
-"tJW" = (
-/obj/effect/landmark/start/f13/followersvolunteer,
-/turf/open/floor/f13{
-	icon_state = "whitedirty"
-	},
-/area/f13/city/bighorn)
 "tKd" = (
 /obj/structure/barricade/wooden,
 /turf/closed/wall/f13/wood/house,
@@ -77428,10 +77388,6 @@
 	},
 /area/f13/wasteland)
 "vWa" = (
-/obj/machinery/door/poddoor/shutters{
-	id = "followershutters";
-	name = "Followers Clinic"
-	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "whitedirtysolid"
 	},
@@ -181034,7 +180990,7 @@ mPZ
 mRP
 vpd
 snn
-aNF
+eem
 epN
 gCX
 mBW
@@ -181530,7 +181486,7 @@ laW
 sdO
 lUK
 lUK
-drs
+lCw
 fau
 iyX
 iyX
@@ -183036,7 +182992,7 @@ laW
 pWQ
 ceT
 lUK
-drs
+lCw
 hNh
 eTb
 iyX
@@ -183544,7 +183500,7 @@ fau
 fau
 gZe
 snn
-aNF
+eem
 frZ
 iJR
 uJk
@@ -186550,9 +186506,9 @@ sCt
 nvZ
 snn
 laW
-tJW
 laW
-tJW
+laW
+laW
 fau
 idL
 snn
@@ -188057,7 +188013,7 @@ sCt
 snn
 izr
 laW
-ihO
+rns
 rns
 fau
 idL
