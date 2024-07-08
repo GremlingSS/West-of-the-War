@@ -403,6 +403,8 @@
 	barefootstep = FOOTSTEP_HARD_BAREFOOT
 //	step_sounds = list("human" = "erikafootsteps")
 
+// Holy shit the lag get the fuck outta here
+/*
 /turf/open/indestructible/ground/outside/road/Initialize(mapload)
 	. = ..()
 	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
@@ -420,6 +422,7 @@
 			new /obj/item/storage/trash_stack(src)
 		if(prob(1))
 			new /obj/effect/spawner/lootdrop/f13/wreckspawner(src)
+*/
 
 /turf/open/indestructible/ground/outside/road_s
 	name = "\proper road"
@@ -435,6 +438,8 @@
 	barefootstep = FOOTSTEP_HARD_BAREFOOT
 //	step_sounds = list("human" = "erikafootsteps")
 
+// Holy shit the lag get the fuck outta here
+/*
 /turf/open/indestructible/ground/outside/sidewalk/Initialize(mapload)
 	. = ..()
 	if(!(locate(/obj/structure) in src) || (locate(/obj/machinery) in src))
@@ -452,6 +457,7 @@
 			new /obj/item/storage/trash_stack(src)
 		if(prob(1))
 			new /obj/effect/spawner/lootdrop/f13/wreckspawner(src)
+*/
 
 /turf/open/indestructible/ground/outside/sidewalk_s
 	name = "\proper sidewalk"
