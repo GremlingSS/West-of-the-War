@@ -2425,11 +2425,11 @@
 	},
 /area/f13/building)
 "azG" = (
-/obj/structure/simple_door/metal/store{
-	name = "Dusty Trails Store"
-	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "shopdeskshutters"
+	},
+/obj/structure/simple_door/metal/store{
+	name = "Westford Store"
 	},
 /turf/open/floor/f13{
 	icon_state = "yellowrustysolid"
@@ -29214,6 +29214,7 @@
 /obj/structure/sign/poster/prewar/random{
 	pixel_y = -32
 	},
+/obj/machinery/mineral/wasteland_vendor/ammo,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain1"
 	},
@@ -33497,7 +33498,7 @@
 /area/f13/wasteland)
 "jxy" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Dusty Trails Store";
+	name = "Westford Store";
 	req_access_txt = "139"
 	},
 /turf/open/floor/f13{
@@ -34417,7 +34418,7 @@
 /area/f13/building)
 "jLh" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Dusty Trails Store";
+	name = "Westford Store";
 	req_access_txt = "139"
 	},
 /turf/open/floor/f13{
@@ -54362,7 +54363,7 @@
 /area/f13/building)
 "pvf" = (
 /obj/structure/simple_door/metal/store{
-	name = "Dusty Trails Store"
+	name = "Westford Store"
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "shopdeskshutters"
@@ -58510,10 +58511,10 @@
 /turf/open/floor/wood,
 /area/f13/building)
 "qBY" = (
-/obj/structure/chair/bench,
 /obj/structure/sign/poster/prewar/random{
 	pixel_y = -32
 	},
+/obj/machinery/mineral/wasteland_vendor/weapons,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain0"
 	},
@@ -82619,7 +82620,7 @@
 /area/f13/building)
 "xwc" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Dusty Trails Depot";
+	name = "Westford Store Depot";
 	req_access_txt = "139"
 	},
 /turf/open/floor/f13{
@@ -84759,11 +84760,12 @@
 	},
 /area/f13/wasteland)
 "ycK" = (
-/obj/effect/turf_decal/big/dustytrails,
-/turf/open/floor/f13{
-	icon_state = "yellowdirtysolid"
+/obj/structure/chair/bench,
+/turf/open/indestructible/ground/outside/road{
+	dir = 8;
+	icon_state = "horizontalinnermain2right"
 	},
-/area/f13/city/bighorn)
+/area/f13/wasteland/bighorn)
 "ycT" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/blood/radaway,
@@ -181503,7 +181505,7 @@ nTr
 goe
 hdk
 hdk
-ycK
+lAW
 jrq
 hYH
 uBs
@@ -186026,7 +186028,7 @@ rMu
 bWU
 fsD
 nmx
-wsM
+ycK
 gra
 exF
 pYB
