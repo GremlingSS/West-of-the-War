@@ -1410,7 +1410,6 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/effect/landmark/start/f13/followersguard,
 /turf/open/floor/f13{
 	icon_state = "whiterusty"
 	},
@@ -10563,9 +10562,11 @@
 /turf/closed/wall/f13/wood/house,
 /area/f13/caves)
 "hQS" = (
-/obj/effect/landmark/start/f13/sheriff,
 /obj/structure/chair/comfy/beige{
 	dir = 8
+	},
+/obj/effect/landmark/start/f13/sheriff{
+	name = "Sheriff"
 	},
 /turf/open/floor/carpet/red,
 /area/f13/city/bighorn)
@@ -17460,7 +17461,6 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/effect/landmark/start/f13/followersguard,
 /turf/open/floor/f13{
 	icon_state = "whiterusty"
 	},
@@ -22386,12 +22386,6 @@
 /obj/item/clothing/accessory/waistcoat,
 /turf/open/floor/wood/wood_fancy,
 /area/f13/city/bighorn)
-"qXO" = (
-/obj/effect/landmark/start/f13/followersguard,
-/turf/open/floor/f13{
-	icon_state = "whitedirty"
-	},
-/area/f13/city/bighorn)
 "qXU" = (
 /obj/structure/bed,
 /obj/item/bedsheet/random,
@@ -23131,12 +23125,6 @@
 /obj/structure/chair/booth,
 /turf/open/floor/f13/wood,
 /area/f13/building)
-"rCg" = (
-/obj/effect/landmark/start/f13/followersguard,
-/turf/open/floor/f13{
-	icon_state = "whiterusty"
-	},
-/area/f13/city/bighorn)
 "rCQ" = (
 /turf/open/floor/f13/wood,
 /area/f13/wasteland/legion)
@@ -132780,7 +132768,7 @@ hqm
 hqm
 gvu
 huF
-qXO
+cLg
 fEe
 gvu
 roi
@@ -134286,7 +134274,7 @@ hqm
 hqm
 rdt
 oUH
-rCg
+huF
 qpT
 gvu
 roi
