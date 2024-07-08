@@ -121,7 +121,7 @@ Practitioner
 	enforces = "While your goal is to assist those who need your help regardless of affiliation, you do not have to help everyone, and may turn away anyone - you are not obligated to revive a raider dropped at your doorstep. Preaching humanitarianism and valuing human life. Assist and provide medical services to those in need. Provide free education for all those who are willing to learn."
 	selection_color = "#FFDDFF"
 	exp_type = EXP_TYPE_FOLLOWERS
-	exp_requirements = 600
+	exp_requirements = 0
 
 	outfit = /datum/outfit/job/followers/f13practitioner
 	matchmaking_allowed = list(
