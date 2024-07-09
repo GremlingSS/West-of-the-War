@@ -509,7 +509,7 @@
 	description = "You're a grunt in a force of Enclave Remnant marines, part of the Rapid Reaction Corps. You may be an experienced trooper, or you may be a fresh recruit in need of training, either from the Enclave's tiny population, the hidden, Enclave-controlled Vault 45, or from concealed Enclave cryostasis bunkers. Be careful not to do anything that will expose the Enclave bunker's presence to its many enemies."
 	supervisors = "The Lieutenant, the Sergeants, your Corporal, the Scientists."
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavespy
-	exp_type = EXP_TYPE_LIVING
+	exp_type = EXP_TYPE_FALLOUT
 	exp_requirements = 10000
 
 	loadout_options = list(
@@ -580,7 +580,7 @@
 	description = "You're a highly-trained academic working in a force of Enclave Remnant marines, part of the Rapid Reaction Corps. You're responsible for a wide array of non-combat tasks, from materials science research to medical treatment to biological weapons and augmentations testing. You've dabbled in enough to be considered a Professor in your field of research, but they call you Doctor. Support your fellow Americans, and avoid leaving the bunker alone if not absolutely necessary."
 	supervisors = "The Lieutenant and the Sergeants."
 	outfit = /datum/outfit/job/enclave/noncombat/enclavesci
-	exp_type = EXP_TYPE_LIVING
+	exp_type = EXP_TYPE_FALLOUT
 	exp_requirements = 10000
 	access = list(ACCESS_ENCLAVE, ACCESS_SECURITY, ACCESS_AI_UPLOAD)
 	selection_color = "#c4c5f2"
