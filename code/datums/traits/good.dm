@@ -288,7 +288,7 @@
 
 /datum/quirk/lifegiver
 	name = "Lifegiver"
-	desc = "You embody wellness! Instantly gain +10 maximum Health"
+	desc = "You embody wellness! Instantly gain +10 maximum health!"
 	value = 3
 	mob_trait = TRAIT_LIFEGIVER
 	gain_text = "<span class='notice'>You feel more healthy than usual.</span>"

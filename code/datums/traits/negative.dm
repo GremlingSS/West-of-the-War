@@ -355,3 +355,41 @@
 	var/mob/living/carbon/human/H = quirk_holder
 	H.apply_necropolis_curse_quirk()
 */
+
+// Some perks added to give some non-super crippling options for negatives.
+/datum/quirk/lifeloser
+	name = "Lifeloser"
+	desc = "You embody weakness! Instantly gain -10 maximum health!"
+	value = -3
+	mob_trait = TRAIT_LIFELOSER
+	gain_text = "<span class='notice'>You feel less healthy than usual.</span>"
+	lose_text = "<span class='danger'>You feel more healthy than usual.</span>"
+
+/datum/quirk/lifeloser/on_spawn()
+	var/mob/living/carbon/human/mob_tar = quirk_holder
+	mob_tar.maxHealth -= 10
+	mob_tar.health -= 10
+
+/datum/quirk/paper_fist
+	name = "Paper Fist"
+	desc = "You have limp wrists and weak fists. You deal the alot less unarmed damage."
+	value = -2
+	mob_trait = TRAIT_PAPERFIST
+	gain_text = "<span class='notice'>Your fists feel weak!</span>"
+	lose_text = "<span class='danger'>Your fists feel stronger.</span>"
+
+/datum/quirk/littleleagues
+	name = "Little Leagues"
+	desc = "Give up on your baseball dream! You deal less damage with melee weapons."
+	value = -2
+	mob_trait = TRAIT_LITTLE_LEAGUES
+	gain_text = "<span class='notice'>You feel like you can't swing for shit!</span>"
+	lose_text = "<span class='danger'>You feel like you can swing properly.</span>"
+
+/datum/quirk/shackledrunning
+	name = "Shackledrunning"
+	desc = "You are about as agile as a brick. You climb MU H slower!"
+	value = -2
+	mob_trait = TRAIT_SHACKLEDRUNNING
+	gain_text = "<span class='notice'>You feel very clumsy!</span>"
+	lose_text = "<span class='danger'>You feel more agile.</span>"

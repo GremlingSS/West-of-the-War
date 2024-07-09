@@ -106,6 +106,8 @@
 					bonus_damage += carbon_user.dna.species.punch_damage_roll(user, M)
 		else if(HAS_TRAIT(user, TRAIT_BIG_LEAGUES))
 			bonus_damage += 10 //flat additive
+		else if(HAS_TRAIT(user, TRAIT_LITTLE_LEAGUES))
+			bonus_damage -= 10 //flat subtraction
 
 		if(HAS_TRAIT(user, TRAIT_BUFFOUT_BUFF))
 			damage_multiplier += 0.4
