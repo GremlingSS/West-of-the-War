@@ -286,6 +286,12 @@
 #define TRAIT_SURGERY_MID		"midsurgery"
 #define TRAIT_SURGERY_HIGH		"highsurgery"
 
+// Negative Perks
+#define TRAIT_LIFELOSER			"lifeloser" // lowers HP
+#define TRAIT_PAPERFIST			"paper_fist" // weakens punches
+#define TRAIT_LITTLE_LEAGUES	"little_leagues" // less damage
+#define TRAIT_SHACKLEDRUNNING		"shackledrunning" // slow climbing
+
 // fallout crafting traits
 #define TRAIT_GUNSMITH_ONE      "gunsmith_one" //crafts poor guns
 #define TRAIT_GUNSMITH_TWO      "gunsmith_two" //crafts mid level guns

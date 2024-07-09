@@ -1485,6 +1485,8 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	var/damage = punchdamagelow
 	if(HAS_TRAIT(user, TRAIT_IRONFIST))
 		damage += 6
+	if(HAS_TRAIT(user, TRAIT_PAPERFIST))
+		damage -= 6
 	if(HAS_TRAIT(user, TRAIT_PERFECT_ATTACKER)) // unit test no-miss trait
 		damage = get_maximum_punch_damage(user)
 	return damage
@@ -1493,6 +1495,8 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	var/damage = punchdamagehigh
 	if(HAS_TRAIT(user, TRAIT_IRONFIST))
 		damage += 5
+	if(HAS_TRAIT(user, TRAIT_PAPERFIST))
+		damage -= 5
 	return damage
 
 /datum/species/proc/punch_damage_roll(mob/living/carbon/human/user, mob/target)

@@ -133,7 +133,7 @@
 /datum/quirk/skittish
 	name = "Skittish"
 	desc = "You can conceal yourself in danger. Ctrl-shift-click a closed locker to jump into it, as long as you have access."
-	value = 2
+	value = 1
 	mob_trait = TRAIT_SKITTISH
 	medical_record_text = "Patient demonstrates a high aversion to danger and has described hiding in containers out of fear."
 
@@ -244,7 +244,7 @@
 /datum/quirk/trapper
 	name = "Trapper"
 	desc = "As an experienced hunter and trapper you know your way around butchering animals for their products, and are able to get twice the usable materials by eliminating waste."
-	value = 2
+	value = 1
 	mob_trait = TRAIT_TRAPPER
 	gain_text = "<span class='notice'>You learn the secrets of butchering!</span>"
 	lose_text = "<span class='danger'>You forget how to slaughter animals.</span>"
@@ -288,7 +288,7 @@
 
 /datum/quirk/lifegiver
 	name = "Lifegiver"
-	desc = "You embody wellness! Instantly gain +10 maximum Health"
+	desc = "You embody wellness! Instantly gain +10 maximum health!"
 	value = 3
 	mob_trait = TRAIT_LIFEGIVER
 	gain_text = "<span class='notice'>You feel more healthy than usual.</span>"
@@ -324,7 +324,7 @@
 	mob_trait = TRAIT_SURGERY_LOW
 	gain_text = "<span class='notice'>You feel yourself discovering the basics of the human body.</span>"
 	lose_text = "<span class='danger'>You forget how to perform even the simplest surgery.</span>"
-	locked = TRUE
+	//locked = TRUE
 
 /datum/quirk/surgerymid
 	name = "Intermediate Surgery"

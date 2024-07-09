@@ -385,7 +385,7 @@
 //Combat Rifle	Keywords: .308 Caliber Rifle, Town rifle
 /obj/item/gun/ballistic/automatic/combat
 	name = "Combat Rifle"
-	desc = "A .308 semi-automatic combat rifle, Modified from carbines produced pre-war for National Guard forces."
+	desc = "A 7.62x51 semi-automatic combat rifle, Modified from carbines produced pre-war for National Guard forces."
 	icon_state = "combat_rifle"
 	item_state = "combatrifle"
 	icon_prefix = "combatrifle"

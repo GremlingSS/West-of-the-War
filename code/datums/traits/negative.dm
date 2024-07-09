@@ -76,7 +76,7 @@
 /datum/quirk/nonviolent
 	name = "Pacifist"
 	desc = "The thought of violence makes you sick. So much so, in fact, that you can't hurt anyone."
-	value = -2
+	value = -6
 	mob_trait = TRAIT_PACIFISM
 	gain_text = "<span class='danger'>You feel repulsed by the thought of violence!</span>"
 	lose_text = "<span class='notice'>You think you can defend yourself again.</span>"
@@ -86,7 +86,7 @@
 /datum/quirk/paraplegic
 	name = "Paraplegic"
 	desc = "Your legs do not function. Nothing will ever fix this. Luckily you found a wheelchair."
-	value = -3
+	value = -4
 	mob_trait = TRAIT_PARA
 	human_only = TRUE
 	gain_text = null // Handled by trauma.
@@ -287,7 +287,7 @@
 
 /datum/quirk/blindness/remove()
 	quirk_holder?.cure_blind(ROUNDSTART_TRAIT)
-
+/*
 /datum/quirk/coldblooded
 	name = "Cold-blooded"
 	desc = "Your body doesn't create its own internal heat, requiring external heat regulation."
@@ -296,7 +296,7 @@
 	mob_trait = TRAIT_COLDBLOODED
 	gain_text = "<span class='notice'>You feel cold-blooded.</span>"
 	lose_text = "<span class='notice'>You feel more warm-blooded.</span>"
-
+*/
 /datum/quirk/monophobia
 	name = "Monophobia"
 	desc = "You will become increasingly stressed when not in company of others, triggering panic reactions ranging from sickness to heart attacks."
@@ -355,3 +355,41 @@
 	var/mob/living/carbon/human/H = quirk_holder
 	H.apply_necropolis_curse_quirk()
 */
+
+// Some perks added to give some non-super crippling options for negatives.
+/datum/quirk/lifeloser
+	name = "Lifeloser"
+	desc = "You embody weakness! Instantly gain -10 maximum health!"
+	value = -3
+	mob_trait = TRAIT_LIFELOSER
+	gain_text = "<span class='notice'>You feel less healthy than usual.</span>"
+	lose_text = "<span class='danger'>You feel more healthy than usual.</span>"
+
+/datum/quirk/lifeloser/on_spawn()
+	var/mob/living/carbon/human/mob_tar = quirk_holder
+	mob_tar.maxHealth -= 10
+	mob_tar.health -= 10
+
+/datum/quirk/paper_fist
+	name = "Paper Fist"
+	desc = "You have limp wrists and weak fists. You deal the alot less unarmed damage."
+	value = -2
+	mob_trait = TRAIT_PAPERFIST
+	gain_text = "<span class='notice'>Your fists feel weak!</span>"
+	lose_text = "<span class='danger'>Your fists feel stronger.</span>"
+
+/datum/quirk/littleleagues
+	name = "Little Leagues"
+	desc = "Give up on your baseball dream! You deal less damage with melee weapons."
+	value = -2
+	mob_trait = TRAIT_LITTLE_LEAGUES
+	gain_text = "<span class='notice'>You feel like you can't swing for shit!</span>"
+	lose_text = "<span class='danger'>You feel like you can swing properly.</span>"
+
+/datum/quirk/shackledrunning
+	name = "Shackledrunning"
+	desc = "You are about as agile as a brick. You climb MU H slower!"
+	value = -2
+	mob_trait = TRAIT_SHACKLEDRUNNING
+	gain_text = "<span class='notice'>You feel very clumsy!</span>"
+	lose_text = "<span class='danger'>You feel more agile.</span>"
