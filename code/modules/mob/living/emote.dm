@@ -157,11 +157,19 @@ yap, yawn.
 	emote_type = EMOTE_AUDIBLE
 	sound = 'sound/f13effects/sunsetsounds/choke.ogg'
 
-/datum/emote/living/chuckle
+/datum/emote/living/audible/chuckle
 	key = "chuckle"
 	key_third_person = "chuckles"
 	message = "chuckles."
-	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/audible/chuckle/get_sound(mob/living/user)
+	. = ..()
+	if(ishuman(user))
+		var/mob/living/carbon/human/human_user = user
+		//power armor laugh track.... spooky
+		if(istype(human_user.get_item_by_slot(ITEM_SLOT_OCLOTHING), /obj/item/clothing/suit/armor/f13/power_armor))
+			return 'sound/voice/robolaugh.ogg'
+		return human_user.dna.species.get_laugh_sound(user)
 
 /datum/emote/living/circle
 	key = "circle"
@@ -405,11 +413,19 @@ yap, yawn.
 	message = "geckers loudly."
 	sound = 'sound/f13effects/sunsetsounds/geck.ogg'
 
-/datum/emote/living/giggle
+/datum/emote/living/audible/giggle
 	key = "giggle"
 	key_third_person = "giggles"
 	message = "giggles."
-	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/audible/giggle/get_sound(mob/living/user)
+	. = ..()
+	if(ishuman(user))
+		var/mob/living/carbon/human/human_user = user
+		//power armor laugh track.... spooky
+		if(istype(human_user.get_item_by_slot(ITEM_SLOT_OCLOTHING), /obj/item/clothing/suit/armor/f13/power_armor))
+			return 'sound/voice/robolaugh.ogg'
+		return human_user.dna.species.get_laugh_sound(user)
 
 /datum/emote/living/glare
 	key = "glare"
