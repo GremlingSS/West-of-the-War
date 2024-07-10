@@ -2633,6 +2633,7 @@
 #include "code\modules\mob\living\living_sprint.dm"
 #include "code\modules\mob\living\login.dm"
 #include "code\modules\mob\living\logout.dm"
+#include "code\modules\mob\living\regeneration.dm"
 #include "code\modules\mob\living\say.dm"
 #include "code\modules\mob\living\smell.dm"
 #include "code\modules\mob\living\status_procs.dm"
