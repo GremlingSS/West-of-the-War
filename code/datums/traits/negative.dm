@@ -393,3 +393,11 @@
 	mob_trait = TRAIT_SHACKLEDRUNNING
 	gain_text = "<span class='notice'>You feel very clumsy!</span>"
 	lose_text = "<span class='danger'>You feel more agile.</span>"
+
+/datum/quirk/soft_feet
+	name = "Wasteland Bumbler"
+	desc = "No matter how much you try, you never seem to be able to find proper footing. Terrain slowdown is much greater."
+	value = -3
+	mob_trait = TRAIT_SOFT_FEET
+	gain_text = "<span class='notice'>Your footing always seems to pick the worst spot to step!</span>"
+	lose_text = "<span class='danger'>The ground feels a bit more firm.</span>"

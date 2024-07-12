@@ -273,6 +273,7 @@
 #define TRAIT_CYBERNETICIST_EXPERT	"Cyberneticist Expert" //Can augument people into robots directly
 #define TRAIT_MACHINE_SPIRITS	"machine_spirits" //for tribe unique functions.
 #define TRAIT_HARD_YARDS        "hard_yards" //trekking, removes slowdown on all tiles
+#define TRAIT_SOFT_FEET        "soft_feet" // slow you the fuck down
 #define TRAIT_LIFEGIVER			"lifegiver" //boosts HP
 #define TRAIT_MARS_TEACH		"mars_teachings" //for legion unique functions
 #define TRAIT_EXPLOSIVE_CRAFTING "explosive_crafting" //can craft explosives and bombs

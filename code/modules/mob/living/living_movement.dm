@@ -56,10 +56,17 @@
 	add_movespeed_modifier((m_intent == MOVE_INTENT_WALK)? /datum/movespeed_modifier/config_walk_run/walk : /datum/movespeed_modifier/config_walk_run/run)
 
 /mob/living/proc/update_turf_movespeed(turf/open/T)
-	if(isopenturf(T) && !HAS_TRAIT(src, TRAIT_HARD_YARDS))
+	if(isopenturf(T))
+		if(HAS_TRAIT(src, TRAIT_HARD_YARDS) && !HAS_TRAIT(src, TRAIT_SOFT_FEET))
+			remove_movespeed_modifier(/datum/movespeed_modifier/turf_slowdown)
+			return
+		if(HAS_TRAIT(src, TRAIT_SOFT_FEET))
+			add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/turf_slowdown, multiplicative_slowdown = (T.slowdown * 2.5))
+			return
 		add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/turf_slowdown, multiplicative_slowdown = T.slowdown)
-	else
-		remove_movespeed_modifier(/datum/movespeed_modifier/turf_slowdown)
+		return
+	remove_movespeed_modifier(/datum/movespeed_modifier/turf_slowdown)
+
 
 /mob/living/proc/update_special_speed(speed)//SPECIAL Integration
 	add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/special_speed, multiplicative_slowdown = speed)

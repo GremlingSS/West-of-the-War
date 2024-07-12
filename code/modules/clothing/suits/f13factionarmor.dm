@@ -968,3 +968,5 @@
 	icon_state = "dusty_lieutenant"
 	item_state = "dusty_lieutenant"
 	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 35, "bomb" = 20, "bio" = 25, "rad" = 25, "fire" = 20, "acid" = 20, "wound" = 30)
+	slowdown = 0.14
+	damage_threshold = DT_STRONG // Unique

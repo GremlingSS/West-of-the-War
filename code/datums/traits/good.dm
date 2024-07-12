@@ -278,8 +278,8 @@
 	//locked = TRUE
 */
 /datum/quirk/hard_yards
-	name = "Hard Yards"
-	desc = "You've put them in, now reap the rewards."
+	name = "Wasteland Maneuvers"
+	desc = "You know how to get around the wasteland, you ignore the slowdown effects of terrain."
 	value = 3
 	mob_trait = TRAIT_HARD_YARDS
 	gain_text = "<span class='notice'>Rain or shine, nothing slows you down.</span>"

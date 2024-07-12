@@ -1084,6 +1084,12 @@
 				granted_trait = TRAIT_BIG_LEAGUES
 				traitname = "hitting things"
 				remarks = list("Grognak hit the Death Knight only once, but that was enough.", "Grognak is surprisingly agile, never committing too heavily on an attack, dancing between his enemies.", "Grognak isn't good at talking, but he knows it has its place. He has friends to talk for him.", "Other barbarians might change their weapons, but Grognak could never leave his beloved axe.")
+
+	if(HAS_TRAIT(user, granted_trait))
+		to_chat(user, "<span class ='notice'>You already have all the insight you need about [traitname].")
+		granted_trait = null
+		return FALSE
+
 	return ..()
 
 
