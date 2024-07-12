@@ -309,6 +309,14 @@
 	lose_text = "<span class='danger'>Your fists feel calm again.</span>"
 	//locked = TRUE
 
+/datum/quirk/perfect_attacker
+	name = "Perfect Striker"
+	desc = "Your strikes are flawless, you always deal maximum damage with unarmed attacks."
+	value = 2
+	mob_trait = TRAIT_PERFECT_ATTACKER
+	gain_text = "<span class='notice'>Your punches never miss!</span>"
+	lose_text = "<span class='danger'>Your strikes feel a bit clumsy.</span>"
+
 /datum/quirk/light_step
 	name = "Light Step"
 	desc = "You walk with a gentle step, making stepping on sharp objects quieter and less painful."

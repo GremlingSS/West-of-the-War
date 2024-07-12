@@ -61,7 +61,7 @@
 			remove_movespeed_modifier(/datum/movespeed_modifier/turf_slowdown)
 			return
 		if(HAS_TRAIT(src, TRAIT_SOFT_FEET))
-			add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/turf_slowdown, multiplicative_slowdown = (T.slowdown * 2.5))
+			add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/turf_slowdown, multiplicative_slowdown = (T.slowdown * 3))
 			return
 		add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/turf_slowdown, multiplicative_slowdown = T.slowdown)
 		return
