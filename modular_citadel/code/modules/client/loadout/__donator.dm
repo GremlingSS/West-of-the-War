@@ -18,7 +18,7 @@
 	name = "Khakhi Slouch Hat"
 	slot = SLOT_HEAD
 	path = /obj/item/clothing/head/f13/slouch/
-	ckeywhitelist = list("The Last Hosea2")
+	ckeywhitelist = list("TheLastHosea2")
 
 /////////////////////
 ///Loadout Boxes///// See kits.dm, use this model for loadouts that have more than one item per character.
