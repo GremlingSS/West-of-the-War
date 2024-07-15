@@ -904,3 +904,24 @@
 	name = "peaked yellow cap"
 	desc = "A militaristic cap with yellow pin on the front."
 	icon_state = "goner_offcap_y"
+
+// Added in F13 WotW
+
+/obj/item/clothing/head/f13/slouch/
+    name = "Khaki Slouch Hat"
+    desc = "A khaki fur felt hat adopted by the Australian army in the late 1800s, it has a puggaree hat band and has a cattleman-esque crease. Was in use as its standard head gear for the Australian army before the bombs fell."
+    icon_state = "slouch_khaki_alt"
+    item_state = "slouch_khaki_alt"
+    can_toggle = 1
+    actions_types = list(/datum/action/item_action/toggle)
+
+/obj/item/clothing/head/f13/slouch/attack_self(mob/user)
+    if(can_toggle && !user.incapacitated(allow_crit = TRUE))
+        up = !up
+        icon_state = "[initial(icon_state)][up ? "up" : ""]"
+        to_chat(user, "you button \the [src]'s brim [up ? "up" : "down"]")
+
+        user.update_inv_head()
+        if(iscarbon(user))
+            var/mob/living/carbon/C = user
+            C.head_update(src, forced = 1)
