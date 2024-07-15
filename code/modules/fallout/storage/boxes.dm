@@ -79,6 +79,7 @@ list(/obj/item/stack/sheet/metal = 20,
 	var/randomgun3 = pick(
 						/obj/item/book/granter/crafting_recipe/blueprint/riotshotgun,
 						/obj/item/book/granter/crafting_recipe/blueprint/aer9,
+						/obj/item/book/granter/crafting_recipe/blueprint/gun/plasmamusket,
 						)
 	var/randomgun4 = pick(
 						/obj/item/book/granter/crafting_recipe/blueprint/r91,

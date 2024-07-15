@@ -836,6 +836,12 @@
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/gaussrifle)
 
+/obj/item/book/granter/crafting_recipe/blueprint/plasmamusket
+	name = "plasma musket experiment blueprint"
+	icon_state = "blueprint2"
+	remarks = list("Connect the toaster to the plasma pistol...", "Make sure to tune the beans tin can...", "Make sure all the lenses are tightened...", "Make sure to remove the label from the Nuka-Cola bottle...", "Don't look directly down the barrel...")
+	crafting_recipe_types = list(/datum/crafting_recipe/gun/plasmamusket)
+
 /obj/item/book/granter/crafting_recipe/manual/denvr
 	name = "den vr configuration"
 	icon_state = "book"
