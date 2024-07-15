@@ -47,13 +47,13 @@ Within this file is the material to turn the previous odd-inclusion into a prope
 	/datum/outfit/loadout/raider_badlands,
 	/datum/outfit/loadout/raider_powder,
 	/datum/outfit/loadout/raider_smith,
-	/datum/outfit/loadout/raider_sawbones,
-	/datum/outfit/loadout/raider_highway,
-	/datum/outfit/loadout/raider_enclave,
-	/datum/outfit/loadout/raider_bos,
-	/datum/outfit/loadout/raider_ncr,
-	/datum/outfit/loadout/raider_legion,
-	/datum/outfit/loadout/raider_vault,
+	/datum/outfit/loadout/raider_sawbones
+	//datum/outfit/loadout/raider_highway,
+	//datum/outfit/loadout/raider_enclave,
+	//datum/outfit/loadout/raider_bos,
+	//datum/outfit/loadout/raider_ncr,
+	//datum/outfit/loadout/raider_legion,
+	//datum/outfit/loadout/raider_vault,
 	)
 
 /datum/outfit/job/raider/f13raider/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -82,7 +82,7 @@ Within this file is the material to turn the previous odd-inclusion into a prope
 		)
 
 /datum/outfit/loadout/raider_jackal
-	name = "Jackal"
+	name = "Raider Jackal"
 	suit = /obj/item/clothing/suit/armor/f13/raider/jackal
 	head = /obj/item/clothing/head/helmet/f13/jackal
 	backpack_contents = list(
@@ -97,7 +97,7 @@ Within this file is the material to turn the previous odd-inclusion into a prope
 	)
 
 /datum/outfit/loadout/raider_badlands
-	name = "Fiend"
+	name = "Raider Fiend"
 	suit = /obj/item/clothing/suit/armor/f13/raider/badlands
 	head = /obj/item/clothing/head/helmet/f13/fiend
 	backpack_contents = list(
@@ -113,7 +113,7 @@ Within this file is the material to turn the previous odd-inclusion into a prope
 	)
 
 /datum/outfit/loadout/raider_powder
-	name = "Powder Ganger"
+	name = "Raider Ganger"
 	suit = /obj/item/clothing/suit/armor/f13/raider/ncrcfarmor
 	head = /obj/item/clothing/head/f13/stormchaser
 	uniform = /obj/item/clothing/under/f13/ncrcf
@@ -163,7 +163,7 @@ Within this file is the material to turn the previous odd-inclusion into a prope
 		/obj/item/defibrillator/primitive=1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
 		)
-
+/*
 /datum/outfit/loadout/raider_highway
 	name = "Highwayman"
 	suit = /obj/item/clothing/suit/f13/cowboygvest
@@ -257,7 +257,7 @@ Within this file is the material to turn the previous odd-inclusion into a prope
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/book/granter/trait/research = 1,
 		)
-
+*/
 
 /*
 Reason this is commented out: Not needed, may re-use loadouts later

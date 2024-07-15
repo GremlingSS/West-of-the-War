@@ -166,6 +166,7 @@
 	item_state = "raider_combat"
 	armor = list("melee" = 40, "bullet" = 40, "laser" = 40, "energy" = 10, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 15, "acid" = 0, "wound" = 15)
 	slowdown = 0.1
+	raider_armor = TRUE
 
 /obj/item/clothing/suit/armor/f13/raider/raidermetal
 	name = "metal raider armor"
@@ -174,6 +175,7 @@
 	item_state = "raider_metal"
 	armor = list("melee" = 55, "bullet" = 55, "laser" = 35, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 0, "wound" = 25)
 	slowdown = 0.2
+	raider_armor = TRUE
 
 //////////
 //LEGION//
