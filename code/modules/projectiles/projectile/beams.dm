@@ -589,7 +589,7 @@
 	wound_bonus = 35 //being hit with plasma is horrific
 	eyeblur = 0
 	is_reflectable = TRUE
-	supereffective_faction = list("hostile", "ant", "supermutant", "deathclaw", "cazador", "raider", "china", "gecko", "wastebot", "radscorpion")
+	supereffective_faction = list("renegade", "hostile", "ant", "supermutant", "deathclaw", "cazador", "raider", "china", "gecko", "wastebot", "radscorpion")
 	supereffective_damage = 36
 	pixels_per_second =  TILES_TO_PIXELS(20)
 

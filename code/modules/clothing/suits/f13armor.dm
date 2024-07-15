@@ -266,6 +266,7 @@
 	item_state = "combat_armor_raider"
 	mutantrace_variation = STYLE_DIGITIGRADE
 	damage_threshold = DT_BASIC // Gives raider a viable choice.
+	raider_armor = TRUE
 
 /////////////////
 // Power armor //
@@ -836,6 +837,7 @@
 	armor = list("melee" = 40, "bullet" = 45, "laser" = 55, "energy" = 15, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 60, "acid" = 0, "wound" = 25)
 	slowdown = 0.18
 	damage_threshold = DT_STRONG // Suphite quality.
+	raider_armor = TRUE // technically raider armor.
 
 /obj/item/clothing/suit/toggle/armor
 	body_parts_covered = CHEST|GROIN
@@ -879,6 +881,7 @@
 	strip_delay = 40
 	icon = 'icons/fallout/clothing/armored_medium.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
+	raider_armor = TRUE
 
 /obj/item/clothing/suit/armor/f13/battlecoat //Maxson's battlecoat from Fallout 4
 	name = "battlecoat"

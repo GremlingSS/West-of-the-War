@@ -265,6 +265,7 @@
 #define TRAIT_BERSERKER			"berserker"
 #define TRAIT_TECHNOPHREAK		"technophreak"	//boosts salvage return
 #define TRAIT_PA_WEAR           "pa_wear" //guess
+#define TRAIT_RAIDER_ARMOR		"raider_wear" // prevents you from wearing any armor that isn't raider armor
 #define TRAIT_MEDICALEXPERT		"Medicinal Expert" //Can do revival surgery
 #define TRAIT_MEDICALGRADUATE		"Medical Graduate" //generalised offmap medschool graduation training
 #define TRAIT_UNETHICAL_PRACTITIONER	"Unethical Practitioner" //Can do harmful experimental surguries

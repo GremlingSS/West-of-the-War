@@ -100,6 +100,7 @@
 	desc = "Take one set of combat armor, add a classic suit of painspike armor, forget hugging your friends ever again."
 	icon_state = "combat_painspike"
 	item_state = "combat_painspike"
+	raider_armor = TRUE
 
 ////////////
 // OUTLAW //
@@ -112,6 +113,7 @@
 	item_state = "supafly"
 	armor = list("melee" = 25, "bullet" = 40, "laser" = 20, "energy" = 5, "bomb" = 20, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 25, "wound" = 10)
 	mutantrace_variation = STYLE_DIGITIGRADE
+	raider_armor = TRUE
 
 /obj/item/clothing/suit/armored/medium/rebel
 	name = "rebel raider armor"
@@ -119,6 +121,7 @@
 	icon_state = "raider_rebel_icon"
 	item_state = "raider_rebel_armor"
 	armor = list("melee" = 25, "bullet" = 30, "laser" = 20, "energy" = 5, "bomb" = 40, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 20, "wound" = 10)
+	raider_armor = TRUE
 
 /obj/item/clothing/suit/armored/medium/sadist
 	name = "sadist raider armor"
@@ -127,6 +130,7 @@
 	item_state = "sadist"
 	armor = list("melee" = 30, "bullet" = 25, "laser" = 25, "energy" = 10, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 15, "acid" = 5, "wound" = 10)
 	mutantrace_variation = STYLE_DIGITIGRADE
+	raider_armor = TRUE
 
 /obj/item/clothing/suit/armored/medium/blastmaster
 	name = "blastmaster raider armor"
@@ -136,6 +140,7 @@
 	flash_protect = 2
 	armor = list("melee" = 25, "bullet" = 25, "laser" = 20, "energy" = 5, "bomb" = 60, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 25, "wound" = 10)
 	mutantrace_variation = STYLE_DIGITIGRADE
+	raider_armor = TRUE
 
 /obj/item/clothing/suit/armored/medium/yankee
 	name = "yankee raider armor"
@@ -144,6 +149,7 @@
 	item_state = "yankee"
 	armor = list("melee" = 40, "bullet" = 20, "laser" = 15, "energy" = 5, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 25, "wound" = 10)
 	mutantrace_variation = STYLE_DIGITIGRADE
+	raider_armor = TRUE
 
 /obj/item/clothing/suit/armored/medium/painspike
 	name = "painspike raider armor"
@@ -152,6 +158,7 @@
 	item_state = "painspike"
 	armor = list("melee" = 40, "bullet" = 25, "laser" = 10, "energy" = 0, "bomb" = 5, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 5, "wound" = 10)
 	mutantrace_variation = STYLE_DIGITIGRADE
+	raider_armor = TRUE
 
 /obj/item/clothing/suit/armored/medium/iconoclast
 	name = "iconoclast raider armor"
@@ -160,6 +167,7 @@
 	item_state = "iconoclast"
 	permeability_coefficient = 0.8
 	armor = list("melee" = 25, "bullet" = 30, "laser" = 25, "energy" = 20, "bomb" = 30, "bio" = 40, "rad" = 60, "fire" = 25, "acid" = 40)
+	raider_armor = TRUE
 
 /obj/item/clothing/suit/armored/medium/khancoat
 	name = "khan battlecoat"
@@ -206,13 +214,15 @@
 	cold_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	siemens_coefficient = 0.9
 	armor = list("melee" = 45, "bullet" = 20, "laser" = 0, "energy" = 0, "bomb" = 40, "bio" = 10, "rad" = 10, "fire" = -25, "acid" = 0, "wound" = 10)
+	raider_armor = TRUE
 
 /obj/item/clothing/suit/armored/medium/scrapcombat
-	name = "scrap combat armor"
+	name = "scrap raider combat armor"
 	desc = "Scavenged military combat armor, repaired by unskilled hands many times, most of the original plating having cracked or crumbled to dust."
 	icon_state = "raider_combat"
 	item_state = "raider_combat"
 	armor = list("melee" = 35, "bullet" = 25, "laser" = 15, "energy" = 5, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 5, "wound" = 10)
+	raider_armor = TRUE
 
 
 ////////////

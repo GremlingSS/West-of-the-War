@@ -24,7 +24,7 @@
 	attack_verb_simple = "smacks"
 	attack_sound = 'sound/weapons/smash.ogg'
 	a_intent = INTENT_HARM
-	faction = list("raider")
+	faction = list("renegade")
 	check_friendly_fire = TRUE
 	status_flags = CANPUSH
 	del_on_death = FALSE
@@ -327,7 +327,7 @@
 	// therefore setting it to BRUTELOSS | FIRELOSS | TOXLOSS | OXYLOSS would mean healing 4x as much
 	// aka 40% of max life every tick, which is basically unkillable
 	// TODO: refactor this if simple_animals ever get damage types
-	AddComponent(/datum/component/glow_heal, chosen_targets = /mob/living/simple_animal/hostile/renegade, allow_revival = FALSE, restrict_faction = list("raider"), type_healing = BRUTELOSS)
+	AddComponent(/datum/component/glow_heal, chosen_targets = /mob/living/simple_animal/hostile/renegade, allow_revival = FALSE, restrict_faction = list("renegade"), type_healing = BRUTELOSS)
 
 // ADVANCED HEALER VARIANT
 /mob/living/simple_animal/hostile/renegade/doc/medic
@@ -340,7 +340,7 @@
 /mob/living/simple_animal/hostile/raider/junker/boss/renegade
 	name = "Renegade Boss"
 	desc = "A Renegade boss, clad in hotrod power armor, and wielding a deadly rapid-fire shrapnel cannon. He's had enough of your shit."
-	faction = list("raider","wastebot","hostile","supermutant","ghoul")
+	faction = list("renegade")
 	aggro_vision_range = 15
 	armour_penetration = 0.8
 	environment_smash = ENVIRONMENT_SMASH_RWALLS

@@ -168,6 +168,7 @@
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	armor = list("melee" = 25, "bullet" = 25, "laser" = 10, "energy" = 5, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 5, "acid" = 0, "wound" = 10)
 	mutantrace_variation = STYLE_DIGITIGRADE
+	raider_armor = TRUE
 
 /obj/item/clothing/suit/armored/light/tribalraider
 	name = "tribal raider wear"
@@ -176,6 +177,7 @@
 	item_state = "tribal_outcast"
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	armor = list("melee" = 30, "bullet" = 20, "laser" = 15, "energy" = 5, "bomb" = 5, "bio" = 0, "rad" = 0, "fire" = 15, "acid" = 0, "wound" = 10)
+	raider_armor = TRUE
 	allowed = list(/obj/item/gun, /obj/item/kitchen, /obj/item/twohanded, /obj/item/melee/onehanded, /obj/item/twohanded/spear, /obj/item/melee/smith, /obj/item/melee/smith/twohand, /obj/item/shield
 	)
 

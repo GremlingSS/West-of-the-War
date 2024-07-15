@@ -19,12 +19,17 @@ Within this file is the material to turn the previous odd-inclusion into a prope
 	social_faction = FACTION_RAIDERS
 	exp_requirements = 600
 	exp_type = EXP_TYPE_FALLOUT
-	total_positions = 12
-	spawn_positions = 12
+	total_positions = 3
+	spawn_positions = 3
 	description = "You are a member of the underworld of the La Verkin region, well-established or a newcomer looking to rile things up. \
 	Morals and laws generally mean little to you. Perhaps you are a thief, chem dealer, deserter, or just a garden-variety murderer. \
 	The Den where you have spawned is a good hovel for scum like you, but take your troubles wherever you like. \
-	Run with a gang or make your crimes an independent venture - just remember to make things interesting for others."
+	Run with a gang or make your crimes an independent venture - just remember to make things interesting for others. \
+	OOC: YOU ARE FLAGGED FOR PVP, this is not a license to grief. Follow server rules as written, the only difference is escalation rules are relaxed. \
+	Do not complain if you are killed, you agreed to this by signing up as a raider. \
+	Raid rules still apply to you but not others, anyone can raid your base freely. \
+	You are expected to defend your dungeon but do not gather up all the loot and hide it, take only what you will use and can carry directly on your person. \
+	You are here to make things interesting, not frustrating."
 	supervisors = "No Gods, No Masters!"
 
 	outfit = /datum/outfit/job/raider/f13raider
@@ -57,6 +62,8 @@ Within this file is the material to turn the previous odd-inclusion into a prope
 		return
 
 	H.social_faction = FACTION_RAIDERS
+	H.faction = list("raider")
+	ADD_TRAIT(H, TRAIT_RAIDER_ARMOR,  REF(src))
 
 /datum/outfit/job/raider/f13raider
 	name = "Raider"
@@ -140,7 +147,7 @@ Within this file is the material to turn the previous odd-inclusion into a prope
 
 /datum/outfit/loadout/raider_sawbones
 	name = "Raider Sawbones"
-	suit = /obj/item/clothing/suit/toggle/labcoat/f13/followers
+	suit = /obj/item/clothing/suit/armor/f13/raider/sadist
 	shoes = /obj/item/clothing/shoes/jackboots
 	l_hand = /obj/item/storage/backpack/duffelbag/med/surgery
 	r_hand = /obj/item/book/granter/trait/midsurgery
