@@ -583,9 +583,9 @@
 	name = "plasma bolt"
 	icon_state = "plasma_clot"
 	damage_type = BURN
-	damage = 30 //fucc you normies
+	damage = 35 //fucc you Radiant
 	armour_penetration = 0.2	//Plasma does higher damage, higher AP, fires at near half the rate as lasers.
-	flag = "laser" //checks laser protection. Why? Because plasma guns are 'side-grades' to lasers, ones high damage, one's higher fire rate.
+	flag = "energy" //checks energy protection. Why? Because plasma guns are not 'side-grades' to lasers, ones high damage, one's higher fire rate, and plasma weapons are harder to fucking find you troglodyte, they're meant to counter heavy (power) armor. There's a reason they're two separate stats, you fucking mong.
 	wound_bonus = 35 //being hit with plasma is horrific
 	eyeblur = 0
 	is_reflectable = TRUE
@@ -606,7 +606,7 @@
 	damage_type = BURN
 	damage = 50
 	armour_penetration = 0.8
-	flag = "laser"
+	flag = "energy"
 	eyeblur = 0
 	is_reflectable = FALSE
 	pixels_per_second = TILES_TO_PIXELS(50)
