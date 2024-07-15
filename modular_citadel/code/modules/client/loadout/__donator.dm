@@ -17,7 +17,7 @@
 /datum/gear/donator/Slouch
 	name = "Khakhi Slouch Hat"
 	slot = SLOT_HEAD
-	path = /obj/item/clothing/head/slouch/
+	path = /obj/item/clothing/head/f13/slouch/
 	ckeywhitelist = list("The Last Hosea2")
 
 /////////////////////

@@ -907,7 +907,7 @@
 
 // Added in F13 WotW
 
-/obj/item/clothing/head/slouch/
+/obj/item/clothing/head/f13/slouch/
     name = "Khaki Slouch Hat"
     desc = "A khaki fur felt hat adopted by the Australian army in the late 1800s, it has a puggaree hat band and has a cattleman-esque crease. Was in use as its standard head gear for the Australian army before the bombs fell."
     icon_state = "slouch_khaki_alt"
@@ -915,7 +915,7 @@
     can_toggle = 1
     actions_types = list(/datum/action/item_action/toggle)
 
-/obj/item/clothing/head/slouch/attack_self(mob/user)
+/obj/item/clothing/head/f13/slouch/attack_self(mob/user)
     if(can_toggle && !user.incapacitated(allow_crit = TRUE))
         up = !up
         icon_state = "[initial(icon_state)][up ? "up" : ""]"
