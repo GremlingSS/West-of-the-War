@@ -21,7 +21,7 @@
 	ckeywhitelist = list("TheLastHosea2")
 
 /datum/gear/donator/primebandana
-	name = prime bandana
+	name = "prime bandana"
 	slot = SLOT_WEAR_MASK
 	path = /obj/item/clothing/mask/bandana/legion/legprime
 	ckeywhitelist = list("Usuario2")
