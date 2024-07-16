@@ -26,6 +26,7 @@
 	var/lighting_alpha
 	var/glass_colour_type //colors your vision when worn
 	var/damage_threshold = 0
+	var/raider_armor = FALSE
 
 
 	var/blocks_shove_knockdown = FALSE //Whether wearing the clothing item blocks the ability for shove to knock down.
@@ -469,6 +470,10 @@ BLIND     // can't see anything
 			if(!wearable)
 				to_chat(M, "<span class='warning'>Your species cannot wear [src].</span>")
 				return FALSE
+
+	if(HAS_TRAIT(M, TRAIT_RAIDER_ARMOR) && !raider_armor && slot_flags == ITEM_SLOT_OCLOTHING)
+		to_chat(M, "<span class='warning'>You can't wear this! You're a badass raider and need to look the part!</span>")
+		return 0
 
 	return TRUE
 

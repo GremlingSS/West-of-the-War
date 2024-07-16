@@ -19,7 +19,7 @@
 	damage = 20
 	armour_penetration = 0.10
 	supereffective_damage = 40
-	supereffective_faction = list("hostile", "ant", "supermutant", "deathclaw", "cazador", "raider", "china", "gecko", "wastebot", "radscorpion")
+	supereffective_faction = list("renegade", "hostile", "ant", "supermutant", "deathclaw", "cazador", "raider", "china", "gecko", "wastebot", "radscorpion")
 	ammo_type = /obj/item/ammo_casing/caseless/arrow/bone
 
 /obj/item/projectile/bullet/reusable/arrow/bronze //Just some AP shots
@@ -99,7 +99,7 @@
 	armour_penetration = 0.05
 	damage = 30
 	supereffective_damage = 20 //weaker upfront, but stronger if you can stack the bleed effect
-	supereffective_faction = list("hostile", "ant", "supermutant", "deathclaw", "cazador", "raider", "china", "gecko", "wastebot", "radscorpion")
+	supereffective_faction = list("renegade", "hostile", "ant", "supermutant", "deathclaw", "cazador", "raider", "china", "gecko", "wastebot", "radscorpion")
 	ammo_type = /obj/item/ammo_casing/caseless/arrow/serrated
 
 /obj/item/projectile/bullet/reusable/arrow/serrated/on_hit(atom/target, blocked)

@@ -124,10 +124,11 @@
 	armor = list("melee" = 25, "bullet" = 20, "laser" = 15, "energy" = 5, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 10)
 
 /obj/item/clothing/suit/f13/mfp/raider
-	name = "offbeat jacket"
+	name = "offbeat raider jacket"
 	desc = "A black leather jacket with a single metal shoulder pad on the right side.<br>The right sleeve was obviously ripped or cut away.<br>It looks like it was originally a piece of a Main Force Patrol uniform."
 	icon_state = "mfp_raider"
 	armor = list("melee" = 25, "bullet" = 15, "laser" = 15, "energy" = 5, "bomb" = 16, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 10)
+	raider_armor = TRUE
 
 /obj/item/clothing/suit/f13/lonesome
 	name = "lonesome duster"

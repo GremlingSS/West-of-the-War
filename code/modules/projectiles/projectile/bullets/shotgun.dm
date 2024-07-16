@@ -9,7 +9,7 @@
 	spread = 2
 	wound_falloff_tile = -7.5
 	supereffective_damage = 35
-	supereffective_faction = list("hostile", "ant", "supermutant", "cazador", "deathclaw", "raider", "wastebot", "gecko", "radscorpion")
+	supereffective_faction = list("renegade", "hostile", "ant", "supermutant", "cazador", "deathclaw", "raider", "wastebot", "gecko", "radscorpion")
 
 /obj/item/projectile/bullet/shotgun_beanbag
 	name = "beanbag slug"
@@ -69,7 +69,7 @@
 	bare_wound_bonus = 90
 	wound_falloff_tile = -20 // low damage + additional dropoff will already curb wounding potential anything past point blank
 	supereffective_damage = 3
-	supereffective_faction = list("hostile", "ant", "supermutant", "cazador", "raider", "gecko", "radscorpion")
+	supereffective_faction = list("renegade", "hostile", "ant", "supermutant", "cazador", "raider", "gecko", "radscorpion")
 
 /obj/item/projectile/bullet/pellet/shotgun_rubbershot
 	name = "rubbershot pellet"

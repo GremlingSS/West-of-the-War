@@ -10,6 +10,7 @@
 	armor = list("melee" = 35, "bullet" = 35, "laser" = 35, "energy" = 5, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 15, "acid" = 0, "wound" = 15)
 	strip_delay = 40
 	slowdown = 0.06
+	raider_armor = TRUE // Applies to all subtypes.
 
 /obj/item/clothing/suit/armor/f13/raider/supafly //melee spec
 	name = "supa-fly raider armor"
@@ -66,7 +67,7 @@
 	AddComponent(/datum/component/armor_plate)
 
 /obj/item/clothing/suit/armor/f13/raider/jackal
-	name = "Jackal armored rags"
+	name = "Jackal armored raider rags"
 	desc = "A collection of spare rags and cloth sewn together into a robe-like uniform and pants, sporting a half-complete combat armor set over-top."
 	icon_state = "jackal"
 	item_state = "jackal"
@@ -79,7 +80,7 @@
 	AddComponent(/datum/component/armor_plate)
 
 /obj/item/clothing/suit/armor/f13/raider/ncrcfarmor
-	name = "NCRCF armored jacket"
+	name = "NCRCF armored raider jacket"
 	desc = "An NCR Correctional Facility jacket worn overtop of a worn bullet proof vest. Simple, yet effective."
 	icon_state = "ncrcf_armor"
 	item_state = "ncrcf_armor"
@@ -107,7 +108,7 @@
 	armor = list("melee" = 30, "bullet" = 30, "laser" = 45, "energy" = 5, "bomb" = 15, "bio" = 60, "rad" = 40, "fire" = 15, "acid" = 0, "wound" = 15)
 
 /obj/item/clothing/suit/armor/f13/raider/combatduster
-	name = "combat duster"
+	name = "raider combat duster"
 	desc = "An old military-grade pre-war combat armor under a weathered duster. It appears to be fitted with metal plates to replace the crumbling ceramic."
 	icon_state = "combatduster"
 	item_state = "combatduster"
@@ -117,7 +118,7 @@
 	damage_threshold = DT_BASIC // Has near heavy armor slowdown.
 
 /obj/item/clothing/suit/armor/f13/raider/combatduster/patrolduster
-	name = "Patrol Duster"
+	name = "raider patrol duster"
 	desc = "What appears to be an NCR patrol ranger's armor under a green tinted duster. The armor itself looks much more well kept then the duster itself, said duster looking somewhat faded. On the back of the duster, is a symbol of a skull with an arrow piercing through the eye."
 	icon_state = "patrolduster"
 	item_state = "patrolduster"
@@ -165,6 +166,7 @@
 	item_state = "raider_combat"
 	armor = list("melee" = 40, "bullet" = 40, "laser" = 40, "energy" = 10, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 15, "acid" = 0, "wound" = 15)
 	slowdown = 0.1
+	raider_armor = TRUE
 
 /obj/item/clothing/suit/armor/f13/raider/raidermetal
 	name = "metal raider armor"
@@ -173,6 +175,7 @@
 	item_state = "raider_metal"
 	armor = list("melee" = 55, "bullet" = 55, "laser" = 35, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 0, "wound" = 25)
 	slowdown = 0.2
+	raider_armor = TRUE
 
 //////////
 //LEGION//

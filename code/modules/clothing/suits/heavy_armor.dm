@@ -14,6 +14,7 @@
 	armor = list("melee" = 55, "bullet" = 40, "laser" = 50, "energy" = 20, "bomb" = 30, "bio" = 25, "rad" = 30, "fire" = 95, "acid" = 15)
 	resistance_flags = FIRE_PROOF
 	damage_threshold = DT_STRONG // It's sulphite, raider made be damned.
+	raider_armor = TRUE
 
 /obj/item/clothing/suit/armored/heavy/metal
 	name = "metal armor suit"
@@ -36,6 +37,7 @@
 	item_state = "raider_metal"
 	armor = list("melee" = 55, "bullet" = 40, "laser" = 15, "energy" = 5, "bomb" = 25, "bio" = 0, "rad" = 15, "fire" = 20, "acid" = 0, "wound" = 10)
 	damage_threshold = DT_STRONG
+	raider_armor = TRUE
 
 /obj/item/clothing/suit/armored/heavy/wardenplate
 	name = "warden plates"
@@ -102,6 +104,7 @@
 	desc = "A salvaged set of T-45d power armor, which has been brought back to life with the help of a welder and lots of scrap metal."
 	icon_state = "raider_salvaged"
 	item_state = "raider_salvaged"
+	raider_armor = TRUE
 
 /obj/item/clothing/suit/armored/heavy/salvaged_pa/t45d/hotrod
 	name = "salvaged hotrod power armor"

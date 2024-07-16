@@ -363,7 +363,7 @@
 
 /obj/item/projectile/proc/process_hit(turf/T, atom/target, qdel_self, hit_something = FALSE)		//probably needs to be reworked entirely when pixel movement is done.
 	if(isliving(target) && LAZYLEN(supereffective_faction))
-		var/mob/living/L = target
+		var/mob/living/simple_animal/L = target
 		for(var/F in L.faction)
 			if(F in supereffective_faction)
 				damage += supereffective_damage
