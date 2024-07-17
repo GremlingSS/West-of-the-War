@@ -6,7 +6,7 @@
 /datum/gear/neck/paladincape
 	name = "short shoulder cape"
 	path = /obj/item/storage/belt/holster/paladincape
-	cost = 2
+	cost = 1
 	restricted_desc = "Paladins"
 	restricted_roles = list("Paladin Commander",
 							"Senior Paladin",
@@ -16,7 +16,7 @@
 /datum/gear/neck/paladinlongcape
 	name = "long shoulder cape"
 	path = /obj/item/storage/belt/holster/paladinlongcape
-	cost = 2
+	cost = 1
 	restricted_desc = "Paladins"
 	restricted_roles = list("Paladin Commander",
 							"Senior Paladin",

@@ -44,4 +44,4 @@
 /datum/gear/gloves/plated
 	name = "plated gloves"
 	path = /obj/item/clothing/gloves/legion/plated
-	cost = 2
+	cost = 1

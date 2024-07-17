@@ -5,7 +5,7 @@
 /datum/gear/glasses/blindfold
 	name = "Blindfold"
 	path = /obj/item/clothing/glasses/sunglasses/blindfold
-	cost = 2
+	cost = 1
 
 /datum/gear/glasses/fakeblindfold
 	name = "Fake Blindfold"
@@ -15,7 +15,7 @@
 /datum/gear/glasses/sunglasses
 	name = "Sunglasses"
 	path = /obj/item/clothing/glasses/sunglasses
-	cost = 2
+	cost = 1
 
 /datum/gear/glasses/sunglasses/big
 	name = "Large sunglasses"
@@ -48,7 +48,7 @@
 /datum/gear/glasses/monocle
 	name = "Monocle"
 	path = /obj/item/clothing/glasses/monocle
-	cost = 2
+	cost = 1
 
 /datum/gear/glasses/orange
 	name = "Orange glasses"
