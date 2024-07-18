@@ -5,7 +5,7 @@
 /datum/gear/hands/backpack
 	name = "hiking backpack"
 	path = /obj/item/storage/backpack
-	cost = 2
+	cost = 1
 
 /datum/gear/hands/backpack/duffel
 	name = "duffelbag"
@@ -31,7 +31,7 @@
 /datum/gear/hands/backpack/sec
 	name = "security backpack"
 	path = /obj/item/storage/backpack/security
-	cost = 2
+	cost = 1
 
 /datum/gear/hands/backpack/sec/satchel
 	name = "security satchel"
@@ -40,37 +40,37 @@
 /datum/gear/hands/backpack/satchel/old
 	name = "old satchel"
 	path = /obj/item/storage/backpack/satchel/old
-	cost = 2
+	cost = 1
 
 /datum/gear/hands/backpack/enclave
 	name = "service backpack"
 	path = /obj/item/storage/backpack/enclave
-	cost = 2
+	cost = 1
 
 /datum/gear/hands/backpack/satchel/enclave
 	name = "service satchel"
 	path = /obj/item/storage/backpack/satchel/enclave
-	cost = 2
+	cost = 1
 
 /datum/gear/hands/backpack/trophy
 	name = "trophy rack"
 	path = /obj/item/storage/backpack/cultpack
-	cost = 2
+	cost = 1
 
 /datum/gear/hands/briefcase/crafted
 	name = "briefcase"
 	path = /obj/item/storage/briefcase/crafted
-	cost = 2
+	cost = 1
 
 /datum/gear/hands/toolbox/mechanical/old
 	name = "rusty blue toolbox"
 	path = /obj/item/storage/toolbox/mechanical/old
-	cost = 2
+	cost = 1
 
 /datum/gear/hands/backpack/legionr
 	name = "legion red cape backpack"
 	path = /obj/item/storage/backpack/legionr
-	cost = 2
+	cost = 1
 	restricted_desc = "Legion Veteran+"
 	restricted_roles = list("Legion Orator",
 							"Legion Centurion",
@@ -84,7 +84,7 @@
 /datum/gear/hands/backpack/legionb
 	name = "legion black cape backpack"
 	path = /obj/item/storage/backpack/legionb
-	cost = 2
+	cost = 1
 	restricted_desc = "Legion Veteran+"
 	restricted_roles = list("Legion Orator",
 							"Legion Centurion",
@@ -122,7 +122,7 @@
 /datum/gear/hands/cheaplighter
 	name = "cheap lighter"
 	path = /obj/item/lighter/greyscale
-	cost = 2
+	cost = 1
 
 /datum/gear/hands/cards
 	name = "playing cards"
@@ -131,22 +131,22 @@
 /datum/gear/hands/wallet
 	name = "wallet"
 	path = /obj/item/storage/wallet
-	cost = 2
+	cost = 1
 
 /datum/gear/hands/flask
 	name = "flask"
 	path = /obj/item/reagent_containers/food/drinks/flask
-	cost = 3
+	cost = 1
 
 /datum/gear/hands/zippolighter
 	name = "zippo lighter"
 	path = /obj/item/lighter
-	cost = 2
+	cost = 1
 
 /datum/gear/hands/beeplushie
 	name = "Bee Plushie"
 	path = /obj/item/toy/plush/beeplushie
-	cost = 2
+	cost = 1
 
 /datum/gear/hands/cobpipe
 	name = "corn cob pipe"
@@ -175,3 +175,27 @@
 /datum/gear/hands/warpaintbowl
 	name = "warpaint bowl"
 	path = /obj/item/warpaint_bowl
+
+/datum/gear/hands/ammo
+	name = "ammo pouch"
+	path = /obj/item/storage/pouch/ammo
+
+/datum/gear/hands/ammo_big
+	name = "big ammo pouch"
+	path = /obj/item/storage/pouch/ammo/big
+
+/datum/gear/hands/ammo_shotgun
+	name = "shotgun ammo pouch"
+	path = /obj/item/storage/pouch/ammo/shotgun
+
+/datum/gear/hands/ammo_grenade
+	name = "grenade pouch"
+	path = /obj/item/storage/pouch/grenade
+
+/datum/gear/hands/utility_pouch
+	name = "tool utility pouch"
+	path = /obj/item/storage/pouch/utility
+
+/datum/gear/hands/medical_pouch
+	name = "medical pouch"
+	path = /obj/item/storage/pouch/medical

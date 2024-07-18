@@ -46,22 +46,22 @@
 /datum/gear/head/utilityolive
 	name = "olive utility covering"
 	path = /obj/item/clothing/head/soft/f13/utility/olive
-	cost = 2
+	cost = 1
 
 /datum/gear/head/utilitynavy
 	name = "navy utility covering"
 	path = /obj/item/clothing/head/soft/f13/utility/navy
-	cost = 2
+	cost = 1
 
 /datum/gear/head/utilitytan
 	name = "tan utility covering"
 	path = /obj/item/clothing/head/soft/f13/utility/tan
-	cost = 2
+	cost = 1
 
 /datum/gear/head/vaquerohat
 	name = "vaquero hat"
 	path = /obj/item/clothing/head/helmet/f13/vaquerohat
-	cost = 2
+	cost = 1
 
 /datum/gear/head/pirate
 	name = "pirate hat"
@@ -70,12 +70,12 @@
 /datum/gear/head/rice_hat
 	name = "rice hat"
 	path = /obj/item/clothing/head/rice_hat
-	cost = 2
+	cost = 1
 
 /datum/gear/head/fedora
 	name = "fedora"
 	path = /obj/item/clothing/head/fedora
-	cost = 2
+	cost = 1
 
 /datum/gear/head/gambler
 	name = "gambler hat"
@@ -84,17 +84,17 @@
 /datum/gear/head/that
 	name = "top hat"
 	path = /obj/item/clothing/head/that
-	cost = 3
+	cost = 1
 
 /datum/gear/head/beaver
 	name = "beaverskin top hat"
 	path = /obj/item/clothing/head/f13/beaver
-	cost = 4
+	cost = 1
 
 /datum/gear/head/purpletophat
 	name = "purple tophat"
 	path = /obj/item/clothing/head/f13/purple
-	cost = 4
+	cost = 1
 
 /datum/gear/head/mailmanhat
 	name = "mailman's hat"
@@ -107,22 +107,22 @@
 /datum/gear/head/sombrerogreen
 	name = "green sombrero"
 	path = /obj/item/clothing/head/sombrero/green
-	cost = 3
+	cost = 1
 
 /datum/gear/head/wig
 	name = "black wig"
 	path = /obj/item/clothing/head/wig
-	cost = 2
+	cost = 1
 
 /datum/gear/head/wigrandom
 	name = "randomized wig"
 	path = /obj/item/clothing/head/wig/random
-	cost = 2
+	cost = 1
 
 /datum/gear/head/powderedwig
 	name = "powdered wig"
 	path = /obj/item/clothing/head/powdered_wig
-	cost = 2
+	cost = 1
 
 /datum/gear/head/nurse
 	name = "nurse hat"
@@ -148,22 +148,22 @@
 /datum/gear/head/cowboy
 	name = "brahmin leather cowboy hat"
 	path = /obj/item/clothing/head/helmet/f13/brahmincowboyhat
-	cost = 3
+	cost = 1
 
 /datum/gear/head/cowboy_alt
 	name = "rusted cowboy hat"
 	path = /obj/item/clothing/head/helmet/f13/rustedcowboyhat
-	cost = 3
+	cost = 1
 
 /datum/gear/head/bountyhunter
 	name = "bounty hunter hat"
 	path = /obj/item/clothing/head/hunter
-	cost = 2
+	cost = 1
 
 /datum/gear/head/bandit
 	name = "bandit hat"
 	path = /obj/item/clothing/head/fluff/bandit
-	cost = 2
+	cost = 1
 
 /datum/gear/head/wkepi
 	name = "white kepi"
@@ -188,52 +188,52 @@
 /datum/gear/head/russobluecamohat
 	name = "Russian blue camo beret"
 	path = /obj/item/clothing/head/fluff/gambler
-	cost = 3
+	cost = 1
 
 /datum/gear/head/ranger_tan
 	name = "tan cowboy hat"
 	path = /obj/item/clothing/head/f13/ranger_hat/tan
-	cost = 2
+	cost = 1
 
 /datum/gear/head/ranger_grey
 	name = "grey cowboy hat"
 	path = /obj/item/clothing/head/f13/ranger_hat
-	cost = 2
+	cost = 1
 
 /datum/gear/head/ranger_banded
 	name = "banded cowboy hat"
 	path = /obj/item/clothing/head/f13/ranger_hat/banded
-	cost = 2
+	cost = 1
 
 /datum/gear/head/flakhelm
 	name = "flak helmet"
 	path = /obj/item/clothing/head/flakhelm
-	cost = 2
+	cost = 1
 
 /datum/gear/head/pot
 	name = "pot helmet"
 	path = /obj/item/clothing/head/f13/pot
-	cost = 4
+	cost = 1
 
 /datum/gear/head/goner_red
 	name = "cheap helmet, red"
 	path = /obj/item/clothing/head/helmet/f13/goner/red
-	cost = 2
+	cost = 1
 
 /datum/gear/head/goner_green
 	name = "cheap helmet, green"
 	path = /obj/item/clothing/head/helmet/f13/goner/green
-	cost = 2
+	cost = 1
 
 /datum/gear/head/goner_blue
 	name = "cheap helmet, blue"
 	path = /obj/item/clothing/head/helmet/f13/goner/blue
-	cost = 2
+	cost = 1
 
 /datum/gear/head/goner_yellow
 	name = "cheap helmet, yellow"
 	path = /obj/item/clothing/head/helmet/f13/goner/yellow
-	cost = 2
+	cost = 1
 
 /datum/gear/head/goner_red/officer
 	name = "peaked cap, red"
@@ -257,58 +257,58 @@
 /datum/gear/head/police
 	name = "Police Officer's cap"
 	path = /obj/item/clothing/head/f13/police/officer
-	cost = 2
+	cost = 1
 
 /datum/gear/head/police/sergeant
 	name = "Police campaign hat"
 	path = /obj/item/clothing/head/f13/police/sergeant
-	cost = 2
+	cost = 1
 
 /datum/gear/head/police/lieutenant
 	name = "Police Lieutenant's cap"
 	path = /obj/item/clothing/head/f13/police/lieutenant
-	cost = 3
+	cost = 1
 
 //US
 
 /datum/gear/head/usarmy
 	name = "US Army field cap"
 	path = /obj/item/clothing/head/f13/army
-	cost = 2
+	cost = 1
 
 /datum/gear/head/usarmy/officer
 	name = "US Army officer's cap"
 	path = /obj/item/clothing/head/f13/army/officer
-	cost = 3
+	cost = 1
 
 /datum/gear/head/usarmy/beret
 	name = "US Army beret"
 	path = /obj/item/clothing/head/f13/army/beret
-	cost = 2
+	cost = 1
 
 /datum/gear/head/usarmy/beretairborne
 	name = "US Army airborne beret"
 	path = /obj/item/clothing/head/f13/army/beret/airborne
-	cost = 3
+	cost = 1
 
 //CHINA
 
 /datum/gear/head/chinese
 	name = "PLA field cap"
 	path = /obj/item/clothing/head/f13/chinese
-	cost = 2
+	cost = 1
 
 /datum/gear/head/chinese/officer
 	name = "PLA officer's cap"
 	path = /obj/item/clothing/head/f13/chinese/officer
-	cost = 3
+	cost = 1
 
 //NCR
 /datum/gear/head/ncr_cap
 	name = "NCR garrison cap"
 	path = /obj/item/clothing/head/f13/ncr/garrisoncap
 	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
-	cost = 2
+	cost = 1
 	restricted_desc = "NCR"
 	restricted_roles = list(
 		"NCR Captain",
@@ -332,7 +332,7 @@
 	name = "NCR slouch hat"
 	path = /obj/item/clothing/head/f13/ncr/slouch
 	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
-	cost = 2
+	cost = 1
 	restricted_desc = "NCR"
 	restricted_roles = list(
 		"NCR Captain",
@@ -356,7 +356,7 @@
 	name = "NCR beret"
 	path = /obj/item/clothing/head/f13/ncr/beret
 	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
-	cost = 2
+	cost = 1
 	restricted_desc = "NCR"
 	restricted_roles = list(
 		"NCR Captain",
@@ -388,7 +388,7 @@
 /datum/gear/head/ncr_beret/sapper
 	name = "NCR sapper beret"
 	path = /obj/item/clothing/head/helmet/f13/ncr/sapper
-	cost = 4
+	cost = 1
 	restricted_desc = "NCR Combat Engineer"
 	restricted_roles = list(
 		"NCR Combat Engineer",
@@ -397,7 +397,7 @@
 /datum/gear/head/ncr_beret/recon
 	name = "NCR 1st Recon beret"
 	path = /obj/item/clothing/head/helmet/f13/ncr/corporal/recon
-	cost = 4
+	cost = 1
 	restricted_desc = "NCR Corporal and above (Combat Roles)"
 	restricted_roles = list(
 		"NCR Captain",
@@ -415,7 +415,7 @@
 	name = "NCR gambler helmet"
 	path = /obj/item/clothing/head/helmet/f13/ncr/trooper/gambler
 	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
-	cost = 4
+	cost = 1
 	restricted_desc = "NCR Trooper and above (Combat Roles)"
 	restricted_roles = list(
 		"NCR Captain",
@@ -456,7 +456,7 @@
 	name = "Great Khan bandana"
 	path = /obj/item/clothing/head/helmet/f13/khan/bandana
 	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
-	cost = 2
+	cost = 1
 	restricted_desc = "Great Khans"
 	restricted_roles = list("Khan Senior Enforcer",
 							"Khan Armorer",
@@ -468,7 +468,7 @@
 	name = "Great Khan fur-trimmed helmet"
 	path = /obj/item/clothing/head/helmet/f13/khan/pelt
 	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
-	cost = 2
+	cost = 1
 	restricted_desc = "Great Khans"
 	restricted_roles = list("Khan Senior Enforcer",
 							"Khan Armorer",
@@ -480,7 +480,7 @@
 	name = "light security helmet"
 	path = /obj/item/clothing/head/helmet/blueshirt
 	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
-	cost = 3
+	cost = 1
 	restricted_desc = "Westford Law & Contractors"
 	restricted_roles = list("Lieutenant",
 							"Mercenary",

@@ -43,7 +43,7 @@
 /datum/gear/shoes/wraps
 	name = "golden leg wraps"
 	path = /obj/item/clothing/shoes/wraps
-	cost = 2
+	cost = 1
 
 /datum/gear/shoes/wrapssilver
 	name = "silver leg wraps"
@@ -112,12 +112,12 @@
 /datum/gear/shoes/plated
 	name = "plated war boots"
 	path = /obj/item/clothing/shoes/f13/military/plated
-	cost = 2
+	cost = 1
 
 /datum/gear/shoes/patrol_boots
 	name = "NCR patrol boots"
 	path = /obj/item/clothing/shoes/f13/military/ncr
-	cost = 2
+	cost = 1
 	subcategory = LOADOUT_SUBCATEGORY_SHOES_FACTIONS
 	restricted_desc = "NCR"
 	restricted_roles = list("NCR Captain",
@@ -141,7 +141,7 @@
 /datum/gear/shoes/khan_peltboots
 	name = "Great Khan pelt boots"
 	path = /obj/item/clothing/shoes/f13/military/khan_pelt
-	cost = 2
+	cost = 1
 	subcategory = LOADOUT_SUBCATEGORY_SHOES_FACTIONS
 	restricted_desc = "KHAN"
 	restricted_roles = list("Khan Senior Enforcer",
