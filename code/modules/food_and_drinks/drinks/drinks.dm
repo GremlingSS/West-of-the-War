@@ -460,7 +460,7 @@
 
 /obj/item/reagent_containers/food/drinks/flask/survival
 	name = "survival flask"
-	list_reagents = list(/datum/reagent/water/bwater = 50)
+	list_reagents = list(/datum/reagent/water/bwater = 60)
 
 /obj/item/reagent_containers/food/drinks/flask/gold
 	name = "captain's flask"

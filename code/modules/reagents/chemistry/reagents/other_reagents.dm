@@ -264,6 +264,8 @@
 	. = ..()
 	if(M.blood_volume)
 		M.blood_volume += 0.1 // water is good for you!
+	if(water_level >= 2)
+		M.adjustToxLoss(-0.1*REM, updating_health = FALSE)
 	M.water += water_level
 
 //dirty water
