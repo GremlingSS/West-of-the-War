@@ -132,6 +132,7 @@ Mayor
 	ADD_TRAIT(H, TRAIT_SELF_AWARE,REF(src))
 	ADD_TRAIT(H, TRAIT_IRONFIST, REF(src))
 	H.AddSpell(new /obj/effect/proc_holder/spell/terrifying_presence)
+	H.AddSpell(new /obj/effect/proc_holder/spell/ferocious_loyalty)
 
 /*--------------------------------------------------------------*/
 /datum/job/bighorn/f13deputy

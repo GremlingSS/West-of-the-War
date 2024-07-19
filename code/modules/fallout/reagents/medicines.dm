@@ -1104,3 +1104,72 @@
 		M.Dizzy(5)
 		M.Jitter(5)
 	..()
+
+/datum/reagent/medicine/ferocious_loyalty
+	name = "strange substance"
+	description = "An organic mix of various chemicals naturally produced by the body and concentrated into... something."
+	reagent_state = LIQUID
+	color = "#df341f"
+	taste_description = "undying loyalty"
+	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	overdose_threshold = 0
+	value = REAGENT_VALUE_GLORIOUS
+	ghoulfriendly = TRUE
+	var/damage_offset = 0.2	//Value to offset damage by. 0.2 might seem heavy but remember that this stacks with other healing. Also equates to 30 brute restored, roughly.
+	var/clot_rate = 0.12	//12% as effective as Hydra at clotting bleeding wounds
+
+// This is meant to mimic the perk of Ferocious Loyalty by backending the effects onto chems to work as a temporary booster
+// I've used it in other projects, its a good way to use temporary buffs. This chem is added by the Ferocious Loyalty spell. -Possum
+/datum/reagent/medicine/ferocious_loyalty/on_mob_add(mob/living/carbon/human/M)
+	to_chat(M, "<span class='userdanger'>You feel unbreakable!</span>")
+	ADD_TRAIT(M, TRAIT_IGNOREDAMAGESLOWDOWN, "[type]")
+	ADD_TRAIT(M, TRAIT_PERFECT_ATTACKER, "loyalty")
+	M.maxHealth += 25
+	M.health += 25
+	..()
+
+/datum/reagent/medicine/ferocious_loyalty/on_mob_life(mob/living/carbon/M)
+	//Clotting properties for pierce/slash wounds
+	if(current_cycle > 0 && current_cycle % 6 == 0 && M.all_wounds && M.all_wounds.len >= 1)	//Every 6th cycle, reduce blood_flow for all pierce/slash wounds by clot_rate.
+		for(var/datum/wound/iter_wound in M.all_wounds)
+			var/affected_limb_name = iter_wound.limb.name
+			switch(iter_wound.severity)
+				if (WOUND_SEVERITY_CRITICAL)
+					if (iter_wound.wound_type == WOUND_PIERCE)
+						iter_wound.blood_flow -= clot_rate
+						M.visible_message("<span class='notice'>The bleeding hole in [M]'s [affected_limb_name] fills with fresh tissue!</span>", \
+										  "<span class='notice'>You feel the cavity in your [affected_limb_name] weaving back together.</span>")
+					else if (iter_wound.wound_type == WOUND_SLASH)
+						iter_wound.blood_flow -= clot_rate
+							M.visible_message("<span class='notice'>The deep gashes on [M]'s [affected_limb_name] close up!</span>", \
+										  "<span class='notice'>You feel the deep gashes on your [affected_limb_name] close up.</span>")
+				if (WOUND_SEVERITY_SEVERE)
+					if (iter_wound.wound_type == WOUND_PIERCE)
+						iter_wound.blood_flow -= clot_rate
+						M.visible_message("<span class='notice'>The puncture wound on [M]'s [affected_limb_name] shrinks!</span>", \
+										  "<span class='notice'>You feel the puncture wound on your [affected_limb_name] shrinking.</span>")
+					else if (iter_wound.wound_type == WOUND_SLASH)
+						iter_wound.blood_flow -= clot_rate
+						M.visible_message("<span class='notice'>The large cuts on [M]'s [affected_limb_name] mend!</span>", \
+										  "<span class='notice'>You feel the large cuts on your [affected_limb_name] mending.</span>")
+				if (WOUND_SEVERITY_MODERATE)
+					if (iter_wound.wound_type == WOUND_PIERCE || iter_wound.wound_type == WOUND_SLASH)
+						iter_wound.blood_flow -= clot_rate
+		//Actual healing part starts here
+	M.adjustBruteLoss(-damage_offset * REAGENTS_EFFECT_MULTIPLIER, FALSE)	//100% of damage_offset (3)
+	M.adjustFireLoss(-damage_offset * 0.75 * REAGENTS_EFFECT_MULTIPLIER, FALSE)	//75% of damage_offset (2.25)
+	M.AdjustStun(-damage_offset * 0.66 * REAGENTS_EFFECT_MULTIPLIER, FALSE)	//66% of damage_offset (2)
+	M.AdjustKnockdown(-damage_offset * 0.66 * REAGENTS_EFFECT_MULTIPLIER, FALSE)	//66% of damage_offset (2)
+	M.adjustStaminaLoss(-damage_offset * 0.66 * REAGENTS_EFFECT_MULTIPLIER, FALSE)	//66% of damage_offset (2)
+	M.AdjustUnconscious(-30*REAGENTS_EFFECT_MULTIPLIER, 0)
+	M.heal_bodypart_damage(damage_offset, damage_offset * 0.75, only_robotic = TRUE, only_organic = FALSE)	//100% / 75% damage_offset (3/2.25)
+	. = TRUE
+	..()
+
+/datum/reagent/medicine/ferocious_loyalty/on_mob_delete(mob/living/carbon/human/M)
+	REMOVE_TRAIT(M, TRAIT_PERFECT_ATTACKER, "loyalty")
+	REMOVE_TRAIT(M, TRAIT_IGNOREDAMAGESLOWDOWN, "[type]")
+	M.maxHealth -= 25
+	M.health -= 25
+	to_chat(M, "<span class='notice'>You feel your inspiration coming to an end.</span>")
+	..()

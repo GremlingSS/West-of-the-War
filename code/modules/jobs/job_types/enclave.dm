@@ -175,6 +175,7 @@
 	ADD_TRAIT(H, TRAIT_ENCLAVE_CODES,  REF(src))
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ,  REF(src))
 	H.AddSpell(new /obj/effect/proc_holder/spell/terrifying_presence)
+	H.AddSpell(new /obj/effect/proc_holder/spell/ferocious_loyalty)
 	H.grant_language(/datum/language/codespeak, TRUE, TRUE, LANGUAGE_MIND)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/marksmancarbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)

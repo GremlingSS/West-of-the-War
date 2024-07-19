@@ -76,6 +76,7 @@ Elder
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ,  REF(src))
 	ADD_TRAIT(H, TRAIT_RESEARCHER,  REF(src))
 	H.AddSpell(new /obj/effect/proc_holder/spell/terrifying_presence)
+	H.AddSpell(new /obj/effect/proc_holder/spell/ferocious_loyalty)
 
 /datum/outfit/job/bos/f13elder
 	name = "Elder"
@@ -131,6 +132,7 @@ Head Paladin
 	ADD_TRAIT(H, TRAIT_LIFEGIVER,  REF(src))
 	ADD_TRAIT(H, TRAIT_IRONFIST,  REF(src))
 	H.AddSpell(new /obj/effect/proc_holder/spell/terrifying_presence)
+	H.AddSpell(new /obj/effect/proc_holder/spell/ferocious_loyalty)
 
 /datum/outfit/job/bos/f13sentinel
 	name = "Paladin Commander"
@@ -370,6 +372,7 @@ Senior Paladin
 	ADD_TRAIT(H, TRAIT_PA_WEAR,  REF(src))
 	ADD_TRAIT(H, TRAIT_RESEARCHER,  REF(src))
 	H.AddSpell(new /obj/effect/proc_holder/spell/terrifying_presence)
+	H.AddSpell(new /obj/effect/proc_holder/spell/ferocious_loyalty)
 
 /datum/outfit/job/bos/f13seniorpaladin
 	name =	"Senior Paladin"
