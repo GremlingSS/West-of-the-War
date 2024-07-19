@@ -131,7 +131,7 @@ Uranium, Contaminated
 	damage = 15
 	wound_bonus = 10
 	var/dmg_dropoff_per_tile = 15 * 0.25 / 15	//In 15 tiles, it will lose half of its initial damage
-	var/stam_dropoff_per_tile = 0 * 0.5 / 15	//In 15 tiles, it will lose half of its initial stam damage
+	var/stam_dropoff_per_tile = 0 * 0.25 / 15	//In 15 tiles, it will lose half of its initial stam damage
 
 /obj/item/projectile/bullet/c9mm/Range()
 	..()
