@@ -452,6 +452,7 @@
 /datum/reagent/water/holywater/on_mob_life(mob/living/carbon/M)
 	if(M.blood_volume)
 		M.blood_volume += 0.1 // water is good for you!
+	M.adjustToxLoss(-0.1*REM, updating_health = FALSE)
 	if(!data)
 		data = list("misc" = 1)
 	data["misc"]++
