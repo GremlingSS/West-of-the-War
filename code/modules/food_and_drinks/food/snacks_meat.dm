@@ -282,13 +282,6 @@
 	tastes = list("meat" = 3, "metal" = 1)
 	foodtype = MEAT
 
-/obj/item/reagent_containers/food/snacks/kebab/human
-	name = "human-kebab"
-	desc = "A human meat, on a stick."
-	bonus_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/nutriment/vitamin = 6)
-	tastes = list("tender meat" = 3, "metal" = 1)
-	foodtype = MEAT | LONGPORK
-
 /obj/item/reagent_containers/food/snacks/kebab/monkey
 	name = "meat-kebab"
 	desc = "Delicious meat, on a stick."
@@ -528,3 +521,55 @@
 	list_reagents = list(/datum/reagent/consumable/eggyolk = 5)
 	tastes = list("dried eggs" = 1, "confusion" = 1)
 	dried_being = /mob/living/simple_animal/chicken
+
+// Cannibal snacks
+/obj/item/reagent_containers/food/snacks/kebab/human
+	name = "killer-kebab"
+	desc = "Meat that is good enough to kill for, on a stick."
+	bonus_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/nutriment/vitamin = 6, /datum/reagent/medicine/longpork_stew = 5)
+	tastes = list("tender meat" = 3, "metal" = 1)
+	foodtype = MEAT | LONGPORK
+
+/obj/item/reagent_containers/food/snacks/pie/peoplepie
+	name = "prick-pie"
+	icon_state = "meatpie"
+	desc = "They probably deserved it for being such a prick!"
+	bonus_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/nutriment/vitamin = 5, /datum/reagent/medicine/longpork_stew = 5)
+	tastes = list("pie" = 1, "meat" = 1)
+	foodtype = GRAIN | MEAT | LONGPORK
+
+/obj/item/reagent_containers/food/snacks/saltedpeople
+	name = "pernicious pemmican"
+	desc = "Slab of meat preserved in salt and tallow. Makes you thirsty."
+	icon_state = "meatsalted"
+	bitesize = 5
+	filling_color = "#800000"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 5)
+	bonus_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/consumable/nutriment/vitamin = 1, /datum/reagent/medicine/longpork_stew = 5)
+	tastes = list("meat" = 2, "salt" = 1)
+	foodtype = MEAT | LONGPORK
+
+/obj/item/reagent_containers/food/snacks/smokedpeople
+	name = "smoked sucker"
+	desc = "Slab of meat dried by smoking. Wait, this isn't sucker fish."
+	icon_state = "meatsmoked"
+	bitesize = 5
+	filling_color = "#800000"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 5)
+	bonus_reagents = list(/datum/reagent/consumable/nutriment = 2, /datum/reagent/consumable/nutriment/vitamin = 2, /datum/reagent/medicine/longpork_stew = 5)
+	tastes = list("meat" = 2, "smoke" = 1)
+	foodtype = MEAT | LONGPORK
+
+/obj/item/reagent_containers/food/snacks/mcpersonnugget
+	name = "chicky nugget"
+	filling_color = "#B22222"
+	bonus_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/nutriment/vitamin = 1, , /datum/reagent/medicine/longpork_stew = 3)
+	list_reagents = list(/datum/reagent/consumable/nutriment = 2)
+	tastes = list("\"chicken\"" = 1)
+	foodtype = MEAT | LONGPORK
+
+/obj/item/reagent_containers/food/snacks/mcpersonnugget/Initialize(mapload)
+	. = ..()
+	var/shape = pick("lump", "star", "lizard", "corgi")
+	desc = "A 'chicky' nugget vaguely shaped like a [shape]. It certainly tastes like chicken..."
+	icon_state = "nugget_[shape]"

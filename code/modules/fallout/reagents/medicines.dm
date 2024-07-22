@@ -146,8 +146,8 @@
 // LONGPORK STEW REAGENT
 
 /datum/reagent/medicine/longpork_stew
-	name = "Longpork stew"
-	description = "A dish sworn by some to have unusual healing properties. To most it just tastes disgusting. What even is longpork anyways?..."
+	name = "Longpork"
+	description = "A reagent sworn by some to have unusual healing properties. To most it just tastes disgusting. What even is longpork anyways?..."
 	reagent_state = LIQUID
 	color =  "#915818"
 	taste_description = "oily water, with bits of raw-tasting tender meat."
