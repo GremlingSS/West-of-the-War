@@ -270,6 +270,7 @@
 	retreat_distance = 3
 	minimum_distance = 1
 	ranged = 1
+	speed = 1.5
 	attack_verb_simple = "power-fists"
 	attack_sound = 'sound/weapons/slam.ogg'
 	ranged_cooldown_time = 30
@@ -348,6 +349,7 @@
 	projectiletype = /obj/item/projectile/bullet/a5mm/simple
 	health = 1250
 	maxHealth = 1250
+	speed = 1.5
 	melee_damage_upper = 50
 	minimum_distance = 0
 	obj_damage = 500
