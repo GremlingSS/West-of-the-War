@@ -37,6 +37,8 @@
 	name = "meat"
 	cooked_type = /obj/item/reagent_containers/food/snacks/meat/steak/plain/human
 	slice_path = /obj/item/reagent_containers/food/snacks/meat/rawcutlet/plain/human
+	dried_type = /obj/item/reagent_containers/food/snacks/smokedpeople
+	list_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/consumable/cooking_oil = 2, /datum/reagent/medicine/longpork_stew = 1) // Gotta cook it to gt the real benefits
 	tastes = list("tender meat" = 1)
 	foodtype = MEAT | RAW | LONGPORK
 
@@ -419,6 +421,7 @@
 
 /obj/item/reagent_containers/food/snacks/meat/rawcutlet/plain/human
 	cooked_type = /obj/item/reagent_containers/food/snacks/meat/cutlet/plain/human
+	list_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/medicine/longpork_stew = 1)
 	tastes = list("tender meat" = 1)
 	foodtype = MEAT | RAW | LONGPORK
 

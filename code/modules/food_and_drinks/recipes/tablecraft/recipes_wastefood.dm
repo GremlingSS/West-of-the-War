@@ -39,15 +39,6 @@
 	result = /obj/item/reagent_containers/food/snacks/f13/deathclawomelette
 	subcategory = CAT_WASTEFOOD
 
-/datum/crafting_recipe/food/longpork_stew
-	name = "Longpork Stew"
-	reqs = list(/datum/reagent/water = 10, // must be before the bowl or else it'll runtime
-				/obj/item/reagent_containers/food/snacks/meat/slab/human= 1,
-				/obj/item/reagent_containers/glass/bowl = 1
-	)
-	result = /obj/item/reagent_containers/food/snacks/soup/longpork_stew
-	subcategory = CAT_WASTEFOOD
-
 /datum/crafting_recipe/food/moleratstew
 	name = "Molerat Stew"
 	reqs = list(
@@ -220,15 +211,6 @@
 //Sewer Food.  //
 /////////////////
 
-/datum/crafting_recipe/food/humankebab
-	name = "Human kebab"
-	reqs = list(
-		/obj/item/stack/rods = 1,
-		/obj/item/reagent_containers/food/snacks/meat/steak/plain/human = 2
-	)
-	result = /obj/item/reagent_containers/food/snacks/kebab/human
-	subcategory = CAT_WASTEFOOD
-
 /datum/crafting_recipe/food/ratkebab
 	name = "Rat Kebab"
 	reqs = list(
@@ -245,4 +227,55 @@
 			/obj/item/reagent_containers/food/snacks/bun = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/burger/rat
+	subcategory = CAT_WASTEFOOD
+
+
+/////////////////
+//Cannibal Food//
+/////////////////
+
+/datum/crafting_recipe/food/longpork_stew
+	name = "Longpork Stew"
+	reqs = list(/datum/reagent/water = 10, // must be before the bowl or else it'll runtime
+				/obj/item/reagent_containers/food/snacks/meat/slab/human = 1,
+				/obj/item/reagent_containers/glass/bowl = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/soup/longpork_stew
+	subcategory = CAT_WASTEFOOD
+
+/datum/crafting_recipe/food/humankebab
+	name = "Killer Kebab"
+	reqs = list(
+		/obj/item/stack/rods = 1,
+		/obj/item/reagent_containers/food/snacks/meat/steak/plain/human = 2
+	)
+	result = /obj/item/reagent_containers/food/snacks/kebab/human
+	subcategory = CAT_WASTEFOOD
+
+/datum/crafting_recipe/food/peoplepie
+	name = "Prick-Pie"
+	reqs = list(
+		/datum/reagent/consumable/blackpepper = 1,
+		/datum/reagent/consumable/sodiumchloride = 1,
+		/obj/item/reagent_containers/food/snacks/pie/plain = 1,
+		/obj/item/reagent_containers/food/snacks/meat/slab/human = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/pie/peoplepie
+	subcategory = CAT_WASTEFOOD
+
+/datum/crafting_recipe/food/saltedpeople
+	name = "Pernicious Pemmican"
+	reqs = list(
+		/datum/reagent/consumable/sodiumchloride = 1,
+		/obj/item/reagent_containers/food/snacks/meat/slab/human = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/saltedpeople
+	subcategory = CAT_WASTEFOOD
+
+/datum/crafting_recipe/food/mcpersonnugget
+	name = "Chicky Nugget"
+	reqs = list(
+		/obj/item/reagent_containers/food/snacks/meat/rawcutlet/plain/human = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/mcpersonnugget
 	subcategory = CAT_WASTEFOOD

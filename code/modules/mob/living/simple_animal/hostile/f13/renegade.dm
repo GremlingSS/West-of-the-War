@@ -174,7 +174,7 @@
 /mob/living/simple_animal/hostile/renegade/defender/assaulter
 	name = "Renegade Assaulter"
 	desc = "The Renegade member who's sole purpose is to withstand punishment with layers of advanced combat armor- and dish out just as much with a well placed violent mace swing. As if to flaunt who's about to smack your skull in- there's a huge red R painted into his shield."
-	armour_penetration = 0.6
+	armour_penetration = 0.5
 	icon_state = "renegade_assaulter"
 	icon_living = "renegade_assaulter"
 	icon_dead = "renegade_assaulter-dead"
@@ -191,7 +191,7 @@
 	health = 280
 	healable = 1
 	speed = 1.3
-	vision_range = 12
+	//vision_range = 12
 	aggro_vision_range = 15
 	check_friendly_fire = 1
 	retreat_distance = 10
@@ -214,7 +214,7 @@
 	health = 300
 	maxHealth = 300
 	minimum_distance = 8
-	vision_range = 15
+	//vision_range = 15
 	icon_state = "renegade_sniper"
 	icon_living = "renegade_sniper"
 	icon_dead = "renegade_sniper-dead"
@@ -247,7 +247,7 @@
 /mob/living/simple_animal/hostile/renegade/guardian/shotgunner
 	name = "Renegade Shotgunner"
 	desc = "A veteran of the Renegades,specializing in close quarters and crowd control.. with an automatic full-metal burst-fire slug shotgun and advanced CQC training. Akin to certain gunners, this shotgunner has painted his shoulder-pads with red highlights."
-	armour_penetration = 5
+	armour_penetration = 0.3
 	extra_projectiles = 2
 	melee_queue_distance = 2
 	rapid_melee = 2
@@ -270,6 +270,7 @@
 	retreat_distance = 3
 	minimum_distance = 1
 	ranged = 1
+	speed = 1.5
 	attack_verb_simple = "power-fists"
 	attack_sound = 'sound/weapons/slam.ogg'
 	ranged_cooldown_time = 30
@@ -288,7 +289,7 @@
 	name = "Renegade Heavy"
 	desc = "Is that a merc in layered advanced combat armor, high on drugs?! Holy shit, that's a big gun!"
 	aggro_vision_range = 14
-	armour_penetration = 0.8
+	armour_penetration = 0.3
 	check_friendly_fire = 0
 	environment_smash = ENVIRONMENT_SMASH_RWALLS
 	extra_projectiles = 7
@@ -339,20 +340,22 @@
 // THE BOSS. THE BIG ONE. THE BIG CHEESE
 /mob/living/simple_animal/hostile/raider/junker/boss/renegade
 	name = "Renegade Boss"
-	desc = "A Renegade boss, clad in hotrod power armor, and wielding a deadly rapid-fire shrapnel cannon. He's had enough of your shit."
+	desc = "A Renegade boss, clad in hotrod power armor, and wielding a deadly rapid-fire cannon. He's had enough of your shit."
 	faction = list("renegade")
 	aggro_vision_range = 15
-	armour_penetration = 0.8
+	armour_penetration = 0.3
 	environment_smash = ENVIRONMENT_SMASH_RWALLS
 	extra_projectiles = 7
+	projectiletype = /obj/item/projectile/bullet/a5mm/simple
 	health = 1250
 	maxHealth = 1250
+	speed = 1.5
 	melee_damage_upper = 50
 	minimum_distance = 0
 	obj_damage = 500
 	rapid_melee = 2
 	retreat_distance = 0
-	vision_range = 15
+	//vision_range = 15
 	icon = 'icons/fallout/mobs/humans/renegade.dmi'
 	icon_state = "renegade_boss"
 	icon_living = "renegade_boss"
