@@ -237,7 +237,7 @@
 /datum/crafting_recipe/food/longpork_stew
 	name = "Longpork Stew"
 	reqs = list(/datum/reagent/water = 10, // must be before the bowl or else it'll runtime
-				/obj/item/reagent_containers/food/snacks/meat/slab/human= 1,
+				/obj/item/reagent_containers/food/snacks/meat/slab/human = 1,
 				/obj/item/reagent_containers/glass/bowl = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/soup/longpork_stew
@@ -258,7 +258,7 @@
 		/datum/reagent/consumable/blackpepper = 1,
 		/datum/reagent/consumable/sodiumchloride = 1,
 		/obj/item/reagent_containers/food/snacks/pie/plain = 1,
-		/obj/item/reagent_containers/food/snacks/meat/steak/plain/human = 1
+		/obj/item/reagent_containers/food/snacks/meat/slab/human = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/pie/peoplepie
 	subcategory = CAT_WASTEFOOD
@@ -267,7 +267,7 @@
 	name = "Pernicious Pemmican"
 	reqs = list(
 		/datum/reagent/consumable/sodiumchloride = 1,
-		/obj/item/reagent_containers/food/snacks/meat/steak/plain/human = 1
+		/obj/item/reagent_containers/food/snacks/meat/slab/human = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/saltedpeople
 	subcategory = CAT_WASTEFOOD

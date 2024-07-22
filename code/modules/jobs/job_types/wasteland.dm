@@ -76,7 +76,7 @@
 	neck = /obj/item/clothing/neck/apron/labor/forge/khan
 	belt = /obj/item/storage/belt/utility/artisan/full
 	glasses = /obj/item/clothing/glasses/welding
-	backpack_contents = list(/obj/item/gun/ballistic/automatic/pistol/m1911=1)
+	backpack_contents = list(/obj/item/gun/ballistic/automatic/pistol/m1911=1, /obj/item/ammo_box/magazine/m45 = 2, /obj/item/twohanded/sledgehammer/simple)
 
 /datum/outfit/loadout/scavenger
 	name = "Scavenger"
@@ -87,7 +87,8 @@
 	backpack_contents = list(/obj/item/mining_scanner=1,
 							/obj/item/metaldetector=1,
 							/obj/item/shovel=1,
-							/obj/item/gun/ballistic/automatic/pistol/m1911=1)
+							/obj/item/gun/ballistic/automatic/pistol/m1911=1,
+							/obj/item/ammo_box/magazine/m45 = 2)
 
 /datum/outfit/loadout/settler
 	name = "Settler"
@@ -104,6 +105,7 @@
 		/obj/item/cultivator = 1,
 		/obj/item/reagent_containers/glass/bucket = 1,
 		/obj/item/storage/bag/plants/portaseeder = 1,
+		/obj/item/ammo_box/magazine/m10mm = 2
 		)
 
 /datum/outfit/loadout/medic
@@ -118,6 +120,7 @@
 							/obj/item/smelling_salts=1,
 							/obj/item/healthanalyzer=1,
 							/obj/item/gun/ballistic/automatic/pistol/m1911=1,
+							/obj/item/ammo_box/magazine/m45 = 2,
 							/obj/item/reagent_containers/glass/bottle/epinephrine=2,
 							/obj/item/storage/backpack/duffelbag/med/surgery=1,
 							/obj/item/paper_bin=1,
@@ -136,7 +139,7 @@
 	glasses = /obj/item/clothing/glasses/f13/biker
 	l_hand = /obj/item/gun/ballistic/revolver/caravan_shotgun
 	backpack_contents =  list(/obj/item/storage/box/vendingmachine=1,
-							/obj/item/gun/ballistic/automatic/pistol/m1911=1)
+							/obj/item/gun/ballistic/automatic/pistol/m1911=1, /obj/item/ammo_box/magazine/m45 = 2, /obj/item/ammo_box/shotgun/buck = 2)
 
 /datum/outfit/loadout/vault_refugee
 	name = "Vaultie"
@@ -148,7 +151,7 @@
 	ears = /obj/item/radio/headset
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
-		/obj/item/ammo_box/magazine/m10mm=2,
+		/obj/item/ammo_box/magazine/m10mm=4,
 		/obj/item/pda=1,)
 
 /datum/outfit/loadout/warrior
@@ -186,7 +189,7 @@
 	id = /obj/item/card/id/dogtag/town/ncr
 	l_hand = /obj/item/gun/ballistic/rifle/mag/varmint
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556mm=2)
+		/obj/item/ammo_box/magazine/m556mm=4)
 
 /datum/outfit/loadout/wastelander_desert_ranger
 	name = "Desert Cowboy"
@@ -198,4 +201,5 @@
 	backpack_contents = list(
 		/obj/item/ammo_box/a357=2,
 		/obj/item/binoculars=1,
-		/obj/item/radio=1)
+		/obj/item/radio=1,
+		/obj/item/melee/onehanded/knife/hunting=1)
