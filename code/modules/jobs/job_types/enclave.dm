@@ -174,13 +174,11 @@
 	ADD_TRAIT(H, TRAIT_RESEARCHER,  REF(src))
 	ADD_TRAIT(H, TRAIT_ENCLAVE_CODES,  REF(src))
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ,  REF(src))
-	H.AddSpell(new /obj/effect/proc_holder/spell/terrifying_presence)
-	H.AddSpell(new /obj/effect/proc_holder/spell/ferocious_loyalty)
 	H.grant_language(/datum/language/codespeak, TRUE, TRUE, LANGUAGE_MIND)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/marksmancarbine)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/pshotgun)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg22)
+	//H.mind.teach_crafting_recipe(/datum/crafting_recipe/marksmancarbine)
+	//H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)
+	//H.mind.teach_crafting_recipe(/datum/crafting_recipe/pshotgun)
+	//H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg22)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/plasmapistol)
 
 /datum/outfit/loadout/lt_is
@@ -628,10 +626,10 @@
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/needle)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gun/plasmamusket)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/USAeyebot)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/marksmancarbine)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)
+	//H.mind.teach_crafting_recipe(/datum/crafting_recipe/marksmancarbine)
+	//H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/pshotgun)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg22)
+	//H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg22)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/plasmapistol)
 
 /*

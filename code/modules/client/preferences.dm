@@ -1354,7 +1354,7 @@ Records disabled until a use for them is found
 	var/total = special_s + special_p + special_e + special_c + special_i + special_a + special_l
 
 	dat += "<center><b>Allocate points</b></center>"
-	dat += "<center>Note: SPECIAL is purely cosmetic. These points have no effect on gameplay.</center><br>"
+	dat += "<center>Note: SPECIAL is NOT cosmetic. These points VASTLY affect gameplay.</center><br>"
 	dat += "<center>[total] out of 40 possible</center><br>"
 	dat += "<b>Strength	   :</b> <a href='?_src_=prefs;preference=special_s;task=input'>[special_s]</a><BR>"
 	dat += "<b>Perception  :</b> <a href='?_src_=prefs;preference=special_p;task=input'>[special_p]</a><BR>"

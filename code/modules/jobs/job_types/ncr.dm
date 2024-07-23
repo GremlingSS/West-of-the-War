@@ -173,7 +173,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	ADD_TRAIT(H, TRAIT_HARD_YARDS,  REF(src))
 	ADD_TRAIT(H, TRAIT_LIFEGIVER,  REF(src))
 	ADD_TRAIT(H, TRAIT_SELF_AWARE,  REF(src))
-	H.AddSpell(new /obj/effect/proc_holder/spell/terrifying_presence)
 
 /datum/outfit/job/ncr/f13captain	// Binoculars, Trench knife
 	name = "NCR Captain"
@@ -283,7 +282,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	ADD_TRAIT(H, TRAIT_SELF_AWARE,  REF(src))
 	ADD_TRAIT(H, TRAIT_HARD_YARDS,  REF(src))
 	ADD_TRAIT(H, TRAIT_LIFEGIVER,  REF(src))
-	H.AddSpell(new /obj/effect/proc_holder/spell/terrifying_presence)
 
 
 //SERGEANT
@@ -405,7 +403,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	ADD_TRAIT(H, TRAIT_GENERIC,  REF(src))
 	var/datum/martial_art/rangertakedown/RT = new
 	RT.teach(H)
-	H.AddSpell(new /obj/effect/proc_holder/spell/terrifying_presence)
 
 /datum/outfit/job/ncr/f13vetranger
 	name = "NCR Veteran Ranger"
@@ -671,10 +668,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	if(visualsOnly)
 		return
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tools/forged/entrenching_tool)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ninemil)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1911)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/huntingrifle)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/huntingshotgun)
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK,  REF(src))
 	ADD_TRAIT(H, TRAIT_EXPLOSIVE_CRAFTING, REF(src))
 
@@ -985,7 +978,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		return
 	ADD_TRAIT(H, TRAIT_GENERIC,  REF(src))
 	ADD_TRAIT(H, TRAIT_SELF_AWARE,  REF(src))
-	H.AddSpell(new /obj/effect/proc_holder/spell/terrifying_presence)
 
 /datum/outfit/job/ncr/f13representative
 	name = "NCR Representative"
@@ -1098,24 +1090,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrsalvagedarmorconversion)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tools/forged/entrenching_tool)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrsalvagedhelmetconversion)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/concussion)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/incendiaryrocket)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/empgrenade)
-	//guns
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg22)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/uzi)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ninemil)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1911)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/n99)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/servicerifle)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/marksmancarbine)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1garand)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/scoutcarbine)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/huntingrifle)
-
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/receiver)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/assembly)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/alloys)
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK,  REF(src))
 
 /datum/outfit/job/ncr/f13logisticsofficer		// M1 Garand, 9mm sidearm, Survival knife, C-4 bomb, Extra materials, Full blueprints

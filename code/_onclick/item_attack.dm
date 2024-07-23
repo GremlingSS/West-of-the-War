@@ -109,6 +109,8 @@
 		else if(HAS_TRAIT(user, TRAIT_LITTLE_LEAGUES))
 			bonus_damage -= 10 //flat subtraction
 
+		bonus_damage += user.special_s//SPECIAL integration
+
 		if(HAS_TRAIT(user, TRAIT_BUFFOUT_BUFF))
 			damage_multiplier += 0.4
 

@@ -125,14 +125,10 @@ Mayor
 	..()
 	if(visualsOnly)
 		return
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combatcarbine)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combatrifle)
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, REF(src))
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, REF(src))
 	ADD_TRAIT(H, TRAIT_SELF_AWARE,REF(src))
 	ADD_TRAIT(H, TRAIT_IRONFIST, REF(src))
-	H.AddSpell(new /obj/effect/proc_holder/spell/terrifying_presence)
-	H.AddSpell(new /obj/effect/proc_holder/spell/ferocious_loyalty)
 
 /*--------------------------------------------------------------*/
 /datum/job/bighorn/f13deputy
@@ -201,8 +197,6 @@ Mayor
 	..()
 	if(visualsOnly)
 		return
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combatcarbine)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combatrifle)
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, REF(src))
 
 /*--------------------------------------------------------------*/
@@ -328,21 +322,6 @@ Mayor
 		return
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, REF(src))
 	ADD_TRAIT(H, TRAIT_GENERIC, REF(src))
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/policepistol)
-
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steelbib/heavy)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/armyhelmetheavy)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/trail_carbine)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg22)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/huntingrifle)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/varmintrifle)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/huntingshotgun)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/thatgun)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/uzi)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/frag_shrapnel)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/concussion)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/explosive/shrapnelmine)
 
 /datum/outfit/job/bighorn/f13shopkeeper/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()

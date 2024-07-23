@@ -36,9 +36,8 @@ Discuss balance and documentation changes with Dragonfruits#1913 or forward them
 	if(visualsOnly)
 		return
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legiongate)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/berserker_powder)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/hydra)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/naturalpainkiller)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionshield)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionlance)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/rip/crossexecution)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legioncombatarmor)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legioncombathelmet)
@@ -118,7 +117,6 @@ Discuss balance and documentation changes with Dragonfruits#1913 or forward them
 	ADD_TRAIT(H, TRAIT_LIFEGIVER,  REF(src))
 	ADD_TRAIT(H, TRAIT_IRONFIST,  REF(src))
 	ADD_TRAIT(H, TRAIT_BIG_LEAGUES,  REF(src))
-	H.AddSpell(new /obj/effect/proc_holder/spell/terrifying_presence)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13legate	// 14mm Pistol, Goliath
 	name = "Legate"
@@ -185,7 +183,6 @@ Discuss balance and documentation changes with Dragonfruits#1913 or forward them
 		return
 	ADD_TRAIT(H, TRAIT_HARD_YARDS,  REF(src))
 	ADD_TRAIT(H, TRAIT_LIFEGIVER,  REF(src))
-	H.AddSpell(new /obj/effect/proc_holder/spell/terrifying_presence)
 
 /datum/job/CaesarsLegion/f13priestess
 	title = "Legion Priestess"
@@ -277,7 +274,6 @@ Discuss balance and documentation changes with Dragonfruits#1913 or forward them
 	ADD_TRAIT(H, TRAIT_LIFEGIVER,  REF(src))
 	ADD_TRAIT(H, TRAIT_IRONFIST,  REF(src))
 	ADD_TRAIT(H, TRAIT_BIG_LEAGUES,  REF(src))
-	H.AddSpell(new /obj/effect/proc_holder/spell/terrifying_presence)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13centurion
 	name = "Legion Centurion"
@@ -606,7 +602,6 @@ Discuss balance and documentation changes with Dragonfruits#1913 or forward them
 	ADD_TRAIT(H, TRAIT_IRONFIST,  REF(src))
 	ADD_TRAIT(H, TRAIT_HARD_YARDS,  REF(src))
 	ADD_TRAIT(H, TRAIT_LIFEGIVER,  REF(src))
-	H.AddSpell(new /obj/effect/proc_holder/spell/terrifying_presence)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13vexillarius
 	name = "Vexillarius"
@@ -1022,24 +1017,6 @@ Discuss balance and documentation changes with Dragonfruits#1913 or forward them
 		return
 	ADD_TRAIT(H, TRAIT_BIG_LEAGUES,  REF(src))
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK,  REF(src))
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gladius)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/spatha)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lance)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionshield)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionlance)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/concussion)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalwar/xbow)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalwar/cheaparrow)
-
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/sks)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/greasegun)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/remingtonhuntingrifle)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/huntingshotgun)
-
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/receiver)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/assembly)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/alloys)
 
 
 
