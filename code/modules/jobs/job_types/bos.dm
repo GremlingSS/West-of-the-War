@@ -75,8 +75,6 @@ Elder
 		return
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ,  REF(src))
 	ADD_TRAIT(H, TRAIT_RESEARCHER,  REF(src))
-	H.AddSpell(new /obj/effect/proc_holder/spell/terrifying_presence)
-	H.AddSpell(new /obj/effect/proc_holder/spell/ferocious_loyalty)
 
 /datum/outfit/job/bos/f13elder
 	name = "Elder"
@@ -131,8 +129,6 @@ Head Paladin
 	ADD_TRAIT(H, TRAIT_RESEARCHER,  REF(src))
 	ADD_TRAIT(H, TRAIT_LIFEGIVER,  REF(src))
 	ADD_TRAIT(H, TRAIT_IRONFIST,  REF(src))
-	H.AddSpell(new /obj/effect/proc_holder/spell/terrifying_presence)
-	H.AddSpell(new /obj/effect/proc_holder/spell/ferocious_loyalty)
 
 /datum/outfit/job/bos/f13sentinel
 	name = "Paladin Commander"
@@ -213,9 +209,6 @@ Proctor
 	ADD_TRAIT(H, TRAIT_SURGERY_HIGH,  REF(src))
 	ADD_TRAIT(H, TRAIT_RESEARCHER,  REF(src))
 	ADD_TRAIT(H, TRAIT_ADVANCED_EXPLOSIVE_CRAFTING, REF(src))
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AER9)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AEP7)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/r91)
 
 /datum/outfit/job/bos/f13headscribe
 	name = "Head Scribe"
@@ -371,8 +364,6 @@ Senior Paladin
 		return
 	ADD_TRAIT(H, TRAIT_PA_WEAR,  REF(src))
 	ADD_TRAIT(H, TRAIT_RESEARCHER,  REF(src))
-	H.AddSpell(new /obj/effect/proc_holder/spell/terrifying_presence)
-	H.AddSpell(new /obj/effect/proc_holder/spell/ferocious_loyalty)
 
 /datum/outfit/job/bos/f13seniorpaladin
 	name =	"Senior Paladin"
@@ -547,9 +538,6 @@ Senior Scribe
 	ADD_TRAIT(H, TRAIT_CYBERNETICIST,  REF(src))
 	ADD_TRAIT(H, TRAIT_RESEARCHER,  REF(src))
 	ADD_TRAIT(H, TRAIT_EXPLOSIVE_CRAFTING, REF(src))
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AER9)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AEP7)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/wattz1k)
 
 /datum/outfit/job/bos/f13seniorscribe
 	name =	"Senior Scribe"

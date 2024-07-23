@@ -40,8 +40,12 @@
 	user.say(message_said, spans = span_list, sanitize = FALSE)
 	playsound(get_turf(user), speech_sound, 100, 1, 5)
 	for(var/mob/living/carbon/C in get_hearers_in_view(7, user))
-		if(!faction_check((user.faction - "neutral"), C.faction))
+		if(!faction_check((user.faction - "neutral"), C.faction) && C.special_c > 7)//SPECIAL Integration
+			return
+		else if(!faction_check((user.faction - "neutral"), C.faction) && C.special_c > 3)
 			C.jitteriness += 5 // Scary, oooooo
+		else
+			C.Stun(10)
 
 
 
@@ -89,5 +93,9 @@
 	user.say(message_said, spans = span_list, sanitize = FALSE)
 	playsound(get_turf(user), speech_sound, 100, 1, 5)
 	for(var/mob/living/carbon/C in get_hearers_in_view(7, user))
-		if(!faction_check((user.faction - "neutral"), C.faction))
+		if(!faction_check((user.faction - "neutral"), C.faction) && C.special_c > 4)//SPECIAL Integration
 			C.reagents.add_reagent(/datum/reagent/medicine/ferocious_loyalty,30)
+		if(!faction_check((user.faction - "neutral"), C.faction)  && C.special_c > 1)
+			C.reagents.add_reagent(/datum/reagent/medicine/ferocious_loyalty,15)
+		if(!faction_check((user.faction - "neutral"), C.faction))
+			C.reagents.add_reagent(/datum/reagent/medicine/ferocious_loyalty,5)
