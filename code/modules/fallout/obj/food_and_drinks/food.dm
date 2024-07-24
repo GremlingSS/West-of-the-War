@@ -245,7 +245,7 @@
 	name = "deathclaw steak"
 	desc = "A piece of hot spicy meat, eaten by only the most worthy hunters - or the most rich clients."
 	list_reagents = list(/datum/reagent/consumable/nutriment = 10)
-	bonus_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 10, /datum/reagent/medicine/tricordrazine = 8) 
+	bonus_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 10, /datum/reagent/medicine/tricordrazine = 8)
 
 /obj/item/reagent_containers/food/snacks/meat/steak/squirrel
 	name = "squirrel steak"
@@ -617,6 +617,20 @@
 	bonus_reagents = list(/datum/reagent/consumable/nutriment/vitamin = 3, /datum/reagent/medicine/longpork_stew = 5)
 	filling_color = "#a7510b"
 	tastes = list("oily broth" = 5, "chewy meat" = 1)
+	foodtype = MEAT | LONGPORK
+	trash = /obj/item/reagent_containers/glass/bowl
+
+/obj/item/reagent_containers/food/snacks/soup/profane_stew
+	name = "profane stew"
+	desc = "A terrible stew made by someone clearly insane, its thick broth contains chunks of gooey and oily meat floating in an unholy mixture of bone broth, nukashine, and sliced sinew."
+	icon = 'icons/fallout/objects/food&drinks/soupsalad.dmi'
+	icon_state = "molerat_stew"
+	bitesize = 4
+	volume = 30
+	list_reagents = list(/datum/reagent/medicine/longpork_stew = 15, /datum/reagent/consumable/ethanol/nukashine = 15)
+	bonus_reagents = list(/datum/reagent/consumable/nutriment/vitamin = 3, /datum/reagent/medicine/longpork_stew = 5, /datum/reagent/consumable/ethanol/nukashine = 5)
+	filling_color = "#a7510b"
+	tastes = list("sweetness and liverpain" = 4, "chewy meat" = 1, "corruption" = 1)
 	foodtype = MEAT | LONGPORK
 	trash = /obj/item/reagent_containers/glass/bowl
 

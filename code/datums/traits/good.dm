@@ -295,11 +295,14 @@
 	lose_text = "<span class='danger'>You feel less healthy than usual.</span>"
 	//locked = TRUE
 
+// This somehow doesn't work and nobody fucking noticed, this means every job with Lifegiver dating back years
+// never got any bonus health and nobody noticed. Jesus christ I knew most ss13 coders were morons by this is special! -Possum
+/*
 /datum/quirk/lifegiver/on_spawn()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
 	mob_tar.maxHealth += 10
 	mob_tar.health += 10
-
+*/
 /datum/quirk/iron_fist
 	name = "Iron Fist"
 	desc = "You have fists of kung-fury! Increases unarmed damage."

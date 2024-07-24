@@ -147,6 +147,9 @@
 	water_level = 1.5
 
 /datum/reagent/consumable/nukacherry/on_mob_life(mob/living/carbon/M)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.05, updating_health = FALSE)
+		M.adjustFireLoss(-0.05, updating_health = FALSE)
 	M.adjustFireLoss(-0.1*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
@@ -165,6 +168,9 @@
 	water_level = 1.5
 
 /datum/reagent/consumable/nukagrape/on_mob_life(mob/living/carbon/M)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.05, updating_health = FALSE)
+		M.adjustFireLoss(-0.05, updating_health = FALSE)
 	M.adjustBruteLoss(-0.1*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
@@ -183,6 +189,9 @@
 	water_level = 1.5
 
 /datum/reagent/consumable/nukaorange/on_mob_life(mob/living/carbon/M)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.05, updating_health = FALSE)
+		M.adjustFireLoss(-0.05, updating_health = FALSE)
 	M.adjustToxLoss(-0.1*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
 	M.drowsyness = 0
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
@@ -200,6 +209,9 @@
 	water_level = 1.5
 
 /datum/reagent/consumable/nukaquartz/on_mob_life(mob/living/carbon/M)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.05, updating_health = FALSE)
+		M.adjustFireLoss(-0.05, updating_health = FALSE)
 	M.adjustOxyLoss(-1*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
@@ -218,6 +230,9 @@
 	water_level = 1.75
 
 /datum/reagent/consumable/nukaice/on_mob_life(mob/living/carbon/M)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.05, updating_health = FALSE)
+		M.adjustFireLoss(-0.05, updating_health = FALSE)
 	M.adjust_bodytemperature(-20 * TEMPERATURE_DAMAGE_COEFFICIENT, T0C) //310.15 is the normal bodytemp.
 	M.drowsyness = 0
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
@@ -243,6 +258,9 @@
 	water_level = 1.5
 
 /datum/reagent/consumable/nukawild/on_mob_life(mob/living/carbon/M)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.05, updating_health = FALSE)
+		M.adjustFireLoss(-0.05, updating_health = FALSE)
 	M.AdjustStun(-2, 0)
 	M.AdjustKnockdown(-2, 0)
 	M.drowsyness = 0
@@ -264,6 +282,9 @@
 	water_level = 1.5
 
 /datum/reagent/consumable/nukanew/on_mob_life(mob/living/carbon/M)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.05, updating_health = FALSE)
+		M.adjustFireLoss(-0.05, updating_health = FALSE)
 	M.adjustFireLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
 	M.AdjustStun(-3, 0)
 	M.AdjustKnockdown(-3, 0)
@@ -283,6 +304,19 @@
 	glass_desc = "Nuka-Cola with a Berry Aftertaste."
 	water_level = 1.5
 
+/datum/reagent/consumable/nukaberry/on_mob_life(mob/living/carbon/M)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.05, updating_health = FALSE)
+		M.adjustFireLoss(-0.05, updating_health = FALSE)
+	M.adjustFireLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
+	M.AdjustStun(-3, 0)
+	M.AdjustKnockdown(-3, 0)
+	M.AdjustUnconscious(-3, 0)
+	M.drowsyness = 0
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	..()
+	. = TRUE
+
 /datum/reagent/consumable/nukacooler
 	name = "Nuka Cooler"
 	description = "Insanely cold Nuka-Cola, Freezing the air that surrounds it."
@@ -294,6 +328,9 @@
 	water_level = 1.85
 
 /datum/reagent/consumable/nukacooler/on_mob_life(mob/living/carbon/M)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.05, updating_health = FALSE)
+		M.adjustFireLoss(-0.05, updating_health = FALSE)
 	M.adjust_bodytemperature(-60 * TEMPERATURE_DAMAGE_COEFFICIENT, T0C) //310.15 is the normal bodytemp.
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
 	..()
@@ -310,6 +347,8 @@
 	water_level = 1.5
 
 /datum/reagent/consumable/nukafree/on_mob_life(mob/living/carbon/M)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.05, updating_health = FALSE)
 	if(M.nutrition <= NUTRITION_LEVEL_STARVING)
 		M.adjustToxLoss(0.1*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
 	M.nutrition = max(M.nutrition - 3, 0)
@@ -329,6 +368,8 @@
 	water_level = 1.5
 
 /datum/reagent/consumable/nukafrutti/on_mob_life(mob/living/carbon/M)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.05, updating_health = FALSE)
 	M.adjustToxLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
 	M.adjustFireLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
 	M.adjustBruteLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
@@ -348,6 +389,16 @@
 	glass_name = "Nuka Float"
 	glass_desc = "A delicious blend of ice-cream and classic Nuka-Cola!"
 	water_level = 1.5
+
+/datum/reagent/consumable/nukafloat/on_mob_life(mob/living/carbon/M)
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.05, updating_health = FALSE)
+		M.adjustFireLoss(-0.05, updating_health = FALSE)
+	..()
+	return TRUE // update health and mobility at end of tick
 
 /datum/reagent/consumable/sunsetfloat
 	name = "Sunset Float"

@@ -437,6 +437,7 @@ Mayor
 		/obj/item/storage/belt/utility/artisan/full = 1,
 		/obj/item/clothing/glasses/welding = 1,
 		/obj/item/stack/sheet/metal/fifty = 1,
+		/obj/item/stack/sheet/metal/twenty = 1,
 		/obj/item/stack/sheet/mineral/sandstone/twenty = 1,
 		/obj/item/stack/sheet/mineral/titanium/fifteen = 1,
 		/obj/item/stack/sheet/mineral/wood = 10,
@@ -453,7 +454,8 @@ Mayor
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/storage/fancy/candle_box = 1,
 		/obj/item/pda = 1,
-		/obj/item/storage/bag/money/small/settler = 1
+		/obj/item/storage/bag/money/small/settler = 1,
+		/obj/item/book/manual/advice_blacksmith = 1
 	) // No weapons, you should be crafting them or using your null rod.
 
 // A preacher who brings god's enemies to the sword, a warrior of faith.

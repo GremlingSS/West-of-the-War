@@ -243,10 +243,23 @@
 	result = /obj/item/reagent_containers/food/snacks/soup/longpork_stew
 	subcategory = CAT_WASTEFOOD
 
+/datum/crafting_recipe/food/profane_stew
+	name = "Profane Stew"
+	reqs = list(
+		/datum/reagent/consumable/ethanol/nukashine = 15,
+		/obj/item/reagent_containers/glass/bowl = 1,
+		/obj/item/stack/sheet/bone = 2,
+		/obj/item/stack/sheet/sinew = 2,
+		/obj/item/organ/tongue = 1,
+		/obj/item/organ/eyes = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/soup/profane_stew
+	subcategory = CAT_WASTEFOOD
+
 /datum/crafting_recipe/food/humankebab
 	name = "Killer Kebab"
 	reqs = list(
-		/obj/item/stack/rods = 1,
+		/obj/item/stack/sheet/bone = 1,
 		/obj/item/reagent_containers/food/snacks/meat/steak/plain/human = 2
 	)
 	result = /obj/item/reagent_containers/food/snacks/kebab/human
