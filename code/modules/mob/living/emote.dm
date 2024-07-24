@@ -1,4 +1,3 @@
-
 /*
 current emotes are:
 aflap, airguitar, alarm, alert,
