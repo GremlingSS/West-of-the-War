@@ -2360,7 +2360,7 @@ Records disabled until a use for them is found
 					gender = chosengender
 
 				if("body_size")
-					var/new_body_size = input(user, "Choose your desired sprite size: (75-125%)\nWarning: This may make your character look distorted. Any size under 100% takes a 10% maximum health penalty to compensate for a smaller hitbox.", "Character Preference", features["body_size"]*100) as num|null
+					var/new_body_size = input(user, "Choose your desired sprite size: (70-130%)\nWarning: This may make your character look distorted. Any size under 100% takes a -10 maximum health penalty to compensate for a smaller hitbox.", "Character Preference", features["body_size"]*100) as num|null
 					if(new_body_size)
 						features["body_size"] = clamp(new_body_size * 0.01, CONFIG_GET(number/body_size_min), CONFIG_GET(number/body_size_max))
 

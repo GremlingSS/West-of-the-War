@@ -473,14 +473,14 @@
 /datum/config_entry/keyed_list/breasts_cups_prefs
 	key_mode = KEY_MODE_TEXT
 	value_mode = VALUE_MODE_FLAG
-	config_entry_value = list("a", "b", "c", "d", "e") //keep these lowercase
+	config_entry_value = list("a", "b", "c", "d", "e", "f", "g", "h", "i") //keep these lowercase
 
 /datum/config_entry/number/penis_min_inches_prefs
 	config_entry_value = 1
 	min_val = 0
 
 /datum/config_entry/number/penis_max_inches_prefs
-	config_entry_value = 10
+	config_entry_value = 20
 	min_val = 0
 
 /datum/config_entry/keyed_list/safe_visibility_toggles
@@ -490,13 +490,13 @@
 
 //Body size configs, the feature will be disabled if both min and max have the same value.
 /datum/config_entry/number/body_size_min
-	config_entry_value = 0.75
+	config_entry_value = 0.70
 	min_val = 0.1 //to avoid issues with zeros and negative values.
 	max_val = RESIZE_DEFAULT_SIZE
 	integer = FALSE
 
 /datum/config_entry/number/body_size_max
-	config_entry_value = 1.25
+	config_entry_value = 1.30
 	min_val = RESIZE_DEFAULT_SIZE
 	integer = FALSE
 
