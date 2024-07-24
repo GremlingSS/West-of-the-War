@@ -433,6 +433,7 @@
 	slowdown = 0.06
 	hoodtype = /obj/item/clothing/head/hooded/cloakhood/deathclaw
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	damage_threshold = DT_STRONG // Special since deathclaw
 
 /obj/item/clothing/head/hooded/cloakhood/deathclaw
 	name = "deathclaw cloak hood"
@@ -449,6 +450,7 @@
 	slowdown = 0.06
 	hoodtype = /obj/item/clothing/head/hooded/cloakhood/razorclaw
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	damage_threshold = DT_ADVANCED // Special since legendary deathclaw
 
 /obj/item/clothing/head/hooded/cloakhood/razorclaw
 	name = "razorclaw helm"

@@ -140,8 +140,8 @@ yap, yawn.
 
 /datum/emote/cackle
 	key = "cackle"
-	key_third_person = "cackles worryingly"
-	message = "cackles worryingly."
+	key_third_person = "cackles"
+	message = "cackles."
 	sound = 'sound/f13effects/sunsetsounds/YeenCackle.ogg'
 
 /datum/emote/living/audible/chitter
