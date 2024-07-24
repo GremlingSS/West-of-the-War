@@ -39,8 +39,8 @@ Uranium, Contaminated
 	name = ".22lr bullet"
 	damage = 12
 	wound_bonus = 6
-	var/dmg_dropoff_per_tile = 12 * 0.5 / 10	//In 10 tiles (roughly a screen and half away), it will lose half of its initial damage
-	var/stam_dropoff_per_tile = 0 * 0.5 / 10	//In 10 tiles (roughly a screen and half away), it will lose half of its initial stam damage
+	var/dmg_dropoff_per_tile = 12 * 0.25 / 15	//In 15 tiles, it will lose a quarter of its initial damage
+	var/stam_dropoff_per_tile = 0 * 0.25 / 15	//In 15 tiles, it will lose a quarter of its initial stam damage
 
 /obj/item/projectile/bullet/c22/Range()
 	..()
@@ -56,7 +56,7 @@ Uranium, Contaminated
 	damage = 8
 	wound_bonus = 0
 	sharpness = SHARP_NONE
-	dmg_dropoff_per_tile = 8 * 0.5 / 10
+	dmg_dropoff_per_tile = 8 * 0.45 / 15
 
 /obj/item/projectile/bullet/c22/shock/on_hit(atom/target, blocked = FALSE)
 	..()
@@ -70,8 +70,8 @@ Uranium, Contaminated
 	name = ".38 bullet"
 	damage = 14
 	wound_bonus = 12
-	var/dmg_dropoff_per_tile = 14 * 0.5 / 10	//In 10 tiles (roughly a screen and half away), it will lose half of its initial damage
-	var/stam_dropoff_per_tile = 0 * 0.5 / 10	//In 10 tiles (roughly a screen and half away), it will lose half of its initial stam damage
+	var/dmg_dropoff_per_tile = 14 * 0.25 / 15	//In 15 tiles, it will lose a quarter of its initial damage
+	var/stam_dropoff_per_tile = 0 * 0.25 / 15	//In 15 tiles, it will lose a quarter of its initial stam damage
 
 /obj/item/projectile/bullet/c38/Range()
 	..()
@@ -84,14 +84,14 @@ Uranium, Contaminated
 
 /obj/item/projectile/bullet/c38/improv
 	damage = 12
-	dmg_dropoff_per_tile = 12 * 0.5 / 10
+	dmg_dropoff_per_tile = 12 * 0.25 / 15
 
 /obj/item/projectile/bullet/c38/acid
 	name = ".38 acid-tipped bullet"
 	damage = 4
 	wound_bonus = 0
 	sharpness = SHARP_NONE
-	dmg_dropoff_per_tile = 4 * 0.5 / 10
+	dmg_dropoff_per_tile = 4 * 0.25 / 15
 	var/acid_type = /datum/reagent/toxin/acid/fluacid
 
 /obj/item/projectile/bullet/c38/acid/Initialize(mapload)
@@ -110,7 +110,7 @@ Uranium, Contaminated
 /obj/item/projectile/bullet/c38/incendiary
 	name = ".38 incendiary bullet"
 	damage = 4
-	dmg_dropoff_per_tile = 4 * 0.5 / 10
+	dmg_dropoff_per_tile = 4 * 0.25 / 15
 	var/fire_stacks = 1
 
 /obj/item/projectile/bullet/c38/incendiary/on_hit(atom/target, blocked = FALSE)
@@ -130,8 +130,8 @@ Uranium, Contaminated
 	name = "9mm FMJ bullet"
 	damage = 15
 	wound_bonus = 10
-	var/dmg_dropoff_per_tile = 15 * 0.5 / 10	//In 10 tiles (roughly a screen and half away), it will lose half of its initial damage
-	var/stam_dropoff_per_tile = 0 * 0.5 / 10	//In 10 tiles (roughly a screen and half away), it will lose half of its initial stam damage
+	var/dmg_dropoff_per_tile = 15 * 0.25 / 15	//In 15 tiles, it will lose half of its initial damage
+	var/stam_dropoff_per_tile = 0 * 0.25 / 15	//In 15 tiles, it will lose half of its initial stam damage
 
 /obj/item/projectile/bullet/c9mm/Range()
 	..()
@@ -200,8 +200,8 @@ Uranium, Contaminated
 	damage = 20
 	armour_penetration = 0.05
 	wound_bonus = 25
-	var/dmg_dropoff_per_tile = 20 * 0.25 / 10	//In 10 tiles (roughly a screen and half away), it will lose a quarter of its initial damage
-	var/stam_dropoff_per_tile = 0 * 0.25 / 10	//In 10 tiles (roughly a screen and half away), it will lose a quarter of its initial stam damage
+	var/dmg_dropoff_per_tile = 20 * 0.25 / 15	//In 15 tiles, it will lose a quarter of its initial damage
+	var/stam_dropoff_per_tile = 0 * 0.25 / 15	//In 15 tiles, it will lose a quarter of its initial stam damage
 
 /obj/item/projectile/bullet/c10mm/Range()
 	..()
@@ -242,8 +242,8 @@ Uranium, Contaminated
 	name = ".45 FMJ bullet"
 	damage = 24
 	wound_bonus = 15
-	var/dmg_dropoff_per_tile = 24 * 0.25 / 10	//In 10 tiles (roughly a screen and half away), it will lose a quarter of its initial damage
-	var/stam_dropoff_per_tile = 0 * 0.25 / 10	//In 10 tiles (roughly a screen and half away), it will lose a quarter of its initial stam damage
+	var/dmg_dropoff_per_tile = 24 * 0.25 / 15	//In 15 tiles, it will lose a quarter of its initial damage
+	var/stam_dropoff_per_tile = 0 * 0.25 / 15	//In 15 tiles, it will lose a quarter of its initial stam damage
 
 /obj/item/projectile/bullet/c45/Range()
 	..()
