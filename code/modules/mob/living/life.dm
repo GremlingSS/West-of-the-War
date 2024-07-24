@@ -8,6 +8,15 @@
 /mob/living/proc/Life(seconds, times_fired)
 	set waitfor = FALSE
 	if(!SPECIAL_SET)
+		// Lifegiver/Lifeloser was put here because the on_spawn proc was not working in traits, in theory this should only
+		// be called once at the same time endurance is checked. This does mean that admin spawned mobs wont run this proc, but if
+		// your admin spawning a player mob you can just edit the hp at that point. -Possum
+		if(HAS_TRAIT(src, TRAIT_LIFEGIVER))
+			src.maxHealth += 10
+			src.health += 10
+		if(HAS_TRAIT(src, TRAIT_LIFELOSER))
+			src.maxHealth -= 10
+			src.health -= 10
 		src.maxHealth += (src.special_e*3)//SPECIAL Integration
 		src.health += (src.special_e*3)//SPECIAL Integration
 		update_special_speed((5-src.special_a)/20)//SPECIAL Integration

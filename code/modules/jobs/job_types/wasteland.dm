@@ -76,7 +76,7 @@
 	neck = /obj/item/clothing/neck/apron/labor/forge/khan
 	belt = /obj/item/storage/belt/utility/artisan/full
 	glasses = /obj/item/clothing/glasses/welding
-	backpack_contents = list(/obj/item/gun/ballistic/automatic/pistol/m1911=1, /obj/item/ammo_box/magazine/m45 = 2, /obj/item/twohanded/sledgehammer/simple)
+	backpack_contents = list(/obj/item/gun/ballistic/automatic/pistol/m1911=1, /obj/item/ammo_box/magazine/m45 = 2, /obj/item/twohanded/sledgehammer/simple = 1, /obj/item/book/manual/advice_blacksmith = 1)
 
 /datum/outfit/loadout/scavenger
 	name = "Scavenger"

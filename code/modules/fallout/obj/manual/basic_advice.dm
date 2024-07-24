@@ -83,7 +83,7 @@
 
 				<h3>How to work a hammer and anvil and produce basic tools.</h3>
 
-				The needed tools are: good gloves, metal ingots, a furnace, wood planks, an anvil and a special hammer.
+				The needed tools are: good gloves, metal sheets, leather, a furnace, wood planks, an anvil and a special hammer.
 				<p>
 				<ol>
 				<li>Gloves: Not all gloves can handle red hot metal, Forgemaster gloves, or most others with fingers, or handwraps, are preferable. If you can move the hot metal from the furnace the gloves are good enough.</li>
@@ -129,10 +129,10 @@
 				<li>Sword: (FFDF) Fold, fold, draw, then FOLD SOME MORE. Done right, you get a proper sharp sword, after adding a sword handle.</li>
 				<li>Machete: (FDF) Fold the metal, draw it and ugh..yeah, fold it more. Add handle.</li>
 				<li>Heavy axe: (UDSP) Upset the hot metal, draw it, then shrink it and give it a solid punch. Add a wooden rod, then go chop down some wood or enemies. Easy. </li>
-				<li>Spear: (DDBF) Draw the metal twice, bend it and fold it. Add a rod, and enjoy a simple but effective weapon.</li>
+				<li>Spear: (DDBF) Draw the metal twice, bend it and fold it. Add a wood rod, and enjoy a simple but effective weapon.</li>
 				<li>Mace: (UPU) Upset, punch, upset. Now you have a properly blunt swinging stick.</li>
-				<li>Reforged Machete: (FDU) Fold it, draw it, and upset the metal. Some lesser anvils such as table anvils should make these instead of swords.</li>
-				<li>Scrap Blade: (UDSU) Upset, draw, shrink, upset. Lesser anvils such as table anvils should produce these in a proper axe.</li>
+				<li>Reforged Machete: (FDU) Fold it, draw it, and upset the metal.</li>
+				<li>Scrap Blade: (UDSU) Upset, draw, shrink, upset.</li>
 
 				<li>Throwing Weapons</li>
 				<li>Javelin: (DBF) Draw the metal, bend it and fold it, then add a wooden rod and throw it in someones face.</li>
@@ -145,7 +145,7 @@
 				<li>Lance: (DDBS) Draw, draw, bend, shrink and add a rod. Get a motorcycle to become wasteland cavalry. </li>
 				<li>Gladius: (DDP) Draw, draw, punch. Because regular swords are too small and not broad enough. Add a handle to finish.</li>
 				<li>Spatha: (FDUF) Fold, draw, upset, fold. You were too good for a gladius. Add a handle to finish.</li>
-				<li>Warhoned: (UDSB) Upset, draw, shrink, bend. You want to the biggest and best.</li>
+				<li>Warhoned: (UDSB) Upset, draw, shrink, bend. You want the biggest and best.</li>
 
 				<li>Armor and Clothing</li>
 				<li>Rings: (SSS) Tiny things, perhaps not of much use, but some will pay well for a ring made from the right material. Perhaps wearing it might just cheer you up.</li>

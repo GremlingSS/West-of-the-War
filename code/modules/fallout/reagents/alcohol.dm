@@ -236,6 +236,9 @@
 	glass_desc = "Nuka Cola with a alcoholic twist."
 
 /datum/reagent/consumable/ethanol/nukadark/on_mob_life(mob/living/carbon/M)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.05, updating_health = FALSE)
+		M.adjustFireLoss(-0.05, updating_health = FALSE)
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
@@ -254,6 +257,9 @@
 	ghoulfriendly = TRUE //too american for ghouls not to taste it
 
 /datum/reagent/consumable/ethanol/nukavictory/on_mob_life(mob/living/carbon/M)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.05, updating_health = FALSE)
+		M.adjustFireLoss(-0.05, updating_health = FALSE)
 	ADD_TRAIT(M, TRAIT_BIG_LEAGUES, "[type]")
 	M.adjustBruteLoss(-2.5*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
 	M.drowsyness = 0
@@ -284,6 +290,9 @@
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.05, updating_health = FALSE)
+		M.adjustFireLoss(-0.05, updating_health = FALSE)
 	..()
 	. = TRUE
 
@@ -308,6 +317,9 @@
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.05, updating_health = FALSE)
+		M.adjustFireLoss(-0.05, updating_health = FALSE)
 	..()
 	. = TRUE
 
@@ -329,6 +341,9 @@
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.05, updating_health = FALSE)
+		M.adjustFireLoss(-0.05, updating_health = FALSE)
 	..()
 	. = TRUE
 
@@ -347,6 +362,9 @@
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.05, updating_health = FALSE)
+		M.adjustFireLoss(-0.05, updating_health = FALSE)
 	..()
 	. = TRUE
 
@@ -371,6 +389,9 @@
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.05, updating_health = FALSE)
+		M.adjustFireLoss(-0.05, updating_health = FALSE)
 	..()
 	. = TRUE
 
@@ -389,6 +410,9 @@
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.05, updating_health = FALSE)
+		M.adjustFireLoss(-0.05, updating_health = FALSE)
 	..()
 	. = TRUE
 
@@ -465,6 +489,9 @@
 	M.AdjustKnockdown(-30, 0)
 	M.AdjustUnconscious(-30, 0)
 	M.adjustStaminaLoss(-5, updating_health = FALSE)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.05, updating_health = FALSE)
+		M.adjustFireLoss(-0.05, updating_health = FALSE)
 	ADD_TRAIT(M, TRAIT_IRONFIST, "[type]")
 	ADD_TRAIT(M, TRAIT_SLEEPIMMUNE, "[type]")
 	if(iscarbon(M))
@@ -793,6 +820,17 @@
 	glass_icon_state = "nukashine"
 	glass_name = "Nukashine"
 	glass_desc = "You've really hit rock bottom now... your liver packed its bags and left last night. Stronger than the normal stuff, whooboy."
+
+/datum/reagent/consumable/ethanol/nukashine/on_mob_life(mob/living/carbon/M)
+	M.adjustBruteLoss(-3*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.05, updating_health = FALSE)
+		M.adjustFireLoss(-0.05, updating_health = FALSE)
+	..()
+	. = TRUE
 
 /datum/reagent/consumable/ethanol/olflakey
 	name = "Ol' Flakey"

@@ -365,11 +365,13 @@
 	gain_text = "<span class='notice'>You feel less healthy than usual.</span>"
 	lose_text = "<span class='danger'>You feel more healthy than usual.</span>"
 
+// Was originally mirrored from lifegiver, which turns out hasn't worked for literal *years*. Defining it elsewhere. -Possum
+/*
 /datum/quirk/lifeloser/on_spawn()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
 	mob_tar.maxHealth -= 10
 	mob_tar.health -= 10
-
+*/
 /datum/quirk/paper_fist
 	name = "Paper Fist"
 	desc = "You have limp wrists and weak fists. You deal the alot less unarmed damage."
