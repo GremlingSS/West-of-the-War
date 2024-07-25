@@ -52,8 +52,12 @@
 
 	var/turf/usr_turf = get_turf(user) //Bellow are the changes made by PR#256
 	var/modifier = 0
+	if(user.special_l > 2)
+		modifier += rand(0, round(user.special_l/4))
+		if(modifier > 0)
+			to_chat(user, "<span class='notice'>You get lucky and find [modifier] more bits of loot!</span>")
 	if(HAS_TRAIT(user,TRAIT_TECHNOPHREAK))
-		modifier += rand((1 + round(user.special_l/3)), (3 + round(user.special_l/3)))
+		modifier += rand(1, 3)
 	var/obj/item/l = user.get_inactive_held_item()
 	if(istype(l,/obj/item/weldingtool))
 		var/obj/item/weldingtool/WO = l

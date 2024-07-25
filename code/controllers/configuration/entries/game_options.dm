@@ -475,6 +475,7 @@
 	value_mode = VALUE_MODE_FLAG
 	config_entry_value = list("a", "b", "c", "d", "e", "f", "g", "h", "i") //keep these lowercase
 
+// Not actually controlled here, see game_options.txt
 /datum/config_entry/number/penis_min_inches_prefs
 	config_entry_value = 1
 	min_val = 0

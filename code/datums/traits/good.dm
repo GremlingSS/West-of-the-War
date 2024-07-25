@@ -355,6 +355,10 @@
 	lose_text = "<span class='danger'>You forget your advanced surgical knowledge.</span>"
 	//locked = TRUE
 
+// Everything basic crafting does is also done by advanced crafting for explosives. I could increase advanced crafting to 2
+// but a newer player might think they need both for all recipes, so instead I commented this out. Unlike surgery perks
+// this would be slightly harder to be clear to a non-code diving/veteran player. -Possum
+/*
 /datum/quirk/explosive_crafting
 	name = "Explosives Crafting"
 	desc = "You have strong feelings about the future of industrial society."
@@ -363,7 +367,7 @@
 	gain_text = "<span class='notice'>You feel like you can make a bomb out of anything.</span>"
 	lose_text = "<span class='danger'You feel okay with the advancement of technology.</span>"
 	//locked = TRUE
-
+*/
 /datum/quirk/advanced_explosive_crafting
 	name = "Advanced Explosive Crafting"
 	desc = "Decades of engineering knowledge have taught you to make all kinds of horrible explosives."
