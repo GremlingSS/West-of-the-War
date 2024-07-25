@@ -481,7 +481,7 @@
 		H.mind.teach_crafting_recipe(/datum/crafting_recipe/rechargerrifle)
 		H.mind.teach_crafting_recipe(/datum/crafting_recipe/melee/forged/surgripper)
 
-	if(H.special_i >= 9 && H.special_e >= 7 && H.special_e >= 7) // Represents a smart and strong person brute forcing PA training.
+	if(H.special_i >= 9 && H.special_e >= 7 && H.special_s >= 7) // Represents a smart and strong person brute forcing PA training.
 		if(pa_wear == FALSE)
 			ADD_TRAIT(H, TRAIT_PA_WEAR, "pa_wear")
 

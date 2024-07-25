@@ -390,7 +390,7 @@
 
 /datum/quirk/shackledrunning
 	name = "Shackledrunning"
-	desc = "You are about as agile as a brick. You climb MU H slower!"
+	desc = "You are about as agile as a brick. You climb MUCH slower!"
 	value = -2
 	mob_trait = TRAIT_SHACKLEDRUNNING
 	gain_text = "<span class='notice'>You feel very clumsy!</span>"

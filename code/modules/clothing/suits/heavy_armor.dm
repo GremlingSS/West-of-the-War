@@ -90,6 +90,79 @@
 	Now begone, report this to coders. NOW!"
 	slowdown = 0.35	//When helmeted, 0.45
 	damage_threshold = DT_ADVANCED // Salvaged PA, still PA.
+	var/repair_path = /obj/item/clothing/suit/armor/f13/power_armor/t45d
+	var/salvage_step = 0
+
+/obj/item/clothing/suit/armored/heavy/salvaged_pa/examine(mob/user)
+	. = ..()
+	if(ispath(repair_path))
+		. += repair_hint()
+
+/obj/item/clothing/suit/armored/heavy/salvaged_pa/proc/repair_hint()
+	switch(salvage_step)
+		if(0)
+			return "<span class='notice'>The wiring cover is <i>screwed</i> shut.</span>"
+		if(1)
+			return "<span class='notice'>The cover is <i>screwed</i> open and <i>wires</i> are awaiting repairs.</span>"
+		if(2)
+			return "<span class='warning'>The wiring has been <i>repaired</i> and components exposed by <i>bolts</i> need fixing.</span>"
+		if(3)
+			return "<span class='warning'>The components have been <i>repaired</i> and servomotors inside the suit need to be <i>welded to the frame</i>.</span>"
+
+
+/obj/item/clothing/suit/armored/heavy/salvaged_pa/attackby(obj/item/I, mob/living/carbon/human/user, params)
+	if(ispath(repair_path) && user.special_i >= 9 && (HAS_TRAIT(user,TRAIT_TECHNOPHREAK) || HAS_TRAIT(user,TRAIT_RESEARCHER)))
+		switch(salvage_step)
+			if(0)
+				// Fix
+				if(istype(I, /obj/item/screwdriver))
+					if(ishuman(user) && user.wear_suit == src)
+						to_chat(user, "<span class='warning'>You have to take off the suit before fixing it.</span>")
+						return
+					to_chat(user, "<span class='notice'>You open the secure paneling to expose the remants of the wiring.</span>")
+					if(I.use_tool(src, user, 60, volume=50))
+						salvage_step = 1
+						to_chat(user, "<span class='notice'>You open the wiring cover.</span>")
+					return
+			if(1)
+				// Fix
+				if(istype(I, /obj/item/wirecutters))
+					if(ishuman(user) && user.wear_suit == src)
+						to_chat(user, "<span class='warning'>You have to take off the suit before fixing it.</span>")
+						return
+					to_chat(user, "<span class='notice'>You begin removing burnt or snipped wiring and reconnecting each cable...</span>")
+					if(I.use_tool(src, user, 80, volume=50))
+						salvage_step = 2
+						to_chat(user, "<span class='notice'>You remove, repair, and reconnect the wires as needed.</span>")
+					return
+			if(2)
+				// Fix
+				if(istype(I, /obj/item/wrench))
+					if(ishuman(user) && user.wear_suit == src)
+						to_chat(user, "<span class='warning'>You have to take off the suit before fixing it.</span>")
+						return
+					to_chat(user, "<span class='notice'>You start resecuring and field repairing the components.</span>")
+					if(I.use_tool(src, user, 100, volume=50))
+						salvage_step = 3
+						to_chat(user, "<span class='notice'>You secure and repair the inner components.</span>")
+					return
+			if(3)
+				// Fix
+				if(istype(I, /obj/item/weldingtool) || istype(I, /obj/item/gun/energy/plasmacutter))
+					if(ishuman(user) && user.wear_suit == src)
+						to_chat(user, "<span class='warning'>You have to take off the suit before fixing it.</span>")
+						return
+					to_chat(user, "<span class='notice'>You begin welding the newly repaired servomotors to the frame.</span>")
+					if(I.use_tool(src, user, 150, volume=60))
+						to_chat(user, "<span class='notice'>You re-connect servomotors to the main frame.</span>")
+						var/obj/item/ST = new repair_path(src)
+						user.put_in_hands(ST)
+						qdel(src)
+					return
+	return ..()
+
+
+
 
 // T-45D
 /obj/item/clothing/suit/armored/heavy/salvaged_pa/t45d
@@ -129,6 +202,7 @@
 	item_state = "t51b_salvaged"
 	armor = list("melee" = 75, "bullet" = 75, "laser" = 65, "energy" = 15, "bomb" = 65, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 50)
 	slowdown = 0.4
+	repair_path = /obj/item/clothing/suit/armor/f13/power_armor/t51b
 
 // Midwest
 /obj/item/clothing/suit/armored/heavy/salvaged_pa/midwest
@@ -138,6 +212,7 @@
 	item_state = "midwestgrey_pa_salvaged"
 	armor = list("melee" = 70, "bullet" = 70, "laser" = 60, "energy" = 20, "bomb" = 45, "bio" = 70, "rad" = 50, "fire" = 75, "acid" = 35, "wound" = 50)
 	slowdown = 0.4
+	repair_path = /obj/item/clothing/suit/armor/f13/power_armor/t51b
 
 // Hardened Midwest
 /obj/item/clothing/suit/armored/heavy/salvaged_pa/midwest/hardened
@@ -147,6 +222,7 @@
 	item_state = "midwestpa_salvaged"
 	armor = list("melee" = 70, "bullet" = 70, "laser" = 65, "energy" = 20, "bomb" = 50, "bio" = 80, "rad" = 60, "fire" = 80, "acid" = 35, "wound" = 50)
 	slowdown = 0.85
+	repair_path = /obj/item/clothing/suit/armor/f13/power_armor/t51b
 
 // T-60A
 /obj/item/clothing/suit/armored/heavy/salvaged_pa/t60
@@ -156,6 +232,7 @@
 	item_state = "t60_salvaged"
 	armor = list("melee" = 75, "bullet" = 70, "laser" = 65, "energy" = 25, "bomb" = 55, "bio" = 70, "rad" = 60, "fire" = 80, "acid" = 35, "wound" = 50)
 	slowdown = 0.35
+	repair_path = /obj/item/clothing/suit/armor/f13/power_armor/t60
 
 // X-02
 /obj/item/clothing/suit/armored/heavy/salvaged_pa/x02
@@ -165,6 +242,7 @@
 	item_state = "advanced_salvaged"
 	armor = list("melee" = 75, "bullet" = 75, "laser" = 75, "energy" = 40, "bomb" = 70, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 50, "wound" = 50)
 	slowdown = 0.35
+	repair_path = /obj/item/clothing/suit/armor/f13/power_armor/x02
 
 ////////////
 // LEGION //
