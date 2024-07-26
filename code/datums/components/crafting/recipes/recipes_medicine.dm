@@ -78,6 +78,7 @@
 	time = 40
 	category = CAT_MEDICAL
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_TRIBAL, TRAIT_MARS_TEACH))
 
 /datum/crafting_recipe/healingpoultice
 	name = "Healing poultice"
@@ -130,6 +131,7 @@
 	time = 15
 	category = CAT_MEDICAL
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_TRIBAL, TRAIT_MARS_TEACH, TRAIT_CHEMWHIZ))
 
 /datum/crafting_recipe/naturalpainkiller
 	name = "Natural Painkiller"
@@ -139,6 +141,7 @@
 	time = 15
 	category = CAT_MEDICAL
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_TRIBAL, TRAIT_MARS_TEACH, TRAIT_CHEMWHIZ))
 
 /datum/crafting_recipe/stimpak
 	name = "Stimpak"
@@ -219,6 +222,7 @@
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_MEDICAL
 	always_available = FALSE
+	granting_trait = TRAIT_CHEMWHIZ
 
 /datum/crafting_recipe/turbo
 	name = "Turbo"
@@ -230,6 +234,7 @@
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_MEDICAL
 	always_available = FALSE
+	granting_trait = TRAIT_CHEMWHIZ
 
 /datum/crafting_recipe/psycho
 	name = "Psycho"
@@ -241,6 +246,7 @@
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_MEDICAL
 	always_available = FALSE
+	granting_trait = TRAIT_CHEMWHIZ
 
 /datum/crafting_recipe/medx
 	name = "Med-X"
@@ -255,6 +261,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_WELDER)
 	category = CAT_MEDICAL
 	always_available = FALSE
+	granting_trait = TRAIT_CHEMWHIZ
 
 /datum/crafting_recipe/buffout
 	name = "Buffout"
@@ -268,6 +275,7 @@
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_MEDICAL
 	always_available = FALSE
+	granting_trait = TRAIT_CHEMWHIZ
 
 /datum/crafting_recipe/extract_gaia
 	name = "Extract gaia"

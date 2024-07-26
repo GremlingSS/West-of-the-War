@@ -65,6 +65,8 @@
 	reqs = list(/obj/item/stack/rods = 1,
 				/obj/item/stack/sheet/mineral/sandstone = 4)
 	category = CAT_PRIMAL
+	granting_trait = list(list(TRAIT_TRIBAL, TRAIT_TRIBAL_WHITELEGS, TRAIT_TRIBAL_DEADHORSES, TRAIT_TRIBAL_RUSTWALKERS, TRAIT_TRIBAL_EIGHTIES, TRAIT_TRIBAL_SORROWS, TRAIT_TRIBAL_WAYFAYER, TRAIT_TRIBAL_BONEDANCER, TRAIT_TRIBAL_ALL))
+
 
 /datum/crafting_recipe/rib
 	name = "Collosal Rib"
@@ -74,6 +76,8 @@
 			/datum/reagent/oil = 5)
 	result = /obj/structure/statue/bone/rib
 	category = CAT_PRIMAL
+	granting_trait = list(list(TRAIT_TRIBAL, TRAIT_TRIBAL_WHITELEGS, TRAIT_TRIBAL_DEADHORSES, TRAIT_TRIBAL_RUSTWALKERS, TRAIT_TRIBAL_EIGHTIES, TRAIT_TRIBAL_SORROWS, TRAIT_TRIBAL_WAYFAYER, TRAIT_TRIBAL_BONEDANCER, TRAIT_TRIBAL_ALL))
+
 
 /datum/crafting_recipe/skull
 	name = "Skull Carving"
@@ -83,6 +87,8 @@
 			/datum/reagent/oil = 5)
 	result = /obj/structure/statue/bone/skull
 	category = CAT_PRIMAL
+	granting_trait = list(list(TRAIT_TRIBAL, TRAIT_TRIBAL_WHITELEGS, TRAIT_TRIBAL_DEADHORSES, TRAIT_TRIBAL_RUSTWALKERS, TRAIT_TRIBAL_EIGHTIES, TRAIT_TRIBAL_SORROWS, TRAIT_TRIBAL_WAYFAYER, TRAIT_TRIBAL_BONEDANCER, TRAIT_TRIBAL_ALL))
+
 
 /datum/crafting_recipe/halfskull
 	name = "Cracked Skull Carving"
@@ -92,6 +98,8 @@
 			/datum/reagent/oil = 5)
 	result = /obj/structure/statue/bone/skull/half
 	category = CAT_PRIMAL
+	granting_trait = list(list(TRAIT_TRIBAL, TRAIT_TRIBAL_WHITELEGS, TRAIT_TRIBAL_DEADHORSES, TRAIT_TRIBAL_RUSTWALKERS, TRAIT_TRIBAL_EIGHTIES, TRAIT_TRIBAL_SORROWS, TRAIT_TRIBAL_WAYFAYER, TRAIT_TRIBAL_BONEDANCER, TRAIT_TRIBAL_ALL))
+
 
 /datum/crafting_recipe/boneshovel
 	name = "Serrated Bone Shovel"
@@ -102,6 +110,8 @@
 			/obj/item/shovel/spade = 1)
 	result = /obj/item/shovel/serrated
 	category = CAT_PRIMAL
+	granting_trait = list(list(TRAIT_TRIBAL, TRAIT_TRIBAL_WHITELEGS, TRAIT_TRIBAL_DEADHORSES, TRAIT_TRIBAL_RUSTWALKERS, TRAIT_TRIBAL_EIGHTIES, TRAIT_TRIBAL_SORROWS, TRAIT_TRIBAL_WAYFAYER, TRAIT_TRIBAL_BONEDANCER, TRAIT_TRIBAL_ALL))
+
 
 /datum/crafting_recipe/punji_sticks
 	name = "Punji stick Trap"
@@ -125,6 +135,8 @@
 	result = /obj/item/clothing/suit/armored/heavy/salvaged_pa/t45d/tribal
 	category = CAT_PRIMAL
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_TRIBAL, TRAIT_TRIBAL_WHITELEGS, TRAIT_TRIBAL_DEADHORSES, TRAIT_TRIBAL_RUSTWALKERS, TRAIT_TRIBAL_EIGHTIES, TRAIT_TRIBAL_SORROWS, TRAIT_TRIBAL_WAYFAYER, TRAIT_TRIBAL_BONEDANCER, TRAIT_TRIBAL_ALL))
+
 
 /datum/crafting_recipe/tribal_pa_helmet
 	name = "Tribal Salvaged Power Armor Helmet"
@@ -140,6 +152,8 @@
 	result = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/tribal
 	category = CAT_PRIMAL
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_TRIBAL, TRAIT_TRIBAL_WHITELEGS, TRAIT_TRIBAL_DEADHORSES, TRAIT_TRIBAL_RUSTWALKERS, TRAIT_TRIBAL_EIGHTIES, TRAIT_TRIBAL_SORROWS, TRAIT_TRIBAL_WAYFAYER, TRAIT_TRIBAL_BONEDANCER, TRAIT_TRIBAL_ALL))
+
 
 /datum/crafting_recipe/tribal_combat_armor
 	name = "Tribal Combat Armor"
@@ -152,6 +166,8 @@
 	result = /obj/item/clothing/suit/armor/f13/combat/tribal
 	category = CAT_PRIMAL
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_TRIBAL, TRAIT_TRIBAL_WHITELEGS, TRAIT_TRIBAL_DEADHORSES, TRAIT_TRIBAL_RUSTWALKERS, TRAIT_TRIBAL_EIGHTIES, TRAIT_TRIBAL_SORROWS, TRAIT_TRIBAL_WAYFAYER, TRAIT_TRIBAL_BONEDANCER, TRAIT_TRIBAL_ALL))
+
 
 /datum/crafting_recipe/tribal_r_combat_armor
 	name = "Tribal Reinforced Combat Armor"
@@ -164,6 +180,8 @@
 	result = /obj/item/clothing/suit/armor/f13/combat/mk2/tribal
 	category = CAT_PRIMAL
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_TRIBAL, TRAIT_TRIBAL_WHITELEGS, TRAIT_TRIBAL_DEADHORSES, TRAIT_TRIBAL_RUSTWALKERS, TRAIT_TRIBAL_EIGHTIES, TRAIT_TRIBAL_SORROWS, TRAIT_TRIBAL_WAYFAYER, TRAIT_TRIBAL_BONEDANCER, TRAIT_TRIBAL_ALL))
+
 
 /datum/crafting_recipe/tribal_combat_armor_helmet
 	name = "Tribal Combat Helmet"
@@ -175,6 +193,8 @@
 	result = /obj/item/clothing/head/helmet/f13/combat/tribal
 	category = CAT_PRIMAL
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_TRIBAL, TRAIT_TRIBAL_WHITELEGS, TRAIT_TRIBAL_DEADHORSES, TRAIT_TRIBAL_RUSTWALKERS, TRAIT_TRIBAL_EIGHTIES, TRAIT_TRIBAL_SORROWS, TRAIT_TRIBAL_WAYFAYER, TRAIT_TRIBAL_BONEDANCER, TRAIT_TRIBAL_ALL))
+
 
 /datum/crafting_recipe/tribal_r_combat_armor_helmet
 	name = "Tribal Reinforced Combat Helmet"
@@ -186,7 +206,11 @@
 	result = /obj/item/clothing/head/helmet/f13/combat/mk2/tribal
 	category = CAT_PRIMAL
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_TRIBAL, TRAIT_TRIBAL_WHITELEGS, TRAIT_TRIBAL_DEADHORSES, TRAIT_TRIBAL_RUSTWALKERS, TRAIT_TRIBAL_EIGHTIES, TRAIT_TRIBAL_SORROWS, TRAIT_TRIBAL_WAYFAYER, TRAIT_TRIBAL_BONEDANCER, TRAIT_TRIBAL_ALL))
 
+
+/datum/crafting_recipe/tribalwar
+	granting_trait = list(list(TRAIT_TRIBAL, TRAIT_TRIBAL_WHITELEGS, TRAIT_TRIBAL_DEADHORSES, TRAIT_TRIBAL_RUSTWALKERS, TRAIT_TRIBAL_EIGHTIES, TRAIT_TRIBAL_SORROWS, TRAIT_TRIBAL_WAYFAYER, TRAIT_TRIBAL_BONEDANCER, TRAIT_TRIBAL_ALL))
 
 /datum/crafting_recipe/tribalwar/sturdybow
 	name = "Sturdy Bow"
@@ -468,6 +492,7 @@
 	category = CAT_PRIMAL
 	tools = list(TOOL_WORKBENCH)
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_TECHNOPHREAK, TRAIT_TRIBAL, TRAIT_TRIBAL_WHITELEGS, TRAIT_TRIBAL_DEADHORSES, TRAIT_TRIBAL_RUSTWALKERS, TRAIT_TRIBAL_EIGHTIES, TRAIT_TRIBAL_SORROWS, TRAIT_TRIBAL_WAYFAYER, TRAIT_TRIBAL_BONEDANCER, TRAIT_TRIBAL_ALL))
 
 /* tdo
 /datum/crafting_recipe/beartrap

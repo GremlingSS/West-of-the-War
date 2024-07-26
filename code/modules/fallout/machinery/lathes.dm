@@ -146,22 +146,22 @@
 			to_chat(user, span_warning("There aren't any casings in \the [O] to recycle!"))
 		return
 	if(panel_open)
-		if(!simple && istype(O, /obj/item/book/granter/crafting_recipe/gunsmith_one))
+		if(!simple && istype(O, /obj/item/book/granter/trait/gunsmith_one))
 			to_chat(user, "<span class='notice'>You upgrade [src] with simple ammunition schematics.</span>")
 			simple = TRUE
 			qdel(O)
 			return
-		if(!basic && istype(O, /obj/item/book/granter/crafting_recipe/gunsmith_two))
+		if(!basic && istype(O, /obj/item/book/granter/trait/gunsmith_two))
 			to_chat(user, "<span class='notice'>You upgrade [src] with basic ammunition schematics.</span>")
 			basic = TRUE
 			qdel(O)
 			return
-		else if(!intermediate && istype(O, /obj/item/book/granter/crafting_recipe/gunsmith_three))
+		else if(!intermediate && istype(O, /obj/item/book/granter/trait/gunsmith_three))
 			to_chat(user, "<span class='notice'>You upgrade [src] with intermediate ammunition schematics.</span>")
 			intermediate = TRUE
 			qdel(O)
 			return
-		else if(!advanced && istype(O, /obj/item/book/granter/crafting_recipe/gunsmith_four))
+		else if(!advanced && istype(O, /obj/item/book/granter/trait/gunsmith_four))
 			to_chat(user, "<span class='notice'>You upgrade [src] with advanced ammunition schematics.</span>")
 			advanced = TRUE
 			qdel(O)
@@ -229,13 +229,13 @@
 /obj/machinery/autolathe/ammo/on_deconstruction()
 	..()
 	if(simple)
-		new /obj/item/book/granter/crafting_recipe/gunsmith_one(src)
+		new /obj/item/book/granter/trait/gunsmith_one(src)
 	if(basic)
-		new /obj/item/book/granter/crafting_recipe/gunsmith_two(src)
+		new /obj/item/book/granter/trait/gunsmith_two(src)
 	if(intermediate)
-		new /obj/item/book/granter/crafting_recipe/gunsmith_three(src)
+		new /obj/item/book/granter/trait/gunsmith_three(src)
 	if(advanced)
-		new /obj/item/book/granter/crafting_recipe/gunsmith_four(src)
+		new /obj/item/book/granter/trait/gunsmith_four(src)
 	return
 
 /obj/machinery/autolathe/ammo/unlocked_basic

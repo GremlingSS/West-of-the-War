@@ -153,6 +153,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_GUNSMITH_TWO, TRAIT_TOWN))
 
 /datum/crafting_recipe/metalmask
 	name = "Metal Mask"
@@ -296,6 +297,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_TECHNOPHREAK, TRAIT_SCAV, TRAIT_TOWN))
 
 /datum/crafting_recipe/enclavecombatarmor
 	name = "enclave combat armor"
@@ -403,6 +405,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_GUNSMITH_TWO, TRAIT_TOWN))
 
 /datum/crafting_recipe/swag
 	name = "Flame Metal Helmet"

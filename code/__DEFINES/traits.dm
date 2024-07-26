@@ -258,7 +258,7 @@
 #define TRAIT_SPRINT_LOCKED				"sprint_locked"
 
 
-#define TRAIT_SMUTANT		"Super Mutant"	//boosts salvage return
+#define TRAIT_SMUTANT			"Super Mutant"	//boosts salvage return
 #define	TRAIT_CHEMWHIZ			"chemwhiz"
 #define TRAIT_TECHNOPHOBE		"luddite" //Cannot use autolathes/biogens
 #define TRAIT_LONGPORKLOVER		"Cannibal" //guess
@@ -276,9 +276,6 @@
 #define TRAIT_HARD_YARDS        "hard_yards" //trekking, removes slowdown on all tiles
 #define TRAIT_SOFT_FEET        "soft_feet" // slow you the fuck down
 #define TRAIT_LIFEGIVER			"lifegiver" //boosts HP
-#define TRAIT_MARS_TEACH		"mars_teachings" //for legion unique functions
-#define TRAIT_EXPLOSIVE_CRAFTING "explosive_crafting" //can craft explosives and bombs
-#define TRAIT_ADVANCED_EXPLOSIVE_CRAFTING "advanced explosive crafting" //can craft almost all kinds of explosives
 #define TRAIT_PILOT				"vb_pilot"//Can fly the VB.
 #define TRAIT_STIM_INTOLERANCE	"stim_intolerance" //Stims cause vomiting, make you jittery, dizzy and confused
 #define TRAIT_STRAIGHT_EDGE		"straight_edge"	//Fallout chems like Med-X, Psycho, Jet, Turbo etc. cause vomiting, make you jittery, dizzy and confused
@@ -294,11 +291,25 @@
 #define TRAIT_LITTLE_LEAGUES	"little_leagues" // less damage
 #define TRAIT_SHACKLEDRUNNING		"shackledrunning" // slow climbing
 
-// fallout crafting traits
+// Teaching/Crafting Perks, these grant recipes in the crafting menu
 #define TRAIT_GUNSMITH_ONE      "gunsmith_one" //crafts poor guns
 #define TRAIT_GUNSMITH_TWO      "gunsmith_two" //crafts mid level guns
 #define TRAIT_GUNSMITH_THREE    "gunsmith_three" //crafts weapon parts
-#define TRAIT_GUNSMITH_FOUR     "gunsmith_four" //currently unused
+#define TRAIT_GUNSMITH_FOUR     "gunsmith_four" // alloys/base materials
+#define TRAIT_SCAV     			"scav omnibus" // raider/wastelander shit
+#define TRAIT_TOWN     			"town gunsmith" // raider/wastelander shit
+#define TRAIT_MARS_TEACH		"mars_teachings" //for legion unique functions
+#define TRAIT_EXPLOSIVE_CRAFTING "explosive_crafting" //can craft explosives and bombs
+#define TRAIT_ADVANCED_EXPLOSIVE_CRAFTING "advanced explosive crafting" //can craft almost all kinds of explosives
+#define TRAIT_TRIBAL			"tribal" // Generic tribal recipes
+#define TRAIT_TRIBAL_WHITELEGS			"tribal" // Generic tribal recipes
+#define TRAIT_TRIBAL_DEADHORSES			"dead horses"
+#define TRAIT_TRIBAL_RUSTWALKERS		"ruster walkers"
+#define TRAIT_TRIBAL_EIGHTIES			"eighties"
+#define TRAIT_TRIBAL_SORROWS			"sorrows"
+#define TRAIT_TRIBAL_WAYFAYER			"wayfayer"
+#define TRAIT_TRIBAL_BONEDANCER			"bone dancer"
+#define TRAIT_TRIBAL_ALL				"tribal all"
 
 
 //non-mob traits

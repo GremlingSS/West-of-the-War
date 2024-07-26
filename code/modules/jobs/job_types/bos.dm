@@ -230,8 +230,8 @@ Proctor
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
 		/obj/item/gun/energy/laser/plasma/glock = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 2,
-		/obj/item/book/granter/crafting_recipe/gunsmith_three=1,
-		/obj/item/book/granter/crafting_recipe/gunsmith_four=1,
+		/obj/item/book/granter/trait/gunsmith_three=1,
+		/obj/item/book/granter/trait/gunsmith_four=1,
 		)
 
 /*
@@ -299,8 +299,8 @@ Head Knight
 		/obj/item/ammo_box/magazine/m14mm = 2,
 		/obj/item/melee/onehanded/knife/hunting = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
-		/obj/item/book/granter/crafting_recipe/gunsmith_one = 1,
-		/obj/item/book/granter/crafting_recipe/gunsmith_two = 1,
+		/obj/item/book/granter/trait/gunsmith_one = 1,
+		/obj/item/book/granter/trait/gunsmith_two = 1,
 		)
 
 /datum/outfit/loadout/capstand
@@ -565,8 +565,8 @@ Senior Scribe
 		/obj/item/gun/energy/laser/aer9/recharger = 1,
 		/obj/item/stock_parts/cell/ammo/breeder = 2,
 		/obj/item/book/granter/crafting_recipe/blueprint/marksman = 1,
-		/obj/item/book/granter/crafting_recipe/gunsmith_three = 1,
-		/obj/item/book/granter/crafting_recipe/gunsmith_four = 1,
+		/obj/item/book/granter/trait/gunsmith_three = 1,
+		/obj/item/book/granter/trait/gunsmith_four = 1,
 		/obj/item/book/granter/trait/explosives_advanced = 1,
 	)
 /datum/outfit/loadout/sscribeb
@@ -628,7 +628,7 @@ Scribe
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/survival = 1,
 		/obj/item/storage/firstaid/regular = 1,
-		/obj/item/book/granter/crafting_recipe/gunsmith_three = 1,
+		/obj/item/book/granter/trait/gunsmith_three = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/storage/belt/utility/full = 1,
 		)
