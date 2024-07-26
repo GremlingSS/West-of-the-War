@@ -20,6 +20,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_FOUR
 
 /datum/crafting_recipe/forge
 	name = "Metalworking bench"
@@ -287,6 +288,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_TRIBAL, TRAIT_MARS_TEACH))
 
 /datum/crafting_recipe/gladius
 	name = "Gladius"
@@ -301,6 +303,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_TRIBAL, TRAIT_MARS_TEACH))
 
 /datum/crafting_recipe/legionlance
 	name = "Legion Lance"
@@ -315,6 +318,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_TRIBAL, TRAIT_MARS_TEACH))
 
 
 /datum/crafting_recipe/legionshield
@@ -330,6 +334,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_TRIBAL, TRAIT_MARS_TEACH))
 
 
 //polearms
@@ -483,3 +488,4 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 	always_available = FALSE
+	granting_trait = TRAIT_SCAV

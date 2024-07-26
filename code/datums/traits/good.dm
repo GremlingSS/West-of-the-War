@@ -59,7 +59,6 @@
 	gain_text = "<span class='notice'>You remember the old ways of your tribe..</span>"
 	lose_text = "<span class='notice'>You've forgotten the ways of your ancestors..</span>"
 
-
 /datum/quirk/tribespeak/add()
 	var/mob/living/carbon/human/H = quirk_holder
 	H.grant_language(/datum/language/tribal)
@@ -374,5 +373,45 @@
 	value = 1
 	mob_trait = TRAIT_ADVANCED_EXPLOSIVE_CRAFTING
 	gain_text = "<span class='notice'>You're on the no-fly list.'</span>"
-	lose_text = "<span class='danger'You feel like you're allowed to fly on planes again.</span>"
+	lose_text = "<span class='danger'>You feel like you're allowed to fly on planes again.</span>"
 	//locked = TRUE
+
+/datum/quirk/gunslinger
+	name = "Gunslinger"
+	desc = "Years of training and skill shooting has made you a much better shot."
+	value = 2
+	mob_trait = TRAIT_NICE_SHOT
+	gain_text = "<span class='notice'>You need a big iron on your hip.'</span>"
+	lose_text = "<span class='danger'>Texas Red would clear leather.</span>"
+
+/datum/quirk/researcher
+	name = "Research Scientist"
+	desc = "Through either being self taught or a former member of a scientific institution you know how to use research machines."
+	value = 5
+	mob_trait = TRAIT_RESEARCHER
+	gain_text = "<span class='notice'>SCIENCE!'</span>"
+	lose_text = "<span class='danger'>NOT SCIENTIFICALLY POSSIBLE!</span>"
+
+/datum/quirk/technophreak
+	name = "Technophreak"
+	desc = "You are an expert at scrapping machines. When disassembling old world machines and cars you gain more salvage. When breaking apart salvage at a workbench, you gain more materials."
+	value = 3
+	mob_trait = TRAIT_TECHNOPHREAK
+	gain_text = "<span class='notice'>There gold in them there wrecks.'</span>"
+	lose_text = "<span class='danger'>What a bunch of junk!</span>"
+
+/datum/quirk/calcium_healer
+	name = "Calcium Healer"
+	desc = "Brahmin milk is a staple of a heavy society, drinking milk heals you."
+	value = 1
+	mob_trait = TRAIT_CALCIUM_HEALER
+	gain_text = "<span class='notice'>Got milk?'</span>"
+	lose_text = "<span class='danger'>Milk is gross!</span>"
+
+/datum/quirk/autodraw
+	name = "Bow Auto Draw"
+	desc = "Through extensive work hunting, you can knock arrows immediately after firing instead of slowly drawing a new shot."
+	value = 2
+	mob_trait = TRAIT_AUTO_DRAW
+	gain_text = "<span class='notice'>You are a big game hunter.'</span>"
+	lose_text = "<span class='danger'>Guns are better anyways.</span>"

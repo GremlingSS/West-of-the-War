@@ -49,6 +49,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 	always_available = FALSE
+	granting_trait = TRAIT_SCAV
 
 /datum/crafting_recipe/buckler
 	name = "Wooden Buckler"
@@ -110,6 +111,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 	always_available = FALSE
+	granting_trait = TRAIT_SCAV
 
 /datum/crafting_recipe/steelsaw
 	name = "Steel Saw"
@@ -123,6 +125,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 	always_available = FALSE
+	granting_trait = TRAIT_SCAV
 
 /datum/crafting_recipe/autoaxe
 	name = "Auto Axe"
@@ -136,6 +139,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 	always_available = FALSE
+	granting_trait = TRAIT_SCAV
 
 ////////////////
 ///POWER CELLS//
@@ -482,6 +486,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_ONE
 
 //m1911
 /datum/crafting_recipe/m1911
@@ -495,6 +500,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_TWO
 
 //n99
 /datum/crafting_recipe/n99
@@ -508,6 +514,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_TWO
 
 //pardner shotgun
 /datum/crafting_recipe/singleshotty
@@ -560,10 +567,11 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_ONE
 
 //remington rifle
 /datum/crafting_recipe/remingtonhuntingrifle
-	name = "Hunting Rifle"
+	name = "Remington Hunting Rifle"
 	result = /obj/item/gun/ballistic/rifle/hunting/remington
 	reqs = list(/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/crafting/metalparts = 2,
@@ -573,6 +581,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_TWO
 
 //battle rifle
 /datum/crafting_recipe/m1garand
@@ -589,6 +598,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_THREE
 
 //sks rifle
 /datum/crafting_recipe/sks
@@ -605,6 +615,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_TWO
 
 //varmint rifle
 /datum/crafting_recipe/varmintrifle
@@ -618,6 +629,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_ONE
 
 //craftable psuedo-ratslayer
 /datum/crafting_recipe/verminkiller
@@ -654,6 +666,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_TOWN, TRAIT_GUNSMITH_ONE))
 
 //rangemaster
 /datum/crafting_recipe/rangemaster
@@ -684,6 +697,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_GUNSMITH_TWO, TRAIT_TOWN))
 
 //marksman carbine
 /datum/crafting_recipe/marksmancarbine
@@ -698,6 +712,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_TWO
 
 /datum/crafting_recipe/combatcarbine
 	name = "Combat carbine"
@@ -711,6 +726,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_GUNSMITH_TWO, TRAIT_TOWN))
 
 /datum/crafting_recipe/combatrifle
 	name = "Combat Rifle"
@@ -724,6 +740,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_GUNSMITH_TWO, TRAIT_TOWN))
 
 //service rifle
 /datum/crafting_recipe/servicerifle
@@ -739,6 +756,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_TWO
 
 //Infantry Rifle
 /datum/crafting_recipe/infantry_rifle
@@ -768,6 +786,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_THREE
 
 /datum/crafting_recipe/gaussrifle
 	name = "M72 Gauss Rifle"
@@ -828,6 +847,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = TRAIT_TOWN
 
 //aep7
 /datum/crafting_recipe/AEP7
@@ -843,6 +863,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_FOUR
 
 //wattz1k
 /datum/crafting_recipe/wattz1k
@@ -858,6 +879,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_FOUR
 
 //recharger weapons, followers of the apocalypse
 /datum/crafting_recipe/rechargerpistol
@@ -876,6 +898,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_FOUR
 
 /datum/crafting_recipe/rechargerrifle //Intentionally expensive. Not giving this to guards round-start, they'll make it once materials have come in.
 	name = "recharger rifle"
@@ -895,6 +918,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_FOUR
 
 //lever action shotgun
 /datum/crafting_recipe/lever_action
@@ -909,6 +933,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_TWO
 
 //trail carbine
 /datum/crafting_recipe/trail_carbine
@@ -923,6 +948,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_TWO
 
 //.223 pistol
 /datum/crafting_recipe/thatgun
@@ -935,6 +961,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_TWO
 
 //plasma pistol
 /datum/crafting_recipe/plasmapistol
@@ -991,6 +1018,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_TWO
 
 //10mm SMG
 /datum/crafting_recipe/smg10mm
@@ -1004,6 +1032,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_TWO
 
 //Uzi
 /datum/crafting_recipe/uzi
@@ -1019,6 +1048,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_TWO
 
 //MP5
 /datum/crafting_recipe/mp5
@@ -1110,6 +1140,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_FOUR
 
 //Type 93 Assault Rifle
 /datum/crafting_recipe/type93
@@ -1220,6 +1251,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_TWO
 
 //aer9
 /datum/crafting_recipe/AER9
@@ -1236,6 +1268,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_FOUR
 
 //plasma rifle
 /datum/crafting_recipe/plasmarifle
@@ -1415,6 +1448,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_PARTS
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_THREE
 
 /datum/crafting_recipe/suppressor
 	name = "Suppressor"
@@ -1430,6 +1464,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_PARTS
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_THREE
 
 /datum/crafting_recipe/burst_improvement
 	name = "Burst Cam"
@@ -1444,6 +1479,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_PARTS
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_THREE
 
 /datum/crafting_recipe/recoil_decrease
 	name = "Recoil Compensator"
@@ -1458,6 +1494,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_PARTS
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_THREE
 
 /datum/crafting_recipe/automatic_sear
 	name = "Automatic Sear"
@@ -1472,6 +1509,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_PARTS
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_THREE
 
 /datum/crafting_recipe/flux
 	name = "Flux capacitor"
@@ -1486,6 +1524,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_PARTS
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_FOUR
 
 /datum/crafting_recipe/lenses
 	name = "Focused crystal lenses"
@@ -1501,6 +1540,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_PARTS
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_FOUR
 
 /datum/crafting_recipe/conductors
 	name = "Superconductor coil"
@@ -1515,6 +1555,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_PARTS
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_FOUR
 
 /datum/crafting_recipe/receiver
 	name = "Advanced modular receiver"
@@ -1529,6 +1570,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_PARTS
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_FOUR
 
 /datum/crafting_recipe/assembly
 	name = "Pre-war weapon assembly"
@@ -1544,6 +1586,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_PARTS
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_FOUR
 
 /datum/crafting_recipe/alloys
 	name = "Superlight alloys"
@@ -1558,6 +1601,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_PARTS
 	always_available = FALSE
+	granting_trait = TRAIT_GUNSMITH_FOUR
 /*
 Not implemented due to balance at the moment
 /datum/crafting_recipe/caws

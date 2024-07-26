@@ -186,6 +186,8 @@
 				/obj/item/reagent_containers/glass/mortar = 1)
 	category = CAT_PRIMAL
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_TRIBAL, TRAIT_TRIBAL_WHITELEGS, TRAIT_TRIBAL_DEADHORSES, TRAIT_TRIBAL_RUSTWALKERS, TRAIT_TRIBAL_EIGHTIES, TRAIT_TRIBAL_SORROWS, TRAIT_TRIBAL_WAYFAYER, TRAIT_TRIBAL_BONEDANCER, TRAIT_TRIBAL_ALL))
+
 
 /datum/crafting_recipe/warmace
 	name = "Carve Wooden Warmace"
@@ -196,6 +198,8 @@
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_PRIMAL
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_TRIBAL, TRAIT_TRIBAL_WHITELEGS, TRAIT_TRIBAL_DEADHORSES, TRAIT_TRIBAL_RUSTWALKERS, TRAIT_TRIBAL_EIGHTIES, TRAIT_TRIBAL_SORROWS, TRAIT_TRIBAL_WAYFAYER, TRAIT_TRIBAL_BONEDANCER, TRAIT_TRIBAL_ALL))
+
 
 /*datum/crafting_recipe/voodoo
 	name = "Voodoo"
@@ -223,6 +227,7 @@
 //White Legs
 /datum/crafting_recipe/tribalwar/whitelegs
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_TRIBAL_WHITELEGS, TRAIT_TRIBAL_ALL))
 
 /datum/crafting_recipe/tribalwar/whitelegs/lightarmour
 	name = "White Legs Light Armour"
@@ -266,6 +271,7 @@
 //Rustwalkers
 /datum/crafting_recipe/tribalwar/rustwalkers
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_TRIBAL_RUSTWALKERS, TRAIT_TRIBAL_ALL))
 
 /datum/crafting_recipe/tribalwar/rustwalkers/lightarmour
 	name = "Rustwalkers Light Armour"
@@ -305,6 +311,7 @@
 //Eighties
 /datum/crafting_recipe/tribalwar/eighties
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_TRIBAL_EIGHTIES, TRAIT_TRIBAL_ALL))
 
 /datum/crafting_recipe/tribalwar/eighties/lightarmour
 	name = "Eighties Light Armour"
@@ -345,6 +352,7 @@
 //Dead Horses
 /datum/crafting_recipe/tribalwar/deadhorses
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_TRIBAL_DEADHORSES, TRAIT_TRIBAL_ALL))
 
 /datum/crafting_recipe/tribalwar/deadhorses/lightarmour
 	name = "Dead Horses Light Armour"
@@ -384,6 +392,7 @@
 //Sorrows
 /datum/crafting_recipe/tribalwar/sorrows
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_TRIBAL_SORROWS, TRAIT_TRIBAL_ALL))
 
 /datum/crafting_recipe/tribalwar/sorrows/armour
 	name = "Sorrows Armour"
@@ -417,6 +426,7 @@
 
 /datum/crafting_recipe/tribalwar/bone
 	always_available = FALSE
+	granting_trait = list(list(TRAIT_TRIBAL_BONEDANCER, TRAIT_TRIBAL_ALL))
 
 /datum/crafting_recipe/tribalwar/bone/lightarmour
 	name = "Bone Dancer Light Armor"

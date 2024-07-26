@@ -260,7 +260,7 @@ Below are the original loadouts and the temporarily used Tribal. Pending rework 
 		/obj/item/melee/onehanded/knife/ritualdagger = 1,
 		/obj/item/stack/medical/gauze/improvised = 1,
 		/obj/item/reagent_containers/pill/patch/healingpowder = 1,
-		/obj/item/book/granter/crafting_recipe/tribal = 1,
+		/obj/item/book/granter/trait/tribal = 1,
 	)
 
 //Wayfarers
@@ -272,7 +272,7 @@ Below are the original loadouts and the temporarily used Tribal. Pending rework 
 		/obj/item/clothing/head/helmet/f13/wayfarer/hunter = 1,
 		/obj/item/twohanded/spear/bonespear = 1,
 		/obj/item/reagent_containers/pill/patch/bitterdrink = 1,
-		/obj/item/book/granter/crafting_recipe/tribal/all = 1,
+		/obj/item/book/granter/trait/tribal/all = 1,
 	)
 
 /datum/outfit/loadout/wayfarerranged
@@ -285,7 +285,7 @@ Below are the original loadouts and the temporarily used Tribal. Pending rework 
 		/obj/item/storage/belt/tribe_quiver/bone = 1,
 		/obj/item/binoculars = 1,
 		/obj/item/melee/onehanded/club/warclub = 1,
-		/obj/item/book/granter/crafting_recipe/tribal/all = 1,
+		/obj/item/book/granter/trait/tribal/all = 1,
 		)
 
 /datum/outfit/loadout/wayfarershaman
@@ -299,7 +299,7 @@ Below are the original loadouts and the temporarily used Tribal. Pending rework 
 		/obj/item/melee/onehanded/knife/ritualdagger = 1,
 		/obj/item/stack/medical/gauze/improvised = 1,
 		/obj/item/reagent_containers/pill/patch/healingpowder = 1,
-		/obj/item/book/granter/crafting_recipe/tribal/all = 1,
+		/obj/item/book/granter/trait/tribal/all = 1,
 	)
 
 //White Legs
@@ -333,7 +333,7 @@ Below are the original loadouts and the temporarily used Tribal. Pending rework 
 		/obj/item/clothing/under/f13/female/whitelegs = 1,
 		/obj/item/twohanded/fireaxe = 1,
 		/obj/item/gun/ballistic/automatic/pistol/ninemil = 1,
-		/obj/item/book/granter/crafting_recipe/tribal/whitelegs = 1
+		/obj/item/book/granter/trait/tribal/whitelegs = 1
 	)
 
 //Dead Horses
@@ -368,7 +368,7 @@ Below are the original loadouts and the temporarily used Tribal. Pending rework 
 		/obj/item/cultivator=1,
 		/obj/item/reagent_containers/glass/bucket/wood=1,
 		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
-		/obj/item/book/granter/crafting_recipe/tribal/deadhorses = 1
+		/obj/item/book/granter/trait/tribal/deadhorses = 1
 	)
 
 //Sorrows
@@ -383,7 +383,7 @@ Below are the original loadouts and the temporarily used Tribal. Pending rework 
 		/obj/item/reagent_containers/pill/patch/healingpoultice = 2,
 		/obj/item/gun/ballistic/bow/tribal = 1,
 		/obj/item/storage/belt/tribe_quiver = 1,
-		/obj/item/book/granter/crafting_recipe/tribal/sorrows = 1
+		/obj/item/book/granter/trait/tribal/sorrows = 1
 	)
 
 /datum/outfit/loadout/sorrowsshaman
@@ -399,7 +399,7 @@ Below are the original loadouts and the temporarily used Tribal. Pending rework 
 		/obj/item/warpaint_bowl = 1,
 		/obj/item/toy/crayon/spraycan = 2,
 		/obj/item/book/granter/trait/tagger = 1,
-		/obj/item/book/granter/crafting_recipe/tribal/sorrows = 1
+		/obj/item/book/granter/trait/tribal/sorrows = 1
 	)
 
 //Eighties
@@ -439,7 +439,7 @@ Below are the original loadouts and the temporarily used Tribal. Pending rework 
 		/obj/item/ammo_box/shotgun/slug = 1,
 		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
 		/obj/item/storage/belt/utility/full = 1,
-		/obj/item/book/granter/crafting_recipe/tribal/eighties = 1
+		/obj/item/book/granter/trait/tribal/eighties = 1
 	)
 
 //Rustwalkers
@@ -478,7 +478,7 @@ Below are the original loadouts and the temporarily used Tribal. Pending rework 
 		/obj/item/circular_saw = 1,
 		/obj/item/reagent_containers/pill/patch/healingpoultice = 2,
 		/obj/item/storage/belt/utility/full = 1,
-		/obj/item/book/granter/crafting_recipe/tribal/rustwalkers = 1
+		/obj/item/book/granter/trait/tribal/rustwalkers = 1
 
 	)
 //Bone Dancer
@@ -487,7 +487,7 @@ Below are the original loadouts and the temporarily used Tribal. Pending rework 
 	backpack_contents = list(
 		/obj/item/clothing/under/f13/bone = 1,
 		/obj/item/clothing/head/helmet/skull/bone = 1,
-		/obj/item/book/granter/crafting_recipe/tribal/bone = 1,
+		/obj/item/book/granter/trait/tribal/bone = 1,
 		/obj/item/twohanded/spear/bonespear = 1,
 		/obj/item/warpaint_bowl=1,
 		/obj/item/reagent_containers/pill/patch/healingpoultice = 2

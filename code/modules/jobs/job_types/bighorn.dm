@@ -119,7 +119,7 @@ Mayor
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/buck = 2, \
 		/obj/item/restraints/handcuffs = 1, \
-		/obj/item/book/granter/crafting_recipe/ODF = 1)
+		/obj/item/book/granter/trait/ODF = 1)
 
 /datum/outfit/job/bighorn/f13sheriff/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -172,7 +172,7 @@ Mayor
 		/obj/item/ammo_box/a357 = 2,
 		/obj/item/restraints/handcuffs = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
-		/obj/item/book/granter/crafting_recipe/ODF = 1,
+		/obj/item/book/granter/trait/ODF = 1,
 		)
 
 /datum/outfit/loadout/waypointmerca
@@ -753,7 +753,7 @@ Mayor
 	gloves = /obj/item/clothing/gloves/f13/blacksmith
 	backpack_contents = list(/obj/item/twohanded/sledgehammer/simple = 1,
 	/obj/item/stack/sheet/metal/twenty = 1,
-	/obj/item/book/granter/crafting_recipe/ODF = 1,
+	/obj/item/book/granter/trait/ODF = 1,
 	)
 
 /datum/outfit/loadout/outdoorsman

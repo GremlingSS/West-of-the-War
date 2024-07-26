@@ -2474,8 +2474,8 @@
 				/obj/item/book/granter/trait/explosives = 17,
 				/obj/item/book/granter/trait/explosives_advanced = 5,
 				/obj/item/book/granter/trait/rifleman = 5,
-				/obj/item/book/granter/crafting_recipe/gunsmith_three = 10,
-				/obj/item/book/granter/crafting_recipe/gunsmith_four = 10
+				/obj/item/book/granter/trait/gunsmith_three = 10,
+				/obj/item/book/granter/trait/gunsmith_four = 10
 				)
 
 /obj/effect/spawner/lootdrop/f13/traitbooks/low
@@ -2485,12 +2485,12 @@
 	loot = list(/obj/item/book/granter/trait/lowsurgery = 1,
 				/obj/item/book/granter/trait/chemistry = 1,
 				/obj/item/book/granter/trait/techno = 10,
-				/obj/item/book/granter/crafting_recipe/scav = 10,
+				/obj/item/book/granter/trait/scav = 10,
 				/obj/item/book/granter/trait/explosives = 10,
-				/obj/item/book/granter/crafting_recipe/ODF = 10,
+				/obj/item/book/granter/trait/ODF = 10,
 				/obj/item/book/granter/action/drink_fling = 10,
-				/obj/item/book/granter/crafting_recipe/gunsmith_one = 10,
-				/obj/item/book/granter/crafting_recipe/gunsmith_two = 5
+				/obj/item/book/granter/trait/gunsmith_one = 10,
+				/obj/item/book/granter/trait/gunsmith_two = 5
 				)
 
 /obj/effect/spawner/lootdrop/f13/blueprintLow

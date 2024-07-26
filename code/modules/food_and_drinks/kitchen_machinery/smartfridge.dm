@@ -836,6 +836,6 @@
 	chance_initial_contents = list(
 		/obj/item/reagent_containers/food/snacks/deadmouse = 1,
 		/obj/item/book/granter/trait/trekking = 1,
-		/obj/item/book/granter/crafting_recipe/gunsmith_one = 1,
-		/obj/item/book/granter/crafting_recipe/gunsmith_two = 1,
-		/obj/item/book/granter/crafting_recipe/gunsmith_three = 1,)
+		/obj/item/book/granter/trait/gunsmith_one = 1,
+		/obj/item/book/granter/trait/gunsmith_two = 1,
+		/obj/item/book/granter/trait/gunsmith_three = 1,)
