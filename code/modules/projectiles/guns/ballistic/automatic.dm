@@ -255,6 +255,7 @@
 	desc = "A compact and reliable Israeli Uzi SMG chambered for 9mm, best paired with a .45 longslide with laser sighting."
 	icon_state = "uzi"
 	item_state = "uzi"
+	w_class = WEIGHT_CLASS_NORMAL
 	fire_sound = 'sound/f13weapons/9mm.ogg'
 	mag_type = /obj/item/ammo_box/magazine/msmg9mm
 	fire_delay = 2
@@ -297,6 +298,7 @@
 	desc = "An open-bolt Heckler & Koch MP9 that saw extensive use in military and police units prior to the war, chambered in 10mm despite its name."
 	icon_state = "smg10mm"
 	item_state = "smg10mm"
+	w_class = WEIGHT_CLASS_NORMAL
 	fire_sound = 'sound/f13weapons/10mm_fire_03.ogg'
 	mag_type = /obj/item/ammo_box/magazine/msmg10mm
 
@@ -329,6 +331,7 @@
 	desc = "A uniquely powerful and lightweight personal defense weapon developed by FN Herstal, chambered for 5mm and feeding from fifty-round translucent box magazines."
 	icon_state = "p90"
 	item_state = "p90"
+	w_class = WEIGHT_CLASS_NORMAL
 	fire_sound = 'sound/f13weapons/assault_carbine.ogg'
 	mag_type = /obj/item/ammo_box/magazine/mp90
 	slowdown = 0.3
@@ -342,6 +345,7 @@
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "smg14mm"
 	item_state = "smg14mm"
+	w_class = WEIGHT_CLASS_NORMAL
 	fire_sound = 'sound/f13weapons/magnum_fire.ogg'
 	mag_type = /obj/item/ammo_box/magazine/msmg14mm
 	fire_delay = 4
