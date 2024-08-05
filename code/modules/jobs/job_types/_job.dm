@@ -413,7 +413,25 @@
 		H.AddSpell(new /obj/effect/proc_holder/spell/terrifying_presence)
 	if(H.special_c >= 9)
 		H.AddSpell(new /obj/effect/proc_holder/spell/ferocious_loyalty)
+/*
+	if(H.special_a >= 7 && H.special_a < 9)
+		var/datum/component/tackler/T = H.AddComponent(/datum/component/tackler)
+		T.stamina_cost = 25
+		T.base_knockdown = 0
+		T.range = 4
+		T.speed = 1
+		T.skill_mod = 0
+		T.min_distance = 1
 
+	if(H.special_a >= 9)
+		var/datum/component/tackler/T = H.AddComponent(/datum/component/tackler)
+		T.stamina_cost = 15
+		T.base_knockdown = 0
+		T.range = 7
+		T.speed = 1
+		T.skill_mod = 0
+		T.min_distance = 1
+*/
 /datum/outfit/job/get_chameleon_disguise_info()
 	var/list/types = ..()
 	types -= /obj/item/storage/backpack //otherwise this will override the actual backpacks

@@ -525,7 +525,7 @@ ATTACHMENTS
 
 	if(on_cooldown())
 		return
-	if(user.IsWeaponDrawDelayed() && user.special_p >= 7)//SPECIAL Integration
+	if(user.IsWeaponDrawDelayed() && user.special_p < 7)//SPECIAL Integration
 		to_chat(user, "<span class='notice'>[src] is not yet ready to fire!</span>")
 		return
 	firing = TRUE
@@ -1012,7 +1012,7 @@ ATTACHMENTS
 /obj/item/gun/proc/getinaccuracy(mob/living/user, bonus_spread, stamloss)
 	if(inaccuracy_modifier == 0)
 		return bonus_spread
-	var/base_inaccuracy = weapon_weight * 25 * inaccuracy_modifier + 45 + (-user.special_p*5)//SPECIAL Integration
+	var/base_inaccuracy = weapon_weight * 25 * inaccuracy_modifier + 180 + (-user.special_p*20)//SPECIAL Integration
 	var/aiming_delay = 0 //Otherwise aiming would be meaningless for slower guns such as sniper rifles and launchers.
 	if(fire_delay)
 		var/penalty = (last_fire + GUN_AIMING_TIME + fire_delay) - world.time
