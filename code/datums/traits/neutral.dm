@@ -468,14 +468,6 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 	mob_tar.resize -= 0.1
 	mob_tar.update_transform()
 
-/obj/item/book/granter/trait/leaper_moderate
-	name = "DEBUG TEST: DELETE SOON"
-	desc = "How did you get this?"
-	oneuse = TRUE
-	granted_trait = TRAIT_LEAPER_MODERATE
-	traitname = "leaper_moderate"
-
-
 //SPECIAL integration
 /datum/quirk/leaper_weak
 	name = "SPECIAL: Leap"

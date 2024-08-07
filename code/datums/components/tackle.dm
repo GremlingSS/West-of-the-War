@@ -180,6 +180,7 @@
 			user.visible_message("<span class='warning'>[user] lands a passable [tackle_word] on [target], sending them both tumbling!</span>", "<span class='userdanger'>You land a passable [tackle_word] on [target], sending you both tumbling!</span>", target)
 			to_chat(target, "<span class='userdanger'>[user] lands a passable [tackle_word] on you, sending you both tumbling!</span>")
 
+			target.adjustBruteLoss(5 + bonus_damage)
 			target.adjustStaminaLoss(stamina_cost * 1.5)
 			target.Paralyze(5)
 			user.Knockdown(20)
@@ -188,7 +189,7 @@
 		if(1 to 2) // solid hit, tackler has a slight advantage
 			user.visible_message("<span class='warning'>[user] lands a solid [tackle_word] on [target], knocking them both down hard!</span>", "<span class='userdanger'>You land a solid [tackle_word] on [target], knocking you both down hard!</span>", target)
 			to_chat(target, "<span class='userdanger'>[user] lands a solid [tackle_word] on you, knocking you both down hard!</span>")
-
+			target.adjustBruteLoss(10 + bonus_damage)
 			target.adjustStaminaLoss(40)
 			target.Paralyze(5)
 			user.Knockdown(10)
@@ -201,6 +202,7 @@
 			user.SetKnockdown(0)
 			user.set_resting(FALSE, TRUE, FALSE)
 			user.forceMove(get_turf(target))
+			target.adjustBruteLoss(20 + bonus_damage)
 			target.adjustStaminaLoss(50)
 			target.Paralyze(3) //Otherwise the victim can just instantly get out of the grab.
 			target.DefaultCombatKnockdown(20) //So they cant get up instantly.
@@ -214,6 +216,7 @@
 			user.SetKnockdown(0)
 			user.set_resting(FALSE, TRUE, FALSE)
 			user.forceMove(get_turf(target))
+			target.adjustBruteLoss(30 + bonus_damage)
 			target.adjustStaminaLoss(65)
 			target.Paralyze(10)
 			target.DefaultCombatKnockdown(20)
@@ -297,7 +300,7 @@
 			attack_mod += 2
 			sacker.adjustStaminaLoss(20)
 
-	var/r = rand(-3, 3) - defense_mod + attack_mod + skill_mod + bonus_damage
+	var/r = rand(-3, 3) - defense_mod + attack_mod + skill_mod
 	return r
 
 

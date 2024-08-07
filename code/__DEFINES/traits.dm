@@ -282,7 +282,7 @@
 #define TRAIT_HERBAL_AFFINITY	"herbal_affinity"	//Improved tribal medicine healing rates and no drawbacks (no confusion, hallucinations, dizziness etc.)
 #define TRAIT_LEAPER_WEAK		"leaper_weak" // leap 4 tiles
 #define TRAIT_LEAPER_MODERATE	"leaper_moderate" // leap 7 tiles
-#define TRAIT_LEAPER_STRONG		"leaper_strong" // leap 7 styles and stun people you hit
+#define TRAIT_LEAPER_STRONG		"leaper_strong" // leap 5 tiles and stun people you hit
 
 #define TRAIT_SURGERY_LOW		"lowsurgery"
 #define TRAIT_SURGERY_MID		"midsurgery"
