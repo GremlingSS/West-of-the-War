@@ -17,6 +17,9 @@
 		if(HAS_TRAIT(src, TRAIT_LIFELOSER))
 			src.maxHealth -= 10
 			src.health -= 10
+		if(HAS_TRAIT(src, TRAIT_BIG_LIFELOSER))
+			src.maxHealth -= 20
+			src.health -= 20
 
 
 		//SPECIAL integration MAIN
@@ -76,7 +79,7 @@
 			src.AddComponent(/datum/component/tackler/strong)
 			var/datum/component/tackler/strong/T = src.LoadComponent(/datum/component/tackler/strong)
 			T.stamina_cost = 20
-			T.base_knockdown = 1
+			T.base_knockdown = 0
 			T.range = 5
 			T.speed = 1
 			T.skill_mod = 3

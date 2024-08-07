@@ -290,6 +290,7 @@
 
 // Negative Perks
 #define TRAIT_LIFELOSER			"lifeloser" // lowers HP
+#define TRAIT_BIG_LIFELOSER		"big_lifeloser" // lowers HP by alot
 #define TRAIT_PAPERFIST			"paper_fist" // weakens punches
 #define TRAIT_LITTLE_LEAGUES	"little_leagues" // less damage
 #define TRAIT_SHACKLEDRUNNING		"shackledrunning" // slow climbing
