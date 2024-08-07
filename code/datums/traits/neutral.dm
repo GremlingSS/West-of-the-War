@@ -235,84 +235,6 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 	H.equip_to_slot_if_possible(musicaltuner, SLOT_IN_BACKPACK)
 	H.regenerate_icons()
 
-/datum/quirk/fev //DOOM - Used in mob_tar creation && A secondary version for FEV-II exposure.
-	name = "Unstable FEV Exposure"
-	desc = "Be it accidental; the work of a mad scientist roaming the waste-land, or pre-war experiments that left an individual unable to die, this one has been exposed to an FEV Variation."
-	value = 0 // Locked
-	gain_text = span_notice("You feel a burning pain as your DNA is ripped apart, and sewn back together.")
-	lose_text = span_notice("The dull metronome of pain that defined your existence has faded.")
-	medical_record_text = "Patient appears to have 'perfect' DNA - if 'perfect' was a Wastelanders idea of beauty."
-	mob_trait = TRAIT_FEV
-	locked = TRUE
-
-/datum/quirk/fev/add()
-	var/mob/living/carbon/human/mob_tar = quirk_holder
-	mob_tar.dna.species.punchdamagelow += 6 //Larger Muscle-mass
-	mob_tar.dna.species.punchdamagehigh += 8 //But not too large. Reserved for FEV-II
-	quirk_holder.become_mega_nearsighted(ROUNDSTART_TRAIT) //Custom proc to make essentially welder-blindness.
-	mob_tar.maxHealth += 5 //These guys are tanky. Almost blind, and slower.
-	mob_tar.health += 5
-	mob_tar.resize += 0.05
-	mob_tar.update_transform()
-	to_chat(mob_tar, "<span class='notice'>You feel far stronger, and a tad dumber...</span>")
-
-/datum/quirk/fev/on_spawn()
-	var/mob/living/carbon/human/mob_tar = quirk_holder
-	mob_tar.dna.species.punchdamagelow += 6 //Larger Muscle-mass
-	mob_tar.dna.species.punchdamagehigh += 8 //But not too large. Reserved for FEV-II
-	quirk_holder.become_mega_nearsighted(ROUNDSTART_TRAIT) //Custom proc to make essentially welder-blindness.
-	mob_tar.maxHealth += 5 //These guys are tanky. Almost blind, and slower.
-	mob_tar.health += 5
-	to_chat(mob_tar, "<span class='notice'>You feel far stronger, and a tad dumber...</span>")
-
-/datum/quirk/fev/remove()
-	var/mob/living/carbon/human/mob_tar = quirk_holder
-	mob_tar.remove_mega_nearsighted()
-	mob_tar.maxHealth -= 5 //Mutie rage.
-	mob_tar.health -= 5
-	mob_tar.dna.species.punchdamagelow -= 6
-	mob_tar.dna.species.punchdamagehigh -= 8
-	mob_tar.resize -= 0.05
-	mob_tar.update_transform()
-
-/datum/quirk/fevII //FRANK FUCKING HORRIGAAAN
-	name = "FEV-II Exposure"
-	desc = "Direct exposure to FEV-II has caused unpredictable mutations to existing DNA."
-	value = 0 //Never unlockable naturally.
-	gain_text = span_notice("You feel a burning pain as your DNA is ripped apart, and sewn back together.")
-	lose_text = span_notice("The dull metronome of pain that defined your existence has faded.")
-	medical_record_text = "Patient has been exposed to FEV-II, with clear signs of triple-helix DNA present."
-	mob_trait = TRAIT_FEVII
-	locked = TRUE
-
-/datum/quirk/fevII/add()
-	var/mob/living/carbon/human/mob_tar = quirk_holder
-	mob_tar.dna.species.punchdamagelow += 8 //Fear.
-	mob_tar.dna.species.punchdamagehigh += 16  //Hurts!
-	mob_tar.maxHealth += 15 //Mutie rage.
-	mob_tar.health += 15
-	mob_tar.resize += 0.1
-	mob_tar.update_transform()
-	to_chat(mob_tar, "<span class='danger'>You feel extremely strong!</span>")
-
-/datum/quirk/fevII/on_spawn() //should never happen.
-	var/mob/living/carbon/human/mob_tar = quirk_holder
-	mob_tar.dna.species.punchdamagelow += 8 //Fear.
-	mob_tar.dna.species.punchdamagehigh += 16  //Hurts bad.
-	mob_tar.maxHealth += 15 //Mutie rage.
-	mob_tar.health += 15
-	to_chat(mob_tar, "<span class='danger'>You feel extremely strong!</span>")
-
-
-/datum/quirk/fevII/remove()
-	var/mob/living/carbon/human/mob_tar = quirk_holder
-	mob_tar.dna.species.punchdamagelow -= 8
-	mob_tar.dna.species.punchdamagehigh -= 16 //Prevents stacking
-	mob_tar.maxHealth -= 15 //Mutie rage.
-	mob_tar.health -= 15
-	mob_tar.resize -= 0.1
-	mob_tar.update_transform()
-
 /datum/quirk/pineapple_liker
 	name = "Ananas Affinity"
 	desc = "You find yourself greatly enjoying fruits of the ananas genus. You can't seem to ever get enough of their sweet goodness!"
@@ -463,3 +385,134 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 	if(where == "in your backpack")
 		var/mob/living/carbon/human/H = quirk_holder
 		SEND_SIGNAL(H.back, COMSIG_TRY_STORAGE_SHOW, H)
+
+
+// Purposefully locked perks, these reveal in-game what stat specials are required to obtain these perks.
+// Some perks that are always locked due to how they are assigned are also listed here aka FEV perks.
+/datum/quirk/fev //DOOM - Used in mob_tar creation && A secondary version for FEV-II exposure.
+	name = "SPECIAL: Unstable FEV Exposure"
+	desc = "Be it accidental; the work of a mad scientist roaming the waste-land, or pre-war experiments that left an individual unable to die, this one has been exposed to an FEV Variation. \
+	This trait must be gained through gameplay."
+	value = 0 // Locked
+	gain_text = span_notice("You feel a burning pain as your DNA is ripped apart, and sewn back together.")
+	lose_text = span_notice("The dull metronome of pain that defined your existence has faded.")
+	medical_record_text = "Patient appears to have 'perfect' DNA - if 'perfect' was a Wastelanders idea of beauty."
+	mob_trait = TRAIT_FEV
+	locked = TRUE
+
+/datum/quirk/fev/add()
+	var/mob/living/carbon/human/mob_tar = quirk_holder
+	mob_tar.dna.species.punchdamagelow += 6 //Larger Muscle-mass
+	mob_tar.dna.species.punchdamagehigh += 8 //But not too large. Reserved for FEV-II
+	quirk_holder.become_mega_nearsighted(ROUNDSTART_TRAIT) //Custom proc to make essentially welder-blindness.
+	mob_tar.maxHealth += 5 //These guys are tanky. Almost blind, and slower.
+	mob_tar.health += 5
+	mob_tar.resize += 0.05
+	mob_tar.update_transform()
+	to_chat(mob_tar, "<span class='notice'>You feel far stronger, and a tad dumber...</span>")
+
+/datum/quirk/fev/on_spawn()
+	var/mob/living/carbon/human/mob_tar = quirk_holder
+	mob_tar.dna.species.punchdamagelow += 6 //Larger Muscle-mass
+	mob_tar.dna.species.punchdamagehigh += 8 //But not too large. Reserved for FEV-II
+	quirk_holder.become_mega_nearsighted(ROUNDSTART_TRAIT) //Custom proc to make essentially welder-blindness.
+	mob_tar.maxHealth += 5 //These guys are tanky. Almost blind, and slower.
+	mob_tar.health += 5
+	to_chat(mob_tar, "<span class='notice'>You feel far stronger, and a tad dumber...</span>")
+
+/datum/quirk/fev/remove()
+	var/mob/living/carbon/human/mob_tar = quirk_holder
+	mob_tar.remove_mega_nearsighted()
+	mob_tar.maxHealth -= 5 //Mutie rage.
+	mob_tar.health -= 5
+	mob_tar.dna.species.punchdamagelow -= 6
+	mob_tar.dna.species.punchdamagehigh -= 8
+	mob_tar.resize -= 0.05
+	mob_tar.update_transform()
+
+/datum/quirk/fevII //FRANK FUCKING HORRIGAAAN
+	name = "SPECIAL: FEV-II Exposure"
+	desc = "Direct exposure to FEV-II has caused unpredictable mutations to existing DNA. \
+	This trait must be gained through gameplay."
+	value = 0 //Never unlockable naturally.
+	gain_text = span_notice("You feel a burning pain as your DNA is ripped apart, and sewn back together.")
+	lose_text = span_notice("The dull metronome of pain that defined your existence has faded.")
+	medical_record_text = "Patient has been exposed to FEV-II, with clear signs of triple-helix DNA present."
+	mob_trait = TRAIT_FEVII
+	locked = TRUE
+
+/datum/quirk/fevII/add()
+	var/mob/living/carbon/human/mob_tar = quirk_holder
+	mob_tar.dna.species.punchdamagelow += 8 //Fear.
+	mob_tar.dna.species.punchdamagehigh += 16  //Hurts!
+	mob_tar.maxHealth += 15 //Mutie rage.
+	mob_tar.health += 15
+	mob_tar.resize += 0.1
+	mob_tar.update_transform()
+	to_chat(mob_tar, "<span class='danger'>You feel extremely strong!</span>")
+
+/datum/quirk/fevII/on_spawn() //should never happen.
+	var/mob/living/carbon/human/mob_tar = quirk_holder
+	mob_tar.dna.species.punchdamagelow += 8 //Fear.
+	mob_tar.dna.species.punchdamagehigh += 16  //Hurts bad.
+	mob_tar.maxHealth += 15 //Mutie rage.
+	mob_tar.health += 15
+	to_chat(mob_tar, "<span class='danger'>You feel extremely strong!</span>")
+
+/datum/quirk/fevII/remove()
+	var/mob/living/carbon/human/mob_tar = quirk_holder
+	mob_tar.dna.species.punchdamagelow -= 8
+	mob_tar.dna.species.punchdamagehigh -= 16 //Prevents stacking
+	mob_tar.maxHealth -= 15 //Mutie rage.
+	mob_tar.health -= 15
+	mob_tar.resize -= 0.1
+	mob_tar.update_transform()
+
+/obj/item/book/granter/trait/leaper_moderate
+	name = "DEBUG TEST: DELETE SOON"
+	desc = "How did you get this?"
+	oneuse = TRUE
+	granted_trait = TRAIT_LEAPER_MODERATE
+	traitname = "leaper_moderate"
+
+
+//SPECIAL integration
+/datum/quirk/leaper_weak
+	name = "SPECIAL: Leap"
+	desc = "You are agile enough to leap short distances, albiet somewhat clumsily. \
+	Having high agility (7) grants this trait automatically."
+	value = 0
+	mob_trait = TRAIT_LEAPER_WEAK
+	gain_text = "<span class='notice'>You feel like you can leap a good distance.</span>"
+	lose_text = "<span class='notice'>You lost your agility!</span>"
+	locked = TRUE
+
+/datum/quirk/leaper_moderate
+	name = "SPECIAL: Lunge"
+	desc = "You are incredibly agile and can leap incredible distances as a result, provided you are not weighed down by muscle mass. \
+	Being extraordinarily agile (9) will grant this trait automatically, having extraordinary strength (9) will grant tackle instead."
+	value = 0
+	mob_trait = TRAIT_LEAPER_MODERATE
+	gain_text = "<span class='notice'>You feel like you can leap amazingly far!</span>"
+	lose_text = "<span class='notice'>You've lost your agility!</span>"
+	locked = TRUE
+
+/datum/quirk/leaper_strong
+	name = "SPECIAL: Tackle"
+	desc = "You can leap medium distances and, if colliding with someone, will likely knock them down due to your strength and bulk. \
+	Having extraordinary agility (9) and extraordinary strength (9) will grant this trait automatically."
+	value = 0
+	mob_trait = TRAIT_LEAPER_STRONG
+	gain_text = "<span class='notice'>You're a battering ram!</span>"
+	lose_text = "<span class='notice'>You feel slow and weak.</span>"
+	locked = TRUE
+
+/datum/quirk/pa_wear
+	name = "SPECIAL: Power Armor Training"
+	desc = "Either through training or skill you have become capable of donning and using power armor. \
+	Having extraordinary intellect (9), high strength (7), and high endurance (7) will grant this trait automatically."
+	value = 0
+	mob_trait = TRAIT_PA_WEAR
+	gain_text = "<span class='notice'>You realize how to use Power Armor.</span>"
+	lose_text = "<span class='danger'>You forget how Power Armor works.</span>"
+	locked = TRUE

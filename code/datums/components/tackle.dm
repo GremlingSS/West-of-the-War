@@ -28,6 +28,14 @@
 	var/min_distance
 	///The throwdatum we're currently dealing with, if we need it
 	var/datum/thrownthing/tackle
+	//Bonus damage
+	var/bonus_damage = 0
+
+/datum/component/tackler/weak
+	bonus_damage = 5
+
+/datum/component/tackler/strong
+	bonus_damage = 20
 
 /datum/component/tackler/Initialize(stamina_cost = 25, base_knockdown = 1 SECONDS, range = 4, speed = 1, skill_mod = 0, min_distance = min_distance)
 	if(!iscarbon(parent))
@@ -289,7 +297,7 @@
 			attack_mod += 2
 			sacker.adjustStaminaLoss(20)
 
-	var/r = rand(-3, 3) - defense_mod + attack_mod + skill_mod
+	var/r = rand(-3, 3) - defense_mod + attack_mod + skill_mod + bonus_damage
 	return r
 
 
