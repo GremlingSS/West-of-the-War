@@ -64,6 +64,7 @@
 			T.speed = 1
 			T.skill_mod = 0
 			T.min_distance = 1
+			ADD_TRAIT(src, TRAIT_LEAPER_WEAK, "leaper_weak")
 		// Super agile and not THICC
 		if(src.special_a >= 9 && src.special_s < 9)
 			src.AddComponent(/datum/component/tackler/weak)
@@ -74,6 +75,7 @@
 			T.speed = 2
 			T.skill_mod = 0
 			T.min_distance = 1
+			ADD_TRAIT(src, TRAIT_LEAPER_MODERATE, "leaper_moderate")
 		// If you have 9 strength you are THICC, can't leap as far but you hit harder and stun on impact.
 		if(src.special_a >= 9 && src.special_s >= 9)
 			src.AddComponent(/datum/component/tackler/strong)
@@ -84,6 +86,7 @@
 			T.speed = 1
 			T.skill_mod = 3
 			T.min_distance = 1
+			ADD_TRAIT(src, TRAIT_LEAPER_STRONG, "leaper_strong")
 
 		// COMBO STATS
 		// Int/End/Str - Represents a smart and strong person brute forcing PA training.
