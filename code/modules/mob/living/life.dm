@@ -17,9 +17,83 @@
 		if(HAS_TRAIT(src, TRAIT_LIFELOSER))
 			src.maxHealth -= 10
 			src.health -= 10
-		src.maxHealth += (src.special_e*3)//SPECIAL Integration
-		src.health += (src.special_e*3)//SPECIAL Integration
-		update_special_speed((5-src.special_a)/20)//SPECIAL Integration
+		if(HAS_TRAIT(src, TRAIT_BIG_LIFELOSER))
+			src.maxHealth -= 20
+			src.health -= 20
+
+
+		//SPECIAL integration MAIN
+		// This is the primary spot for all stat based special bonuses that are passive.
+		// Primarily because its easy to debug this in round. -Possum
+
+		// ENDURANCE
+		src.maxHealth += (src.special_e*3)
+		src.health += (src.special_e*3)
+
+		// INTELLIGENCE
+		if(src.special_i >= 3)
+			ADD_TRAIT(src, TRAIT_TRIBAL, "tribal")
+		if(src.special_i >= 5)
+			ADD_TRAIT(src, TRAIT_GUNSMITH_ONE, "gunsmith_one")
+		if(src.special_i >= 7)
+			ADD_TRAIT(src, TRAIT_GUNSMITH_TWO, "gunsmith_two")
+			ADD_TRAIT(src, TRAIT_EXPLOSIVE_CRAFTING, "explosive_crafting")
+		if(src.special_i >= 9)
+			ADD_TRAIT(src, TRAIT_PILOT, "vb_pilot")
+			ADD_TRAIT(src, TRAIT_GUNSMITH_THREE, "gunsmith_three")
+			ADD_TRAIT(src, TRAIT_GUNSMITH_FOUR, "gunsmith_four")
+
+		// CHARISMA
+		// Both of these spells are in terrifying_presence.dm
+		if(src.special_c >= 7)
+			src.AddSpell(new /obj/effect/proc_holder/spell/terrifying_presence)
+		if(src.special_c >= 9)
+			src.AddSpell(new /obj/effect/proc_holder/spell/ferocious_loyalty)
+
+		// AGILITY
+		// The below line affects movement speed.
+		update_special_speed((5-src.special_a)/20)
+
+		// Basic leap
+		if(src.special_a >= 7 && src.special_a < 9)
+			src.AddComponent(/datum/component/tackler/weak)
+			var/datum/component/tackler/weak/T = src.LoadComponent(/datum/component/tackler/weak)
+			T.stamina_cost = 30
+			T.base_knockdown = 0
+			T.range = 4
+			T.speed = 1
+			T.skill_mod = 0
+			T.min_distance = 1
+			ADD_TRAIT(src, TRAIT_LEAPER_WEAK, "leaper_weak")
+		// Super agile and not THICC
+		if(src.special_a >= 9 && src.special_s < 9)
+			src.AddComponent(/datum/component/tackler/weak)
+			var/datum/component/tackler/weak/T = src.LoadComponent(/datum/component/tackler/weak)
+			T.stamina_cost = 20
+			T.base_knockdown = 0
+			T.range = 7
+			T.speed = 2
+			T.skill_mod = 0
+			T.min_distance = 1
+			ADD_TRAIT(src, TRAIT_LEAPER_MODERATE, "leaper_moderate")
+		// If you have 9 strength you are THICC, can't leap as far but you hit harder and stun on impact.
+		if(src.special_a >= 9 && src.special_s >= 9)
+			src.AddComponent(/datum/component/tackler/strong)
+			var/datum/component/tackler/strong/T = src.LoadComponent(/datum/component/tackler/strong)
+			T.stamina_cost = 20
+			T.base_knockdown = 0
+			T.range = 5
+			T.speed = 1
+			T.skill_mod = 3
+			T.min_distance = 1
+			ADD_TRAIT(src, TRAIT_LEAPER_STRONG, "leaper_strong")
+
+		// COMBO STATS
+		// Int/End/Str - Represents a smart and strong person brute forcing PA training.
+		if(src.special_i >= 9 && src.special_e >= 7 && src.special_s >= 7)
+			ADD_TRAIT(src, TRAIT_PA_WEAR, "pa_wear")
+
+
 		SPECIAL_SET = TRUE
 
 	//SHOULD_NOT_SLEEP(TRUE)

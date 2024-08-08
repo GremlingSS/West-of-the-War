@@ -307,15 +307,17 @@
 
 	if(chemwhiz == TRUE)
 		ADD_TRAIT(H, TRAIT_CHEMWHIZ, "chemwhiz")
-		var/list/chem_types = list(/datum/crafting_recipe/jet, /datum/crafting_recipe/turbo, /datum/crafting_recipe/psycho, /datum/crafting_recipe/medx, /datum/crafting_recipe/buffout)
-		for(var/datum/crafting_recipe/R in chem_types)
-			H.mind.teach_crafting_recipe(R)
+		//var/list/chem_types = list(/datum/crafting_recipe/jet, /datum/crafting_recipe/turbo, /datum/crafting_recipe/psycho, /datum/crafting_recipe/medx, /datum/crafting_recipe/buffout)
+		//for(var/datum/crafting_recipe/R in chem_types)
+		//	H.mind.teach_crafting_recipe(R)
 
 	if(pa_wear == TRUE)
 		ADD_TRAIT(H, TRAIT_PA_WEAR, "pa_wear")
 
 	if(vb_pilot == TRUE)
 		ADD_TRAIT(H, TRAIT_PILOT, "vb_pilot")
+// This is commented out because it doesn't actually work, perks that call for a proc always fail during init.
+// Leaving this note so nobody else makes the same mistake. Also applies to Chem Wiz above. -Possum
 /*
 	var/list/gun_types
 	if(gunsmith_one == TRUE)
@@ -391,28 +393,6 @@
 			T.linked_mob = H
 	//Fortuna edit end. radio management
 
-	//SPECIAL integration
-	if(H.special_i >= 3)
-		ADD_TRAIT(H, TRAIT_TRIBAL, "tribal")
-	if(H.special_i >= 5)
-		ADD_TRAIT(H, TRAIT_GUNSMITH_ONE, "gunsmith_one")
-	if(H.special_i >= 7)
-		ADD_TRAIT(H, TRAIT_GUNSMITH_TWO, "gunsmith_two")
-		ADD_TRAIT(H, TRAIT_EXPLOSIVE_CRAFTING, "explosive_crafting")
-	if(H.special_i >= 9)
-		if(vb_pilot == FALSE)
-			ADD_TRAIT(H, TRAIT_PILOT, "vb_pilot")
-		ADD_TRAIT(H, TRAIT_GUNSMITH_THREE, "gunsmith_three")
-		ADD_TRAIT(H, TRAIT_GUNSMITH_FOUR, "gunsmith_four")
-
-	if(H.special_i >= 9 && H.special_e >= 7 && H.special_s >= 7) // Represents a smart and strong person brute forcing PA training.
-		if(pa_wear == FALSE)
-			ADD_TRAIT(H, TRAIT_PA_WEAR, "pa_wear")
-
-	if(H.special_c >= 7)
-		H.AddSpell(new /obj/effect/proc_holder/spell/terrifying_presence)
-	if(H.special_c >= 9)
-		H.AddSpell(new /obj/effect/proc_holder/spell/ferocious_loyalty)
 
 /datum/outfit/job/get_chameleon_disguise_info()
 	var/list/types = ..()

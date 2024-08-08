@@ -128,6 +128,12 @@
 	mob_trait = TRAIT_POOR_AIM
 	medical_record_text = "Patient possesses a strong tremor in both hands."
 
+/datum/quirk/fat_fingers
+	name = "Fat-Fingers"
+	desc = "Due to the shape of your hands, width of your fingers or just missing fingers entirely, you're unable to fire guns without accommodation."
+	value = -3
+	mob_trait = TRAIT_CHUNKYFINGERS
+
 /datum/quirk/prosopagnosia
 	name = "Prosopagnosia"
 	desc = "You have a mental disorder that prevents you from being able to recognize faces at all."
@@ -359,11 +365,20 @@
 // Some perks added to give some non-super crippling options for negatives.
 /datum/quirk/lifeloser
 	name = "Lifeloser"
-	desc = "You embody weakness! Instantly gain -10 maximum health!"
+	desc = "You embody weakness! Instantly lose 10 maximum health!"
 	value = -3
 	mob_trait = TRAIT_LIFELOSER
 	gain_text = "<span class='notice'>You feel less healthy than usual.</span>"
 	lose_text = "<span class='danger'>You feel more healthy than usual.</span>"
+
+
+/datum/quirk/lifeloser_big
+	name = "Big Lifeloser"
+	desc = "You embody weakness! Instantly lose 20 maximum health!"
+	value = -5
+	mob_trait = TRAIT_BIG_LIFELOSER
+	gain_text = "<span class='notice'>You feel alot less healthy than usual.</span>"
+	lose_text = "<span class='danger'>You feel alot more healthy than usual.</span>"
 
 // Was originally mirrored from lifegiver, which turns out hasn't worked for literal *years*. Defining it elsewhere. -Possum
 /*

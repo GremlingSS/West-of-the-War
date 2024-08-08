@@ -79,7 +79,7 @@
 
 /datum/quirk/freerunning
 	name = "Freerunning"
-	desc = "You're great at quick moves! You can climb tables more quickly."
+	desc = "You're great at quick moves! You can climb structures much faster and scale up walls!"
 	value = 2
 	mob_trait = TRAIT_FREERUNNING
 	gain_text = "<span class='notice'>You feel lithe on your feet!</span>"
@@ -95,7 +95,6 @@
 	lose_text = "<span class='danger'>You start tromping around like a barbarian.</span>"
 	medical_record_text = "Patient's dexterity belies a strong capacity for stealth."
 
-/*
 /datum/quirk/quick_step
 	name = "Quick Step"
 	desc = "You walk with determined strides, and out-pace most people when walking."
@@ -104,7 +103,6 @@
 	gain_text = "<span class='notice'>You feel determined. No time to lose.</span>"
 	lose_text = "<span class='danger'>You feel less determined. What's the rush, man?</span>"
 	medical_record_text = "Patient scored highly on racewalking tests."
-*/
 
 /datum/quirk/photographer
 	name = "Photographer"
@@ -266,16 +264,7 @@
 	gain_text = "<span class='notice'>The mysteries of chemistry are revealed to you.</span>"
 	lose_text = "<span class='danger'>You forget how the periodic table works.</span>"
 	//locked = TRUE
-/*
-/datum/quirk/pa_wear
-	name = "PA Wear"
-	desc = "You've being around the wastes and have learned the importance of defense."
-	value = 3
-	mob_trait = TRAIT_PA_WEAR
-	gain_text = "<span class='notice'>You realize how to use Power Armor.</span>"
-	lose_text = "<span class='danger'>You forget how Power Armor works.</span>"
-	//locked = TRUE
-*/
+
 /datum/quirk/hard_yards
 	name = "Wasteland Maneuvers"
 	desc = "You know how to get around the wasteland, you ignore the slowdown effects of terrain."
@@ -402,7 +391,7 @@
 
 /datum/quirk/calcium_healer
 	name = "Calcium Healer"
-	desc = "Brahmin milk is a staple of a heavy society, drinking milk heals you."
+	desc = "Brahmin milk is a staple of a healthy society, drinking milk heals you."
 	value = 1
 	mob_trait = TRAIT_CALCIUM_HEALER
 	gain_text = "<span class='notice'>Got milk?'</span>"
