@@ -38,9 +38,13 @@
 			var/itemtype= pickweight(lootable_trash)
 			var/itemtypebonus= pickweight(lootable_trash)
 			if(itemtype)
+				if(user.special_l < 3)
+					to_chat(user, "<span class='warning'>What rotten luck, you find nothing in [src]!</span>")
+					loot_players += user
+					return
 				to_chat(user, "<span class='notice'>You scavenge through [src].</span>")
 				var/obj/item/item = new itemtype(ST)
-				if (prob(10+(user.special_l*3.5)))//SPECIAL Integration
+				if (prob(10+(user.special_l*3.5)) && user.special_l > 2)//SPECIAL Integration
 					to_chat(user, "<span class='notice'>You get lucky and find even more loot!</span>")
 					var/obj/item/bonusitem = new itemtypebonus(ST)
 					if(istype(bonusitem))
