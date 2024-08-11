@@ -35,7 +35,7 @@
 		if("hairy")
 			details = "It has quite a bit of hair growing on it and "
 		if("human")
-			details = "It is taut with smooth skin, though without much hair and "
+			details = "It is a typical vagina"
 		if("gaping")
 			details = "It is gaping slightly open, though without much hair and "
 		if("spade")
@@ -45,9 +45,9 @@
 		else
 			details = "It has an exotic shape and "
 	if(aroused_state)
-		details += "is slick with female arousal."
+		details += ", slick with female arousal."
 	else
-		details += "seems to be dry."
+		details += " and seems to be dry."
 
 	desc = "You see a vagina. [details]"
 
