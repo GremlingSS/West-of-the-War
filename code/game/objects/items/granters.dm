@@ -127,6 +127,9 @@
 
 /obj/item/book/granter/trait/onlearned(mob/living/user)
 	..()
+	if(oneuse && prob(0 + user.special_l*6) && user.special_l >= 6 && !istype(src,/obj/item/book/granter/trait/selection))
+		to_chat(user, "<span class='notice'>You notice the old book tremble and then settle rather than crumbling to dust. You feel lucky!</span>")
+		return
 	if(oneuse)
 		user.visible_message(
 		message = "<span class='notice'>Just as [user] finishes reading [p_their(user)] copy of [src], the ancient book crumbles to dust!</span>",
