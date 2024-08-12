@@ -113,11 +113,9 @@ Within this file is the material to turn the previous odd-inclusion into a prope
 	)
 
 /datum/outfit/loadout/raider_powder
-	name = "Raider Ganger"
-	suit = /obj/item/clothing/suit/armor/f13/raider/ncrcfarmor
-	head = /obj/item/clothing/head/f13/stormchaser
-	uniform = /obj/item/clothing/under/f13/ncrcf
-	shoes = /obj/item/clothing/shoes/f13/brownie
+	name = "Raider Bomber"
+	suit = /obj/item/clothing/suit/armor/f13/raider/blastmaster
+	head = /obj/item/clothing/head/helmet/f13/raider/blastmaster
 	backpack_contents = list(
 		/obj/item/grenade/homemade/dynamite = 4,
 		/obj/item/gun/ballistic/revolver/caravan_shotgun = 1,
@@ -131,7 +129,7 @@ Within this file is the material to turn the previous odd-inclusion into a prope
 /datum/outfit/loadout/raider_smith
 	name = "Raider Smith"
 	suit = /obj/item/clothing/suit/armored/heavy/raidermetal
-	uniform = /obj/item/clothing/under/f13/raider_leather
+	uniform = /obj/item/clothing/under/f13/raiderharness
 	head = /obj/item/clothing/head/helmet/f13/raider/arclight
 	gloves = /obj/item/clothing/gloves/f13/blacksmith
 	backpack_contents = list(
@@ -148,7 +146,8 @@ Within this file is the material to turn the previous odd-inclusion into a prope
 /datum/outfit/loadout/raider_sawbones
 	name = "Raider Sawbones"
 	suit = /obj/item/clothing/suit/armor/f13/raider/sadist
-	shoes = /obj/item/clothing/shoes/jackboots
+	uniform = /obj/item/clothing/under/f13/raiderrags
+	gloves = /obj/item/clothing/gloves/f13/crudemedical
 	l_hand = /obj/item/storage/backpack/duffelbag/med/surgery
 	r_hand = /obj/item/book/granter/trait/midsurgery
 	suit_store = /obj/item/gun/energy/laser/wattz

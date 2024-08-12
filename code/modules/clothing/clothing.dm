@@ -471,7 +471,7 @@ BLIND     // can't see anything
 				to_chat(M, "<span class='warning'>Your species cannot wear [src].</span>")
 				return FALSE
 
-	if(HAS_TRAIT(M, TRAIT_RAIDER_ARMOR) && !raider_armor && slot_flags == ITEM_SLOT_OCLOTHING)
+	if(HAS_TRAIT(M, TRAIT_RAIDER_ARMOR) && !raider_armor)// && slot_flags == ITEM_SLOT_OCLOTHING)
 		to_chat(M, "<span class='warning'>You can't wear this! You're a badass raider and need to look the part!</span>")
 		return 0
 

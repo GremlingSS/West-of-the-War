@@ -35,6 +35,7 @@
 	icon_state = "brownie"
 	item_state = "brownie"
 	mutantrace_variation = STYLE_DIGITIGRADE
+	raider_armor = TRUE
 
 /obj/item/clothing/shoes/f13/fancy
 	name = "black shoes"
@@ -60,6 +61,7 @@
 	icon_state = "raidertreads"
 	item_state = "raidertreads"
 	mutantrace_variation = STYLE_DIGITIGRADE
+	raider_armor = TRUE
 
 /obj/item/clothing/shoes/f13/diesel
 	name = "male diesel boots"

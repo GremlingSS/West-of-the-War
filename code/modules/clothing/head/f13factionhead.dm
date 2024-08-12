@@ -57,6 +57,7 @@
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 	dynamic_hair_suffix = ""
 	armor = list("melee" = 35, "bullet" = 35, "laser" = 35, "energy" = 5, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 15, "acid" = 0, "wound" = 15)
+	raider_armor = TRUE
 
 /obj/item/clothing/head/helmet/f13/raider/supafly
 	name = "supa-fly raider helmet"
@@ -116,6 +117,7 @@
 	flags_inv = HIDEEARS
 	dynamic_hair_suffix = "+generic"
 	armor = list("melee" = 45, "bullet" = 30, "laser" = 30, "energy" = 5, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 15, "acid" = 0, "wound" = 15)
+	raider_armor = TRUE
 
 /obj/item/clothing/head/helmet/f13/fiend_reinforced
 	name = "reinforced fiend helmet"
@@ -123,15 +125,17 @@
 	icon_state = "fiend"
 	item_state = "fiend"
 	armor = list("melee" = 50, "bullet" = 35, "laser" = 35, "energy" = 5, "bomb" = 20, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0, "wound" = 20)
+	raider_armor = TRUE
 
 /obj/item/clothing/head/helmet/f13/jackal
 	name = "jackal headwrap"
-	desc = "A cloth head wrap that secures around the user's head, sporting a few rienforced points of leather underneath."
+	desc = "A cloth head wrap that secures around the user's head, sporting a few reinforced points of leather underneath."
 	icon = 'icons/fallout/clothing/hats.dmi'
 	icon_state = "jackal"
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	armor = list("melee" = 35, "bullet" = 20, "laser" = 10, "energy" = 0, "bomb" = 25, "bio" = 20, "rad" = 30, "fire" = 30, "acid" = 20, "wound" = 10)
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
+	raider_armor = TRUE
 
 /obj/item/clothing/head/helmet/f13/jackal/Initialize(mapload)
 	. = ..()
@@ -143,6 +147,7 @@
 	icon_state = "raidermetal"
 	item_state = "raidermetal"
 	armor = list("melee" = 20, "bullet" = 35, "laser" = 20, "energy" = 5, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 15, "acid" = 0, "wound" = 15)
+	raider_armor = TRUE
 
 /obj/item/clothing/head/helmet/f13/raidercombathelmet
 	name = "combat raider helmet"
@@ -150,6 +155,7 @@
 	icon_state = "raider_combat_helmet"
 	item_state = "raider_combat_helmet"
 	armor = list("melee" = 40, "bullet" = 40, "laser" = 40, "energy" = 10, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 15, "acid" = 0, "wound" = 15)
+	raider_armor = TRUE
 
 ///////////
 //ENCLAVE//
