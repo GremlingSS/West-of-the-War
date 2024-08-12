@@ -255,7 +255,7 @@
 /obj/item/restraints/legcuffs/beartrap/Initialize(mapload)
 	. = ..()
 	icon_state = "[initial(icon_state)][armed]"
-	
+
 	var/static/list/loc_connections = list(
 		COMSIG_ATOM_ENTERED = .proc/on_entered,
 	)
@@ -295,6 +295,8 @@
 				if(SA.mob_size > MOB_SIZE_TINY)
 					snap = TRUE
 			if(L.movement_type & (FLYING | FLOATING))
+				snap = FALSE
+			if(L.special_p >= 7)
 				snap = FALSE
 			if(snap)
 				armed = FALSE
@@ -355,7 +357,7 @@
  * * C - the carbon that we will try to ensnare
  */
 /obj/item/restraints/legcuffs/bola/proc/ensnare(mob/living/carbon/C)
-	if(!C.legcuffed && C.get_num_legs(FALSE) >= 2)
+	if(!C.legcuffed && C.get_num_legs(FALSE) >= 2 && C.special_p >= 9)
 		visible_message("<span class='danger'>\The [src] ensnares [C]!</span>")
 		C.legcuffed = src
 		forceMove(C)
