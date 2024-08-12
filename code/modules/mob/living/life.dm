@@ -29,7 +29,6 @@
 		// STRENGTH
 		if(src.special_s >= 7 && src.special_s < 9)
 			ADD_TRAIT(src, TRAIT_QUICK_CARRY, "quick-carry")
-		// Super agile and not THICC
 		if(src.special_s >= 9)
 			ADD_TRAIT(src, TRAIT_QUICKER_CARRY, "quicker-carry")
 
