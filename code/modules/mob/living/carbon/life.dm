@@ -524,6 +524,18 @@ GLOBAL_LIST_INIT(ballmer_windows_me_msg, list("Yo man, what if, we like, uh, put
 		bufferedstam = max(bufferedstam - drainrate, 0)
 	//END OF CIT CHANGES
 
+	//SPECIAL integration
+	if(special_e >= 7)
+		adjustBruteLoss(-0.02, updating_health = FALSE)
+		adjustFireLoss(-0.02, updating_health = FALSE)
+		adjustToxLoss(-0.02, updating_health = FALSE)
+
+	if(special_e >= 9)
+		adjustBruteLoss(-0.02, updating_health = FALSE)
+		adjustFireLoss(-0.02, updating_health = FALSE)
+		adjustToxLoss(-0.02, updating_health = FALSE)
+	// Stacks together.
+
 	var/restingpwr = 1 + 4 * !CHECK_MOBILITY(src, MOBILITY_STAND)
 
 	//Dizziness

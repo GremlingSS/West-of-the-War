@@ -171,6 +171,7 @@
 	item_state = "ncrcf"
 	item_color = "ncrcf"
 	mutantrace_variation = STYLE_DIGITIGRADE
+	raider_armor = TRUE
 
 //Settlers
 
@@ -696,6 +697,7 @@
 	icon_state = "raider_leather"
 	item_state = "raider_leather"
 	item_color = "raider_leather"
+	raider_armor = TRUE
 
 /obj/item/clothing/under/f13/raiderrags
 	name = "raider rags"
@@ -704,6 +706,7 @@
 	item_state = "raiderrags"
 	item_color = "raiderrags"
 	mutantrace_variation = STYLE_DIGITIGRADE
+	raider_armor = TRUE
 
 /obj/item/clothing/under/f13/khan
 	name = "great khan uniform"
@@ -1758,6 +1761,7 @@
 	icon_state = "raiderharness"
 	item_state = "raiderharness"
 	item_color = "raiderharness"
+	raider_armor = TRUE
 
 /obj/item/clothing/under/f13/fprostitute
 	name = "feminine prostitute outfit"

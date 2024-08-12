@@ -26,6 +26,16 @@
 		// This is the primary spot for all stat based special bonuses that are passive.
 		// Primarily because its easy to debug this in round. -Possum
 
+		// STRENGTH
+		if(src.special_s >= 7 && src.special_s < 9)
+			ADD_TRAIT(src, TRAIT_QUICK_CARRY, "quick-carry")
+		if(src.special_s >= 9)
+			ADD_TRAIT(src, TRAIT_QUICKER_CARRY, "quicker-carry")
+
+		// PERCEPTION
+		if(src.special_p >= 7)
+			ADD_TRAIT(src, TRAIT_NIGHT_VISION, "night_vision")
+
 		// ENDURANCE
 		src.maxHealth += (src.special_e*3)
 		src.health += (src.special_e*3)
@@ -53,6 +63,8 @@
 		// AGILITY
 		// The below line affects movement speed.
 		update_special_speed((5-src.special_a)/20)
+		if(src.special_a >= 9)
+			ADD_TRAIT(src, TRAIT_NOSLIPALL, "noslip_all")
 
 		// Basic leap
 		if(src.special_a >= 7 && src.special_a < 9)
@@ -92,6 +104,9 @@
 		// Int/End/Str - Represents a smart and strong person brute forcing PA training.
 		if(src.special_i >= 9 && src.special_e >= 7 && src.special_s >= 7)
 			ADD_TRAIT(src, TRAIT_PA_WEAR, "pa_wear")
+		// Int/Per/Agi - Someone who is smart, perceptive, and good with their hands can cut down on crafting time.
+		if(src.special_i >= 5 && src.special_e >= 5 && src.special_s >= 5)
+			ADD_TRAIT(src, TRAIT_QUICK_BUILD, "quick-build")
 
 
 		SPECIAL_SET = TRUE

@@ -25,6 +25,7 @@
 	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
+	raider_armor = TRUE
 
 /obj/item/clothing/gloves/f13/leather/fingerless
 	name = "fingerless leather gloves"
@@ -74,6 +75,7 @@
 	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
+	raider_armor = TRUE
 
 /obj/item/clothing/gloves/f13/lace
 	name = "lace gloves"
@@ -100,6 +102,7 @@
 	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
+	raider_armor = TRUE
 
 /obj/item/clothing/gloves/f13/crudemedical
 	name = "crude medical gloves"
@@ -108,6 +111,7 @@
 	item_state = "offwhite"
 	siemens_coefficient = 0.5
 	permeability_coefficient = 0.1
+	raider_armor = TRUE
 
 /obj/item/clothing/gloves/f13/mutant
 	name = "mutant bracers"

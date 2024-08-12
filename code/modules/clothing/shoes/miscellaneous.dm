@@ -107,6 +107,7 @@
 	permeability_coefficient = 0.05 //Thick soles, and covers the ankle
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/shoes
 	lace_time = 12 SECONDS
+	raider_armor = TRUE
 
 /obj/item/clothing/shoes/jackboots/fast
 	slowdown = -1

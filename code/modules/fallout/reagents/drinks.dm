@@ -230,9 +230,6 @@
 	water_level = 1.75
 
 /datum/reagent/consumable/nukaice/on_mob_life(mob/living/carbon/M)
-	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.05, updating_health = FALSE)
-		M.adjustFireLoss(-0.05, updating_health = FALSE)
 	M.adjust_bodytemperature(-20 * TEMPERATURE_DAMAGE_COEFFICIENT, T0C) //310.15 is the normal bodytemp.
 	M.drowsyness = 0
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)

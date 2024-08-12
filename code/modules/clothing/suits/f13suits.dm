@@ -506,6 +506,7 @@
 	armor = list("melee" = 55, "bullet" = 40, "laser" = 40, "energy" = 10, "bomb" = 20, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0, "wound" = 35)
 	slowdown = 0.06
 	mutantrace_variation = STYLE_DIGITIGRADE
+	damage_threshold = DT_ADVANCED // Special since legendary deathclaw
 
 /obj/item/clothing/head/hooded/cloakhood/hhunter
 	name = "Razorclaw helm"

@@ -91,6 +91,7 @@
 	icon_state = "combat_helmet_raider"
 	item_state = "combat_helmet_raider"
 	armor = list("melee" = 45, "bullet" = 35, "laser" = 35, "energy" = 10, "bomb" = 15, "bio" = 10, "rad" = 10, "fire" = 15, "acid" = 0, "wound" = 15)
+	raider_armor = TRUE
 
 /obj/item/clothing/head/helmet/f13/combat/rangerbroken
 	name = "broken riot helmet"
@@ -141,6 +142,7 @@
 	dynamic_hair_suffix = ""
 	armor = list("melee" = 40, "bullet" = 45, "laser" = 55, "energy" = 15, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 60, "acid" = 0, "wound" = 25)
 	slowdown = 0.02
+	raider_armor = TRUE
 
 //Metal
 
@@ -581,6 +583,7 @@
 	icon_state = "stormchaser"
 	item_state = "fedora"
 	flags_inv = HIDEEARS|HIDEHAIR
+	raider_armor = TRUE
 
 /obj/item/clothing/head/f13/headscarf
 	name = "headscarf"

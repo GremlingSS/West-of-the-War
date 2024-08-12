@@ -94,6 +94,7 @@
 	desc = "A heavily modified, almost bastardised T-45d power armor helmet."
 	icon_state = "raiderpa_helm"
 	item_state = "raiderpa_helm"
+	raider_armor = TRUE
 
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/hotrod
 	name = "hotrod salvaged power helmet"
