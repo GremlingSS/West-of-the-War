@@ -32,6 +32,10 @@
 		if(src.special_s >= 9)
 			ADD_TRAIT(src, TRAIT_QUICKER_CARRY, "quicker-carry")
 
+		// PERCEPTION
+		if(src.special_p >= 7)
+			ADD_TRAIT(src, TRAIT_NIGHT_VISION, "night_vision")
+
 		// ENDURANCE
 		src.maxHealth += (src.special_e*3)
 		src.health += (src.special_e*3)

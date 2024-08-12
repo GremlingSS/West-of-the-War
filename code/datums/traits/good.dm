@@ -202,7 +202,7 @@
 	gain_text = "<span class='notice'>You are now able to use primitive technology.</span>"
 	lose_text = "<span class='danger'>You are no longer able to use primitive technology.</span>"
 	//locked = TRUE
-
+/*
 /datum/quirk/night_vision
 	name = "Night Vision"
 	desc = "You can see slightly more clearly in full darkness than most people."
@@ -215,7 +215,7 @@
 /datum/quirk/night_vision/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
 	H.update_sight()
-
+*/
 /datum/quirk/nukalover
 	name = "Nuka Fiend"
 	desc = "You are a fan of America's most popular pre-war soft drink. Your body simply loves the sugary drink so much, it rejects healthier alternatives."
