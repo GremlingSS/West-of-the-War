@@ -45,6 +45,7 @@
 				new /obj/item/ammo_box/c10mm/improvised(user.loc)
 			else
 				new /obj/item/ammo_box/c10mm/improvised(user.loc)
+			qdel(src)
 		if(".357")
 			if(user.special_l * 10 && user.special_l >= 3)
 				new /obj/item/ammo_box/a357box(user.loc)
