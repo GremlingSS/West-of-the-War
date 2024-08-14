@@ -1,5 +1,80 @@
 //In this document: Ammo boxes, speed loaders, stripper clips.
 
+////////////////////
+//    AMMO KIT    //
+////////////////////
+/obj/item/ammo_crafting_kit
+	name = "Handloader Quick-Kit"
+	desc = "A tin can filled with lead, gunpowder, and some crappy tools that could be used to make some basic handloads. \
+	Someone smart could easily make the most of this kit. Someone lucky could make something great."
+	icon = 'icons/fallout/objects/guns/ammo.dmi'
+	icon_state = "BBbox"
+
+/obj/item/ammo_crafting_kit/attack_self(mob/user)
+	var/list/choices = list("shotgun", ".38", "10mm", ".357", ".44", ".45")
+	var/choice = input("Choose an ammo type:") in choices
+	switch(choice)
+		if(null)
+			return 0
+		if("shotgun")
+			if(user.special_l * 10 && user.special_l >= 3)
+				new /obj/item/ammo_box/shotgun/buck(user.loc)
+				new /obj/item/ammo_box/shotgun/buck(user.loc)
+			else if (user.special_i >= 6)
+				new /obj/item/ammo_box/shotgun/improvised(user.loc)
+				new /obj/item/ammo_box/shotgun/improvised(user.loc)
+			else
+				new /obj/item/ammo_box/shotgun/improvised(user.loc)
+			qdel(src)
+		if(".38")
+			if(user.special_l * 10 && user.special_l >= 3)
+				new /obj/item/ammo_box/c38box(user.loc)
+				new /obj/item/ammo_box/c38box(user.loc)
+			else if (user.special_i >= 6)
+				new /obj/item/ammo_box/c38box/improvised(user.loc)
+				new /obj/item/ammo_box/c38box/improvised(user.loc)
+			else
+				new /obj/item/ammo_box/c38box/improvised(user.loc)
+			qdel(src)
+		if("10mm")
+			if(user.special_l * 10 && user.special_l >= 3)
+				new /obj/item/ammo_box/c10mm(user.loc)
+				new /obj/item/ammo_box/c10mm(user.loc)
+			else if (user.special_i >= 6)
+				new /obj/item/ammo_box/c10mm/improvised(user.loc)
+				new /obj/item/ammo_box/c10mm/improvised(user.loc)
+			else
+				new /obj/item/ammo_box/c10mm/improvised(user.loc)
+		if(".357")
+			if(user.special_l * 10 && user.special_l >= 3)
+				new /obj/item/ammo_box/a357box(user.loc)
+				new /obj/item/ammo_box/a357box(user.loc)
+			else if (user.special_i >= 6)
+				new /obj/item/ammo_box/a357box/improvised(user.loc)
+				new /obj/item/ammo_box/a357box/improvised(user.loc)
+			else
+				new /obj/item/ammo_box/a357box/improvised(user.loc)
+			qdel(src)
+		if(".44")
+			if(user.special_l * 10 && user.special_l >= 3)
+				new /obj/item/ammo_box/m44box(user.loc)
+				new /obj/item/ammo_box/m44box(user.loc)
+			else if (user.special_i >= 6)
+				new /obj/item/ammo_box/m44box/improvised(user.loc)
+				new /obj/item/ammo_box/m44box/improvised(user.loc)
+			else
+				new /obj/item/ammo_box/m44box/improvised(user.loc)
+			qdel(src)
+		if(".45")
+			if(user.special_l * 10 && user.special_l >= 3)
+				new /obj/item/ammo_box/c45(user.loc)
+				new /obj/item/ammo_box/c45(user.loc)
+			else if (user.special_i >= 6)
+				new /obj/item/ammo_box/c45/improvised(user.loc)
+				new /obj/item/ammo_box/c45/improvised(user.loc)
+			else
+				new /obj/item/ammo_box/c45/improvised(user.loc)
+			qdel(src)
 
 ////////////////////
 //AMMUNITION BOXES//
