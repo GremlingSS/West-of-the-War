@@ -32,10 +32,18 @@
 
 /datum/design/seclite
 	name = "Seclite"
-	id = "flashlight"
+	id = "seclite"
 	build_type = AUTOLATHE
 	materials = list(/datum/material/iron = 50, /datum/material/glass = 20)
 	build_path = /obj/item/flashlight/seclite
+	category = list("initial","Tools")
+
+/datum/design/lantern
+	name = "Lantern"
+	id = "lantern"
+	build_type = AUTOLATHE
+	materials = list(/datum/material/iron = 50, /datum/material/glass = 20)
+	build_path = /obj/item/flashlight/lantern
 	category = list("initial","Tools")
 
 /datum/design/metaldetector
