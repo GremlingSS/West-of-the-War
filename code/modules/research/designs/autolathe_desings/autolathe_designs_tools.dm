@@ -30,7 +30,7 @@
 	build_path = /obj/item/flashlight
 	category = list("initial","Tools")
 
-/datum/design/seclite
+/datum/design/seclite_public
 	name = "Seclite"
 	id = "seclite"
 	build_type = AUTOLATHE
@@ -38,7 +38,7 @@
 	build_path = /obj/item/flashlight/seclite
 	category = list("initial","Tools")
 
-/datum/design/lantern
+/datum/design/lantern_light
 	name = "Lantern"
 	id = "lantern"
 	build_type = AUTOLATHE
