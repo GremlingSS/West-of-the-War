@@ -1,7 +1,7 @@
 /obj/item/storage/pouch
 	name = "SPECIALIZED POUCH TEMPLATE"
 	desc = "You're not supposed to see this."
-	w_class = WEIGHT_CLASS_BULKY
+	w_class = WEIGHT_CLASS_SMALL
 	slot_flags = ITEM_SLOT_POCKET
 
 /obj/item/storage/pouch/ammo
@@ -33,14 +33,12 @@
 	desc = "A pouch designed for storing basic tools."
 	icon_state = "pouch_utility"
 	component_type = /datum/component/storage/concrete/pouch/tool
-	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/storage/pouch/medical
 	name = "medical pouch"
 	desc = "A pouch designed for storing basic medical items."
 	icon_state = "pouch_medical"
 	component_type = /datum/component/storage/concrete/pouch/medical
-	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/storage/pouch/medical/full/PopulateContents()
 	new /obj/item/reagent_containers/hypospray/medipen/stimpak(src)

@@ -4,7 +4,8 @@
 
 /obj/item/bottlecap_mine
 	name = "bottlecap mine"
-	desc = "It has an adjustable timer. It can explode in 5 seconds after activating."
+	desc = "It has an adjustable timer. It can explode in 5 seconds after activating. The motion sensor suggests nobody \
+	will be able to avoid tripping it once its active."
 	w_class = 2
 	icon = 'icons/fallout/objects/crafting.dmi'
 	icon_state = "capmine"
@@ -251,6 +252,9 @@
 
 /obj/item/mine/proc/triggermine(mob/victim)
 	if(triggered)
+		return
+	if(victim.special_p >= 8)
+		to_chat(victim, "<span class='danger'>You narrowly avoid setting off the [src]!</span>")
 		return
 	visible_message("<span class='danger'>[victim] sets off [icon2html(src, viewers(src))] [src]!</span>")
 	var/datum/effect_system/spark_spread/s = new /datum/effect_system/spark_spread

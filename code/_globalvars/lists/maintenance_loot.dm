@@ -188,12 +188,7 @@ GLOBAL_LIST_INIT(trash_clothing, list(
 ))
 
 GLOBAL_LIST_INIT(trash_ammo, list(
-	/obj/item/ammo_box/a762mmbox/sport = 3,
-	/obj/item/ammo_box/a556mmbox/sport = 3,
-	/obj/item/ammo_box/magazine/m10mm = 1,
-	/obj/item/ammo_box/magazine/zipgun = 3,
-	/obj/item/ammo_casing/shotgun/buckshot = 2,
-	/obj/item/ammo_box/a357box = 3,
+	/obj/item/ammo_crafting_kit
 ))
 
 GLOBAL_LIST_INIT(trash_chem, list(
