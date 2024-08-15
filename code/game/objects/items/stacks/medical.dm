@@ -99,6 +99,9 @@
 	if(M.stat == DEAD)
 		to_chat(user, "<span class='notice'> [M] is dead. You can not help [M.p_them()]!</span>")
 		return
+	// Sanity check, basically resets the heal to prevent stat/bonus stacking. A hack, but hey, it works.
+	heal_brute = initial(heal_brute)
+	stat_bonus_total  = 0
 	if(isanimal(M))
 		var/mob/living/simple_animal/critter = M
 		if (!(critter.healable))
@@ -117,7 +120,6 @@
 		if(user.special_c >= 6 && user.special_i >= 6)
 			stat_bonus_total = user.special_c + user.special_i
 			heal_brute += stat_bonus_total
-			stat_bonus_total = 0 //sanity
 		return heal_carbon(M, user, heal_brute, heal_burn)
 	to_chat(user, "<span class='warning'>You can't heal [M] with \the [src]!</span>")
 	to_chat(user, "<span class='notice'>You can't heal [M] with the \the [src]!</span>")
@@ -297,13 +299,16 @@
 	if(M.stat == DEAD)
 		to_chat(user, "<span class='warning'>[M] is dead! You can not help [M.p_them()].</span>")
 		return
+	// Sanity check, basically resets the heal to prevent stat/bonus stacking. A hack, but hey, it works.
+	heal_brute = initial(heal_brute)
+	stop_bleeding = initial(stop_bleeding)
+	stat_bonus_total  = 0
 	if(iscarbon(M))
 		//SPECIAL integration
 		if(user.special_c >= 6 && user.special_i >= 6)
 			stat_bonus_total = round((user.special_c + user.special_i) / 3)
 			heal_brute += stat_bonus_total
 			stop_bleeding += stat_bonus_total
-			stat_bonus_total = 0 //sanity
 		return heal_carbon(M, user, heal_brute, 0)
 	if(isanimal(M))
 		var/mob/living/simple_animal/critter = M
@@ -347,13 +352,16 @@
 	if(M.stat == DEAD)
 		to_chat(user, "<span class='warning'>[M] is dead! You can not help [M.p_them()].</span>")
 		return
+	// Sanity check, basically resets the heal to prevent stat/bonus stacking. A hack, but hey, it works.
+	heal_burn = initial(heal_burn)
+	flesh_regeneration = initial(flesh_regeneration)
+	stat_bonus_total  = 0
 	if(iscarbon(M))
 		//SPECIAL integration
 		if(user.special_c >= 6 && user.special_i >= 6)
 			stat_bonus_total = round((user.special_c + user.special_i) / 3)
 			heal_burn += stat_bonus_total
 			flesh_regeneration += stat_bonus_total
-			stat_bonus_total = 0 //sanity
 		return heal_carbon(M, user, heal_brute, heal_burn)
 	to_chat(user, "<span class='warning'>You can't heal [M] with \the [src]!</span>")
 
@@ -426,13 +434,16 @@
 	if(M.stat == DEAD)
 		to_chat(user, "<span class='warning'>[M] is dead! You can not help [M.p_them()].</span>")
 		return
+	// Sanity check, basically resets the heal to prevent stat/bonus stacking. A hack, but hey, it works.
+	heal_burn = initial(heal_burn)
+	flesh_regeneration  = initial(flesh_regeneration)
+	stat_bonus_total  = 0
 	if(iscarbon(M))
 		//SPECIAL integration
 		if(user.special_c >= 6 && user.special_i >= 6)
 			stat_bonus_total = round((user.special_c + user.special_i) / 3)
 			heal_burn += stat_bonus_total
 			flesh_regeneration += stat_bonus_total
-			stat_bonus_total = 0 //sanity
 		return heal_carbon(M, user, heal_brute, heal_burn)
 	to_chat(user, "<span class='warning'>You can't heal [M] with \the [src]!</span>")
 
@@ -557,13 +568,16 @@
 	amount = 5
 
 /obj/item/stack/medical/poultice/heal(mob/living/M, mob/user)
+	// Sanity check, basically resets the heal to prevent stat/bonus stacking. A hack, but hey, it works.
+	heal_brute = initial(heal_brute)
+	heal_burn = initial(heal_burn)
+	stat_bonus_total  = 0
 	if(iscarbon(M))
 		//SPECIAL integration
 		if(user.special_c >= 6 && user.special_i >= 6)
 			stat_bonus_total = round((user.special_c + user.special_i) / 3)
 			heal_brute += stat_bonus_total
 			heal_burn += stat_bonus_total
-			stat_bonus_total = 0 //sanity
 		return heal_carbon(M, user, heal_brute, heal_burn)
 	return ..()
 
