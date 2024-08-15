@@ -26,6 +26,8 @@
 	var/sanitization
 	/// How much we add to flesh_healing for burn wounds on application
 	var/flesh_regeneration
+	//SPECIAL integration
+	var/stat_bonus_total
 
 /obj/item/stack/medical/attack(mob/living/M, mob/user)
 	. = ..()
@@ -113,7 +115,9 @@
 	if(iscarbon(M))
 		//SPECIAL integration
 		if(user.special_c >= 6 && user.special_i >= 6)
-			heal_brute += user.special_c + user.special_i
+			stat_bonus_total = user.special_c + user.special_i
+			heal_brute += stat_bonus_total
+			stat_bonus_total = 0 //sanity
 		return heal_carbon(M, user, heal_brute, heal_burn)
 	to_chat(user, "<span class='warning'>You can't heal [M] with \the [src]!</span>")
 	to_chat(user, "<span class='notice'>You can't heal [M] with the \the [src]!</span>")
@@ -296,8 +300,10 @@
 	if(iscarbon(M))
 		//SPECIAL integration
 		if(user.special_c >= 6 && user.special_i >= 6)
-			heal_brute += round(user.special_c/3) + round(user.special_i/3)
-			stop_bleeding += round(user.special_c/3) + round(user.special_i/3)
+			stat_bonus_total = round((user.special_c + user.special_i) / 3)
+			heal_brute += stat_bonus_total
+			stop_bleeding += stat_bonus_total
+			stat_bonus_total = 0 //sanity
 		return heal_carbon(M, user, heal_brute, 0)
 	if(isanimal(M))
 		var/mob/living/simple_animal/critter = M
@@ -344,8 +350,10 @@
 	if(iscarbon(M))
 		//SPECIAL integration
 		if(user.special_c >= 6 && user.special_i >= 6)
-			heal_burn += round(user.special_c/3) + round(user.special_i/3)
-			flesh_regeneration += round(user.special_c/3) + round(user.special_i/3)
+			stat_bonus_total = round((user.special_c + user.special_i) / 3)
+			heal_burn += stat_bonus_total
+			flesh_regeneration += stat_bonus_total
+			stat_bonus_total = 0 //sanity
 		return heal_carbon(M, user, heal_brute, heal_burn)
 	to_chat(user, "<span class='warning'>You can't heal [M] with \the [src]!</span>")
 
@@ -421,8 +429,10 @@
 	if(iscarbon(M))
 		//SPECIAL integration
 		if(user.special_c >= 6 && user.special_i >= 6)
-			heal_burn += user.special_c + user.special_i
-			flesh_regeneration += round(user.special_c/3) + round(user.special_i/3)
+			stat_bonus_total = round((user.special_c + user.special_i) / 3)
+			heal_burn += stat_bonus_total
+			flesh_regeneration += stat_bonus_total
+			stat_bonus_total = 0 //sanity
 		return heal_carbon(M, user, heal_brute, heal_burn)
 	to_chat(user, "<span class='warning'>You can't heal [M] with \the [src]!</span>")
 
@@ -550,8 +560,10 @@
 	if(iscarbon(M))
 		//SPECIAL integration
 		if(user.special_c >= 6 && user.special_i >= 6)
-			heal_brute += round(user.special_c/3) + round(user.special_i/3)
-			heal_burn += round(user.special_c/3) + round(user.special_i/3)
+			stat_bonus_total = round((user.special_c + user.special_i) / 3)
+			heal_brute += stat_bonus_total
+			heal_burn += stat_bonus_total
+			stat_bonus_total = 0 //sanity
 		return heal_carbon(M, user, heal_brute, heal_burn)
 	return ..()
 
