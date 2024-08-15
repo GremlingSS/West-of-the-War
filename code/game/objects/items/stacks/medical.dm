@@ -111,6 +111,9 @@
 		M.heal_bodypart_damage((heal_brute/2))
 		return TRUE
 	if(iscarbon(M))
+		//SPECIAL integration
+		if(user.special_c >= 6 && user.special_i >= 6)
+			heal_brute += user.special_c + user.special_i
 		return heal_carbon(M, user, heal_brute, heal_burn)
 	to_chat(user, "<span class='warning'>You can't heal [M] with \the [src]!</span>")
 	to_chat(user, "<span class='notice'>You can't heal [M] with the \the [src]!</span>")
@@ -291,6 +294,10 @@
 		to_chat(user, "<span class='warning'>[M] is dead! You can not help [M.p_them()].</span>")
 		return
 	if(iscarbon(M))
+		//SPECIAL integration
+		if(user.special_c >= 6 && user.special_i >= 6)
+			heal_brute += round(user.special_c/3) + round(user.special_i/3)
+			stop_bleeding += round(user.special_c/3) + round(user.special_i/3)
 		return heal_carbon(M, user, heal_brute, 0)
 	if(isanimal(M))
 		var/mob/living/simple_animal/critter = M
@@ -335,6 +342,10 @@
 		to_chat(user, "<span class='warning'>[M] is dead! You can not help [M.p_them()].</span>")
 		return
 	if(iscarbon(M))
+		//SPECIAL integration
+		if(user.special_c >= 6 && user.special_i >= 6)
+			heal_burn += round(user.special_c/3) + round(user.special_i/3)
+			flesh_regeneration += round(user.special_c/3) + round(user.special_i/3)
 		return heal_carbon(M, user, heal_brute, heal_burn)
 	to_chat(user, "<span class='warning'>You can't heal [M] with \the [src]!</span>")
 
@@ -408,6 +419,10 @@
 		to_chat(user, "<span class='warning'>[M] is dead! You can not help [M.p_them()].</span>")
 		return
 	if(iscarbon(M))
+		//SPECIAL integration
+		if(user.special_c >= 6 && user.special_i >= 6)
+			heal_burn += user.special_c + user.special_i
+			flesh_regeneration += round(user.special_c/3) + round(user.special_i/3)
 		return heal_carbon(M, user, heal_brute, heal_burn)
 	to_chat(user, "<span class='warning'>You can't heal [M] with \the [src]!</span>")
 
@@ -533,6 +548,10 @@
 
 /obj/item/stack/medical/poultice/heal(mob/living/M, mob/user)
 	if(iscarbon(M))
+		//SPECIAL integration
+		if(user.special_c >= 6 && user.special_i >= 6)
+			heal_brute += round(user.special_c/3) + round(user.special_i/3)
+			heal_burn += round(user.special_c/3) + round(user.special_i/3)
 		return heal_carbon(M, user, heal_brute, heal_burn)
 	return ..()
 

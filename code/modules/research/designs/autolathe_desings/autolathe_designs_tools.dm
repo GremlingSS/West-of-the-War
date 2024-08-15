@@ -32,7 +32,7 @@
 
 /datum/design/seclite_public
 	name = "Seclite"
-	id = "seclite"
+	id = "seclite_public"
 	build_type = AUTOLATHE
 	materials = list(/datum/material/iron = 50, /datum/material/glass = 20)
 	build_path = /obj/item/flashlight/seclite
