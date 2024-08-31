@@ -456,6 +456,7 @@
 //Alien Blaster
 /obj/item/gun/energy/laser/plasma/pistol/alien
 	name = "alien blaster"
+	icon = 'icons/obj/guns/energy.dmi'
 	item_state = "alienblaster"
 	icon_state = "alienblaster"
 	desc = "This weapon is unlike any other you've ever seen before, and appears to be made out of metals not usually found on Earth. It certainly packs a punch, though."
