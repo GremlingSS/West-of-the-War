@@ -309,6 +309,22 @@
 	name = "Wastelander"
 	icon_state = "Wastelander"
 
+/obj/effect/landmark/start/f13/f13ncrscout
+	name = "NCR Scout"
+	icon_state = "Wastelander"
+
+/obj/effect/landmark/start/f13/f13legion_explorer
+	name = "Legion Rimor"
+	icon_state = "Wastelander"
+
+/obj/effect/landmark/start/f13/f13brotherhood_initiate
+	name = "Brotherhood Scout-Knight"
+	icon_state = "Wastelander"
+
+/obj/effect/landmark/start/f13/f13khan_runner
+	name = "Great Khan Runner"
+	icon_state = "Wastelander"
+
 /obj/effect/landmark/start/f13/raider
 	name = "Raider"
 	icon_state = "Raider"

@@ -543,8 +543,8 @@
 //Followers
 
 /obj/item/clothing/suit/hooded/followerlight
-	name = "\improper Followers labcoat"
-	desc = "A well-kept labcoat with the insignia of the followers stitched onto the back and shoulders, provides excellent protection from chemical hazards and radiation."
+	name = "\improper westford labcoat"
+	desc = "A well-kept labcoat with the insignia of westford medical stitched onto the back and shoulders, provides excellent protection from chemical hazards and radiation."
 	icon = 'icons/fallout/clothing/suits_cosmetic.dmi'
 	hoodtype = /obj/item/clothing/head/hooded/followerlight
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/suit_cosmetic.dmi'
@@ -554,7 +554,7 @@
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small
 
 /obj/item/clothing/head/hooded/followerlight
-	name = "\improper Followers labcoat hood"
+	name = "\improper labcoat hood"
 	icon_state = "follower_light"
 	icon = 'icons/fallout/clothing/hats.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'

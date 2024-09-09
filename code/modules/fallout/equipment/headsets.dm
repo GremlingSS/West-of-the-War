@@ -173,7 +173,7 @@
 
 /obj/item/radio/headset/headset_den
 	name = "den radio headset"
-	desc = "This is used by the den.\nUse .j To access the Den channel."
+	desc = "This is used by raiders.\nUse .j To access the raider channel."
 	icon_state = "mine_headset"
 	keyslot = new /obj/item/encryptionkey/headset_den
 
