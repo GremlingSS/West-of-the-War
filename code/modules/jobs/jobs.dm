@@ -229,6 +229,10 @@ GLOBAL_LIST_INIT(vault_positions, list(
 GLOBAL_LIST_INIT(wasteland_positions, list(
 	"Vigilante",
 	"Wastelander",
+	"NCR Scout",
+	"Legion Rimor",
+	"Brotherhood Scout-Knight",
+	"Great Khan Runner",
 	"Raider",
 	"Tribal",
 ))
@@ -271,11 +275,11 @@ GLOBAL_LIST_INIT(followers_positions, list(
 GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_WASTELAND = list("jobs" = wasteland_positions, "color" = "#5a5a5a"),
 	EXP_TYPE_BIGHORN = list("jobs" = bighorn_positions, "color" = "#d7b088"),
-	EXP_TYPE_NCR = list("jobs" = ncr_positions, "color" = "#ffeeaa"),
+	//EXP_TYPE_NCR = list("jobs" = ncr_positions, "color" = "#ffeeaa"),
 	EXP_TYPE_FOLLOWERS = list("jobs" = followers_positions, "color" = "#ffeeaa"),
-	EXP_TYPE_LEGION = list("jobs" = legion_positions, "color" = "#f81717"),
-	EXP_TYPE_KHAN = list("jobs" = khan_positions, "color" = "#006666"),
-	EXP_TYPE_BROTHERHOOD = list("jobs" = brotherhood_positions, "color" = "#95a5a6"),
+	//EXP_TYPE_LEGION = list("jobs" = legion_positions, "color" = "#f81717"),
+	//EXP_TYPE_KHAN = list("jobs" = khan_positions, "color" = "#006666"),
+	//EXP_TYPE_BROTHERHOOD = list("jobs" = brotherhood_positions, "color" = "#95a5a6"),
 	EXP_TYPE_ENCLAVE = list("jobs" = enclave_positions, "color" = "#5a5bc7"),
 ))
 

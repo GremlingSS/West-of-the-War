@@ -19,8 +19,8 @@ Within this file is the material to turn the previous odd-inclusion into a prope
 	social_faction = FACTION_RAIDERS
 	exp_requirements = 600
 	exp_type = EXP_TYPE_FALLOUT
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 6
+	spawn_positions = 6
 	description = "You are a member of the underworld of the La Verkin region, well-established or a newcomer looking to rile things up. \
 	Morals and laws generally mean little to you. Perhaps you are a thief, chem dealer, deserter, or just a garden-variety murderer. \
 	The Den where you have spawned is a good hovel for scum like you, but take your troubles wherever you like. \
@@ -69,7 +69,7 @@ Within this file is the material to turn the previous odd-inclusion into a prope
 	name = "Raider"
 	jobtype = /datum/job/raider/f13raider
 	id = /obj/item/card/id/raider_tags
-	ears = null
+	ears = /obj/item/radio/headset/headset_den
 	belt = null
 	shoes = /obj/item/clothing/shoes/f13/raidertreads
 	uniform = /obj/item/clothing/under/f13/raider_leather

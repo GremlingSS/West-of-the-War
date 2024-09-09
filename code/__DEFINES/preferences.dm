@@ -75,15 +75,15 @@
 #define EXP_TYPE_VAULT			"Vault"
 #define EXP_TYPE_BROTHERHOOD	"BoS"
 #define EXP_TYPE_NCR			"NCR"
-#define EXP_TYPE_BIGHORN		"Waypoint"
+#define EXP_TYPE_BIGHORN		"Westford Town"
 #define EXP_TYPE_LEGION			"Legion"
-#define EXP_TYPE_WASTELAND		"Wasteland"
+#define EXP_TYPE_WASTELAND		"Independent"
 #define EXP_TYPE_ENCLAVE		"Enclave"
 #define EXP_TYPE_NCRCOMMAND     "NCRCommand"
 #define EXP_TYPE_RANGER         "Ranger"
 #define EXP_TYPE_SCRIBE         "Scribe"
 #define EXP_TYPE_DECANUS        "Decanus"
-#define EXP_TYPE_FOLLOWERS		"FoA"
+#define EXP_TYPE_FOLLOWERS		"Westford Medical"
 #define EXP_TYPE_KHAN			"Great Khans"
 //Flags in the players table in the db
 #define DB_FLAG_EXEMPT 							(1<<0)

@@ -140,8 +140,12 @@
 #define WASTELAND		(1<<8)
 
 #define F13WASTELANDER	(1<<0)
-#define F13VIGILANTE	(1<<3)
-#define F13ADMINBOOS	(1<<4)
+#define F13NCRSCOUT		(1<<1)
+#define F13LEGIONRIMOR	(1<<2)
+#define F13BOSSKNIGHT	(1<<3)
+#define F13KHANRUNNER	(1<<4)
+#define F13VIGILANTE	(1<<5)
+#define F13ADMINBOOS	(1<<6)
 
 #define RAIDER			(1<<9)
 

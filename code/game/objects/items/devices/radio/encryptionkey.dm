@@ -174,7 +174,7 @@
 	channels = list(RADIO_CHANNEL_TOWN = 1)
 
 /obj/item/encryptionkey/headset_den
-	name = "den radio encryption key"
+	name = "raider radio encryption key"
 	icon_state = "cypherkey"
 	channels = list(RADIO_CHANNEL_DEN = 1)
 
