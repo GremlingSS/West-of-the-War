@@ -38,7 +38,7 @@ Mayor
 	supervisors = "The citizens of Westford."
 	description = "You are the elected mayor of the town of Westford. \
 	 You have been entrusted by the people to protect them, distribute funds, and make beneficial deals with the regional powers. \
-	 The law enforcers defending Westford are under your control, though matters are often left to your subordinate the Sheriff. \
+	 You are expected to work diplomatically with law enforcement, they are not under your direct control, generally this means working with the sheriff. \
 	 There is great flexibility for personal gain and to run things as you see fit, but always remember that you were elected, not appointed."
 	selection_color = "#d7b088"
 	exp_type = EXP_TYPE_BIGHORN
@@ -83,11 +83,11 @@ Mayor
 	department_flag = DEP_BIGHORN
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Mayor."
+	supervisors = "your morals."
 	description = "You are the chief law enforcer of the town of Westford. \
 	 You have been entrusted by the people to keep the peace, settle local disputes, and keep townsfolk safe and alive. \
-	 The deputies defending Westford are under your management, though ultimately answer to the Mayor. \
-	 Never leave the town undefended, utilising bounties, your sheriffs and deputies, or trusty mercenaries on missions far beyond the walls."
+	 The deputies defending Westford are under your management, they answer directly to you above all. \
+	 Ensure that the town is always defended. For problems outside the town, utilize bounties, your deputies, or trusty mercenaries on missions far beyond the walls."
 
 	selection_color = "#d7b088"
 	exp_type = EXP_TYPE_BIGHORN
@@ -137,10 +137,10 @@ Mayor
 	department_flag = DEP_BIGHORN
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = "the Mayor, the Sheriff"
+	supervisors = "the Sheriff"
 	description = "You are a hired law enforcer of the town of Westford. \
 	 You have been entrusted to keep the peace, settle local disputes, and keep townsfolk safe and alive. \
-	 Patrol town, the perimeter of the walls, and follow the orders of the Sheriff, and their superior the Mayor. \
+	 Patrol town, the perimeter of the walls, and follow the orders of the Sheriff. \
 	 Never leave the town undefended, yet orders may send you further afield on bounties or doomed diplomatic missions."
 	selection_color = "#dcba97"
 	exp_type = EXP_TYPE_BIGHORN
@@ -207,7 +207,7 @@ Mayor
 	department_flag = DEP_BIGHORN
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the call of Profit."
+	supervisors = "the call of profit and the mayor."
 	description = "You are a local mixologist hired to run and staff the Westford bar. \
 	 You have been entrusted by the owner to run a place of food, drink, and rest for the populace. \
 	 You have full domain over the running of your business, but mind the law."
@@ -288,7 +288,7 @@ Mayor
 	department_flag = DEP_BIGHORN
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the call of Profit."
+	supervisors = "the call of profit and the mayor"
 	description = "You are a hired contractor to run Westford's shop. \
 	 You have been entrusted by the owners to run the store and have been given a generous initial stock. \
 	 You have full domain over the running of your business, but mind the law."
