@@ -1376,7 +1376,7 @@ Records disabled until a use for them is found
 	return
 
 /datum/preferences/proc/GetQuirkBalance()
-	var/bal = 0
+	var/bal = 4
 	for(var/V in all_quirks)
 		var/datum/quirk/T = SSquirks.quirks[V]
 		bal -= initial(T.value)
