@@ -946,8 +946,8 @@
 //Town
 
 /obj/item/clothing/suit/armor/f13/combat/dusty
-	name = "Dusty Trails combat armor"
-	desc = "An old military grade pre war combat armor, repainted to the colour scheme of the Dusty Trails Caravan Company."
+	name = "\improper Westford combat armor"
+	desc = "An old military grade pre war combat armor, repainted to the colour scheme of Westford."
 	icon = 'icons/fallout/clothing/armored_medium.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/suit.dmi'
 	icon_state = "combat_armor_dusty"
@@ -955,8 +955,8 @@
 	armor = list("melee" = 35, "bullet" = 35, "laser" = 35, "energy" = 10, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 0, "wound" = 25)
 
 /obj/item/clothing/suit/armor/f13/combat/mk2/dusty
-	name = "reinforced Dusty Trails combat armor"
-	desc = "A reinforced set of bracers, greaves, and torso plating of prewar design. This one is kitted with additional plates, repainted to the colour scheme of the Dusty Trails Caravan Company."
+	name = "\improper Westford reinforced combat armor"
+	desc = "A reinforced set of bracers, greaves, and torso plating of prewar design. This one is kitted with additional plates, repainted to the colour scheme of Westford."
 	icon = 'icons/fallout/clothing/armored_medium.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/suit.dmi'
 	icon_state = "combat_armor_dusty_mk2"
@@ -964,8 +964,8 @@
 	mutantrace_variation = NONE
 
 /obj/item/clothing/suit/armor/f13/usmcriot/dusty
-	name = "Dusty Trails riot armor"
-	desc = "A custom suit of armor owned by a mercenary Lieutenant, in the colors of the Dusty Trails Caravan Company."
+	name = "\improper Westford riot armor"
+	desc = "A custom suit of armor used by the sheriff, in the colors of Westford."
 	icon = 'icons/fallout/clothing/armored_medium.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/suit.dmi'
 	icon_state = "dusty_lieutenant"

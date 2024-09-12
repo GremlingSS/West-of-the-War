@@ -315,6 +315,12 @@
 #define TRAIT_TRIBAL_BONEDANCER			"bone dancer"
 #define TRAIT_TRIBAL_ALL				"tribal all"
 
+// Faction Teaching Perks, mainly for scouts, but let people upgrade into faction drip.
+#define TRAIT_FORMER_LEGION			"former_legion"
+#define TRAIT_FORMER_NCR			"former_ncr"
+#define TRAIT_FORMER_BROTHERHOOD	"former_brotherhood"
+#define TRAIT_FORMER_KHAN			"former_khan"
+#define TRAIT_FORMER_FOLLOWER		"former_follower" // Technically for the clinic itself
 
 //non-mob traits
 #define TRAIT_PARALYSIS				"paralysis" //Used for limb-based paralysis, where replacing the limb will fix it

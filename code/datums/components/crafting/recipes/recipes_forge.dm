@@ -270,6 +270,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_KHAN
 
 
 // LEGION SPECIFIC
