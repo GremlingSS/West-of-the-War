@@ -7,6 +7,7 @@
 	slot_flags = ITEM_SLOT_EARS
 	resistance_flags = NONE
 	custom_price = PRICE_BELOW_NORMAL
+	raider_armor = TRUE
 
 /obj/item/clothing/ears/earmuffs
 	name = "earmuffs"

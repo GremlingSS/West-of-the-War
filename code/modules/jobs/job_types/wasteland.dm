@@ -51,9 +51,8 @@
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak,
-		/obj/item/reagent_containers/pill/radx,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/reagent_containers/pill/radx = 1
 		)
 
 /datum/outfit/job/wasteland/f13wastelander/pre_equip(mob/living/carbon/human/H)
@@ -108,7 +107,7 @@
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556mm = 4,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
-		/obj/item/reagent_containers/pill/radx,
+		/obj/item/reagent_containers/pill/radx = 1
 		)
 
 
@@ -153,8 +152,8 @@
 	l_hand = /obj/item/shield/riot/buckler
 	backpack_contents = list(
 		/obj/item/melee/onehanded/machete = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
-		/obj/item/reagent_containers/pill/radx,
+		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
+		/obj/item/reagent_containers/pill/patch/hydra = 1
 		)
 
 
@@ -201,7 +200,7 @@
 		/obj/item/stock_parts/cell/ammo/ec = 3,
 		/obj/item/melee/onehanded/knife/survival = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
-		/obj/item/reagent_containers/pill/radx,
+		/obj/item/reagent_containers/pill/radx = 1
 		)
 
 
@@ -248,7 +247,7 @@
 		/obj/item/storage/bag/money/small/khan = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
-		/obj/item/reagent_containers/pill/radx
+		/obj/item/reagent_containers/pill/radx = 1
 		)
 
 
