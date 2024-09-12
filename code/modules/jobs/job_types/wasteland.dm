@@ -110,6 +110,12 @@
 		/obj/item/reagent_containers/pill/radx = 1
 		)
 
+/datum/outfit/job/wasteland/f13ncrscout/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+
+	ADD_TRAIT(H, TRAIT_FORMER_NCR,  REF(src))
 
 /datum/job/wasteland/f13legion_explorer
 	title = "Legion Rimor"
@@ -156,6 +162,13 @@
 		/obj/item/reagent_containers/pill/patch/hydra = 1
 		)
 
+/datum/outfit/job/wasteland/f13legion_explorer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+
+	ADD_TRAIT(H, TRAIT_MARS_TEACH,  REF(src))
+	ADD_TRAIT(H, TRAIT_FORMER_LEGION,  REF(src))
 
 /datum/job/wasteland/f13brotherhood_initiate
 	title = "Brotherhood Scout-Knight"
@@ -203,6 +216,13 @@
 		/obj/item/reagent_containers/pill/radx = 1
 		)
 
+/datum/outfit/job/wasteland/f13brotherhood_initiate/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+
+	ADD_TRAIT(H, TRAIT_FORMER_BROTHERHOOD,  REF(src))
+
 
 /datum/job/wasteland/f13khan_runner
 	title = "Great Khan Runner"
@@ -249,6 +269,13 @@
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/reagent_containers/pill/radx = 1
 		)
+
+/datum/outfit/job/wasteland/f13khan_runner/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+
+	ADD_TRAIT(H, TRAIT_FORMER_KHAN,  REF(src))
 
 
 ///////////////////////////////// Loadouts ///////////////////////////////////////////////////

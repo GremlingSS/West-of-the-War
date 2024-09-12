@@ -18,11 +18,13 @@
 	name = "NCR Patrol Belt"
 	result = /obj/item/storage/belt/military/assault/ncr
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_NCR
 
 /datum/crafting_recipe/belt/legion
 	name = "Legionary Marching Belt"
 	result = /obj/item/storage/belt/military/assault/legion
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_LEGION
 
 /datum/crafting_recipe/belt/enclave
 	name = "Old Army Belt (Enclave)"
@@ -85,6 +87,7 @@
 		/obj/item/toy/crayon/spraycan,
 	)
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_NCR
 
 /datum/crafting_recipe/belt/holster/ranger/legion
 	name = "Ranger-Hunter Cape"
@@ -94,6 +97,7 @@
 		/obj/item/toy/crayon/spraycan,
 	)
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_LEGION
 
 /datum/crafting_recipe/belt/bandolier
 	name = "Shotgun Bandolier"
