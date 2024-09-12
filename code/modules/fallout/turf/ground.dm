@@ -63,7 +63,7 @@
 #define DESOLATE_PLANT_SPAWN_LIST	list(/obj/structure/flora/grass/wasteland = 1)
 #define SNOW_PLANT_SPAWN_LIST		list(/obj/structure/flora/tree/tall = 12, /obj/structure/flora/grass = 10, /obj/structure/flora/grass/brown = 9, /obj/structure/flora/grass/green = 8, /obj/structure/flora/grass/both = 7, /obj/structure/flora/bush = 6, /obj/structure/flora/wasteplant/wild_broc = 5, /obj/structure/flora/wasteplant/wild_mutfruit = 5)
 #define BADLANDS_PLANT_SPAWN_LIST	list(/obj/structure/flora/grass/wasteland = 10, /obj/structure/flora/wasteplant/wild_broc = 7, /obj/structure/flora/wasteplant/wild_mesquite = 4, /obj/structure/flora/wasteplant/wild_feracactus = 5, /obj/structure/flora/wasteplant/wild_punga = 3, /obj/structure/flora/wasteplant/wild_coyote = 5, /obj/structure/flora/wasteplant/wild_tato = 5, /obj/structure/flora/wasteplant/wild_yucca = 5, /obj/structure/flora/wasteplant/wild_mutfruit = 5, /obj/structure/flora/wasteplant/wild_prickly = 5, /obj/structure/flora/wasteplant/wild_buffalogourd = 5, /obj/structure/flora/wasteplant/wild_pinyon = 3, /obj/structure/flora/wasteplant/wild_xander = 5, /obj/structure/flora/wasteplant/wild_agave = 5)
-#define FOREST_PLANT_SPAWN_LIST		list(/obj/structure/flora/grass/wasteland = 10, /obj/structure/flora/twig = 9, /obj/structure/flora/wasteplant/wild_broc = 7, /obj/structure/flora/wasteplant/wild_mesquite = 4, /obj/structure/flora/wasteplant/wild_feracactus = 5, /obj/structure/flora/wasteplant/wild_punga = 3, /obj/structure/flora/wasteplant/wild_coyote = 5, /obj/structure/flora/wasteplant/wild_tato = 5, /obj/structure/flora/wasteplant/wild_yucca = 5, /obj/structure/flora/wasteplant/wild_mutfruit = 5, /obj/structure/flora/wasteplant/wild_prickly = 5, /obj/structure/flora/wasteplant/wild_buffalogourd = 5, /obj/structure/flora/wasteplant/wild_pinyon = 3, /obj/structure/flora/wasteplant/wild_xander = 5, /obj/structure/flora/wasteplant/wild_agave = 5)
+#define FOREST_PLANT_SPAWN_LIST		list(/obj/structure/flora/grass/jungle = 10, /obj/structure/flora/twig = 9, /obj/structure/flora/wasteplant/wild_broc = 7, /obj/structure/flora/wasteplant/wild_mesquite = 4, /obj/structure/flora/wasteplant/wild_punga = 3, /obj/structure/flora/wasteplant/wild_coyote = 5, /obj/structure/flora/wasteplant/wild_tato = 5, /obj/structure/flora/wasteplant/wild_mutfruit = 5, /obj/structure/flora/wasteplant/wild_prickly = 5, /obj/structure/flora/wasteplant/wild_buffalogourd = 5, /obj/structure/flora/wasteplant/wild_pinyon = 3, /obj/structure/flora/wasteplant/wild_xander = 5, /obj/structure/flora/wasteplant/wild_agave = 5)
 
 /turf/open/indestructible/ground/outside/dirthole
 	name = "Dirt hole"
@@ -91,9 +91,9 @@
 	icon_state = "savannahcenter"
 	slowdown = 0.4
 	flags_1 = CAN_HAVE_NATURE | ADJACENCIES_OVERLAY
-	footstep = FOOTSTEP_SAND
-	barefootstep = FOOTSTEP_SAND
-	clawfootstep = FOOTSTEP_SAND
+	footstep = FOOTSTEP_GRASS
+	barefootstep = FOOTSTEP_GRASS
+	clawfootstep = FOOTSTEP_GRASS
 
 /turf/open/indestructible/ground/outside/savannah/center
 	icon_state = "savannahcenter"
@@ -130,7 +130,22 @@
 /turf/open/indestructible/ground/outside/savannah/dark
 	icon_state = "savannah1_dark"
 
-
+//Savannah grassification
+/turf/open/indestructible/ground/outside/savannah/Initialize(mapload)
+	. = ..()
+	if(z > 4)
+		return
+	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src) || (locate(/obj/effect/overlay/turfs/sidewalk) in src))) //no doublestacking on the plantgrass /structure/flora
+		if(prob(40))
+			new /obj/structure/flora/ausbushes/fullgrass(src)
+		else if(prob(10))
+			new /obj/structure/flora/grass/wasteland(src)
+		else if(prob(5))
+			new /obj/structure/flora/ausbushes(src)
+		else if(prob(3))
+			new /obj/effect/spawner/lootdrop/f13/wreckspawner(src)
+		else if(prob(2))
+			new /obj/structure/flora/grass/jungle(src)
 
 // DESERT
 
@@ -337,6 +352,40 @@
 		setTurfPlant(new randPlant(src))
 		return TRUE
 
+/turf/open/indestructible/ground/outside/savannah/proc/setTurfPlant(newTurfPlant)
+	turfPlant = newTurfPlant
+	RegisterSignal(turfPlant, COMSIG_PARENT_QDELETING, .proc/clear_turfplant)
+
+/turf/open/indestructible/ground/outside/savannah/proc/clear_turfplant()
+	UnregisterSignal(turfPlant, COMSIG_PARENT_QDELETING)
+	turfPlant = null
+
+/turf/open/indestructible/ground/outside/savannah/proc/plantGrass(Plantforce = FALSE)
+	var/Weight = 0
+	var/randPlant = null
+
+	//spontaneously spawn grass
+	if(Plantforce || prob(GRASS_SPONTANEOUS))
+		randPlant = pickweight(FOREST_PLANT_SPAWN_LIST) //Create a new grass object at this location, and assign var
+		setTurfPlant(new randPlant(src))
+		return TRUE
+
+	//loop through neighbouring desert turfs, if they have grass, then increase weight
+	for(var/turf/open/indestructible/ground/outside/savannah/T in RANGE_TURFS(3, src))
+		if(T.turfPlant)
+			Weight += GRASS_WEIGHT
+
+	//use weight to try to spawn grass
+	if(prob(Weight))
+
+		//If surrounded on 5+ sides, pick from lush
+		if(Weight == (5 * GRASS_WEIGHT))
+			randPlant = pickweight(FOREST_PLANT_SPAWN_LIST)
+		else
+			randPlant = pickweight(FOREST_PLANT_SPAWN_LIST)
+		setTurfPlant(new randPlant(src))
+		return TRUE
+
 /turf/open/indestructible/ground/outside/desert/MakeSlippery(wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
 	return //I mean, it makes sense that deserts don't get slippery, I guess... :(
 
@@ -361,14 +410,19 @@
 
 /turf/open/indestructible/ground/outside/dirt/Initialize(mapload)
 	. = ..()
-	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
-		if(prob(20))
+	if(z > 4)
+		return
+	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src) || (locate(/obj/effect/overlay/turfs/sidewalk) in src))) //no doublestacking on the plantgrass /structure/flora
+		if(prob(40))
 			new /obj/structure/flora/grass/wasteland(src)
-		if(prob(3))
+		else if(prob(10))
+			new /obj/structure/flora/ausbushes/fullgrass(src)
+		else if(prob(5))
+			new /obj/structure/flora/ausbushes(src)
+		else if(prob(3))
 			new /obj/effect/spawner/lootdrop/f13/wreckspawner(src)
-
-/turf/open/indestructible/ground/outside/dirt/MakeSlippery(wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
-	return //same thing here, dirt absorbs the liquid... :(
+		else if(prob(2))
+			new /obj/structure/flora/grass/jungle(src)
 
 // DARK DIRT - the legacy one
 /turf/open/indestructible/ground/outside/dirt/dark
@@ -404,25 +458,25 @@
 //	step_sounds = list("human" = "erikafootsteps")
 
 // Holy shit the lag get the fuck outta here
+/*
 /turf/open/indestructible/ground/outside/road/Initialize(mapload)
 	. = ..()
 	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
-//		if(prob(20)) //decals
-//			new /obj/effect/decal/cleanable/rubble(src)
-//		if(prob(1))
-//			new /obj/effect/decal/cleanable/oil(src)
-//		if(prob(1))
-//			new /obj/effect/decal/cleanable/glass(src)
-//		if(prob(1))
-//			new /obj/effect/decal/cleanable/generic(src)
+		if(prob(20)) //decals
+			new /obj/effect/decal/cleanable/rubble(src)
+		if(prob(1))
+			new /obj/effect/decal/cleanable/oil(src)
+		if(prob(1))
+			new /obj/effect/decal/cleanable/glass(src)
+		if(prob(1))
+			new /obj/effect/decal/cleanable/generic(src)
 		if(prob(3))
 			new /obj/effect/spawner/lootdrop/f13/junkspawners(src)
 		if(prob(1))
 			new /obj/item/storage/trash_stack(src)
 		if(prob(1))
 			new /obj/effect/spawner/lootdrop/f13/wreckspawner(src)
-
-
+*/
 /turf/open/indestructible/ground/outside/road_s
 	name = "\proper road"
 	icon_state = "innermiddle"
@@ -438,24 +492,25 @@
 //	step_sounds = list("human" = "erikafootsteps")
 
 // Holy shit the lag get the fuck outta here
+/*
 /turf/open/indestructible/ground/outside/sidewalk/Initialize(mapload)
 	. = ..()
 	if(!(locate(/obj/structure) in src) || (locate(/obj/machinery) in src))
-//		if(prob(20)) //decals
-//			new /obj/effect/decal/cleanable/rubble(src)
-//		if(prob(1))
-//			new /obj/effect/decal/cleanable/oil(src)
-//		if(prob(1))
-//			new /obj/effect/decal/cleanable/glass(src)
-//		if(prob(1))
-//			new /obj/effect/decal/cleanable/generic(src)
+		if(prob(20)) //decals
+			new /obj/effect/decal/cleanable/rubble(src)
+		if(prob(1))
+			new /obj/effect/decal/cleanable/oil(src)
+		if(prob(1))
+			new /obj/effect/decal/cleanable/glass(src)
+		if(prob(1))
+			new /obj/effect/decal/cleanable/generic(src)
 		if(prob(3))
 			new /obj/effect/spawner/lootdrop/f13/junkspawners(src)
 		if(prob(1))
 			new /obj/item/storage/trash_stack(src)
 		if(prob(1))
 			new /obj/effect/spawner/lootdrop/f13/wreckspawner(src)
-
+*/
 
 /turf/open/indestructible/ground/outside/sidewalk_s
 	name = "\proper sidewalk"
@@ -634,6 +689,32 @@
 		setTurfPlant(new randPlant(src))
 		return TRUE
 
+/* somehow this causes lighting issues -Evan
+/turf/open/indestructible/ground/outside/road/Initialize(mapload)
+	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src) || (locate(/obj/effect/overlay/turfs/sidewalk) in src))) //no double stacking
+		if (prob(90))
+			return
+		else if(prob(1))
+			new /obj/structure/car/rubbish1(src)
+		else if(prob(1))
+			new /obj/structure/car/rubbish2(src)
+		else if(prob(1))
+			new /obj/structure/car/rubbish3(src)
+		else if(prob(1))
+			new /obj/structure/car/rubbish4(src)
+		else if(prob(1))
+			new /obj/structure/car/rubbish5(src)
+		else if(prob(1))
+			new /obj/structure/car/rubbish6(src)
+		else if(prob(1))
+			new /obj/structure/car/rubbish7(src)
+		else if(prob(1))
+			new /obj/structure/car/rubbish8(src)
+		else if(prob(1))
+			new /obj/structure/car/rubbish9(src)
+		else if(prob(1))
+			new /obj/structure/car/rubbish10(src)
+*/
 /////////////////////////////////////////////////////////
 
 #define SHROOM_SPAWN_GROUND	1
