@@ -64,6 +64,7 @@
 #define SNOW_PLANT_SPAWN_LIST		list(/obj/structure/flora/tree/tall = 12, /obj/structure/flora/grass = 10, /obj/structure/flora/grass/brown = 9, /obj/structure/flora/grass/green = 8, /obj/structure/flora/grass/both = 7, /obj/structure/flora/bush = 6, /obj/structure/flora/wasteplant/wild_broc = 5, /obj/structure/flora/wasteplant/wild_mutfruit = 5)
 #define BADLANDS_PLANT_SPAWN_LIST	list(/obj/structure/flora/grass/wasteland = 10, /obj/structure/flora/wasteplant/wild_broc = 7, /obj/structure/flora/wasteplant/wild_mesquite = 4, /obj/structure/flora/wasteplant/wild_feracactus = 5, /obj/structure/flora/wasteplant/wild_punga = 3, /obj/structure/flora/wasteplant/wild_coyote = 5, /obj/structure/flora/wasteplant/wild_tato = 5, /obj/structure/flora/wasteplant/wild_yucca = 5, /obj/structure/flora/wasteplant/wild_mutfruit = 5, /obj/structure/flora/wasteplant/wild_prickly = 5, /obj/structure/flora/wasteplant/wild_buffalogourd = 5, /obj/structure/flora/wasteplant/wild_pinyon = 3, /obj/structure/flora/wasteplant/wild_xander = 5, /obj/structure/flora/wasteplant/wild_agave = 5)
 #define FOREST_PLANT_SPAWN_LIST		list(/obj/structure/flora/grass/jungle = 10, /obj/structure/flora/twig = 9, /obj/structure/flora/wasteplant/wild_broc = 7, /obj/structure/flora/wasteplant/wild_mesquite = 4, /obj/structure/flora/wasteplant/wild_punga = 3, /obj/structure/flora/wasteplant/wild_coyote = 5, /obj/structure/flora/wasteplant/wild_tato = 5, /obj/structure/flora/wasteplant/wild_mutfruit = 5, /obj/structure/flora/wasteplant/wild_prickly = 5, /obj/structure/flora/wasteplant/wild_buffalogourd = 5, /obj/structure/flora/wasteplant/wild_pinyon = 3, /obj/structure/flora/wasteplant/wild_xander = 5, /obj/structure/flora/wasteplant/wild_agave = 5)
+#define HARVESTABLE_PLANTS_LIST		list(/obj/structure/flora/wasteplant/wild_broc = 7, /obj/structure/flora/wasteplant/wild_mesquite = 4, /obj/structure/flora/wasteplant/wild_feracactus = 5, /obj/structure/flora/wasteplant/wild_punga = 5, /obj/structure/flora/wasteplant/wild_coyote = 5, /obj/structure/flora/wasteplant/wild_tato = 5, /obj/structure/flora/wasteplant/wild_yucca = 5, /obj/structure/flora/wasteplant/wild_mutfruit = 5, /obj/structure/flora/wasteplant/wild_prickly = 5, /obj/structure/flora/wasteplant/wild_datura = 5, /obj/structure/flora/wasteplant/wild_buffalogourd = 5, /obj/structure/flora/wasteplant/wild_pinyon = 3, /obj/structure/flora/wasteplant/wild_xander = 5, /obj/structure/flora/wasteplant/wild_agave = 5)
 
 /turf/open/indestructible/ground/outside/dirthole
 	name = "Dirt hole"
@@ -146,6 +147,7 @@
 			new /obj/effect/spawner/lootdrop/f13/wreckspawner(src)
 		else if(prob(2))
 			new /obj/structure/flora/grass/jungle(src)
+		plantGrass()
 
 // DESERT
 
@@ -366,7 +368,7 @@
 
 	//spontaneously spawn grass
 	if(Plantforce || prob(GRASS_SPONTANEOUS))
-		randPlant = pickweight(FOREST_PLANT_SPAWN_LIST) //Create a new grass object at this location, and assign var
+		randPlant = pickweight(LUSH_PLANT_SPAWN_LIST) //Create a new grass object at this location, and assign var
 		setTurfPlant(new randPlant(src))
 		return TRUE
 
@@ -380,9 +382,43 @@
 
 		//If surrounded on 5+ sides, pick from lush
 		if(Weight == (5 * GRASS_WEIGHT))
-			randPlant = pickweight(FOREST_PLANT_SPAWN_LIST)
+			randPlant = pickweight(LUSH_PLANT_SPAWN_LIST)
 		else
-			randPlant = pickweight(FOREST_PLANT_SPAWN_LIST)
+			randPlant = pickweight(DESOLATE_PLANT_SPAWN_LIST)
+		setTurfPlant(new randPlant(src))
+		return TRUE
+
+/turf/open/indestructible/ground/outside/dirt/proc/setTurfPlant(newTurfPlant)
+	turfPlant = newTurfPlant
+	RegisterSignal(turfPlant, COMSIG_PARENT_QDELETING, .proc/clear_turfplant)
+
+/turf/open/indestructible/ground/outside/dirt/proc/clear_turfplant()
+	UnregisterSignal(turfPlant, COMSIG_PARENT_QDELETING)
+	turfPlant = null
+
+/turf/open/indestructible/ground/outside/dirt/proc/plantGrass(Plantforce = FALSE)
+	var/Weight = 0
+	var/randPlant = null
+
+	//spontaneously spawn grass
+	if(Plantforce || prob(GRASS_SPONTANEOUS))
+		randPlant = pickweight(LUSH_PLANT_SPAWN_LIST) //Create a new grass object at this location, and assign var
+		setTurfPlant(new randPlant(src))
+		return TRUE
+
+	//loop through neighbouring desert turfs, if they have grass, then increase weight
+	for(var/turf/open/indestructible/ground/outside/dirt/T in RANGE_TURFS(3, src))
+		if(T.turfPlant)
+			Weight += GRASS_WEIGHT
+
+	//use weight to try to spawn grass
+	if(prob(Weight))
+
+		//If surrounded on 5+ sides, pick from lush
+		if(Weight == (5 * GRASS_WEIGHT))
+			randPlant = pickweight(LUSH_PLANT_SPAWN_LIST)
+		else
+			randPlant = pickweight(DESOLATE_PLANT_SPAWN_LIST)
 		setTurfPlant(new randPlant(src))
 		return TRUE
 
@@ -423,6 +459,7 @@
 			new /obj/effect/spawner/lootdrop/f13/wreckspawner(src)
 		else if(prob(2))
 			new /obj/structure/flora/grass/jungle(src)
+		plantGrass()
 
 // DARK DIRT - the legacy one
 /turf/open/indestructible/ground/outside/dirt/dark
