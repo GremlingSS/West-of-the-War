@@ -2050,6 +2050,12 @@
 /obj/structure/spider/stickyweb,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/caves)
+"aBo" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/closed/wall/f13/wood/house,
+/area/f13/wasteland)
 "aBp" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
@@ -2564,6 +2570,12 @@
 	icon_state = "greenrustyfull"
 	},
 /area/f13/tunnel)
+"aHt" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/wood/wood_mosaic,
+/area/f13/wasteland)
 "aHw" = (
 /obj/structure/car/rubbish2{
 	pixel_y = 5
@@ -13931,6 +13943,10 @@
 /obj/structure/nest/supermutant/nightkin,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/caves)
+"dGp" = (
+/obj/machinery/microwave/stove,
+/turf/open/floor/wood/wood_mosaic,
+/area/f13/wasteland)
 "dGv" = (
 /obj/structure/table,
 /obj/item/book/granter/trait/pa_wear,
@@ -14320,6 +14336,13 @@
 	name = "Westford Undertown";
 	requires_power = 1
 	})
+"dLi" = (
+/obj/structure/curtain{
+	color = "#b8a482"
+	},
+/obj/structure/window/fulltile/ruins,
+/turf/open/floor/wood/wood_mosaic,
+/area/f13/wasteland)
 "dLj" = (
 /obj/structure/chair/stool{
 	dir = 4;
@@ -14634,6 +14657,10 @@
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain0"
 	},
+/area/f13/wasteland)
+"dPA" = (
+/obj/machinery/door/unpowered/securedoor/bighorn_door,
+/turf/open/floor/wood/wood_mosaic,
 /area/f13/wasteland)
 "dPH" = (
 /obj/structure/reagent_dispensers/barrel/dangerous,
@@ -18487,6 +18514,10 @@
 	icon_state = "oakfloor1"
 	},
 /area/f13/city/bighorn)
+"eMK" = (
+/obj/structure/simple_door/interior,
+/turf/open/floor/wood/wood_mosaic,
+/area/f13/wasteland)
 "eML" = (
 /obj/machinery/defibrillator_mount/loaded{
 	pixel_y = 27
@@ -20167,6 +20198,10 @@
 	},
 /turf/open/indestructible/ground/outside/savannah,
 /area/f13/wasteland)
+"fjH" = (
+/obj/structure/closet/fridge,
+/turf/open/floor/wood/wood_mosaic,
+/area/f13/wasteland)
 "fjN" = (
 /obj/machinery/power/terminal{
 	dir = 4;
@@ -20943,12 +20978,11 @@
 	},
 /area/f13/wasteland)
 "ftA" = (
-/obj/machinery/door/airlock/grunge{
-	name = "Westford Store";
-	req_access_txt = "139"
+/obj/structure/closet/anchored{
+	pixel_y = 21
 	},
-/turf/closed/wall/f13/sunset/brick_small_dark,
-/area/f13/city/bighorn)
+/turf/open/floor/wood/wood_mosaic,
+/area/f13/wasteland)
 "ftC" = (
 /obj/item/newspaper,
 /obj/effect/decal/cleanable/dirt,
@@ -43464,6 +43498,10 @@
 	icon_state = "oakfloor1"
 	},
 /area/f13/city/bighorn)
+"lgg" = (
+/obj/structure/chair/wood,
+/turf/open/floor/wood/wood_mosaic,
+/area/f13/wasteland)
 "lgk" = (
 /obj/structure/spacevine,
 /turf/closed/mineral/random/low_chance,
@@ -44047,16 +44085,8 @@
 /turf/closed/wall/f13/wood/house,
 /area/f13/building)
 "loa" = (
-/obj/structure/railing{
-	color = "#A47449";
-	dir = 4;
-	pixel_y = 5;
-	pixel_x = 1
-	},
-/turf/open/floor/plasteel/stairs{
-	color = d
-	},
-/area/f13/wasteland/bighorn)
+/turf/open/floor/wood/wood_mosaic,
+/area/f13/wasteland)
 "loh" = (
 /obj/structure/wreck/trash/five_tires,
 /turf/open/indestructible/ground/outside/ruins,
@@ -51380,6 +51410,15 @@
 	name = "air"
 	},
 /area/f13/wasteland)
+"niA" = (
+/obj/structure/window/fulltile/ruins{
+	icon_state = "ruinswindowvertical"
+	},
+/obj/structure/curtain{
+	color = "#b8a482"
+	},
+/turf/open/floor/wood/wood_mosaic,
+/area/f13/wasteland)
 "niD" = (
 /obj/machinery/door/airlock/medical{
 	name = "Operating Theatre";
@@ -55580,6 +55619,11 @@
 	name = "Westford Undertown";
 	requires_power = 1
 	})
+"oof" = (
+/obj/structure/bed/wooden,
+/obj/item/bedsheet/runtime,
+/turf/open/floor/wood/wood_mosaic,
+/area/f13/wasteland)
 "oom" = (
 /obj/structure/flora/tree/wasteland,
 /obj/structure/railing{
@@ -70564,6 +70608,10 @@
 	name = "Westford Undertown";
 	requires_power = 1
 	})
+"sdk" = (
+/obj/structure/table/wood,
+/turf/open/floor/wood/wood_mosaic,
+/area/f13/wasteland)
 "sdm" = (
 /obj/structure/table,
 /obj/item/toy/crayon/spraycan,
@@ -81363,6 +81411,15 @@
 	icon_state = "tunnelrusty"
 	},
 /area/f13/building)
+"uTY" = (
+/obj/machinery/shower{
+	pixel_y = 32
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/f13,
+/area/f13/wasteland)
 "uUg" = (
 /mob/living/simple_animal/hostile/ghoul,
 /turf/open/floor/f13{
@@ -84930,6 +84987,9 @@
 /obj/structure/window/fulltile/ruins{
 	icon_state = "ruinswindowvertical"
 	},
+/obj/structure/curtain{
+	color = "#b8a482"
+	},
 /turf/open/floor/f13/wood{
 	icon_state = "oakfloor1"
 	},
@@ -84956,6 +85016,15 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/caves)
+"vPE" = (
+/obj/structure/sink{
+	pixel_y = 20
+	},
+/obj/structure/mirror{
+	pixel_y = 29
+	},
+/turf/open/floor/f13,
+/area/f13/wasteland)
 "vPP" = (
 /obj/structure/table,
 /obj/item/stack/f13Cash/random/med,
@@ -85996,6 +86065,9 @@
 /area/f13/building/massfusion)
 "weV" = (
 /obj/structure/window/fulltile/ruins,
+/obj/structure/curtain{
+	color = "#b8a482"
+	},
 /turf/open/floor/f13/wood{
 	icon_state = "oakfloor1"
 	},
@@ -89984,6 +90056,13 @@
 	icon_state = "greenrustychess"
 	},
 /area/f13/building/massfusion)
+"xgG" = (
+/obj/structure/table/wood,
+/obj/machinery/light/small{
+	pixel_x = -10
+	},
+/turf/open/floor/wood/wood_mosaic,
+/area/f13/wasteland)
 "xgH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -187431,7 +187510,7 @@ iKI
 iKI
 jUn
 wDV
-loa
+mgh
 gTQ
 tMz
 ewU
@@ -187673,7 +187752,7 @@ pmZ
 pmZ
 pmZ
 pmZ
-neI
+pmZ
 jUn
 iKI
 iKI
@@ -192584,7 +192663,7 @@ gkt
 gkt
 gkt
 gkt
-ftA
+aQA
 jOm
 jOm
 aQF
@@ -250369,11 +250448,11 @@ dFj
 dFj
 dFj
 dFj
-dFj
-dFj
-dFj
-dFj
-dFj
+pGA
+pGA
+dPA
+pGA
+aBo
 qMv
 qMv
 qMv
@@ -250623,14 +250702,14 @@ qMv
 aQF
 aQF
 lZA
-lZA
-lZA
-lZA
-lZA
-lZA
-lZA
-lZA
-lZA
+pGA
+pGA
+pGA
+pGA
+ftA
+loa
+sdk
+dLi
 qMv
 qMv
 qMv
@@ -250881,13 +250960,13 @@ aQF
 aQF
 pGA
 pGA
-pGA
-pGA
-pGA
-pGA
-pGA
-pGA
-pGA
+vPE
+bgj
+eMK
+loa
+lgg
+xgG
+dLi
 qMv
 qMv
 qMv
@@ -251138,12 +251217,12 @@ aQF
 aQF
 pGA
 pGA
+uTY
+wrF
 pGA
-pGA
-pGA
-pGA
-pGA
-pGA
+aHt
+loa
+fjH
 pGA
 qMv
 qMv
@@ -251394,14 +251473,14 @@ qMv
 aQF
 aQF
 lZA
-lZA
-lZA
-lZA
-lZA
-lZA
-lZA
-lZA
-lZA
+pGA
+pGA
+pGA
+pGA
+oof
+loa
+dGp
+pGA
 qMv
 qMv
 rRO
@@ -251654,11 +251733,11 @@ lZA
 lZA
 lZA
 lZA
-lZA
-lZA
-lZA
-lZA
-lZA
+pGA
+niA
+niA
+niA
+pGA
 qMv
 qMv
 jOm
