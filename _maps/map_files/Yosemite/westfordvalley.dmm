@@ -9378,6 +9378,18 @@
 	initial_gas_mix = "o2=22;n2=82;miasma=44;TEMP=293.15"
 	},
 /area/f13/caves)
+"cwa" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/turf/open/floor/f13{
+	icon_state = "whitegreenrustychess";
+	color = "#d9c4b9"
+	},
+/area/f13/citycaves{
+	name = "Westford Undertown";
+	requires_power = 1
+	})
 "cwi" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -43785,7 +43797,7 @@
 "lkW" = (
 /mob/living/simple_animal/hostile/ghoul/legendary{
 	name = "Candice";
-	faction = list("hostile","ghoul","raider")
+	faction = list("hostile","renegade","ghoul","raider")
 	},
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelrusty"
@@ -54786,6 +54798,12 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"obx" = (
+/obj/machinery/shower{
+	dir = 4
+	},
+/turf/open/floor/f13,
+/area/f13/wasteland)
 "obC" = (
 /obj/item/toy/beach_ball/holoball/dodgeball,
 /turf/open/indestructible/ground/outside/road{
@@ -58842,6 +58860,21 @@
 	icon_state = "tealwhdirtychess2"
 	},
 /area/f13/city/bighorn)
+"pih" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/toilet{
+	dir = 4
+	},
+/turf/open/floor/f13{
+	icon_state = "whitegreenrustychess";
+	color = "#d9c4b9"
+	},
+/area/f13/citycaves{
+	name = "Westford Undertown";
+	requires_power = 1
+	})
 "pii" = (
 /obj/machinery/autolathe,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -67556,8 +67589,8 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "rsp" = (
-/obj/structure/toilet{
-	pixel_y = 13
+/obj/machinery/shower{
+	pixel_y = 32
 	},
 /turf/open/floor/f13,
 /area/f13/city/bighorn)
@@ -71265,6 +71298,12 @@
 /turf/open/floor/f13/wood{
 	icon_state = "oakfloor1"
 	},
+/area/f13/city/bighorn)
+"sof" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/turf/open/floor/f13,
 /area/f13/city/bighorn)
 "soq" = (
 /obj/structure/flora/grass/wasteland{
@@ -90724,6 +90763,18 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/yellow,
 /area/f13/tunnel)
+"xrj" = (
+/obj/structure/shelf_wood,
+/obj/item/seeds/xander,
+/obj/item/seeds/xander,
+/obj/item/seeds/poppy/broc,
+/obj/item/seeds/poppy/broc,
+/obj/item/seeds/punga,
+/obj/item/seeds/punga,
+/turf/open/floor/f13/wood{
+	icon_state = "oakfloor1"
+	},
+/area/f13/city/bighorn)
 "xrB" = (
 /obj/structure/table,
 /obj/item/reagent_containers/food/snacks/meat/slab/human,
@@ -91284,6 +91335,18 @@
 	icon_state = "horizontaltopborderbottom1"
 	},
 /area/f13/wasteland)
+"xyI" = (
+/obj/machinery/shower{
+	pixel_y = 17
+	},
+/turf/open/floor/f13{
+	icon_state = "whitegreenrustychess";
+	color = "#d9c4b9"
+	},
+/area/f13/citycaves{
+	name = "Westford Undertown";
+	requires_power = 1
+	})
 "xyM" = (
 /obj/structure/window/fulltile/house{
 	icon_state = "housewindowbrokenvertical"
@@ -116178,14 +116241,14 @@ ugP
 lSl
 qlG
 ugP
-jrZ
-nSa
+xyI
+pih
 ugP
 lSl
 qlG
 ugP
-jrZ
-nSa
+xyI
+pih
 ugP
 nGD
 pXp
@@ -117709,10 +117772,10 @@ iVf
 naL
 naL
 imp
-sSE
-jrZ
+ugP
+xyI
 nSa
-pCZ
+cwa
 ugP
 sdj
 ccp
@@ -120290,7 +120353,7 @@ naL
 naL
 aeZ
 ugP
-pCZ
+xyI
 pCZ
 pCZ
 ugP
@@ -187635,7 +187698,7 @@ gTQ
 gIx
 jOm
 rsp
-ahC
+sof
 jOm
 eab
 pmZ
@@ -190180,7 +190243,7 @@ dLc
 dzK
 jOm
 rsp
-ahC
+sof
 jOm
 aoV
 dzK
@@ -191717,7 +191780,7 @@ xpP
 eHJ
 jhB
 jOm
-iIB
+xrj
 pmZ
 jOm
 nbW
@@ -257030,7 +257093,7 @@ pGA
 sdU
 qsz
 bgj
-bgj
+obx
 pGA
 aQF
 aQF
