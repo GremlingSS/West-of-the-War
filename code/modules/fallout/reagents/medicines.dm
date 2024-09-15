@@ -1141,7 +1141,7 @@
 										  "<span class='notice'>You feel the cavity in your [affected_limb_name] weaving back together.</span>")
 					else if (iter_wound.wound_type == WOUND_SLASH)
 						iter_wound.blood_flow -= clot_rate
-							M.visible_message("<span class='notice'>The deep gashes on [M]'s [affected_limb_name] close up!</span>", \
+						M.visible_message("<span class='notice'>The deep gashes on [M]'s [affected_limb_name] close up!</span>", \
 										  "<span class='notice'>You feel the deep gashes on your [affected_limb_name] close up.</span>")
 				if (WOUND_SEVERITY_SEVERE)
 					if (iter_wound.wound_type == WOUND_PIERCE)

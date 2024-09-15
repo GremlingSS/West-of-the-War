@@ -919,7 +919,8 @@
     actions_types = list(/datum/action/item_action/toggle)
 
 /obj/item/clothing/head/f13/slouch/attack_self(mob/user)
-    if(can_toggle && !user.incapacitated(allow_crit = TRUE))
+    // if(can_toggle && !user.incapacitated(allow_crit = TRUE)) // Grem edit, bad params for allow_crit, doesn't exist!
+    if(can_toggle && !user.incapacitated())
         up = !up
         icon_state = "[initial(icon_state)][up ? "up" : ""]"
         to_chat(user, "you button \the [src]'s brim [up ? "up" : "down"]")
