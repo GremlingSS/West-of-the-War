@@ -8,6 +8,13 @@
 /mob/living/proc/Life(seconds, times_fired)
 	set waitfor = FALSE
 	if(!SPECIAL_SET)
+		// This proc is to check if the person is abusing a UI bug, said attempt gibs them and notifies admins of the attempt.
+		if ((src.special_s + src.special_p + src.special_e + src.special_c + src.special_i + src.special_a + src.special_l) > 40)
+			message_admins("[src.ckey] attempted to play a character with stats greater than 40 and was gibbed as a result.")
+			log_game("[key_name(src)] tried to spawn with stats greater than 40.")
+			to_chat(src, "<span class='warning'>You have been gibbed for trying to use the stat exploit. Admins have been messaged and this attempt logged.</span>")
+			gib(src)
+
 		// Lifegiver/Lifeloser was put here because the on_spawn proc was not working in traits, in theory this should only
 		// be called once at the same time endurance is checked. This does mean that admin spawned mobs wont run this proc, but if
 		// your admin spawning a player mob you can just edit the hp at that point. -Possum
@@ -65,6 +72,8 @@
 		update_special_speed((5-src.special_a)/20)
 		if(src.special_a >= 9)
 			ADD_TRAIT(src, TRAIT_NOSLIPALL, "noslip_all")
+		if(src.special_a >= 6)
+			ADD_TRAIT(src, TRAIT_LIGHT_STEP, "light_step")
 
 		// Basic leap
 		if(src.special_a >= 7 && src.special_a < 9)
