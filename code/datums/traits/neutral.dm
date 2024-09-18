@@ -1,6 +1,56 @@
 //traits with no real impact that can be taken freely
 //MAKE SURE THESE DO NOT MAJORLY IMPACT GAMEPLAY. those should be positive or negative traits.
 
+/datum/quirk/voracious
+	name = "Voracious"
+	desc = "Nothing gets between you and your food. You eat twice as fast as everyone else!"
+	value = 0
+	mob_trait = TRAIT_VORACIOUS
+	gain_text = "<span class='notice'>You feel HONGRY.</span>"
+	lose_text = "<span class='danger'>You no longer feel HONGRY.</span>"
+	medical_record_text = "Patient demonstrates a disturbing capacity for eating."
+
+/datum/quirk/spiritual
+	name = "Spiritual"
+	desc = "You're in tune with the gods, and your prayers may be more likely to be heard. Or not."
+	value = 0
+	mob_trait = TRAIT_SPIRITUAL
+	gain_text = "<span class='notice'>You feel a little more faithful to the gods today.</span>"
+	lose_text = "<span class='danger'>You feel less faithful in the gods.</span>"
+	medical_record_text = "Patient reports a belief in a higher power."
+
+/datum/quirk/tagger
+	name = "Tagger"
+	desc = "You're an experienced artist. While drawing graffiti, you can get twice as many uses out of drawing supplies."
+	value = 0
+	mob_trait = TRAIT_TAGGER
+	gain_text = "<span class='notice'>You know how to tag walls efficiently.</span>"
+	lose_text = "<span class='danger'>You forget how to tag walls properly.</span>"
+	medical_record_text = "Patient was recently seen for possible paint huffing incident."
+
+/datum/quirk/tagger/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	var/obj/item/toy/crayon/spraycan/spraycan = new(get_turf(H))
+	H.put_in_hands(spraycan)
+	H.equip_to_slot(spraycan, SLOT_IN_BACKPACK)
+	H.regenerate_icons()
+
+/datum/quirk/photographer
+	name = "Photographer"
+	desc = "You know how to handle a camera, shortening the delay between each shot."
+	value = 0
+	mob_trait = TRAIT_PHOTOGRAPHER
+	gain_text = "<span class='notice'>You know everything about photography.</span>"
+	lose_text = "<span class='danger'>You forget how photo cameras work.</span>"
+	medical_record_text = "Patient mentions photography as a stress-relieving hobby."
+
+/datum/quirk/photographer/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	var/obj/item/camera/camera = new(get_turf(H))
+	H.put_in_hands(camera)
+	H.equip_to_slot(camera, SLOT_NECK)
+	H.regenerate_icons()
+
 /datum/quirk/no_taste
 	name = "Ageusia"
 	desc = "You can't taste anything! Toxic food will still poison you."
@@ -121,101 +171,6 @@
 	else
 		SEND_SIGNAL(quirk_holder, COMSIG_CLEAR_MOOD_EVENT, "brightlight")
 
-/datum/quirk/family_heirloom
-	name = "Family Heirloom"
-	desc = "You are the current owner of an heirloom, passed down for generations. You have to keep it safe!"
-	value = 0
-	mood_quirk = TRUE
-	medical_record_text = "Patient demonstrates an unnatural attachment to a family heirloom."
-	var/obj/item/heirloom
-	var/where
-
-GLOBAL_LIST_EMPTY(family_heirlooms)
-
-/datum/quirk/family_heirloom/on_spawn()
-	var/mob/living/carbon/human/H = quirk_holder
-	var/obj/item/heirloom_type
-	switch(quirk_holder.mind.assigned_role)
-		if("Scribe")
-			heirloom_type = pick(/obj/item/trash/f13/electronic/toaster, /obj/item/screwdriver/crude, /obj/item/toy/tragicthegarnering)
-		if("Knight")
-			heirloom_type = /obj/item/gun/ballistic/automatic/toy/pistol
-		if("BoS Off-Duty")
-			heirloom_type = /obj/item/toy/figure/borg
-		if("Lieutenant")
-			heirloom_type = /obj/item/clothing/accessory/medal/silver
-		if("Mercenary")
-			heirloom_type = /obj/item/clothing/accessory/medal/bronze_heart
-		if("Shopkeeper")
-			heirloom_type = /obj/item/coin/plasma
-		if("Followers Doctor")
-			heirloom_type = pick(/obj/item/clothing/neck/stethoscope,/obj/item/toy/tragicthegarnering)
-		if("Followers Administrator")
-			heirloom_type = pick(/obj/item/toy/nuke, /obj/item/wrench/medical, /obj/item/clothing/neck/tie/horrible)
-		if("Prime Legionnaire")
-			heirloom_type = pick(/obj/item/melee/onehanded/machete, /obj/item/melee/onehanded/club/warclub, /obj/item/clothing/accessory/talisman, /obj/item/toy/plush/mr_buckety)
-		if("Recruit Legionnaire")
-			heirloom_type = pick(/obj/item/melee/onehanded/machete, /obj/item/melee/onehanded/club/warclub, /obj/item/clothing/accessory/talisman,/obj/item/clothing/accessory/skullcodpiece/fake)
-		if("Den Mob Boss")
-			heirloom_type = /obj/item/lighter/gold
-		if("Den Doctor")
-			heirloom_type = /obj/item/card/id/dogtag/MDfakepermit
-		if("Farmer")
-			heirloom_type = pick(/obj/item/hatchet, /obj/item/shovel/spade, /obj/item/toy/plush/beeplushie)
-		if("Janitor")
-			heirloom_type = /obj/item/mop
-		if("Security Officer")
-			heirloom_type = /obj/item/clothing/accessory/medal/silver/valor
-		if("Scientist")
-			heirloom_type = /obj/item/toy/plush/slimeplushie
-		if("Assistant")
-			heirloom_type = /obj/item/clothing/gloves/cut/family
-		if("Chaplain")
-			heirloom_type = /obj/item/camera/spooky/family
-		if("Captain")
-			heirloom_type = /obj/item/clothing/accessory/medal/gold/captain/family
-	if(!heirloom_type)
-		heirloom_type = pick(
-		/obj/item/toy/cards/deck,
-		/obj/item/lighter,
-		/obj/item/card/id/rusted,
-		/obj/item/card/id/rusted/fadedvaultid,
-		/obj/item/clothing/gloves/ring/silver,
-		/obj/item/toy/figure/detective,
-		/obj/item/toy/tragicthegarnering,
-		)
-	heirloom = new heirloom_type(get_turf(quirk_holder))
-	GLOB.family_heirlooms += heirloom
-	var/list/slots = list(
-		"in your left pocket" = SLOT_L_STORE,
-		"in your right pocket" = SLOT_R_STORE,
-		"in your backpack" = SLOT_IN_BACKPACK
-	)
-	where = H.equip_in_one_of_slots(heirloom, slots, FALSE) || "at your feet"
-
-/datum/quirk/family_heirloom/post_add()
-	if(where == "in your backpack")
-		var/mob/living/carbon/human/H = quirk_holder
-		SEND_SIGNAL(H.back, COMSIG_TRY_STORAGE_SHOW, H)
-
-	to_chat(quirk_holder, "<span class='boldnotice'>There is a precious family [heirloom.name] [where], passed down from generation to generation. Keep it safe!</span>")
-	var/list/family_name = splittext(quirk_holder.real_name, " ")
-	heirloom.name = "\improper [family_name[family_name.len]] family [heirloom.name]"
-
-/datum/quirk/family_heirloom/on_process()
-	if(heirloom in quirk_holder.GetAllContents())
-		SEND_SIGNAL(quirk_holder, COMSIG_CLEAR_MOOD_EVENT, "family_heirloom_missing")
-		SEND_SIGNAL(quirk_holder, COMSIG_ADD_MOOD_EVENT, "family_heirloom", /datum/mood_event/family_heirloom)
-	else
-		SEND_SIGNAL(quirk_holder, COMSIG_CLEAR_MOOD_EVENT, "family_heirloom")
-		SEND_SIGNAL(quirk_holder, COMSIG_ADD_MOOD_EVENT, "family_heirloom_missing", /datum/mood_event/family_heirloom_missing)
-
-/datum/quirk/family_heirloom/clone_data()
-	return heirloom
-
-/datum/quirk/family_heirloom/on_clone(data)
-	heirloom = data
-
 /datum/quirk/musician
 	name = "Musician"
 	desc = "You can tune handheld musical instruments to play melodies that clear certain negative effects and soothe the soul."
@@ -235,6 +190,8 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 	H.equip_to_slot_if_possible(musicaltuner, SLOT_IN_BACKPACK)
 	H.regenerate_icons()
 
+// Removed to just not clutter the UI.
+/*
 /datum/quirk/pineapple_liker
 	name = "Ananas Affinity"
 	desc = "You find yourself greatly enjoying fruits of the ananas genus. You can't seem to ever get enough of their sweet goodness!"
@@ -272,7 +229,7 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 	if(H)
 		var/datum/species/species = H.dna.species
 		species.disliked_food &= ~PINEAPPLE
-
+*/
 /datum/quirk/deviant_tastes
 	name = "Deviant Tastes"
 	desc = "You dislike food that most people enjoy, and find delicious what they don't."
@@ -295,24 +252,6 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 		species.liked_food = initial(species.liked_food)
 		species.disliked_food = initial(species.disliked_food)
 
-/datum/quirk/monochromatic
-	name = "Monochromacy"
-	desc = "You suffer from full colorblindness, and perceive nearly the entire world in blacks and whites."
-	value = 0
-	medical_record_text = "Patient is afflicted with almost complete color blindness."
-
-/datum/quirk/monochromatic/add()
-	quirk_holder.add_client_colour(/datum/client_colour/monochrome)
-
-/datum/quirk/monochromatic/post_add()
-	if(quirk_holder.mind.assigned_role == "Detective")
-		to_chat(quirk_holder, "<span class='boldannounce'>Mmm. Nothing's ever clear on this station. It's all shades of gray...</span>")
-		quirk_holder.playsound_local(quirk_holder, 'sound/ambience/ambidet1.ogg', 50, FALSE)
-
-/datum/quirk/monochromatic/remove()
-	if(quirk_holder)
-		quirk_holder.remove_client_colour(/datum/client_colour/monochrome)
-
 /datum/quirk/maso
 	name = "Masochism"
 	desc = "You are aroused by pain."
@@ -320,24 +259,6 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 	mob_trait = TRAIT_MASO
 	gain_text = "<span class='notice'>You desire to be hurt.</span>"
 	lose_text = "<span class='notice'>Pain has become less exciting for you.</span>"
-
-/datum/quirk/alcohol_intolerance
-	name = "Alcohol Intolerance"
-	desc = "You take toxin damage from alcohol rather than getting drunk."
-	value = 0
-	mob_trait = TRAIT_NO_ALCOHOL
-	medical_record_text = "Patient's body does not react properly to ethyl alcohol."
-
-/datum/quirk/alcohol_intolerance/add()
-	var/mob/living/carbon/human/H = quirk_holder
-	var/datum/species/species = H.dna.species
-	species.disliked_food |= ALCOHOL
-
-/datum/quirk/alcohol_intolerance/remove()
-	var/mob/living/carbon/human/H = quirk_holder
-	if(H)
-		var/datum/species/species = H.dna.species
-		species.disliked_food &= ~ALCOHOL
 
 /datum/quirk/longtimer
 	name = "Longtimer"
@@ -356,6 +277,7 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 	C.generate_fake_scars(rand(min_scars, max_scars))
 
 //Horrid and pulled from Crash
+/* // People do really weird shit with this, commenting it out for safety.
 /datum/quirk/soapstone
 	name = "Soapstone"
 	desc = "You recently found this yellow rock. Neat. Now, if only you knew what this did..."
@@ -385,7 +307,7 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 	if(where == "in your backpack")
 		var/mob/living/carbon/human/H = quirk_holder
 		SEND_SIGNAL(H.back, COMSIG_TRY_STORAGE_SHOW, H)
-
+*/
 
 // Purposefully locked perks, these reveal in-game what stat specials are required to obtain these perks.
 // Some perks that are always locked due to how they are assigned are also listed here aka FEV perks.

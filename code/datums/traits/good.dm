@@ -34,7 +34,8 @@
 
 /datum/quirk/tribal
 	name = "Former Tribal"
-	desc = "You used to be part of one of the tribes scattered throughout the wasteland. You retain some of your tribal knowledge but the ancient crafts are lost to you as you became more modern."
+	desc = "You used to be part of one of the tribes scattered throughout the wasteland. You retain some of your tribal knowledge but the ancient crafts are lost to you as you became more modern. \
+	This perk adds Trapper, Herbal Affinity, and Primitive Tech all in one."
 	value = 3
 	gain_text = "<span class='notice'>You remember the old ways of your tribe..</span>"
 	lose_text = "<span class='notice'>You've forgotten the ways of your ancestors..</span>"
@@ -86,6 +87,7 @@
 	lose_text = "<span class='danger'>You feel clumsy again.</span>"
 	medical_record_text = "Patient scored highly on cardio tests."
 
+/* // Added light step as a default trait for agility 6.
 /datum/quirk/light_step
 	name = "Light Step"
 	desc = "You walk with a gentle step; stepping on sharp objects is quieter, less painful and you won't leave footprints behind you."
@@ -94,31 +96,17 @@
 	gain_text = "<span class='notice'>You walk with a little more litheness.</span>"
 	lose_text = "<span class='danger'>You start tromping around like a barbarian.</span>"
 	medical_record_text = "Patient's dexterity belies a strong capacity for stealth."
+*/
 
+// Expensive because with agility 9 you can silently walk as fast as most people can loudly sprint.
 /datum/quirk/quick_step
-	name = "Quick Step"
-	desc = "You walk with determined strides, and out-pace most people when walking."
-	value = 2
+	name = "Silent Running"
+	desc = "You move much faster while walking and move silently as well. Potentially faster than some can sprint."
+	value = 3
 	mob_trait = TRAIT_SPEEDY_STEP
 	gain_text = "<span class='notice'>You feel determined. No time to lose.</span>"
 	lose_text = "<span class='danger'>You feel less determined. What's the rush, man?</span>"
 	medical_record_text = "Patient scored highly on racewalking tests."
-
-/datum/quirk/photographer
-	name = "Photographer"
-	desc = "You know how to handle a camera, shortening the delay between each shot."
-	value = 1
-	mob_trait = TRAIT_PHOTOGRAPHER
-	gain_text = "<span class='notice'>You know everything about photography.</span>"
-	lose_text = "<span class='danger'>You forget how photo cameras work.</span>"
-	medical_record_text = "Patient mentions photography as a stress-relieving hobby."
-
-/datum/quirk/photographer/on_spawn()
-	var/mob/living/carbon/human/H = quirk_holder
-	var/obj/item/camera/camera = new(get_turf(H))
-	H.put_in_hands(camera)
-	H.equip_to_slot(camera, SLOT_NECK)
-	H.regenerate_icons()
 
 /datum/quirk/selfaware
 	name = "Self-Aware"
@@ -134,31 +122,6 @@
 	mob_trait = TRAIT_SKITTISH
 	medical_record_text = "Patient demonstrates a high aversion to danger and has described hiding in containers out of fear."
 
-/datum/quirk/spiritual
-	name = "Spiritual"
-	desc = "You're in tune with the gods, and your prayers may be more likely to be heard. Or not."
-	value = 1
-	mob_trait = TRAIT_SPIRITUAL
-	gain_text = "<span class='notice'>You feel a little more faithful to the gods today.</span>"
-	lose_text = "<span class='danger'>You feel less faithful in the gods.</span>"
-	medical_record_text = "Patient reports a belief in a higher power."
-
-/datum/quirk/tagger
-	name = "Tagger"
-	desc = "You're an experienced artist. While drawing graffiti, you can get twice as many uses out of drawing supplies."
-	value = 1
-	mob_trait = TRAIT_TAGGER
-	gain_text = "<span class='notice'>You know how to tag walls efficiently.</span>"
-	lose_text = "<span class='danger'>You forget how to tag walls properly.</span>"
-	medical_record_text = "Patient was recently seen for possible paint huffing incident."
-
-/datum/quirk/tagger/on_spawn()
-	var/mob/living/carbon/human/H = quirk_holder
-	var/obj/item/toy/crayon/spraycan/spraycan = new(get_turf(H))
-	H.put_in_hands(spraycan)
-	H.equip_to_slot(spraycan, SLOT_IN_BACKPACK)
-	H.regenerate_icons()
-
 /datum/quirk/herbal_affinity
 	name = "Herbal Affinity"
 	desc = "You are in-tune with your natural side. Tribal medicine has increased healing and you do not suffer any drawbacks from it."
@@ -167,15 +130,6 @@
 	gain_text = "<span class='notice'>You feel a connection to traditional forms of medicine.</span>"
 	lose_text = "<span class='danger'>You feel yourself unable to handle natural medicine.</span>"
 	medical_record_text = "Patient reports a keen interest in natural forms of treatment."
-
-/datum/quirk/voracious
-	name = "Voracious"
-	desc = "Nothing gets between you and your food. You eat twice as fast as everyone else!"
-	value = 1
-	mob_trait = TRAIT_VORACIOUS
-	gain_text = "<span class='notice'>You feel HONGRY.</span>"
-	lose_text = "<span class='danger'>You no longer feel HONGRY.</span>"
-	medical_record_text = "Patient demonstrates a disturbing capacity for eating."
 
 /datum/quirk/bloodpressure
 	name = "Polycythemia vera"
@@ -293,7 +247,7 @@
 */
 /datum/quirk/iron_fist
 	name = "Iron Fist"
-	desc = "You have fists of kung-fury! Increases unarmed damage."
+	desc = "You have fists of kung-fury! Increases unarmed and tackle damage."
 	value = 2
 	mob_trait = TRAIT_IRONFIST
 	gain_text = "<span class='notice'>Your fists feel furious!</span>"
@@ -308,18 +262,10 @@
 	gain_text = "<span class='notice'>Your punches never miss!</span>"
 	lose_text = "<span class='danger'>Your strikes feel a bit clumsy.</span>"
 
-/datum/quirk/light_step
-	name = "Light Step"
-	desc = "You walk with a gentle step, making stepping on sharp objects quieter and less painful."
-	value = 1
-	mob_trait = TRAIT_LIGHT_STEP
-	gain_text = "<span class='notice'>You walk with a little more litheness.</span>"
-	lose_text = "<span class='danger'>You start tromping around like a barbarian.</span>"
-
 /datum/quirk/surgerylow
 	name = "Minor Surgery"
 	desc = "You are a somewhat adequate medical practicioner, capable of performing minor surgery."
-	value = 1
+	value = 2
 	mob_trait = TRAIT_SURGERY_LOW
 	gain_text = "<span class='notice'>You feel yourself discovering the basics of the human body.</span>"
 	lose_text = "<span class='danger'>You forget how to perform even the simplest surgery.</span>"
@@ -328,7 +274,7 @@
 /datum/quirk/surgerymid
 	name = "Intermediate Surgery"
 	desc = "You are a skilled medical practicioner, capable of performing most surgery."
-	value = 2
+	value = 3
 	mob_trait = TRAIT_SURGERY_MID
 	gain_text = "<span class='notice'>You feel yourself discovering most of the details of the human body.</span>"
 	lose_text = "<span class='danger'>You forget how to perform surgery.</span>"
@@ -337,7 +283,7 @@
 /datum/quirk/surgeryhigh
 	name = "Complex Surgery"
 	desc = "You are an expert practicioner, capable of performing almost all surgery."
-	value = 3
+	value = 4
 	mob_trait = TRAIT_SURGERY_HIGH
 	gain_text = "<span class='notice'>You feel yourself discovering the most intricate secrets of the human body.</span>"
 	lose_text = "<span class='danger'>You forget your advanced surgical knowledge.</span>"
@@ -346,7 +292,7 @@
 // Everything basic crafting does is also done by advanced crafting for explosives. I could increase advanced crafting to 2
 // but a newer player might think they need both for all recipes, so instead I commented this out. Unlike surgery perks
 // this would be slightly harder to be clear to a non-code diving/veteran player. -Possum
-/*
+/* // You also get this for having high enough intelligence automatically.
 /datum/quirk/explosive_crafting
 	name = "Explosives Crafting"
 	desc = "You have strong feelings about the future of industrial society."
@@ -376,7 +322,7 @@
 /datum/quirk/researcher
 	name = "Research Scientist"
 	desc = "Through either being self taught or a former member of a scientific institution you know how to use research machines."
-	value = 5
+	value = 4
 	mob_trait = TRAIT_RESEARCHER
 	gain_text = "<span class='notice'>SCIENCE!'</span>"
 	lose_text = "<span class='danger'>NOT SCIENTIFICALLY POSSIBLE!</span>"

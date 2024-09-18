@@ -1,5 +1,136 @@
 //predominantly negative traits
 
+/datum/quirk/monochromatic
+	name = "Monochromacy"
+	desc = "You suffer from full colorblindness, and perceive nearly the entire world in blacks and whites."
+	value = -1
+	medical_record_text = "Patient is afflicted with almost complete color blindness."
+
+/datum/quirk/monochromatic/add()
+	quirk_holder.add_client_colour(/datum/client_colour/monochrome)
+
+/datum/quirk/monochromatic/post_add()
+	if(quirk_holder.mind.assigned_role == "Detective")
+		to_chat(quirk_holder, "<span class='boldannounce'>Mmm. Nothing's ever clear on this station. It's all shades of gray...</span>")
+		quirk_holder.playsound_local(quirk_holder, 'sound/ambience/ambidet1.ogg', 50, FALSE)
+
+/datum/quirk/monochromatic/remove()
+	if(quirk_holder)
+		quirk_holder.remove_client_colour(/datum/client_colour/monochrome)
+
+/datum/quirk/alcohol_intolerance
+	name = "Alcohol Intolerance"
+	desc = "You take toxin damage from alcohol rather than getting drunk."
+	value = -2
+	mob_trait = TRAIT_NO_ALCOHOL
+	medical_record_text = "Patient's body does not react properly to ethyl alcohol."
+
+/datum/quirk/alcohol_intolerance/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	var/datum/species/species = H.dna.species
+	species.disliked_food |= ALCOHOL
+
+/datum/quirk/alcohol_intolerance/remove()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(H)
+		var/datum/species/species = H.dna.species
+		species.disliked_food &= ~ALCOHOL
+
+/datum/quirk/family_heirloom
+	name = "Family Heirloom"
+	desc = "You are the current owner of an heirloom, passed down for generations. You have to keep it safe!"
+	value = -1
+	mood_quirk = TRUE
+	medical_record_text = "Patient demonstrates an unnatural attachment to a family heirloom."
+	var/obj/item/heirloom
+	var/where
+
+GLOBAL_LIST_EMPTY(family_heirlooms)
+
+/datum/quirk/family_heirloom/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	var/obj/item/heirloom_type
+	switch(quirk_holder.mind.assigned_role)
+		if("Scribe")
+			heirloom_type = pick(/obj/item/trash/f13/electronic/toaster, /obj/item/screwdriver/crude, /obj/item/toy/tragicthegarnering)
+		if("Knight")
+			heirloom_type = /obj/item/gun/ballistic/automatic/toy/pistol
+		if("BoS Off-Duty")
+			heirloom_type = /obj/item/toy/figure/borg
+		if("Lieutenant")
+			heirloom_type = /obj/item/clothing/accessory/medal/silver
+		if("Mercenary")
+			heirloom_type = /obj/item/clothing/accessory/medal/bronze_heart
+		if("Shopkeeper")
+			heirloom_type = /obj/item/coin/plasma
+		if("Followers Doctor")
+			heirloom_type = pick(/obj/item/clothing/neck/stethoscope,/obj/item/toy/tragicthegarnering)
+		if("Followers Administrator")
+			heirloom_type = pick(/obj/item/toy/nuke, /obj/item/wrench/medical, /obj/item/clothing/neck/tie/horrible)
+		if("Prime Legionnaire")
+			heirloom_type = pick(/obj/item/melee/onehanded/machete, /obj/item/melee/onehanded/club/warclub, /obj/item/clothing/accessory/talisman, /obj/item/toy/plush/mr_buckety)
+		if("Recruit Legionnaire")
+			heirloom_type = pick(/obj/item/melee/onehanded/machete, /obj/item/melee/onehanded/club/warclub, /obj/item/clothing/accessory/talisman,/obj/item/clothing/accessory/skullcodpiece/fake)
+		if("Den Mob Boss")
+			heirloom_type = /obj/item/lighter/gold
+		if("Den Doctor")
+			heirloom_type = /obj/item/card/id/dogtag/MDfakepermit
+		if("Farmer")
+			heirloom_type = pick(/obj/item/hatchet, /obj/item/shovel/spade, /obj/item/toy/plush/beeplushie)
+		if("Janitor")
+			heirloom_type = /obj/item/mop
+		if("Security Officer")
+			heirloom_type = /obj/item/clothing/accessory/medal/silver/valor
+		if("Scientist")
+			heirloom_type = /obj/item/toy/plush/slimeplushie
+		if("Assistant")
+			heirloom_type = /obj/item/clothing/gloves/cut/family
+		if("Chaplain")
+			heirloom_type = /obj/item/camera/spooky/family
+		if("Captain")
+			heirloom_type = /obj/item/clothing/accessory/medal/gold/captain/family
+	if(!heirloom_type)
+		heirloom_type = pick(
+		/obj/item/toy/cards/deck,
+		/obj/item/lighter,
+		/obj/item/card/id/rusted,
+		/obj/item/card/id/rusted/fadedvaultid,
+		/obj/item/clothing/gloves/ring/silver,
+		/obj/item/toy/figure/detective,
+		/obj/item/toy/tragicthegarnering,
+		)
+	heirloom = new heirloom_type(get_turf(quirk_holder))
+	GLOB.family_heirlooms += heirloom
+	var/list/slots = list(
+		"in your left pocket" = SLOT_L_STORE,
+		"in your right pocket" = SLOT_R_STORE,
+		"in your backpack" = SLOT_IN_BACKPACK
+	)
+	where = H.equip_in_one_of_slots(heirloom, slots, FALSE) || "at your feet"
+
+/datum/quirk/family_heirloom/post_add()
+	if(where == "in your backpack")
+		var/mob/living/carbon/human/H = quirk_holder
+		SEND_SIGNAL(H.back, COMSIG_TRY_STORAGE_SHOW, H)
+
+	to_chat(quirk_holder, "<span class='boldnotice'>There is a precious family [heirloom.name] [where], passed down from generation to generation. Keep it safe!</span>")
+	var/list/family_name = splittext(quirk_holder.real_name, " ")
+	heirloom.name = "\improper [family_name[family_name.len]] family [heirloom.name]"
+
+/datum/quirk/family_heirloom/on_process()
+	if(heirloom in quirk_holder.GetAllContents())
+		SEND_SIGNAL(quirk_holder, COMSIG_CLEAR_MOOD_EVENT, "family_heirloom_missing")
+		SEND_SIGNAL(quirk_holder, COMSIG_ADD_MOOD_EVENT, "family_heirloom", /datum/mood_event/family_heirloom)
+	else
+		SEND_SIGNAL(quirk_holder, COMSIG_CLEAR_MOOD_EVENT, "family_heirloom")
+		SEND_SIGNAL(quirk_holder, COMSIG_ADD_MOOD_EVENT, "family_heirloom_missing", /datum/mood_event/family_heirloom_missing)
+
+/datum/quirk/family_heirloom/clone_data()
+	return heirloom
+
+/datum/quirk/family_heirloom/on_clone(data)
+	heirloom = data
+
 /datum/quirk/blooddeficiency
 	name = "Acute Blood Deficiency"
 	desc = "Your body can't produce enough blood to sustain itself."
