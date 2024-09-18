@@ -31,7 +31,7 @@
 	var/caller = new hook_path
 	var/status = 1
 	for(var/P in typesof("[hook_path]/proc"))
-		if(!call(caller, P)(arglist(args)))
+		if(!LIBCALL(caller, P)(arglist(args)))
 			CRASH("Hook '[P]' failed or runtimed.")
 
 	return status

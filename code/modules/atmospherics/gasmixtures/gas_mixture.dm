@@ -146,7 +146,7 @@ we use a hook instead
 /datum/gas_mixture/proc/get_by_flag(flag)
 /datum/gas_mixture/proc/set_moles(gas_type, moles)
 
-// VV WRAPPERS - EXTOOLS HOOKED PROCS DO NOT TAKE ARGUMENTS FROM CALL() FOR SOME REASON.
+// VV WRAPPERS - EXTOOLS HOOKED PROCS DO NOT TAKE ARGUMENTS FROM LIBCALL() FOR SOME REASON.
 /datum/gas_mixture/proc/vv_set_moles(gas_type, moles)
 	return set_moles(gas_type, moles)
 /datum/gas_mixture/proc/vv_get_moles(gas_type)

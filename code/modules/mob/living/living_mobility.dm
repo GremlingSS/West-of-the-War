@@ -174,7 +174,7 @@
 
 	//Handle citadel autoresist
 	if(CHECK_MOBILITY(src, MOBILITY_MOVE) && !(combat_flags & COMBAT_FLAG_INTENTIONALLY_RESTING) && canstand_involuntary && iscarbon(src) && client?.prefs?.autostand)//CIT CHANGE - adds autostanding as a preference
-		addtimer(CALLBACK(src, .proc/resist_a_rest, TRUE), 0) //CIT CHANGE - ditto
+		addtimer(CALLBACK(src,PROC_REF(resist_a_rest), TRUE), 0) //CIT CHANGE - ditto
 
 	// Movespeed mods based on arms/legs quantity
 	if(!get_leg_ignore())
@@ -188,7 +188,7 @@
 			add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/limbless, multiplicative_slowdown = limbless_slowdown)
 		else
 			remove_movespeed_modifier(/datum/movespeed_modifier/limbless)
-	
+
 	update_movespeed()
 
 	return mobility_flags
