@@ -237,8 +237,8 @@
 
 /datum/reagent/consumable/ethanol/nukadark/on_mob_life(mob/living/carbon/M)
 	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.05, updating_health = FALSE)
-		M.adjustFireLoss(-0.05, updating_health = FALSE)
+		M.adjustBruteLoss(-0.2, updating_health = FALSE)
+		M.adjustFireLoss(-0.1, updating_health = FALSE)
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
@@ -258,8 +258,8 @@
 
 /datum/reagent/consumable/ethanol/nukavictory/on_mob_life(mob/living/carbon/M)
 	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.05, updating_health = FALSE)
-		M.adjustFireLoss(-0.05, updating_health = FALSE)
+		M.adjustBruteLoss(-0.2, updating_health = FALSE)
+		M.adjustFireLoss(-0.1, updating_health = FALSE)
 	ADD_TRAIT(M, TRAIT_BIG_LEAGUES, "[type]")
 	M.adjustBruteLoss(-2.5*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
 	M.drowsyness = 0
@@ -291,8 +291,8 @@
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
 	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.05, updating_health = FALSE)
-		M.adjustFireLoss(-0.05, updating_health = FALSE)
+		M.adjustBruteLoss(-0.2, updating_health = FALSE)
+		M.adjustFireLoss(-0.1, updating_health = FALSE)
 	..()
 	. = TRUE
 
@@ -318,8 +318,8 @@
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
 	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.05, updating_health = FALSE)
-		M.adjustFireLoss(-0.05, updating_health = FALSE)
+		M.adjustBruteLoss(-0.2, updating_health = FALSE)
+		M.adjustFireLoss(-0.1, updating_health = FALSE)
 	..()
 	. = TRUE
 
@@ -342,8 +342,8 @@
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
 	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.05, updating_health = FALSE)
-		M.adjustFireLoss(-0.05, updating_health = FALSE)
+		M.adjustBruteLoss(-0.2, updating_health = FALSE)
+		M.adjustFireLoss(-0.1, updating_health = FALSE)
 	..()
 	. = TRUE
 
@@ -363,8 +363,8 @@
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
 	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.05, updating_health = FALSE)
-		M.adjustFireLoss(-0.05, updating_health = FALSE)
+		M.adjustBruteLoss(-0.2, updating_health = FALSE)
+		M.adjustFireLoss(-0.1, updating_health = FALSE)
 	..()
 	. = TRUE
 
@@ -390,8 +390,8 @@
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
 	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.05, updating_health = FALSE)
-		M.adjustFireLoss(-0.05, updating_health = FALSE)
+		M.adjustBruteLoss(-0.2, updating_health = FALSE)
+		M.adjustFireLoss(-0.1, updating_health = FALSE)
 	..()
 	. = TRUE
 
@@ -411,8 +411,8 @@
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
 	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.05, updating_health = FALSE)
-		M.adjustFireLoss(-0.05, updating_health = FALSE)
+		M.adjustBruteLoss(-0.2, updating_health = FALSE)
+		M.adjustFireLoss(-0.1, updating_health = FALSE)
 	..()
 	. = TRUE
 
@@ -442,8 +442,8 @@
 	M.hallucination += 20
 	M.Jitter(2)
 	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.1)
-		M.adjustFireLoss(-0.1)
+		M.adjustBruteLoss(-1.5, updating_health = FALSE)
+		M.adjustFireLoss(-1, updating_health = FALSE)
 	ADD_TRAIT(M, TRAIT_SLEEPIMMUNE, "[type]")
 	if(iscarbon(M))
 		var/mob/living/carbon/C = M
@@ -490,8 +490,8 @@
 	M.AdjustUnconscious(-30, 0)
 	M.adjustStaminaLoss(-5, updating_health = FALSE)
 	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.05, updating_health = FALSE)
-		M.adjustFireLoss(-0.05, updating_health = FALSE)
+		M.adjustBruteLoss(-0.8, updating_health = FALSE)
+		M.adjustFireLoss(-0.4, updating_health = FALSE)
 	ADD_TRAIT(M, TRAIT_IRONFIST, "[type]")
 	ADD_TRAIT(M, TRAIT_SLEEPIMMUNE, "[type]")
 	if(iscarbon(M))
@@ -827,8 +827,8 @@
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
 	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.05, updating_health = FALSE)
-		M.adjustFireLoss(-0.05, updating_health = FALSE)
+		M.adjustBruteLoss(-0.2, updating_health = FALSE)
+		M.adjustFireLoss(-0.1, updating_health = FALSE)
 	..()
 	. = TRUE
 
