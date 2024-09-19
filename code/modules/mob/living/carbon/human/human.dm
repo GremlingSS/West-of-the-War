@@ -33,7 +33,7 @@
 	if(CONFIG_GET(flag/disable_stambuffer))
 		enable_intentional_sprint_mode()
 
-	RegisterSignal(src, TYPE_PROC_REF(COMSIG_COMPONENT_CLEAN_ACT, /atom,clean_blood))
+	RegisterSignal(src, COMSIG_COMPONENT_CLEAN_ACT, TYPE_PROC_REF(/atom,clean_blood))
 	GLOB.human_list += src
 
 
