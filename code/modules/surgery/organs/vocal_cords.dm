@@ -947,7 +947,7 @@
 				ADD_TRAIT(C, TRAIT_MUTE, "enthrall")
 			else
 				C.silent += ((10 * power_multiplier) * E.phase)
-			addtimer(CALLBACK(L, GLOBAL_PROC_REF(to_chat), C, "<span class='notice'>You are unable to speak!</b></span>"), 5)
+			addtimer(CALLBACK(C, GLOBAL_PROC_REF(to_chat), C, "<span class='notice'>You are unable to speak!</b></span>"), 5)
 			to_chat(user, "<span class='notice'><i>You silence [C].</i></span>")
 			E.cooldown += 3
 
@@ -980,7 +980,7 @@
 			E.deltaResist += (power_multiplier)
 			E.owner_resist()
 			E.cooldown += 2
-			addtimer(CALLBACK(L, GLOBAL_PROC_REF(to_chat), C, "<span class='notice'>You are spurred into resisting from [user]'s words!'</b></span>"), 5)
+			addtimer(CALLBACK(C, GLOBAL_PROC_REF(to_chat), C, "<span class='notice'>You are spurred into resisting from [user]'s words!'</b></span>"), 5)
 			to_chat(user, "<span class='notice'><i>You spark resistance in [C].</i></span>")
 
 	//FORGET (A way to cancel the process)
@@ -988,9 +988,9 @@
 		for(var/mob/living/carbon/C in listeners)
 			var/datum/status_effect/chem/enthrall/E = C.has_status_effect(/datum/status_effect/chem/enthrall)
 			if(E.phase == 4)
-				addtimer(CALLBACK(L, GLOBAL_PROC_REF(to_chat), C, "<span class='warning'>You're unable to forget about [(E.lewd?"the dominating presence of [E.enthrallGender]":"[E.master]")]!</b></span>"), 5)
+				addtimer(CALLBACK(C, GLOBAL_PROC_REF(to_chat), C, "<span class='warning'>You're unable to forget about [(E.lewd?"the dominating presence of [E.enthrallGender]":"[E.master]")]!</b></span>"), 5)
 				continue
-			addtimer(CALLBACK(L, GLOBAL_PROC_REF(to_chat), C, "<span class='warning'>You wake up, forgetting everything that just happened. You must've dozed off..? How embarassing!</b></span>"), 5)
+			addtimer(CALLBACK(C, GLOBAL_PROC_REF(to_chat), C, "<span class='warning'>You wake up, forgetting everything that just happened. You must've dozed off..? How embarassing!</b></span>"), 5)
 			C.Sleeping(50)
 			switch(E.phase)
 				if(1 to 2)
@@ -1001,9 +1001,9 @@
 					E.phase = 0
 					E.cooldown = 0
 					if(E.lewd)
-						addtimer(CALLBACK(L, GLOBAL_PROC_REF(to_chat), C, "<span class='big warning'>You revert to yourself before being enthralled by your [E.enthrallGender], with no memory of what happened.</b></span>"), 5)
+						addtimer(CALLBACK(C, GLOBAL_PROC_REF(to_chat), C, "<span class='big warning'>You revert to yourself before being enthralled by your [E.enthrallGender], with no memory of what happened.</b></span>"), 5)
 					else
-						addtimer(CALLBACK(L, GLOBAL_PROC_REF(to_chat), C, "<span class='big warning'>You revert to who you were before, with no memory of what happened with [E.master].</b></span>"), 5)
+						addtimer(CALLBACK(C, GLOBAL_PROC_REF(to_chat), C, "<span class='big warning'>You revert to who you were before, with no memory of what happened with [E.master].</b></span>"), 5)
 					to_chat(user, "<span class='notice'><i>You put [C] into a sleeper state, ready to turn them back at the snap of your fingers.</i></span>")
 
 	//ATTRACT
@@ -1024,7 +1024,7 @@
 				if(2 to INFINITY)
 					C.Sleeping(45 * power_multiplier)
 					E.cooldown += 10
-					addtimer(CALLBACK(L, GLOBAL_PROC_REF(to_chat), C, "<span class='notice'>Drowsiness suddenly overwhelms you as you fall asleep!</b></span>"), 5)
+					addtimer(CALLBACK(C, GLOBAL_PROC_REF(to_chat), C, "<span class='notice'>Drowsiness suddenly overwhelms you as you fall asleep!</b></span>"), 5)
 					to_chat(user, "<span class='notice'><i>You send [C] to sleep.</i></span>")
 
 	//STRIP
@@ -1038,7 +1038,7 @@
 					for(var/obj/item/W in items)
 						if(W == H.wear_suit)
 							H.dropItemToGround(W, TRUE)
-					addtimer(CALLBACK(L, GLOBAL_PROC_REF(to_chat), H, "<span class='[(E.lewd?"love":"warning")]'>Before you can even think about it, you quickly remove your clothes in response to [(E.lewd?"your [E.enthrallGender]'s command'":"[E.master]'s directive'")].</b></span>"), 5)
+					addtimer(CALLBACK(H, GLOBAL_PROC_REF(to_chat), H, "<span class='[(E.lewd?"love":"warning")]'>Before you can even think about it, you quickly remove your clothes in response to [(E.lewd?"your [E.enthrallGender]'s command'":"[E.master]'s directive'")].</b></span>"), 5)
 					E.cooldown += 10
 
 	//WALK
@@ -1107,7 +1107,7 @@
 				for (var/trigger in E.customTriggers)
 					speaktrigger += "[trigger], "
 				to_chat(user, "<b>[C]</b> whispers, \"<i>[speaktrigger] are my triggers.</i>\"")//So they don't trigger themselves!
-				addtimer(CALLBACK(L, GLOBAL_PROC_REF(to_chat), C, "<span class='notice'>You whisper your triggers to [(E.lewd?"Your [E.enthrallGender]":"[E.master]")].</span>"), 5)
+				addtimer(CALLBACK(C, GLOBAL_PROC_REF(to_chat), C, "<span class='notice'>You whisper your triggers to [(E.lewd?"Your [E.enthrallGender]":"[E.master]")].</span>"), 5)
 
 
 	//CUSTOM TRIGGERS
@@ -1142,7 +1142,7 @@
 								E.customTriggers[trigger] = trigger2
 								log_reagent("FERMICHEM: [H] has been implanted by [user] with [trigger], triggering [trigger2].")
 							E.mental_capacity -= 5
-							addtimer(CALLBACK(L, GLOBAL_PROC_REF(to_chat), H, "<span class='notice'>[(E.lewd?"your [E.enthrallGender]":"[E.master]")] whispers you a new trigger.</span>"), 5)
+							addtimer(CALLBACK(H, GLOBAL_PROC_REF(to_chat), H, "<span class='notice'>[(E.lewd?"your [E.enthrallGender]":"[E.master]")] whispers you a new trigger.</span>"), 5)
 							to_chat(user, "<span class='notice'><i>You sucessfully set the trigger word [trigger] in [H]</i></span>")
 						else
 							to_chat(user, "<span class='warning'>Your pet looks at you confused, it seems they don't understand that effect!</b></span>")
@@ -1204,7 +1204,7 @@
 						objective = replacetext(lowertext(objective), "suicide", "self-love")
 						message_admins("[H] has been implanted by [user] with the objective [objective].")
 						log_reagent("FERMICHEM: [H] has been implanted by [user] with the objective [objective] via MKUltra.")
-						addtimer(CALLBACK(L, GLOBAL_PROC_REF(to_chat), H, "<span class='notice'>[(E.lewd?"Your [E.enthrallGender]":"[E.master]")] whispers you a new objective.</span>"), 5)
+						addtimer(CALLBACK(H, GLOBAL_PROC_REF(to_chat), H, "<span class='notice'>[(E.lewd?"Your [E.enthrallGender]":"[E.master]")] whispers you a new objective.</span>"), 5)
 						brainwash(H, objective)
 						E.mental_capacity -= 200
 						to_chat(user, "<span class='notice'><i>You sucessfully give an objective to [H]</i></span>")
@@ -1233,7 +1233,7 @@
 			if(E.phase > 1)
 				if(user.ckey == E.enthrallID && user.real_name == E.master.real_name)
 					E.master = user
-					addtimer(CALLBACK(L, GLOBAL_PROC_REF(to_chat), H, "<span class='nicegreen'>[(E.lewd?"You hear the words of your [E.enthrallGender] again!! They're back!!":"You recognise the voice of [E.master].")]</b></span>"), 5)
+					addtimer(CALLBACK(H, GLOBAL_PROC_REF(to_chat), H, "<span class='nicegreen'>[(E.lewd?"You hear the words of your [E.enthrallGender] again!! They're back!!":"You recognise the voice of [E.master].")]</b></span>"), 5)
 					to_chat(user, "<span class='notice'><i>[H] looks at you with sparkling eyes, recognising you!</i></span>")
 
 	//I dunno how to do state objectives without them revealing they're an antag
