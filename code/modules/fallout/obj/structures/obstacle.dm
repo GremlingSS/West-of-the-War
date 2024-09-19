@@ -443,7 +443,8 @@
 	max_integrity = 75
 
 /obj/structure/barricade/wooden/make_debris()
-	new /obj/item/stack/sheet/mineral/wood(get_turf(src), drop_amount)
+	if(drop_amount) // Gremling fix, stops divide by 0 runtimes.
+		new /obj/item/stack/sheet/mineral/wood(get_turf(src), drop_amount)
 
 
 /obj/structure/barricade/bars //FighterX2500 is this you?
