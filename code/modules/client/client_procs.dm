@@ -376,14 +376,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		else
 			qdel(src)
 			return 0
-	if (byond_version == 515)
-		var/msg = "<b>BYOND 515 is not yet supported by many legacy TG servers, including Dusty Trails.</b><br>"
-		msg += "Your version: [byond_version].[byond_build]<br>"
-		msg += "Click <a href=\"https://www.byond.com/download/build/514/514.1589_byond.exe\">here</a> to get the latest compatible version from BYOND.<br>"
-		src << browse(msg, "window=warning_popup")
-		qdel(src)
-		return 0
-	else if (byond_version < cwv)	//We have words for this client.
+	if (byond_version < cwv)	//We have words for this client.
 		if(CONFIG_GET(flag/client_warn_popup))
 			var/msg = "<b>Your version of byond may be getting out of date:</b><br>"
 			msg += CONFIG_GET(string/client_warn_message) + "<br><br>"

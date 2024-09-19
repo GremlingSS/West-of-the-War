@@ -139,7 +139,7 @@ Example:
 	to_chat(world,"knock knock")
 
 /mob/subtype/proc/do_something()
-	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(funny)), 100))
+	addtimer(CALLBACK(src, GLOBAL_PROC_REF(funny)), 100))
 ```
 
 Note that the same rules go for verbs too! We have VERB_REF() and TYPE_VERB_REF() as you need it in these same cases. GLOBAL_VERB_REF() isn't a thing however, as verbs are not global.
