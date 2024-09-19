@@ -8,7 +8,7 @@
 		reaction = new r
 		if(!reaction.exclude)
 			. += reaction
-	sortTim(., /proc/cmp_gas_reaction)
+	sortTim(., GLOBAL_PROC_REF(cmp_gas_reaction))
 
 /proc/cmp_gas_reaction(datum/gas_reaction/a, datum/gas_reaction/b) // compares lists of reactions by the maximum priority contained within the list
 	return b.priority - a.priority
@@ -710,7 +710,7 @@
 
 	//Possibly burning a bit of organic matter through maillard reaction, so a *tiny* bit more heat would be understandable
 	air.set_temperature(air.return_temperature() + cleaned_air * 0.002)
-	
+
 	// no way to tell who to benefit, so we just don't give research for it at all
 	// todo: move this to a special gas sensor research machine or something
 	// SSresearch.science_tech.add_point_type(TECHWEB_POINT_TYPE_DEFAULT, cleaned_air*MIASMA_RESEARCH_AMOUNT)//Turns out the burning of miasma is kinda interesting to scientists

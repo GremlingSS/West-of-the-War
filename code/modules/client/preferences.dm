@@ -1119,7 +1119,7 @@ Records disabled until a use for them is found
 		//The job before the current job. I only use this to get the previous jobs color when I'm filling in blank rows.
 		var/datum/job/lastJob
 
-		for(var/datum/job/job in sortList(SSjob.occupations, /proc/cmp_job_display_asc))
+		for(var/datum/job/job in sortList(SSjob.occupations, GLOBAL_PROC_REF(cmp_job_display_asc)))
 			if(job.total_positions == 0)
 				continue
 
@@ -1779,7 +1779,7 @@ Records disabled until a use for them is found
 					right_eye_color = left_eye_color
 
 				if("species")
-					sortTim(GLOB.roundstart_race_names,/proc/cmp_text_asc)
+					sortTim(GLOB.roundstart_race_names, GLOBAL_PROC_REF(cmp_text_asc))
 					var/result = input(user, "Select a species", "Species Selection") as null|anything in GLOB.roundstart_race_names
 					if(result)
 						var/newtype = GLOB.species_list[GLOB.roundstart_race_names[result]]

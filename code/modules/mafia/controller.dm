@@ -408,9 +408,9 @@
 		if(D.id != "mafia") //so as to not trigger shutters on station, lol
 			continue
 		if(close)
-			INVOKE_ASYNC(D, /obj/machinery/door/poddoor.proc/close)
+			INVOKE_ASYNC(D, TYPE_PROC_REF(/obj/machinery/door/poddoor,close))
 		else
-			INVOKE_ASYNC(D, /obj/machinery/door/poddoor.proc/open)
+			INVOKE_ASYNC(D, TYPE_PROC_REF(/obj/machinery/door/poddoor,open))
 
 /**
  * The actual start of night for players. Mostly info is given at the start of the night as the end of the night is when votes and actions are submitted and tried.
@@ -522,7 +522,7 @@
 			tally[votes[vote_type][votee]] = 1
 		else
 			tally[votes[vote_type][votee]] += 1
-	sortTim(tally,/proc/cmp_numeric_dsc,associative=TRUE)
+	sortTim(tally, GLOBAL_PROC_REF(cmp_numeric_dsc),associative=TRUE)
 	return length(tally) ? tally[1] : null
 
 /**

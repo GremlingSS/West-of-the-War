@@ -296,7 +296,7 @@
 	var/target = comp_lookup[sigtype]
 	if(!length(target))
 		var/datum/listening_datum = target
-		return NONE | LIBCALL(listening_datum, listening_datum.signal_procs[src][sigtype])(arglist(arguments))
+		return NONE | call(listening_datum, listening_datum.signal_procs[src][sigtype])(arglist(arguments))
 	. = NONE
 	// This exists so that even if one of the signal receivers unregisters the signal,
 	// all the objects that are receiving the signal get the signal this final time.
@@ -305,7 +305,7 @@
 	for(var/datum/listening_datum as anything in target)
 		queued_calls[listening_datum] = listening_datum.signal_procs[src][sigtype]
 	for(var/datum/listening_datum as anything in queued_calls)
-		. |= LIBCALL(listening_datum, queued_calls[listening_datum])(arglist(arguments))
+		. |= call(listening_datum, queued_calls[listening_datum])(arglist(arguments))
 
 // The type arg is casted so initial works, you shouldn't be passing a real instance into this
 /**
