@@ -191,6 +191,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_NCR
 
 /datum/crafting_recipe/ncrsalvagedhelmetconversion
 	name = "NCR salvaged power armor helmet"
@@ -207,6 +208,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_NCR
 
 /datum/crafting_recipe/boscombatarmor
 	name = "knight armor"
@@ -228,6 +230,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_BROTHERHOOD
 
 /datum/crafting_recipe/boscombathelmet
 	name = "knight helmet"
@@ -249,6 +252,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_BROTHERHOOD
 
 /datum/crafting_recipe/boscombatarmormk2
 	name = "reinforced knight armor"
@@ -268,6 +272,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_BROTHERHOOD
 
 /datum/crafting_recipe/boscombathelmetmk2
 	name = "reinforced knight helmet"
@@ -287,6 +292,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_BROTHERHOOD
 
 /datum/crafting_recipe/durathread_vest
 	name = "Makeshift Durathread Armour"
@@ -508,6 +514,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_KHAN
 
 /datum/crafting_recipe/ncrsturdy
 	name = "NCR Sturdy Boots"
@@ -519,6 +526,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_NCR
 
 //Gauntlets
 
@@ -542,6 +550,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_KHAN
 
 
 /*CRAFT rework: removed for balance
@@ -625,6 +634,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_NCR
 
 /datum/crafting_recipe/tailor/legionuniform
 	name = "Legion Uniform"
@@ -635,6 +645,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_LEGION
 
 /datum/crafting_recipe/settler
 	name = "Settler outfit"
@@ -1098,6 +1109,7 @@
 	time = 50
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+
 /datum/crafting_recipe/durathread_helmet
 	name = "Makeshift Helmet"
 	result = /obj/item/clothing/head/helmet/durathread
@@ -1106,6 +1118,7 @@
 	time = 40
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+
 /datum/crafting_recipe/fannypack
 	name = "Fannypack"
 	result = /obj/item/storage/belt/fannypack
@@ -1114,6 +1127,7 @@
 	time = 20
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+
 //f13 additions
 /datum/crafting_recipe/metalarmor
 	name = "metal armor"
@@ -1125,6 +1139,7 @@
 	time = 120
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+
 /datum/crafting_recipe/Imetalarmor
 	name = "improved metal armor"
 	result = /obj/item/clothing/suit/armor/f13/ibmetalarmor
@@ -1136,6 +1151,7 @@
 	time = 120
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+
 /datum/crafting_recipe/IImetalarmor
 	name = "upgrading metal armor"
 	result = /obj/item/clothing/suit/armor/f13/ibmetalarmor
@@ -1146,6 +1162,7 @@
 	time = 120
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+
 //Tribal armors
 /datum/crafting_recipe/tribalgeckoarmor
 	name = "Gecko Armor"
@@ -1169,6 +1186,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+
 /datum/crafting_recipe/supafly_reinforced
 	name = "reinforced supafly armor"
 	result = /obj/item/clothing/suit/armor/f13/raider/r/supafly
@@ -1179,6 +1197,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+
 /datum/crafting_recipe/yankeehelm_reinforced
 	name = "reinforced yankee helmet"
 	result = /obj/item/clothing/head/helmet/f13/raider/r/yankee/
@@ -1189,6 +1208,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+
 /datum/crafting_recipe/yankee_reinforced
 	name = "reinforced yankee armor"
 	result = /obj/item/clothing/suit/armor/f13/raider/r/yankee
@@ -1199,6 +1219,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+
 /datum/crafting_recipe/blasterhelm_reinforced
 	name = "reinforced blaster helmet"
 	result = /obj/item/clothing/head/helmet/f13/raider/r/blastmaster
@@ -1209,6 +1230,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+
 /datum/crafting_recipe/blaster_reinforced
 	name = "reinforced blaster armor"
 	result = /obj/item/clothing/suit/armor/f13/raider/r/blastmaster
@@ -1219,6 +1241,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+
 /datum/crafting_recipe/sadisthelm_reinforced
 	name = "reinforced sadist helmet"
 	result = /obj/item/clothing/head/helmet/f13/raider/r/arclight
@@ -1229,6 +1252,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+
 /datum/crafting_recipe/sadist_reinforced
 	name = "reinforced sadist armor"
 	result = /obj/item/clothing/suit/armor/f13/raider/r/sadist
@@ -1239,6 +1263,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+
 /datum/crafting_recipe/fiendshelm_reinforced
 	name = "reinforced fiend helmet"
 	result = /obj/item/clothing/head/helmet/f13/fiend_reinforced
@@ -1249,6 +1274,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+
 /datum/crafting_recipe/badlands_reinforced
 	name = "reinforced badlands armor"
 	result = /obj/item/clothing/suit/armor/f13/raider/r/badlands
@@ -1259,6 +1285,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+
 /datum/crafting_recipe/painspikehelm_reinforced
 	name = "reinforced painspike helmet"
 	result = /obj/item/clothing/head/helmet/f13/raider/r/psychotic
@@ -1269,6 +1296,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+
 /datum/crafting_recipe/painspike_reinforced
 	name = "reinforced painspike armor"
 	result = /obj/item/clothing/suit/armor/f13/raider/r/painspike
@@ -1279,6 +1307,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+
 /datum/crafting_recipe/iconoclast_reinforced
 	name = "reinforced iconoclast armor"
 	result = /obj/item/clothing/suit/armor/f13/raider/r/iconoclast
@@ -1289,6 +1318,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+
 /datum/crafting_recipe/ncrexile_reinforced
 	name = "reinforced NCR deserter armor"
 	result = /obj/item/clothing/suit/armor/f13/exile/r/ncr
@@ -1299,6 +1329,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+
 /datum/crafting_recipe/legion_reinforced
 	name = "reinforced punished Legion armor"
 	result = /obj/item/clothing/suit/armor/f13/exile/r/legion
@@ -1309,6 +1340,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+
 /datum/crafting_recipe/bos_reinforced
 	name = "reinforced BoS exile armor"
 	result = /obj/item/clothing/suit/armor/f13/exile/r/bos
@@ -1338,6 +1370,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_LEGION
 
 /datum/crafting_recipe/legioncombathelmet
 	name = "Legion combat helmet"
@@ -1357,6 +1390,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_LEGION
 
 /datum/crafting_recipe/legioncombatarmormk2
 	name = "reinforced Legion combat armor"
@@ -1372,6 +1406,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_LEGION
 
 /datum/crafting_recipe/legioncombathelmetmk2
 	name = "reinforced Legion combat helmet"
@@ -1387,6 +1422,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_LEGION
 
 // NCR Armor conversions
 /datum/crafting_recipe/ncrcombatarmor
@@ -1406,6 +1442,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_NCR
 
 /datum/crafting_recipe/ncrcombathelmet
 	name = "NCR combat helmet"
@@ -1425,6 +1462,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_NCR
 
 /datum/crafting_recipe/ncrcombatarmormk2
 	name = "reinforced NCR combat armor"
@@ -1440,6 +1478,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_NCR
 
 /datum/crafting_recipe/ncrcombathelmetmk2
 	name = "reinforced NCR combat helmet"
@@ -1455,11 +1494,60 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_NCR
+
+
+
+// Khan Armor conversions
+/datum/crafting_recipe/khanjacket
+	name = "Khan jacket"
+	result = /obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket
+	reqs = list(
+		/obj/item/clothing/suit/armor/f13/leather_jacket/combat = 1,
+		/obj/item/toy/crayon/spraycan,
+	)
+	time = 30
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+	granting_trait = TRAIT_FORMER_KHAN
+
+/datum/crafting_recipe/khanjacket_armored
+	name = "Khan armored jacket"
+	result = /obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket/armored
+	reqs = list(
+		/obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket = 1,
+		/obj/item/stack/sheet/cloth = 1,
+		/obj/item/stack/crafting/armor_plate = 2,
+		/obj/item/stack/crafting/metalparts = 5,
+		/obj/item/stack/crafting/goodparts = 2
+	)
+	time = 30
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+	granting_trait = TRAIT_FORMER_KHAN
+
+/datum/crafting_recipe/khanjacket_battle
+	name = "Khan battle coat"
+	result = /obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket/coat
+	reqs = list(
+		/obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket/armored = 1,
+		/obj/item/stack/sheet/cloth = 5,
+		/obj/item/stack/crafting/armor_plate = 4,
+		/obj/item/stack/crafting/metalparts = 3,
+		/obj/item/stack/crafting/goodparts = 1
+	)
+	time = 30
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+	granting_trait = TRAIT_FORMER_KHAN
+
 
 //Follower Armor
-
 /datum/crafting_recipe/follower_light
-	name = "Follower Insignia Stitching"
+	name = "Clinic Insignia Stitching"
 	result = /obj/item/clothing/suit/hooded/followerlight
 	reqs = list(/obj/item/clothing/suit/toggle/labcoat = 1,
 				/obj/item/stack/sheet/cloth = 1)
@@ -1468,9 +1556,10 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_FOLLOWER
 
 /datum/crafting_recipe/follower_medium
-	name = "Follower Labcoat Plating"
+	name = "Clinic Labcoat Plating"
 	result = /obj/item/clothing/suit/hooded/followermedium
 	reqs = list(/obj/item/clothing/suit/hooded/followerlight = 1,
 				/obj/item/stack/sheet/cloth = 1,
@@ -1482,9 +1571,10 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_FOLLOWER
 
 /datum/crafting_recipe/follower_heavy
-	name = "Follower Labcoat Reforging"
+	name = "Clinic Labcoat Reforging"
 	result = /obj/item/clothing/suit/hooded/followerheavy
 	reqs = list(/obj/item/clothing/suit/hooded/followermedium = 1,
 				/obj/item/stack/sheet/cloth = 1,
@@ -1496,3 +1586,4 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	granting_trait = TRAIT_FORMER_FOLLOWER

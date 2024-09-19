@@ -35,7 +35,7 @@
 ///////////////////////////////////////////////
 //Makes sure people can't get trapped in each other's bodies if lag causes a deync between proc calls.
 
-
+/*
 /datum/status_effect/chem/astral_insurance
 	id = "astral_insurance"
 	var/mob/living/original
@@ -44,15 +44,15 @@
 
 /datum/status_effect/chem/astral_insurance/tick(mob/living/carbon/M)
 	. = ..()
-	if(owner.reagents.has_reagent(/datum/reagent/fermi/astral))
-		return
+	//if(owner.reagents.has_reagent(/datum/reagent/fermi/astral))
+	//	return
 	if(owner.mind == originalmind) //If they're home, let the chem deal with deletion.
 		return
-	if(owner.mind)
-		var/mob/living/simple_animal/astral/G = new(get_turf(M.loc))
-		owner.mind.transfer_to(G)//Just in case someone else is inside of you, it makes them a ghost and should hopefully bring them home at the end.
-		to_chat(G, "<span class='warning'>[M]'s conciousness snaps back to them as their astrogen runs out, kicking your projected mind out!'</b></span>")
-		log_reagent("FERMICHEM: [M]'s possesser has been booted out into a astral ghost!")
+	//if(owner.mind)
+	//	var/mob/living/simple_animal/astral/G = new(get_turf(M.loc))
+	//	owner.mind.transfer_to(G)//Just in case someone else is inside of you, it makes them a ghost and should hopefully bring them home at the end.
+	//	to_chat(G, "<span class='warning'>[M]'s conciousness snaps back to them as their astrogen runs out, kicking your projected mind out!'</b></span>")
+	//	log_reagent("FERMICHEM: [M]'s possesser has been booted out into a astral ghost!")
 	originalmind.transfer_to(original)
 
 /datum/status_effect/chem/astral_insurance/on_remove() //God damnit get them home!
@@ -64,7 +64,7 @@
 			log_reagent("FERMICHEM: [owner]'s possesser has been booted out into a astral ghost!")
 		originalmind.transfer_to(original)
 	return ..()
-
+*/
 /*//////////////////////////////////////////
 		Mind control functions!
 ///////////////////////////////////////////

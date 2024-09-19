@@ -17,8 +17,8 @@
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
 	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.05, updating_health = FALSE)
-		M.adjustFireLoss(-0.05, updating_health = FALSE)
+		M.adjustBruteLoss(-0.2, updating_health = FALSE)
+		M.adjustFireLoss(-0.1, updating_health = FALSE)
 	..()
 	return TRUE // update health and mobility at end of tick
 
@@ -148,8 +148,8 @@
 
 /datum/reagent/consumable/nukacherry/on_mob_life(mob/living/carbon/M)
 	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.05, updating_health = FALSE)
-		M.adjustFireLoss(-0.05, updating_health = FALSE)
+		M.adjustBruteLoss(-0.2, updating_health = FALSE)
+		M.adjustFireLoss(-0.1, updating_health = FALSE)
 	M.adjustFireLoss(-0.1*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
@@ -169,8 +169,8 @@
 
 /datum/reagent/consumable/nukagrape/on_mob_life(mob/living/carbon/M)
 	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.05, updating_health = FALSE)
-		M.adjustFireLoss(-0.05, updating_health = FALSE)
+		M.adjustBruteLoss(-0.2, updating_health = FALSE)
+		M.adjustFireLoss(-0.1, updating_health = FALSE)
 	M.adjustBruteLoss(-0.1*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
@@ -190,8 +190,8 @@
 
 /datum/reagent/consumable/nukaorange/on_mob_life(mob/living/carbon/M)
 	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.05, updating_health = FALSE)
-		M.adjustFireLoss(-0.05, updating_health = FALSE)
+		M.adjustBruteLoss(-0.2, updating_health = FALSE)
+		M.adjustFireLoss(-0.1, updating_health = FALSE)
 	M.adjustToxLoss(-0.1*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
 	M.drowsyness = 0
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
@@ -210,8 +210,8 @@
 
 /datum/reagent/consumable/nukaquartz/on_mob_life(mob/living/carbon/M)
 	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.05, updating_health = FALSE)
-		M.adjustFireLoss(-0.05, updating_health = FALSE)
+		M.adjustBruteLoss(-0.2, updating_health = FALSE)
+		M.adjustFireLoss(-0.1, updating_health = FALSE)
 	M.adjustOxyLoss(-1*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
@@ -234,8 +234,8 @@
 	M.drowsyness = 0
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
 	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.075)
-		M.adjustFireLoss(-0.075)
+		M.adjustBruteLoss(-0.25, updating_health = FALSE)
+		M.adjustFireLoss(-0.125, updating_health = FALSE)
 	..()
 	. = TRUE
 
@@ -256,8 +256,8 @@
 
 /datum/reagent/consumable/nukawild/on_mob_life(mob/living/carbon/M)
 	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.05, updating_health = FALSE)
-		M.adjustFireLoss(-0.05, updating_health = FALSE)
+		M.adjustBruteLoss(-0.2, updating_health = FALSE)
+		M.adjustFireLoss(-0.1, updating_health = FALSE)
 	M.AdjustStun(-2, 0)
 	M.AdjustKnockdown(-2, 0)
 	M.drowsyness = 0
@@ -280,8 +280,8 @@
 
 /datum/reagent/consumable/nukanew/on_mob_life(mob/living/carbon/M)
 	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.05, updating_health = FALSE)
-		M.adjustFireLoss(-0.05, updating_health = FALSE)
+		M.adjustBruteLoss(-0.2, updating_health = FALSE)
+		M.adjustFireLoss(-0.1, updating_health = FALSE)
 	M.adjustFireLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
 	M.AdjustStun(-3, 0)
 	M.AdjustKnockdown(-3, 0)
@@ -303,8 +303,8 @@
 
 /datum/reagent/consumable/nukaberry/on_mob_life(mob/living/carbon/M)
 	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.05, updating_health = FALSE)
-		M.adjustFireLoss(-0.05, updating_health = FALSE)
+		M.adjustBruteLoss(-0.2, updating_health = FALSE)
+		M.adjustFireLoss(-0.1, updating_health = FALSE)
 	M.adjustFireLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
 	M.AdjustStun(-3, 0)
 	M.AdjustKnockdown(-3, 0)
@@ -326,8 +326,8 @@
 
 /datum/reagent/consumable/nukacooler/on_mob_life(mob/living/carbon/M)
 	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.05, updating_health = FALSE)
-		M.adjustFireLoss(-0.05, updating_health = FALSE)
+		M.adjustBruteLoss(-0.2, updating_health = FALSE)
+		M.adjustFireLoss(-0.1, updating_health = FALSE)
 	M.adjust_bodytemperature(-60 * TEMPERATURE_DAMAGE_COEFFICIENT, T0C) //310.15 is the normal bodytemp.
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
 	..()
@@ -345,7 +345,8 @@
 
 /datum/reagent/consumable/nukafree/on_mob_life(mob/living/carbon/M)
 	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.05, updating_health = FALSE)
+		M.adjustBruteLoss(-0.2, updating_health = FALSE)
+		M.adjustFireLoss(-0.1, updating_health = FALSE)
 	if(M.nutrition <= NUTRITION_LEVEL_STARVING)
 		M.adjustToxLoss(0.1*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
 	M.nutrition = max(M.nutrition - 3, 0)
@@ -366,7 +367,8 @@
 
 /datum/reagent/consumable/nukafrutti/on_mob_life(mob/living/carbon/M)
 	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.05, updating_health = FALSE)
+		M.adjustBruteLoss(-0.2, updating_health = FALSE)
+		M.adjustFireLoss(-0.1, updating_health = FALSE)
 	M.adjustToxLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
 	M.adjustFireLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
 	M.adjustBruteLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
@@ -392,8 +394,8 @@
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
 	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.05, updating_health = FALSE)
-		M.adjustFireLoss(-0.05, updating_health = FALSE)
+		M.adjustBruteLoss(-0.2, updating_health = FALSE)
+		M.adjustFireLoss(-0.1, updating_health = FALSE)
 	..()
 	return TRUE // update health and mobility at end of tick
 

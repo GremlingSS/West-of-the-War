@@ -51,8 +51,8 @@ Mayor
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, REF(src))
-	ADD_TRAIT(H, TRAIT_GENERIC, REF(src))
+	//ADD_TRAIT(H, TRAIT_TECHNOPHREAK, REF(src))
+	//ADD_TRAIT(H, TRAIT_GENERIC, REF(src))
 
 /datum/outfit/job/bighorn/f13mayor
 	name = "Mayor"
@@ -125,10 +125,10 @@ Mayor
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, REF(src))
-	ADD_TRAIT(H, TRAIT_LIFEGIVER, REF(src))
-	ADD_TRAIT(H, TRAIT_SELF_AWARE,REF(src))
-	ADD_TRAIT(H, TRAIT_IRONFIST, REF(src))
+	//ADD_TRAIT(H, TRAIT_HARD_YARDS, REF(src))
+	//ADD_TRAIT(H, TRAIT_LIFEGIVER, REF(src))
+	//ADD_TRAIT(H, TRAIT_SELF_AWARE,REF(src))
+	//ADD_TRAIT(H, TRAIT_IRONFIST, REF(src))
 
 /*--------------------------------------------------------------*/
 /datum/job/bighorn/f13deputy
@@ -197,7 +197,7 @@ Mayor
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, REF(src))
+	//ADD_TRAIT(H, TRAIT_HARD_YARDS, REF(src))
 
 /*--------------------------------------------------------------*/
 
@@ -320,8 +320,8 @@ Mayor
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, REF(src))
-	ADD_TRAIT(H, TRAIT_GENERIC, REF(src))
+	//ADD_TRAIT(H, TRAIT_TECHNOPHREAK, REF(src))
+	//ADD_TRAIT(H, TRAIT_GENERIC, REF(src))
 
 /datum/outfit/job/bighorn/f13shopkeeper/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()

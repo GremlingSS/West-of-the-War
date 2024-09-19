@@ -41,10 +41,10 @@
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_GENERIC,  REF(src))
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK,  REF(src))
+	//ADD_TRAIT(H, TRAIT_GENERIC,  REF(src))
+	//ADD_TRAIT(H, TRAIT_TECHNOPHREAK,  REF(src))
 	ADD_TRAIT(H, TRAIT_ENCLAVE_CODES,  REF(src))
-	ADD_TRAIT(H, TRAIT_STRAIGHT_EDGE, REF(src))
+	//ADD_TRAIT(H, TRAIT_STRAIGHT_EDGE, REF(src))
 	H.grant_language(/datum/language/codespeak, TRUE, TRUE, LANGUAGE_MIND)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/enclavemarinearmor)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/enclavemarinehelmet)
@@ -170,10 +170,10 @@
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_PA_WEAR,  REF(src))
-	ADD_TRAIT(H, TRAIT_LIFEGIVER,  REF(src))
+	//ADD_TRAIT(H, TRAIT_LIFEGIVER,  REF(src))
 	ADD_TRAIT(H, TRAIT_RESEARCHER,  REF(src))
 	ADD_TRAIT(H, TRAIT_ENCLAVE_CODES,  REF(src))
-	ADD_TRAIT(H, TRAIT_CHEMWHIZ,  REF(src))
+	//ADD_TRAIT(H, TRAIT_CHEMWHIZ,  REF(src))
 	H.grant_language(/datum/language/codespeak, TRUE, TRUE, LANGUAGE_MIND)
 	//H.mind.teach_crafting_recipe(/datum/crafting_recipe/marksmancarbine)
 	//H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)
@@ -362,8 +362,8 @@
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_HARD_YARDS,  REF(src))
-	ADD_TRAIT(H, TRAIT_RESEARCHER,  REF(src))
+	//ADD_TRAIT(H, TRAIT_HARD_YARDS,  REF(src))
+	//ADD_TRAIT(H, TRAIT_RESEARCHER,  REF(src))
 	ADD_TRAIT(H, TRAIT_ENCLAVE_CODES,  REF(src))
 	H.grant_language(/datum/language/codespeak, TRUE, TRUE, LANGUAGE_MIND)
 
@@ -423,7 +423,7 @@
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_PA_WEAR,  REF(src))
-	ADD_TRAIT(H, TRAIT_RESEARCHER,  REF(src))
+	//ADD_TRAIT(H, TRAIT_RESEARCHER,  REF(src))
 	ADD_TRAIT(H, TRAIT_ENCLAVE_CODES,  REF(src))
 	H.grant_language(/datum/language/codespeak, TRUE, TRUE, LANGUAGE_MIND)
 

@@ -277,14 +277,14 @@ GENETICS SCANNER
 					//MKUltra
 					if(H.has_status_effect(/datum/status_effect/chem/enthrall))
 						temp_message += " <span class='info'>Subject has abnormal brain fuctions.</span>"
-
+/*
 					//Astrogen shenanigans
 					if(H.reagents.has_reagent(/datum/reagent/fermi/astral))
 						if(H.mind)
 							temp_message += " <span class='danger'>Warning: subject may be possesed.</span>"
 						else
 							temp_message += " <span class='notice'>Subject appears to be astrally projecting.</span>"
-
+*/
 
 			//LIVER
 			else if(istype(O, /obj/item/organ/liver))
