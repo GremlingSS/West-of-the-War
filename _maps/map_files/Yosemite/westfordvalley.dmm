@@ -1315,6 +1315,10 @@
 /area/f13/caves)
 "aqt" = (
 /obj/structure/chair/sofa,
+/obj/machinery/light{
+	dir = 1;
+	light_color = "#706891"
+	},
 /turf/open/floor/wood/wood_common,
 /area/f13/city/bighorn)
 "aqB" = (
@@ -5320,6 +5324,10 @@
 /area/f13/caves)
 "brl" = (
 /obj/machinery/rnd/production/protolathe,
+/obj/machinery/light{
+	dir = 1;
+	light_color = "#706891"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/purple/side{
 	dir = 1
 	},
@@ -11595,6 +11603,15 @@
 /obj/structure/flora/tree/wasteland,
 /turf/open/indestructible/ground/outside/savannah,
 /area/f13/wasteland/bighorn)
+"cYo" = (
+/obj/machinery/light{
+	dir = 1;
+	light_color = "#706891"
+	},
+/turf/open/floor/wood/wood_common{
+	icon_state = "common-broken4"
+	},
+/area/f13/city/bighorn)
 "cYr" = (
 /obj/item/reagent_containers/glass/bucket{
 	desc = "It smells awful.";
@@ -13621,6 +13638,9 @@
 /area/f13/city/bighorn)
 "dzU" = (
 /obj/machinery/iv_drip,
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/open/floor/wood/wood_common{
 	icon_state = "common-broken3"
 	},
@@ -15325,6 +15345,16 @@
 	icon_state = "horizontalinnermain2right"
 	},
 /area/f13/wasteland)
+"dWp" = (
+/obj/effect/landmark/start/f13/followersdoctor,
+/obj/machinery/light{
+	dir = 8;
+	pixel_y = -16
+	},
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/city/bighorn)
 "dWu" = (
 /obj/structure/chair/sofa/left,
 /turf/open/floor/wood/wood_wide,
@@ -15991,6 +16021,12 @@
 /obj/structure/girder/reinforced,
 /turf/open/indestructible/ground/outside/ruins,
 /area/f13/tunnel)
+"eep" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/wood/wood_common,
+/area/f13/city/bighorn)
 "eet" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -17773,8 +17809,7 @@
 /area/f13/caves)
 "eBT" = (
 /obj/machinery/light{
-	dir = 8;
-	pixel_y = -15
+	dir = 8
 	},
 /turf/open/floor/carpet/green,
 /area/f13/tunnel)
@@ -18080,6 +18115,13 @@
 	icon_state = "horizontaloutermain0"
 	},
 /area/f13/wasteland)
+"eFA" = (
+/obj/machinery/light{
+	dir = 1;
+	light_color = "#706891"
+	},
+/turf/open/floor/wood/wood_common,
+/area/f13/city/bighorn)
 "eFH" = (
 /obj/structure/showcase/horrific_experiment{
 	desc = "Some sort of pod. Seems this one's maintanance panel is open, someone was working on this.";
@@ -20069,6 +20111,9 @@
 /area/f13/wasteland)
 "fgA" = (
 /obj/machinery/iv_drip,
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/open/floor/plasteel/f13/vault_floor/white/whitesolid{
 	icon_state = "whitedirtysolid"
 	},
@@ -30435,6 +30480,14 @@
 	icon_state = "oakfloor1"
 	},
 /area/f13/building)
+"hMA" = (
+/obj/item/kirbyplants/random,
+/obj/machinery/light{
+	dir = 1;
+	light_color = "#706891"
+	},
+/turf/open/floor/wood/wood_common,
+/area/f13/city/bighorn)
 "hME" = (
 /obj/structure/toilet{
 	pixel_y = 13
@@ -39116,6 +39169,15 @@
 "jVz" = (
 /turf/open/floor/wood/wood_mosaic/wood_mosaic_dark,
 /area/f13/enclave/hydroponics)
+"jVA" = (
+/obj/machinery/door/airlock/medical{
+	name = "Clinic";
+	req_one_access_txt = "124"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/white{
+	icon_state = "whitedirty"
+	},
+/area/f13/city/bighorn)
 "jVF" = (
 /obj/structure/dresser,
 /turf/open/floor/carpet,
@@ -49073,6 +49135,7 @@
 /area/f13/enclave/reactor)
 "mCZ" = (
 /obj/structure/closet/secure_closet/personal,
+/obj/machinery/light,
 /turf/open/floor/f13{
 	icon_state = "floordirtysolid"
 	},
@@ -49615,6 +49678,15 @@
 "mKd" = (
 /turf/open/floor/carpet/royalblack,
 /area/f13/building)
+"mKe" = (
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#c1caff"
+	},
+/turf/open/floor/f13{
+	icon_state = "floordirtysolid"
+	},
+/area/f13/city/bighorn)
 "mKm" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "horizontaloutermain2left"
@@ -49892,7 +49964,8 @@
 /area/f13/wasteland/bighorn)
 "mOa" = (
 /obj/machinery/button/door{
-	id = "medical"
+	id = "medical";
+	req_one_access_txt = "124"
 	},
 /turf/closed/wall/f13/supermart{
 	id = "medical"
@@ -51489,6 +51562,9 @@
 /area/f13/wasteland)
 "nhM" = (
 /obj/machinery/iv_drip,
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/open/floor/wood/wood_common,
 /area/f13/city/bighorn)
 "nhO" = (
@@ -52122,8 +52198,7 @@
 /area/f13/caves)
 "nqQ" = (
 /obj/machinery/light{
-	dir = 8;
-	pixel_y = -15
+	dir = 8
 	},
 /turf/open/floor/f13{
 	color = "#d9c4b9";
@@ -55402,6 +55477,10 @@
 /area/f13/caves)
 "oiX" = (
 /obj/machinery/workbench,
+/obj/machinery/light{
+	dir = 1;
+	light_color = "#706891"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/purple/side{
 	dir = 1
 	},
@@ -56978,8 +57057,7 @@
 /area/f13/caves)
 "oFb" = (
 /obj/machinery/light{
-	dir = 8;
-	pixel_y = -15
+	dir = 8
 	},
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/f13/armor/tier2,
@@ -62479,9 +62557,12 @@
 	},
 /area/f13/building)
 "pZM" = (
-/obj/machinery/door/airlock/medical/glass,
-/turf/open/floor/f13{
-	icon_state = "floordirtysolid"
+/obj/machinery/door/airlock/medical{
+	name = "Clinic";
+	req_one_access_txt = ss
+	},
+/turf/open/floor/plasteel/f13/vault_floor/white{
+	icon_state = "whitedirty"
 	},
 /area/f13/city/bighorn)
 "pZU" = (
@@ -64510,6 +64591,16 @@
 /area/f13/building/hospital{
 	name = "Jansen Memorial Hospital"
 	})
+"qxI" = (
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#c1caff"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/yellow/whiteyellowfull{
+	icon_state = "yellow";
+	dir = 4
+	},
+/area/f13/city/bighorn)
 "qxK" = (
 /obj/structure/chair/sofa{
 	dir = 1;
@@ -75683,6 +75774,15 @@
 	icon_state = "horizontalbottombordertop2"
 	},
 /area/f13/wasteland)
+"tpL" = (
+/obj/machinery/light{
+	dir = 8;
+	pixel_y = -16
+	},
+/turf/open/floor/f13{
+	icon_state = "floordirtysolid"
+	},
+/area/f13/city/bighorn)
 "tqb" = (
 /obj/structure/decoration/rag,
 /obj/structure/table/wood/junk,
@@ -81665,6 +81765,14 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/building)
+"uUh" = (
+/obj/structure/table,
+/obj/machinery/light{
+	dir = 1;
+	light_color = "#706891"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/white/whitesolid,
+/area/f13/city/bighorn)
 "uUD" = (
 /obj/structure/table,
 /turf/open/floor/f13{
@@ -89801,8 +89909,7 @@
 /area/f13/tunnel)
 "xbO" = (
 /obj/machinery/light{
-	dir = 8;
-	pixel_y = -15
+	dir = 8
 	},
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/f13/armor/tier4,
@@ -91548,6 +91655,13 @@
 /obj/structure/weightlifter,
 /turf/open/floor/wood/wood_common,
 /area/f13/tunnel)
+"xxo" = (
+/obj/machinery/light{
+	dir = 1;
+	light_color = "#706891"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/white/whitesolid,
+/area/f13/city/bighorn)
 "xxp" = (
 /obj/structure/chair/wood{
 	dir = 8
@@ -91974,6 +92088,15 @@
 	name = "tile"
 	},
 /area/f13/building)
+"xCM" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plasteel/f13/vault_floor/yellow/whiteyellowfull{
+	icon_state = "yellow";
+	dir = 8
+	},
+/area/f13/city/bighorn)
 "xCO" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier3,
@@ -262528,9 +262651,9 @@ kjm
 wrq
 lrF
 maR
+tpL
 maR
-maR
-maR
+tpL
 maR
 maR
 wrq
@@ -263305,7 +263428,7 @@ maR
 maR
 maR
 wrq
-vQz
+eFA
 kYb
 kYb
 kYb
@@ -263813,7 +263936,7 @@ baY
 phX
 xop
 wrq
-dFp
+hMA
 iuc
 vQz
 cmj
@@ -264076,7 +264199,7 @@ vQz
 vQz
 cvU
 wrq
-iuc
+cYo
 mvq
 cdx
 gFr
@@ -325488,7 +325611,7 @@ vHf
 lig
 wrq
 maR
-maR
+mKe
 maR
 xcs
 wrq
@@ -325754,7 +325877,7 @@ tjh
 dMC
 wrq
 kPb
-mew
+dWp
 kDL
 eaV
 wGl
@@ -326511,7 +326634,7 @@ jPR
 exl
 jFE
 icA
-icA
+qxI
 icA
 lig
 wrq
@@ -327025,7 +327148,7 @@ jPR
 pAn
 aKM
 vHf
-vHf
+xCM
 vHf
 lig
 wrq
@@ -327297,7 +327420,7 @@ ipO
 ipO
 ipO
 ipO
-ipO
+gEZ
 eaV
 qMv
 qMv
@@ -327552,7 +327675,7 @@ wrq
 wrq
 wrq
 wrq
-pZM
+jVA
 pZM
 wrq
 wrq
@@ -328579,7 +328702,7 @@ wrq
 wrq
 wrq
 wrq
-gaE
+uUh
 ppO
 ppO
 gaE
@@ -328832,7 +328955,7 @@ qMv
 wrq
 dFp
 cmj
-vQz
+eep
 cLR
 dFp
 wrq
@@ -329607,7 +329730,7 @@ wrq
 wrq
 dNn
 wrq
-xYQ
+xxo
 ppO
 ppO
 xYQ
