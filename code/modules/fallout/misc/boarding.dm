@@ -7,7 +7,7 @@
 	max_integrity = 150
 	layer = 5
 	proj_pass_rate = 20
-	drop_amount = 0
+	drop_amount = 1
 	var/planks = 3
 	var/maxplanks = 3
 

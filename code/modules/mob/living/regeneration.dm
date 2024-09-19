@@ -30,7 +30,8 @@
 	. = ..()
 	var/mob/living/M = parent
 	// We don't use PROC_REF here, so it was changed to .proc/ instead. -Possum
-	RegisterSignal(M, COMSIG_MOB_SLEEPING,.proc/OnSleep)
+	// We now use PROC_REF here, so it was changed to PROC_REF() instead. -Gremling
+	RegisterSignal(M, COMSIG_MOB_SLEEPING,PROC_REF(OnSleep))
 
 // We need to unregister it from calling when the component is removed, this is just because it can be a permanent/stacking effect. We dont want that.
 /datum/component/sleeping_regeneration/UnregisterFromParent()

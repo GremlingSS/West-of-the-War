@@ -262,7 +262,7 @@
 
 /turf/open/indestructible/ground/outside/desert/proc/setTurfPlant(newTurfPlant)
 	turfPlant = newTurfPlant
-	RegisterSignal(turfPlant, COMSIG_PARENT_QDELETING, .proc/clear_turfplant)
+	RegisterSignal(turfPlant, COMSIG_PARENT_QDELETING,PROC_REF(clear_turfplant))
 
 /turf/open/indestructible/ground/outside/desert/proc/clear_turfplant()
 	UnregisterSignal(turfPlant, COMSIG_PARENT_QDELETING)
@@ -296,7 +296,7 @@
 
 /turf/open/indestructible/ground/outside/desertharsh/proc/setTurfPlant(newTurfPlant)
 	turfPlant = newTurfPlant
-	RegisterSignal(turfPlant, COMSIG_PARENT_QDELETING, .proc/clear_turfplant)
+	RegisterSignal(turfPlant, COMSIG_PARENT_QDELETING,PROC_REF(clear_turfplant))
 
 /turf/open/indestructible/ground/outside/desertharsh/proc/clear_turfplant()
 	UnregisterSignal(turfPlant, COMSIG_PARENT_QDELETING)
@@ -356,7 +356,7 @@
 
 /turf/open/indestructible/ground/outside/savannah/proc/setTurfPlant(newTurfPlant)
 	turfPlant = newTurfPlant
-	RegisterSignal(turfPlant, COMSIG_PARENT_QDELETING, .proc/clear_turfplant)
+	RegisterSignal(turfPlant, COMSIG_PARENT_QDELETING,PROC_REF(clear_turfplant))
 
 /turf/open/indestructible/ground/outside/savannah/proc/clear_turfplant()
 	UnregisterSignal(turfPlant, COMSIG_PARENT_QDELETING)
@@ -390,7 +390,7 @@
 
 /turf/open/indestructible/ground/outside/dirt/proc/setTurfPlant(newTurfPlant)
 	turfPlant = newTurfPlant
-	RegisterSignal(turfPlant, COMSIG_PARENT_QDELETING, .proc/clear_turfplant)
+	RegisterSignal(turfPlant, COMSIG_PARENT_QDELETING, PROC_REF(clear_turfplant))
 
 /turf/open/indestructible/ground/outside/dirt/proc/clear_turfplant()
 	UnregisterSignal(turfPlant, COMSIG_PARENT_QDELETING)
@@ -694,7 +694,7 @@
 
 /turf/open/indestructible/ground/outside/snow/proc/setTurfPlant(newTurfPlant)
 	turfPlant = newTurfPlant
-	RegisterSignal(turfPlant, COMSIG_PARENT_QDELETING, .proc/clear_turfplant)
+	RegisterSignal(turfPlant, COMSIG_PARENT_QDELETING,PROC_REF(clear_turfplant))
 
 /turf/open/indestructible/ground/outside/snow/proc/clear_turfplant()
 	UnregisterSignal(turfPlant, COMSIG_PARENT_QDELETING)
@@ -798,7 +798,7 @@
 
 /turf/open/indestructible/ground/inside/mountain/proc/setTurfPlant(newTurfPlant)
 	turfPlant = newTurfPlant
-	RegisterSignal(turfPlant, COMSIG_PARENT_QDELETING, .proc/clear_turfplant)
+	RegisterSignal(turfPlant, COMSIG_PARENT_QDELETING,PROC_REF(clear_turfplant))
 
 /turf/open/indestructible/ground/inside/mountain/proc/clear_turfplant()
 	UnregisterSignal(turfPlant, COMSIG_PARENT_QDELETING)

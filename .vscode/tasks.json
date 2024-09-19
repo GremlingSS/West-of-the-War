@@ -25,13 +25,70 @@
 			"label": "Build All"
 		},
 		{
-			"type": "npm",
-			"script": "build",
-			"path": "tgui/packages/tgfont",
+			"type": "dreammaker",
+			"dme": "fortune13.dme",
+			"problemMatcher": [
+				"$dreammaker"
+			],
 			"group": "build",
-			"problemMatcher": [],
-			"label": "npm: build - tgui/packages/tgfont",
-			"detail": "node mkdist.cjs && fantasticon --config config.cjs"
+			"label": "dm: build - fortune13.dme"
+		},
+		{
+			"command": "${command:dreammaker.reparse}",
+			"group": "build",
+			"label": "dm: reparse"
+		},
+		{
+			"type": "shell",
+			"command": "bin/tgui-build",
+			"windows": {
+				"command": ".\\tgui\\bin\\tgui.bat"
+			},
+			"problemMatcher": [
+				"$tsc",
+				"$eslint-stylish"
+			],
+			"group": "build",
+			"label": "tgui: build"
+		},
+		{
+			"type": "shell",
+			"command": "bin/tgui-dev",
+			"windows": {
+				"command": ".\\tgui\\bin\\tgui-dev-server.bat"
+			},
+			"problemMatcher": [
+				"$tsc",
+				"$eslint-stylish"
+			],
+			"group": "build",
+			"label": "tgui: dev server"
+		},
+		{
+			"type": "shell",
+			"command": "bin/tgui-bench",
+			"windows": {
+				"command": ".\\tgui\\bin\\tgui-bench.cmd"
+			},
+			"problemMatcher": [
+				"$tsc",
+				"$eslint-stylish"
+			],
+			"group": "build",
+			"label": "tgui: bench"
+		},
+		{
+			"type": "shell",
+			"command": "bin/tgui-sonar",
+			"windows": {
+				"command": ".\\tgui\\bin\\tgui-sonar.cmd"
+			},
+			"problemMatcher": [
+				"$tsc",
+				"$eslint-stylish"
+			],
+			"group": "build",
+			"label": "tgui: sonar"
 		}
 	]
 }

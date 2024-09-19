@@ -76,7 +76,7 @@ var/path_type = "/obj/item/baseball_bat"
 
 * Changes to the `/config` tree must be made in a way that allows for updating server deployments while preserving previous behaviour. This is due to the fact that the config tree is to be considered owned by the user and not necessarily updated alongside the remainder of the code. The code to preserve previous behaviour may be removed at some point in the future given the OK by maintainers.
 
-* The dlls section of tgs3.json is not designed for dlls that are purely `call()()`ed since those handles are closed between world reboots. Only put in dlls that may have to exist between world reboots.
+* The dlls section of tgs3.json is not designed for dlls that are purely `LIBCALL()()`ed since those handles are closed between world reboots. Only put in dlls that may have to exist between world reboots.
 
 ## Structural
 ### No duplicated code (Don't repeat yourself)
@@ -100,7 +100,7 @@ While we normally encourage (and in some cases, even require) bringing out of da
 ### RegisterSignal()
 
 #### PROC_REF Macros
-When referencing procs in RegisterSignal, Callback and other procs you should use PROC_REF, TYPE_PROC_REF and GLOBAL_PROC_REF macros. 
+When referencing procs in RegisterSignal, Callback and other procs you should use PROC_REF, TYPE_PROC_REF and GLOBAL_PROC_REF macros.
 They ensure compilation fails if the reffered to procs change names or get removed.
 The macro to be used depends on how the proc you're in relates to the proc you want to use:
 
@@ -129,7 +129,7 @@ Example:
 /mob/subtype/proc/do_something()
 	var/obj/thing/x = new()
 	// we're referring to /obj/thing proc inside /mob/subtype proc
-	RegisterSignal(x, COMSIG_FAKE, TYPE_PROC_REF(/obj/thing, funny)) 
+	RegisterSignal(x, COMSIG_FAKE, TYPE_PROC_REF(/obj/thing, funny))
 ```
 
 GLOBAL_PROC_REF if the proc you want to use is a global proc.
@@ -139,7 +139,7 @@ Example:
 	to_chat(world,"knock knock")
 
 /mob/subtype/proc/do_something()
-	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(funny)), 100))
+	addtimer(CALLBACK(src, GLOBAL_PROC_REF(funny)), 100))
 ```
 
 Note that the same rules go for verbs too! We have VERB_REF() and TYPE_VERB_REF() as you need it in these same cases. GLOBAL_VERB_REF() isn't a thing however, as verbs are not global.
@@ -154,7 +154,7 @@ All procs that are registered to listen for signals using `RegisterSignal()` mus
 ```
 This is to ensure that it is clear the proc handles signals and turns on a lint to ensure it does not sleep.
 
-Any sleeping behaviour that you need to perform inside a `SIGNAL_HANDLER` proc must be called asynchronously (e.g. with `INVOKE_ASYNC()`) or be redone to work asynchronously. 
+Any sleeping behaviour that you need to perform inside a `SIGNAL_HANDLER` proc must be called asynchronously (e.g. with `INVOKE_ASYNC()`) or be redone to work asynchronously.
 
 #### `override`
 
@@ -280,7 +280,7 @@ Good:
 		off_overlay = iconstate2appearance(icon, "off")
 		broken_overlay = icon2appearance(broken_icon)
 	if (stat & broken)
-		add_overlay(broken_overlay) 
+		add_overlay(broken_overlay)
 		return
 	if (is_on)
 		add_overlay(on_overlay)
@@ -304,7 +304,7 @@ Bad:
 	if (isnull(our_overlays))
 		our_overlays = list("on" = iconstate2appearance(overlay_icon, "on"), "off" = iconstate2appearance(overlay_icon, "off"), "broken" = iconstate2appearance(overlay_icon, "broken"))
 	if (stat & broken)
-		add_overlay(our_overlays["broken"]) 
+		add_overlay(our_overlays["broken"])
 		return
 	...
 ```
@@ -391,7 +391,7 @@ At its best, it can make some very common patterns easy to use, and harder to me
 		some_code()
 		if (do_something_else())
 			. = TRUE // Uh oh, what's going on!
-	
+
 	// even
 	// more
 	// code
@@ -468,7 +468,7 @@ Meaning:
 	to_chat(world, uh_oh())
 ```
 
-...will print `woah!`. 
+...will print `woah!`.
 
 For this reason, it is acceptable for `.` to be used in places where consumers can reasonably continue in the event of a runtime.
 
@@ -494,7 +494,7 @@ If you are using `.` in this case (or for another case that might be acceptable,
 	. = ..()
 	if (. == BIGGER_SUPER_ATTACK)
 		return BIGGER_SUPER_ATTACK // More readable than `.`
-	
+
 	// Due to how common it is, most uses of `. = ..()` do not need a trailing `return .`
 ```
 
