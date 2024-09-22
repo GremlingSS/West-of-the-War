@@ -115,7 +115,7 @@ jobs:
         run: |
           cargo build --manifest-path auxmos/Cargo.toml --target=${{env.target}} --release --verbose
           ldd auxmos/target/${{env.target}}/release/libauxmos.so
-
+      
       - name: Upload libauxmos artifact
         uses: actions/upload-artifact@v2
         with:
@@ -162,7 +162,7 @@ jobs:
         run: |
           sudo dpkg --add-architecture i386
           sudo apt update || true
-          sudo apt install -o APT::Immediate-Configure=false libssl3:i386
+          sudo apt install -o APT::Immediate-Configure=false libssl1.1:i386
           bash tools/ci/install_rust_g.sh
       - name: Install auxmos
         run: |

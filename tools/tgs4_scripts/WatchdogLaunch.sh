@@ -23,10 +23,10 @@ if ! [ -x "$has_cargo" ]; then
 fi
 
 # apt packages, libssl needed by rust-g but not included in TGS barebones install
-if ! ([ -x "$has_git" ] && [ -x "$has_grep" ] && [ -f "/usr/lib/i386-linux-gnu/libssl.so" ]); then
+if ! ( [ -x "$has_git" ] && [ -x "$has_grep" ] && [ -f "/usr/lib/i386-linux-gnu/libssl.so" ] ); then
 	dpkg --add-architecture i386
 	apt-get update
-	apt-get install -y lib32z1 git pkg-config libssl-dev:i386 libssl-dev libssl3:i386
+	apt-get install -y lib32z1 git pkg-config libssl-dev:i386 libssl-dev libssl1.1:i386
 fi
 
 # install yt-dlp when not present
