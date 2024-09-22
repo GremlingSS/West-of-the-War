@@ -30,7 +30,7 @@ if ! [ -x "$has_cargo" ]; then
 fi
 
 # apt packages, libssl needed by rust-g but not included in TGS barebones install
-if ! ( [ -x "$has_git" ] && [ -x "$has_grep" ] && [ -f "/usr/lib/i386-linux-gnu/libssl.so" ] ); then
+if ! ([ -x "$has_git" ] && [ -x "$has_grep" ] && [ -f "/usr/lib/i386-linux-gnu/libssl.so" ]); then
 	echo "Installing apt dependencies..."
 	if ! [ -x "$has_sudo" ]; then
 		dpkg --add-architecture i386
@@ -46,7 +46,7 @@ if ! ( [ -x "$has_git" ] && [ -x "$has_grep" ] && [ -f "/usr/lib/i386-linux-gnu/
 fi
 dpkg --add-architecture i386
 apt-get update
-apt-get install -y lib32z1 pkg-config libssl-dev:i386 libssl-dev libssl1.1:i386
+apt-get install -y lib32z1 pkg-config libssl-dev:i386 libssl-dev libssl3:i386
 # update rust-g
 if [ ! -d "rust-g" ]; then
 	echo "Cloning rust-g..."
@@ -84,5 +84,5 @@ fi
 # compile tgui
 echo "Compiling tgui..."
 cd "$1"
-chmod +x tools/bootstrap/node  # Workaround for https://github.com/tgstation/tgstation-server/issues/1167
+chmod +x tools/bootstrap/node # Workaround for https://github.com/tgstation/tgstation-server/issues/1167
 env TG_BOOTSTRAP_CACHE="$original_dir" TG_BOOTSTRAP_NODE_LINUX=1 CBT_BUILD_MODE="TGS" tools/bootstrap/node tools/build/build.js
