@@ -78,7 +78,7 @@ if ! [ -x "$has_youtubedl" ]; then
 	pip3 install yt-dlp --break-system-packages # FUCK IT I CANT FIND A SOLUTION OTHER THAN THIS.
 elif [ -x "$has_pip3" ]; then
 	echo "Ensuring yt-dlp is up-to-date with pip3..."
-	pip3 install yt-dlp -U --break-system-packages # FUCK IT I CANT FIND A SOLUTION OTHER THAN THIS.
+	pip3 install yt-dlp --break-system-packages -U # FUCK IT I CANT FIND A SOLUTION OTHER THAN THIS.
 fi
 
 # compile tgui
