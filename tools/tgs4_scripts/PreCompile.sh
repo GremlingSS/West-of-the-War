@@ -30,7 +30,7 @@ if ! [ -x "$has_cargo" ]; then
 fi
 
 # apt packages, libssl needed by rust-g but not included in TGS barebones install
-if ! ( [ -x "$has_git" ] && [ -x "$has_grep" ] && [ -f "/usr/lib/i386-linux-gnu/libssl.so" ] ); then
+if ! ([ -x "$has_git" ] && [ -x "$has_grep" ] && [ -f "/usr/lib/i386-linux-gnu/libssl.so" ]); then
 	echo "Installing apt dependencies..."
 	if ! [ -x "$has_sudo" ]; then
 		dpkg --add-architecture i386
@@ -75,14 +75,14 @@ if ! [ -x "$has_youtubedl" ]; then
 	else
 		sudo apt-get install -y python3 python3-pip
 	fi
-	pip3 install yt-dlp
+	pip3 install yt-dlp --break-system-packages # FUCK IT I CANT FIND A SOLUTION OTHER THAN THIS.
 elif [ -x "$has_pip3" ]; then
 	echo "Ensuring yt-dlp is up-to-date with pip3..."
-	pip3 install yt-dlp -U
+	pip3 install yt-dlp -U --break-system-packages # FUCK IT I CANT FIND A SOLUTION OTHER THAN THIS.
 fi
 
 # compile tgui
 echo "Compiling tgui..."
 cd "$1"
-chmod +x tools/bootstrap/node  # Workaround for https://github.com/tgstation/tgstation-server/issues/1167
+chmod +x tools/bootstrap/node # Workaround for https://github.com/tgstation/tgstation-server/issues/1167
 env TG_BOOTSTRAP_CACHE="$original_dir" TG_BOOTSTRAP_NODE_LINUX=1 CBT_BUILD_MODE="TGS" tools/bootstrap/node tools/build/build.js
